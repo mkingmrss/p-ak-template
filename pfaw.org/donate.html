@@ -1,6 +1,9 @@
 {% extends "./wrapper.html" %}
 {% load actionkit_tags %}
 
+{# remove menu on donation pages #}
+{% block navigation %}{% endblock %}
+
 {% block content %}
 <form id="act" name="act" class="{{ templateset.custom_fields.donation_steps }}" method="POST" action="/act/" accept-charset="utf-8">
     <input type="hidden" name="page" value="{{ page.name }}">
