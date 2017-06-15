@@ -1,0 +1,7 @@
+.main {
+  padding: 15px 0;
+  
+  @include breakpoint(700px, $no-query: true) {
+    padding: 30px 0;
+  }
+}
