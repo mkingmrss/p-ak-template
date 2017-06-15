@@ -1,0 +1,21 @@
+.blue {
+  background: $light-blue;;
+  padding: 1em 0 1em 0;
+  @include breakpoint(700px, $no-query: true) {
+    padding: 3em 0 3em 0;
+  }
+  h2 {
+    padding: 0;
+    a {
+      color: $red;
+      &:hover {
+        color: $navy;
+      }
+    }
+  }
+  img {
+    &:hover {
+      box-shadow: 0 0 4px $black;
+    }
+  }
+}

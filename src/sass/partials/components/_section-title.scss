@@ -1,0 +1,18 @@
+.section-title {
+  &:before {
+    content: "";
+    background: $border-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 185px;
+    height: 5px;
+  }
+}
+.section-title--med {
+  @extend .section-title;
+  font-size: $font-size-lgr;
+  @include breakpoint(700px, $no-query: true) {
+    font-size: $font-size-xl;
+  }
+}

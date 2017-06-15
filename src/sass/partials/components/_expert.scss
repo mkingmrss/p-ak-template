@@ -1,0 +1,31 @@
+.expert {
+  background: $white;
+  border-bottom: 5px solid $green;
+  display: flex;
+  margin-bottom: 1em;
+  padding: 1em;
+  h3 {
+    font-size: $font-size-md;
+  }
+  img {
+    border-radius: 50%;
+    filter: grayscale(100%);
+    margin-right: 1em;
+    width:80px;
+    height: 80px;
+  }
+  i {
+    color: $brown;
+    font-size: $font-size-md;
+    margin-right: 10px;
+    text-align: center;
+    width: 20px;
+  }
+  h4 {
+    i {
+      &.email {
+        font-size: $font-size-md-sm;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.layout-sidebar__sidebar  {
+  h2 {
+    color: $black;
+    font-size: $font-size-lg;
+    @include breakpoint(800px, $no-query: true) {
+      font-size: $font-size-lg-between;
+    }
+    .single-campaign & {
+      color: $navy;
+      font-size: $font-size-lgr;
+      @include breakpoint(800px, $no-query: true) {
+        font-size: $font-size-xl;
+      }
+    }
+  }
+  h4 {
+    font-size: $font-size-md-sm;
+    a {
+      color:$green;
+    }
+  }
+}
+.sidebar__about {
+  background:url(/wp-content/themes/pfaw/images/pfaw-sidebar.png) $grey bottom right no-repeat;
+  background-size: 230px 200px;
+  margin-top: 20px;
+  padding: 20px;
+  @include breakpoint(900px, $no-query: true) {
+    background:url(/wp-content/themes/pfaw/images/pfaw-sidebar.png) no-repeat;
+    background-size: cover;
+    padding: 30px;
+  }
+  a {
+    display: inline-block;
+    line-height: 1;
+    margin:1.5em 0 0 0;
+  }
+  h3 {
+    line-height: 1;
+    margin-bottom: 0.25em;
+  }
+  p {
+    margin: 0;
+    font-size: $font-size-md-alt;
+    line-height: 1.5;
+  }
+}
+.sidebar__signup {
+  background: $yellow;
+  margin: 1em 0 -1em 0;
+  overflow: hidden;
+  padding: 20px;
+  @include breakpoint(900px, $no-query: true) {
+    margin: 1em 0;
+    padding: 30px;
+  }
+  h3 {
+    line-height: 1;
+    margin-bottom: 0.25em;
+  }
+  input {
+    border-radius: 0;
+    float: left;
+    margin-right: -.5em;
+    padding: .6em 1em;
+    @include breakpoint(900px, $no-query: true) {
+      margin-right: 10px;
+      padding: .6em 2em;
+    }
+  }
+}
+.sidebar__facebook-embed {
+  iframe {
+    margin: 0 auto;
+    &.small-screen {
+      display: block;
+      @include breakpoint(1036px, $no-query: true) {
+        display: none;
+      }
+    }
+    &.full-width {
+      display: none;
+      @include breakpoint(1036px, $no-query: true) {
+        display: block;
+      }
+    }
+  }
+}

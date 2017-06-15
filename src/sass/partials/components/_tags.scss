@@ -1,0 +1,21 @@
+.tags {
+  border-top: 5px solid $light-grey;
+  font-family: $base-font-family-regular;
+  font-size: $font-size-md-sm;
+  margin: 2em 0;
+  padding-top: 1em;
+  p {
+    display: inline;
+  }
+  a {
+    font-family: $base-font-family-regular;
+    &:after {
+      content: ', ';
+    }
+    &:last-of-type {
+      &:after {
+        content: '';
+      }
+    }
+  }
+}

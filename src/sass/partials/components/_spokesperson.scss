@@ -1,0 +1,65 @@
+.spokesperson {
+  background: $navy;
+  color: $white;
+  display: flex;
+  overflow: hidden;
+  padding: 1em;
+  a {
+    color: $white;
+    &:after {
+      content: none;
+    }
+  }
+  h3 {
+    font-size: $font-size-lg;
+    margin: 0;
+    a {
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  img {
+    border-radius: 50%;
+    float: left;
+    margin: 0;
+  }
+  p {
+    font-family: $base-font-family-regular;
+    font-size: $font-size-md-alt;
+    line-height: 1;
+    margin:.25em 0 0 0;
+  }
+  .fa-twitter {
+    background: $dark-grey;
+    border-radius: 50%;
+    height: 25px;
+    margin-top: .25em;
+    padding: .25em;
+    text-align: center;
+    width: 25px;
+    &:hover {
+      background: $grey;
+    }
+  }
+}
+.spokesperson__image {
+  width: 100px;
+  margin-right: .75em;
+}
+.spokesperson__meta {
+  width: 260px;
+}
+.spokesperson__text {
+  h3 {
+    font-size: $font-size-md-between;
+  }
+  li {
+    margin-bottom: .5em;
+  }
+  p {
+    &:last-of-type {
+      margin-bottom: 1em;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.hero {
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: '';
+    border-bottom: 5px solid $green;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index:10;
+  }
+  &:before {
+    background: url(/wp-content/themes/pfaw/images/overlay.png) #444;
+    content: '';
+    height: 100%;
+    opacity: .6;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  @include breakpoint(700px, $no-query: true) {
+    height: 325px;
+    margin-top: -32px;
+  }
+  h1 {
+    bottom: 0;
+    color: $white;
+    font-size: $font-size-lg;
+    padding: 1em 0 .5em 0;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    @include breakpoint(600px, $no-query: true) {
+      font-size: $font-size-lgrr;
+    }
+    @include breakpoint(700px, $no-query: true) {
+      font-size: $font-size-xxl;
+    }
+  }
+}
+.hero--home {
+  align-items: center;
+  border-bottom: 5px solid $green;
+  display: flex;
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+  padding: 1em 0;
+  position: relative;
+  text-align: center;
+  @include breakpoint(700px, $no-query: true) {
+    height: 425px;
+    margin-top: -32px;
+  }
+  h1 {
+    color: $white;
+    font-size: 25px;
+    margin: .25em 1em .5em 1em;;
+    @include breakpoint(700px, $no-query: true) {
+      font-size: 30px;
+      margin: .25em 2em .5em 2em;
+    }
+    @include breakpoint(900px, $no-query: true) {
+      font-size: 36px;
+    }
+    @include breakpoint(1000px, $no-query: true) {
+      font-size: $font-size-xl;
+    }
+    @include breakpoint(1200px, $no-query: true) {
+      font-size: $font-size-xxl;
+    }
+  }
+  h3 {
+    color: $white;
+    font-family: $base-font-family-regular;
+    font-size: $font-size-md-between;
+    margin: .5em 0;
+    @include breakpoint(700px, $no-query: true) {
+      font-size: $font-size-md;
+      margin: 1em 2em;
+    }
+    @include breakpoint(900px, $no-query: true) {
+      font-size: $font-size-featured;
+    }
+    @include breakpoint(1200px, $no-query: true) {
+      font-size: $font-size-lg-between;
+    }
+    a {
+      color: $white;
+      display: inline-block;
+      font-family: $header-font-family;
+      font-size: $font-size-md-between;
+      transition: .3s ease-in-out;
+      &:after {
+        content: '\f107';
+      }
+      &:hover {
+        border-bottom: 2px solid $white;
+        font-size: $font-size-featured;
+        padding-bottom: .25em;
+        &:after {
+          content: '';
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+.hero__text {
+  @include breakpoint(700px, $no-query: true) {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+}

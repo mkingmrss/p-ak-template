@@ -1,0 +1,19 @@
+.page__header {
+  margin-top: 2em;
+  @include breakpoint(800px, $no-query: true) {
+    margin-top: 4em;
+  }
+}
+.page__header__top {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page__header--basic-page {
+  margin-top: 2em;
+  @include breakpoint(800px, $no-query: true) {
+    margin-top: 4em;
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+}

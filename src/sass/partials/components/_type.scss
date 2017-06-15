@@ -1,0 +1,32 @@
+%type {
+  background: url(/wp-content/themes/pfaw/images/doc.png) no-repeat;
+  background-size: 30px 30px;
+  display: block;
+  margin-bottom: 1em;
+  a {
+    display: block;
+    padding-left: 40px;
+  }
+  p {
+    padding-left: 40px;
+  }
+}
+.top {
+  li {
+    &.type {
+      @extend %type;
+    }
+    &.video {
+      background: url(/wp-content/themes/pfaw/images/play.png) no-repeat;
+      background-size: 30px 30px;
+    }
+    &.audio {
+      background: url(/wp-content/themes/pfaw/images/audio.png) no-repeat;
+      background-size: 30px 30px;
+    }
+    &.longform {
+      background: url(/wp-content/themes/pfaw/images/docs.png) no-repeat;
+      background-size: 30px 30px;
+    }
+  }
+}

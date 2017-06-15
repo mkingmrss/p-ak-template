@@ -1,0 +1,83 @@
+.filter {
+  display: none;
+  @include breakpoint(900px, $no-query: true) {
+    display: block;
+  }
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint(900px, $no-query: true) {
+    display: flex;
+    justify-content: space-between;
+  }
+  input[type="search"] {
+    font-size: 14px;
+    height: 25px;
+    margin-right: 10px;
+    padding: .5em;
+  }
+  h3 {
+    margin: 1.5em 0 .5em 0;
+  }
+  h4 {
+    font-family: $base-font-family;
+    font-size: 1em;
+    margin: 0 0 .25em 0;
+
+  }
+  > div {
+    margin-bottom: .5em;
+    overflow: hidden;
+    width: 100%;
+    @include breakpoint(700px, $no-query: true) {
+      width: 33%;
+    }
+    @include breakpoint(1050px, $no-query: true) {
+      width: auto;
+    }
+    &.date-range {
+      width: 100%;
+      @include breakpoint(1050px, $no-query: true) {
+        width: auto;
+      }
+    }
+  }
+  .facetwp-facet {
+    margin: 0;
+    input {
+      margin-bottom: 1em;
+    }
+    input[type="search"] {
+      float: left;
+      margin: 0;
+      width: 80%;
+      @include breakpoint(700px, $no-query: true) {
+        width: auto;
+      }
+    }
+    input[type="button"] {
+      background: url(/wp-content/themes/pfaw/images/submit-b.png) #AE272B no-repeat center center;
+      background-size: 10px 14px;
+      border: none;
+      float: left;
+      height: 39px;
+      overflow: hidden;
+      padding: 0;
+      text-indent: 100%;
+      -webkit-transition-property: none;
+      transition-property: none;
+      white-space: nowrap;
+      width: 35px;
+      @include breakpoint(900px, $no-query: true) {
+      }
+    }
+  }
+}
+.facetwp-search-wrap {
+  .facetwp-btn {
+    background: $white;
+    top: 3px;
+    right: 20px;
+  }
+}

@@ -1,0 +1,168 @@
+.featured-posts--more, .related-posts{
+  overflow: hidden;
+  padding-top: 2em;
+}
+
+.featured-posts__top__content--left {
+  margin-right: 1em;
+}
+
+.featured-posts {
+  .featured-area & {
+    ul {
+      margin-bottom: 2em;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    margin: 2em 0 0 0;
+    overflow: hidden;
+    @include breakpoint(600px, $no-query: true) {
+      margin: 2em 2em 0 0;
+    }
+
+    .video {
+      @include breakpoint(700px, $no-query: true) {
+        float: left;
+        margin-right: 1em;
+      }
+      img {
+        width: 180px;
+      }
+      .crop {
+        height: 100px;
+        overflow: hidden;
+        width: 180px;
+      }
+      a {
+        background: url(/wp-content/themes/pfaw/images/youtube-play.png) no-repeat center center;
+        display: block;
+        height: 100px;
+        position: absolute;
+        width: 180px;
+      }
+    }
+    a {
+      &.longform {
+        display: block;
+        height: 100px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 180px;
+      }
+    }
+    h3 {
+      font-size: $font-size-lg;
+      @include breakpoint(700px, $no-query: true) {
+        display: inline;
+      }
+      @include breakpoint(1200px, $no-query: true) {
+        font-size: $font-size-lg;
+      }
+      line-height: 1;
+      margin: 10px 0 10px 0;
+      a {
+        color: $black;
+        &:hover,&:focus {
+          color: $blue;
+        }
+      }
+    }
+    > a {
+        display: block;
+        margin-right: 1em;
+        width: 180px;
+        height: 100px;
+        overflow: hidden;
+        @include breakpoint(600px, $no-query: true) {
+          display: inline-block;
+          margin-right: 1em;
+          float: left;
+
+        }
+      img {
+        width: 180px;
+        @include breakpoint(600px, $no-query: true) {
+          float: left;
+          margin-right: 1em;
+          width: 150px;
+        }
+        @include breakpoint(1200px, $no-query: true) {
+          width: 180px;
+        }
+      }
+    }
+    iframe {
+      height: 100px;
+      width: 180px;
+      @include breakpoint(600px, $no-query: true) {
+        float: left;
+        margin-right: 1em;
+        height: 100px;
+        width: 150px;
+      }
+      @include breakpoint(1200px, $no-query: true) {
+        width: 180px;
+      }
+    }
+    div.read-more {
+      display: block;
+      margin-top: 10px;
+    }
+    .thumb {
+      float: left;
+    }
+    .text {
+      float: left;
+    }
+  }
+}
+.featured-posts-a {
+  > a {
+    display: block;
+    margin-right: 1em;
+    width: 180px;
+    height: 100px;
+    overflow: hidden;
+    @include breakpoint(700px, $no-query: true) {
+      display: inline-block;
+      margin-right: 1em;
+      float: left;
+      display: inline-block;
+
+    }
+  }
+}
+.featured-posts__text {
+  margin-left: 170px;
+  @include breakpoint(1200px, $no-query: true) {
+    margin-left: 205px;
+  }
+}
+.layout-main__sidebar {
+  width: 100%;
+  @include breakpoint(900px, $no-query: true) {
+    width: 38%;
+  }
+  @include breakpoint(1200px, $no-query: true) {
+    width: 33%;
+  }
+}
+div.longform {
+  background: $red;
+  color: $white;
+  font-size: $font-size-sm;
+  font-family: $base-font-family;
+  font-weight: bold;
+  line-height: 1;
+  padding: 2px 3px;
+  position: absolute;
+  text-transform: uppercase;
+}

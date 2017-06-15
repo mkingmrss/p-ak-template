@@ -1,0 +1,22 @@
+// @file
+// Styles for buttons.
+
+.button {
+  @extend %button;
+  a {
+    color: $white;
+  }
+}
+
+.button--red {
+  @extend %button;
+  @extend %button--red;
+}
+.button--black {
+  @extend %button;
+  @extend %button--black;
+}
+.button--blue {
+  @extend %button;
+  @extend %button--blue;
+}

@@ -1,0 +1,42 @@
+.wp-caption {
+  color: #7A8281;
+  font-size: 12px;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  max-width: 100%;
+  .wp-caption-text {
+    font-size: $font-size-sm;
+    line-height: 1.2;
+    margin-bottom: 1.5em;
+  }
+  &.alignright {
+    margin-right: 0;
+    @include breakpoint(1200px, $no-query: true) {
+      margin-right: -150px;
+    }
+    .wp-caption-text {
+      float: right;
+      font-size: $font-size-sm;
+      line-height: 1.2;
+      width: 100%;
+      @include breakpoint(1200px, $no-query: true) {
+        width: 150px;
+      }
+    }
+  }
+  &.alignleft {
+    margin-left: 0;
+    @include breakpoint(1200px, $no-query: true) {
+      margin-left: -150px;
+    }
+    .wp-caption-text {
+      float: left;
+      font-size: $font-size-sm;
+      line-height: 1.2;
+      width: 100%;
+      @include breakpoint(1200px, $no-query: true) {
+        width: 150px;
+      }
+    }
+  }
+}

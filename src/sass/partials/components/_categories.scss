@@ -1,0 +1,19 @@
+.categories {
+  margin: 1em 0;
+  span {
+    background: $dark-grey;
+    color: $white;
+    display: inline-block;
+    font-weight: bold;
+    padding: .75em 1em;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+  }
+  .post-type-archive-blogpost & {
+    display: inline-block;
+    margin: 0;
+    span {
+      padding: .75em .5em;
+    }
+  }
+}

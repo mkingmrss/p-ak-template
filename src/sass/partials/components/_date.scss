@@ -1,0 +1,25 @@
+.date {
+  color: $dark-grey;
+  font-size: 12px;
+  font-family: $base-font-family;
+  font-weight: bold;
+  margin: 0 0 .75em 0;
+  text-transform: uppercase;
+  .featured-posts &{
+    margin-top: .5em;
+    @include breakpoint(700px, $no-query: true) {
+      margin-top:0;
+    }
+  }
+  .post-type-archive-blogpost & {
+    margin: .75em 0;
+  }
+  span {
+    &.rww-post {
+      display: inline-block;
+    }
+    @include breakpoint(700px, $no-query: true) {
+      display: inline-block;
+    }
+  }
+}

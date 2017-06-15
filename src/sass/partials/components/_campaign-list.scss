@@ -1,0 +1,94 @@
+.campaign-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint(1050px, $no-query: true) {
+    flex-wrap: nowrap;
+  }
+  a {
+    margin: 2% 0;
+    width: 100%;
+    @include breakpoint(700px, $no-query: true) {
+      margin: 2%;
+      width: 46%;
+    }
+    @include breakpoint(1050px, $no-query: true) {
+      margin:0 2% 0 0;
+      width: 23%;
+    }
+    &:hover {
+      .campaign-list__thumb {
+        &:after {
+          background: url(/wp-content/themes/pfaw/images/overlay.png) $blue;
+        }
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+.campaign-list__thumb {
+  border-bottom: 5px solid $brown;
+  height: 140px;
+  position: relative;
+  &:after {
+    background: url(/wp-content/themes/pfaw/images/overlay.png) #444;
+    content: '';
+    height: 100%;
+    opacity: .6;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+  }
+  h3 {
+    bottom: .5em;
+    color: $white;
+    left: .5em;
+    margin: 0;
+    position: absolute;
+    z-index: 10;
+    &:after {
+      content: "\f105";
+      display: inline;
+      font-weight: bold;
+      font-family: FontAwesome;
+      margin-left: .4em;
+    }
+  }
+}
+
+.campaign-list__thumb--page {
+  height: 170px;
+  position: relative;
+  &:hover {
+    &:after {
+      opacity: .8;
+    }
+  }
+  &:after {
+    background: url(/wp-content/themes/pfaw/images/overlay.png) #444;
+    content: '';
+    height: 100%;
+    opacity: .6;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  h3 {
+    bottom: .5em;
+    color: $white;
+    left: 1em;
+    margin: 0 1em 0 0;
+    position: absolute;
+    z-index: 10;
+    color: $white;
+    &:after {
+      content: "\f105";
+      display: inline;
+      font-weight: bold;
+      font-family: FontAwesome;
+      margin-left: .4em;
+    }
+  }
+}

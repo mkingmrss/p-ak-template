@@ -1,0 +1,35 @@
+.most-recent {
+  font-family: $header-font-family;
+  margin-left: 0 !important;
+  padding-bottom: 1em;
+  width: 50%;
+  @include breakpoint(700px, $no-query: true) {
+    margin: 0 .5em 0 1.5em!important;
+  }
+  h2{
+    font-size: $font-size-lgr;
+    padding-top: .5em;
+    &:before {
+      content: "";
+      background: $border-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 185px;
+      height: 5px;
+    }
+  }
+  p {
+    margin: 0;
+    font-family: $base-font-family;
+    font-size: $font-size-md-sm;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      font-size: $font-size-md;
+      line-height: 1.3;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+// @file
+// Styles for the mobile menu.
+
+.mobile-menu {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+    display: none;
+  }
+}
+
+.mobile-menu__bar {
+  align-items: center;
+  background: #fff;
+  border-bottom: none;
+  box-shadow: none;
+  color: $mobile-menu-text-color;
+  display: flex;
+  height: em(75px);
+  justify-content: space-between;
+  text-align: center;
+}
+
+.mobile-menu__button {
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  border: 0;
+  color: $mobile-menu-text-color;
+  display: inline-block;
+  font-family: $mobile-menu-font-family;
+  font-size: 12px;
+  font-weight: bold;
+  height: em(55px);
+  line-height: em(55px);
+  margin: 0;
+  padding: 0 1em;
+  text-decoration: none;
+  &:focus {
+    outline: thin dotted;
+  }
+}
+
+.mobile-menu__button--menu {
+  border-right: none;
+}
+
+.mobile-menu__button--search {
+  border-left: none;
+  float: right;
+}
+
+.mobile-menu__icon {
+  @include image-replace(22px, 22px);
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  color: $navy;
+  display: inline-block;
+  font-family: $nav-font-family;
+  font-size: $font-size-md-between;
+  height: 38px;
+  margin-top: 0;
+  text-align: left;
+  text-transform: uppercase;
+  &:before {
+    height: auto;
+  }
+  @include breakpoint(450px, $no-query: true) {
+    font-size: $font-size-md;
+  }
+}
+
+%mobile-menu__icon--close {
+  @include svg-background-inline(mobile-close);
+}
+
+.mobile-menu__icon--menu {
+  @include svg-background-inline(mobile-menu);
+  background-size: 33px 22px;
+  background-position: right center;
+  width: 110px;
+  @include breakpoint(450px, $no-query: true) {
+
+  }
+  .is-active & {
+    @extend %mobile-menu__icon--close;
+    background-size: 22px 22px;
+  }
+}
+
+.mobile-menu__icon--search {
+  @include svg-background-inline(mobile-search);
+
+  .is-active & {
+    @extend %mobile-menu__icon--close;
+  }
+}
+
+.mobile-menu__links {
+  background-color: $mobile-menu-fallback-bg-color;
+  background-color: $mobile-menu-bg-color;
+  color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+
+  li {
+    ul {
+      list-style: none;
+      p {
+        display: none;
+      }
+    }
+    &.is-open {
+      ul {
+        display: block!important;
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu__search {
+  display: none;
+  padding: 0.5em;
+
+  form,
+  .form-item,
+  .form-text {
+    width: 100%;
+  }
+
+  .form-text {
+    box-sizing: border-box;
+  }
+}

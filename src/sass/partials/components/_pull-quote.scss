@@ -1,0 +1,65 @@
+%pull-quote {
+  background: url(/wp-content/themes/pfaw/images/quote.png) no-repeat;
+  background-size: 1.25em;
+  color: $navy;
+  font-family: $header-font-family;
+  font-size: $font-size-lgr;
+  line-height: 1;
+  margin-bottom: .75em;
+  padding: 1.5em 0 .5em 0;
+  position: relative;
+  @include breakpoint(700px, $no-query: true) {
+    font-size: $font-size-lgr;
+  }
+  &:after {
+    content: "";
+    background: $brown;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 185px;
+    height: 5px;
+  }
+  p,h2,h3 {
+    margin-bottom:0;
+  }
+}
+.pull-quote--right {
+  @extend %pull-quote;
+  @include breakpoint(900px, $no-query: true) {
+    float: right;
+    margin: 1em -6em 1em 1em;
+    width: 12em;
+  }
+}
+.pull-quote--left {
+  @extend %pull-quote;
+  @include breakpoint(900px, $no-query: true) {
+    float: left;
+    margin: 1em 1em 1em -6em;
+    width: 12em;
+  }
+}
+.pull-quote--full {
+  @extend %pull-quote;
+  width: 100%;
+}
+.pull-quote__citation {
+  p, h2, h3, h4 {
+    color: $brown;
+    font-size: 12px;
+    font-family: $base-font-family;
+    font-weight: bold;
+    line-height: 1.25;
+    margin-top: 1.5em;
+    text-transform: uppercase;
+  }
+}
+.tweet {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.tweet-link {
+  color: $black;
+}

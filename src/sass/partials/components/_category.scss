@@ -1,0 +1,29 @@
+.category-top{
+  background: $light-grey;
+  margin-bottom: 0;
+  padding: 2em 0;
+  h1 {
+    margin-top:0;
+    padding: 0;
+    &:before {
+      content: "";
+      background: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+}
+.category--indepth{
+  overflow: hidden;
+  p {
+    line-height: 1.5;
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+}
+.category--content {
+
+}

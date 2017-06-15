@@ -1,0 +1,42 @@
+// @file
+// Styles for constraining the page width.
+
+.layout-constrain {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: em($max-page-width);
+  padding-left: 1em;
+  padding-right: 1em;
+  @if breakpoint-get('no queries') == true {
+    width: em($max-page-width);
+  }
+  @include breakpoint(980px, $no-query: true) {
+    padding-left: 2.75em;
+    padding-right: 2.75em;
+  }
+  @include breakpoint(1280px, $no-query: true) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.layout-constrain--hero {
+  @extend .layout-constrain;
+  padding: 0;
+  max-width: em($max-hero-width);
+  @if breakpoint-get('no queries') == true {
+    width: em($max-hero-width);
+  }
+}
+
+.layout-constrain--narrow {
+  @extend .layout-constrain;
+  max-width: em($max-reading-width);
+  @if breakpoint-get('no queries') == true {
+    width: em($max-reading-width);
+  }
+}
+
+.layout-main {
+  overflow: hidden;
+}

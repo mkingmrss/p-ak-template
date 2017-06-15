@@ -1,0 +1,178 @@
+.header__inner {
+  @include breakpoint(900px, $no-query: true) {
+    align-items: center;
+    display: flex;
+    height: 125px;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+.header {
+  display: none;
+  @include breakpoint(900px, $no-query: true) {
+    display: block;
+    height: 224px;
+  }
+}
+.header__ghost {
+  height: 75px;
+  @include breakpoint(900px, $no-query: true) {
+    height: 224px;
+  }
+}
+.header__top {
+  display: none;
+  @include breakpoint(900px, $no-query: true) {
+    background: $light-grey;
+    display: block;
+    height: 44px;
+  }
+  input {
+    border: 1px solid $grey;
+    font-size: 12px;
+    height: 26px;
+    margin-left: 15px;
+    margin-right: 0;
+    padding: 0 1em;
+    width: 170px;
+    &[type="submit"] {
+      background: url(/wp-content/themes/pfaw/images/submit-b.png) $green no-repeat center center;
+      background-size: 10px 14px;
+      border: none;
+      float: right;
+      margin: 0 0 0 5px;
+      overflow: hidden;
+      padding: 0;
+      text-indent: 100%;
+      transition-property: none;
+      white-space: nowrap;
+      width: 27px;
+      &:hover {
+        background: url(/wp-content/themes/pfaw/images/submit-b.png) no-repeat center center $red;
+        background-size: 10px 14px;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    &.nav {
+      align-items: center;
+      height: 43px;
+    }
+  }
+  li {
+    font-family: $header-font-family;
+    font-size: $font-size-md-sm;
+    line-height: 1.5;
+    a {
+      border-left: 1px solid $dark-grey;
+      color: $black;
+      padding-left: 1em;
+      &:hover, &:active {
+        color: $navy;
+      }
+    }
+    &:first-of-type {
+      a {
+        border: none;
+      }
+    }
+  }
+  label {
+    display: none;
+  }
+}
+.header__top--right {
+  display: flex;
+}
+.header__top--inner {
+  align-items: center;
+  display: flex;
+  height: 43px;
+  justify-content: space-between;
+}
+.header__logo {
+  @include svg-background(PFAW_logo);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 180px 80px;
+  display: inline-block;
+  height: 80px;
+  overflow: hidden;
+  width: 180px;
+  &:before {
+    content: '';
+    display: block;
+    height: 150%;
+    width: 0;
+  }
+  .is-sticky & {
+    background-size: 140px 62px;
+    height: 62px;
+    width: 140px;
+  }
+  h1 {
+    position: relative;
+  }
+  .mobile-menu & {
+    margin-left: .25em;
+    background-size: 140px 62px;
+    height: 62px;
+    width: 140px;
+    img {
+      display: none;
+    }
+  }
+}
+.header__logo--scroll {
+  .mobile-menu & {
+    display: block;
+    margin-left: .25em;
+    width: 55px;
+  }
+}
+.header__utilities {
+  display: flex;
+  li {
+    margin: .5em 1em;
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  .menu {
+    display: inline;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+header {
+  &.banner {
+    background: $white;
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+    @include breakpoint(900px, $no-query: true) {
+      display: block;
+    }
+  }
+}
+.header__buttons {
+  ul {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 .25em;
+    a {
+      @extend .button--red;
+    }
+  }
+}

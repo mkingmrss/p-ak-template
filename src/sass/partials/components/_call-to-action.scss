@@ -1,0 +1,16 @@
+.call-to-actions {
+  h2 {
+    margin: 0 0 .5em 0;
+  }
+  .button {
+    margin-bottom:0
+  }
+  .cta--red {
+    background: $red;
+    color: $white;
+    padding: 1em;
+    h3 {
+      color: $white;
+    }
+  }
+}

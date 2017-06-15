@@ -1,0 +1,47 @@
+// @file
+// Slat layout style
+
+$bp-first: 600px, 'no-query' true;
+$gutter: 1em;
+
+.layout-slat {
+  @extend %clearfix;
+}
+
+.layout-slat__media {
+  margin: 0;
+  padding: 0 0 .25em 0;
+
+  @include breakpoint($bp-first) {
+    float: left;
+    padding-right: $gutter;
+  }
+    @include breakpoint(800px, $no-query: true)  {
+    padding: 0 $gutter 1.25em 0;
+  }
+
+  &:empty {
+    padding: 0;
+  }
+
+  a,
+  img {
+    display: block;
+    padding-top: 0px;
+  }
+}
+
+.layout-slat__content {
+  display: table-cell;
+  width: 10000px;
+}
+
+.layout-slat--reversed {
+  .layout-slat__media {
+    @include breakpoint($bp-first) {
+      float: right;
+      padding-left: $gutter;
+      padding-right: 0;
+    }
+  }
+}

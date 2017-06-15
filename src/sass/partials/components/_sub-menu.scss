@@ -1,0 +1,15 @@
+.sub-menu {
+	display: none;
+	li {
+		font-family: $base-font-family;
+		list-style: none;
+		text-align: left;
+		a {
+			padding: .75em .75em 0 .75em;
+			color: $black;
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+}

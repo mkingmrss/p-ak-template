@@ -1,0 +1,22 @@
+.featured-area {
+  padding: 2em 0;
+  @include breakpoint(900px, $no-query: true) {
+    display: flex;
+  }
+}
+.featured-area--left {
+  width: 100%;
+  @include breakpoint(900px, $no-query: true) {
+    width: 60%;
+  }
+
+}
+.featured-area--right {
+  width: 100%;
+  @include breakpoint(900px, $no-query: true) {
+    width: 400px;
+  }
+}
+.related-video {
+  margin-bottom: 2em;
+}

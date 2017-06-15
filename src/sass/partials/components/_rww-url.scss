@@ -1,0 +1,11 @@
+.rww-url {
+  margin-bottom: 3em;
+  .button {
+    background-size: 100px 100px;
+    height: 50px;
+    @include breakpoint(700px, $no-query: true) {
+      background-size: 100px 75px;
+      height: 39px;
+    }
+  }
+}

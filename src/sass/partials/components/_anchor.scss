@@ -1,0 +1,8 @@
+.anchor {
+  margin-top: -150px;
+  padding-top: 150px;
+  @include breakpoint(800px, $no-query: true) {
+    margin-top: -220px;
+    padding-top: 220px;
+  }
+}

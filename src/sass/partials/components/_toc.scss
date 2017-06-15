@@ -1,0 +1,57 @@
+.toc {
+  background: url(/wp-content/themes/pfaw/images/swatch.png) repeat;
+  padding: 1em 0;
+  margin-bottom: 2em;
+  @include breakpoint(700px, $no-query: true) {
+    padding: 2em;
+  }
+  h2 {
+    font-size: $font-size-lgr;
+    padding-top: .5em;
+    @include breakpoint(700px, $no-query: true) {
+      font-size: $font-size-lgrr;
+    }
+  }
+  a {
+    color: $link-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    float: left;
+    line-height: 1.5;
+    width: 70%;
+    @include breakpoint(700px, $no-query: true) {
+      width: 90%;
+    }
+  }
+  ol {
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+  }
+  ol li {
+    display: block;
+    overflow: hidden;
+    line-height: 1;
+    margin: 0;
+    padding: .5em .5em .5em 0;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+  ol li:before {
+    color: #FFFFFF;
+    counter-increment: item;
+    content: counter(item);
+    background-color: $brown;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: $base-font-size;
+    height: 27px;
+    margin-right: 10px;
+    padding-top: 4px;
+    text-align: center;
+    width: 27px;
+  }
+}

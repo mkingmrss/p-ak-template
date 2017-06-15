@@ -1,0 +1,26 @@
+.description {
+  color: $dark-grey;
+  font-family: $sans-serif;
+  font-size: $font-size-md;
+  font-weight: 200;
+  line-height: 1.2;
+  margin-top: 1.25em;
+  width: 100%;
+  p {
+    font-family: $sans-serif;
+    font-weight: 200;
+    line-height: 1.2;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @include breakpoint(800px, $no-query: true) {
+    font-size: $font-size-lgr;
+  }
+}
+.description__inner {
+  margin-right: 1em;
+}
+.description__secondary {
+  margin: 1em 0 2em 0;
+}

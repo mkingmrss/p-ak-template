@@ -1,0 +1,11 @@
+.main {
+  z-index: 10;
+  @include breakpoint(450px, $no-query: true) {
+  }
+  @include breakpoint(900px, $no-query: true) {
+    margin-top: 0;
+    .admin-bar & {
+
+    }
+  }
+}

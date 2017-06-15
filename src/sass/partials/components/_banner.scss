@@ -1,0 +1,11 @@
+.banner {
+  position: relative;
+  h1 {
+    bottom: 0;
+    color: $white;
+    position: absolute;
+    &:before {
+      content: none;
+    }
+  }
+}

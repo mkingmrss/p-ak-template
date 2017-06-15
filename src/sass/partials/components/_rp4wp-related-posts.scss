@@ -1,0 +1,80 @@
+.yaml {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  @include breakpoint(700px, $no-query: true) {
+    flex-wrap: nowrap;
+  }
+
+  li {
+    list-style: none;
+    margin: 0 0 2% 0;
+    width: 100%;
+    @include breakpoint(700px, $no-query: true) {
+      width: 25%;
+      margin: 0 2% 2% 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .yaml__component {
+      background: $white;
+      border-bottom: 5px solid $brown;
+      height: auto;
+    }
+    .video {
+      position: relative;
+      img {
+        background: none;
+        height: 100%;
+        width: 100%;
+      }
+      .crop {
+        overflow: hidden;
+
+        @include breakpoint(700px, $no-query: true) {
+          height: 150px;
+          width: 268px;
+        }
+      }
+      a {
+        border: none!important;
+        background: url(/wp-content/themes/rightwingwatch/images/youtube-play.png) no-repeat center center;
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        &:after {
+          content: '';
+        }
+      }
+    }
+    .image-link {
+      border: none;
+      display: inline-block;
+      padding: 0;
+      position: relative;
+      width: 100%;
+      &:after {
+        content: none;
+      }
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+      @include breakpoint(700px, $no-query: true) {
+        width: 265px;
+        height: 150px;
+      }
+    }
+    img {
+      margin-bottom: 0;
+      height: auto;
+      width: 100%;
+      @include breakpoint(1200px, $no-query: true) {
+        width: 270px;
+      }
+    }
+  }
+}

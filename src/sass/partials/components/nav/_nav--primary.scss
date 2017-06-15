@@ -1,0 +1,97 @@
+// @file
+// Styles for the main menu.
+
+.nav--primary {
+  background: $navy;
+  display: none;
+  height: 55px;
+  width: 100%;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+    display: inline-block;
+  }
+  a {
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    height: 55px;
+    line-height: 2.25;
+    &:hover {
+      color: $white;
+    }
+  }
+  .menu-item-has-children {
+    padding-right: 24px;
+    > a {
+      &:after {
+        content: "\f107";
+        display: inline;
+        font-weight: bold;
+        font-family: FontAwesome;
+        margin-left: .4em;
+        position: absolute;
+      }
+    }
+    > a {
+      &.active {
+        &:after {
+          content: "\f106";
+          display: inline;
+          font-weight: bold;
+          font-family: FontAwesome;
+          margin-left: .4em;
+        }
+      }
+    }
+  }
+  ul.nav {
+    @extend %nav--inline;
+    > li {
+      background: url(/wp-content/themes/pfaw/images/menu-border.png) no-repeat top left;
+      flex: 1 1 auto;
+      font-size: $base-font-size;
+      line-height: 2.75;
+      text-align: center;
+      @include breakpoint(1200px, $no-query: true) {
+        font-size: $font-size-md;
+        line-height: 2.5;
+      }
+      &:hover {
+        background: $dark-navy;
+        color: $white;
+        outline: 0;
+      }
+      &.active {
+        background: $dark-navy;
+      }
+    }
+    ul {
+      background: $light-grey;
+      padding: .5em 1em;
+      position: absolute;
+      li {
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        list-style: none;
+        position: relative;
+        text-align: left;
+        @include breakpoint(1200px, $no-query: true) {
+          font-size: $font-size-md;
+        }
+        a {
+          border-bottom: 5px solid $light-grey;
+          color: $black;
+          height: auto;
+          line-height: 2;
+          padding: .25em 0 0 0;
+          &:hover {
+            color: $navy;
+            border-bottom: 5px solid $navy;
+          }
+        }
+      }
+    }
+  }
+  @media print {
+    display: none;
+  }
+}

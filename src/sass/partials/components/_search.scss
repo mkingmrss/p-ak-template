@@ -1,0 +1,106 @@
+form {
+  &.search {
+    align-items: center;
+    clear: both;
+    display: flex;
+    height: 55px;
+    justify-content: flex-start;
+    margin-right: 0;
+    text-align: left;
+    @include breakpoint(900px, $no-query: true) {
+      display: none;
+      height: auto;
+      margin-right: 2em;
+      text-align: left;
+    }
+    .search-page & {
+      display: block;
+    }
+    label {
+      display: none;
+    }
+    input[type="search"]{
+      @include input-placeholder($med-grey);
+      background: white;
+      border: 1px solid $grey;
+      border-radius: 0;
+      display: inline-block;
+      float: left;
+      font-family: $base-font-family;
+      font-size: 14px;
+      height: 23px;
+      line-height: normal;
+      margin: 0 .5em 0 0;
+      padding: .5em;
+      text-align: left;
+      vertical-align: top;
+      @include breakpoint(900px, $no-query: true) {
+        float: none;
+      }
+    }
+    button {
+      font-size: 14px;
+      height: 39px;
+      margin: 0;
+      padding: 0 1em;
+    }
+  }
+}
+.search {
+  h1 {
+    &.page-title {
+      // float: left;
+      font-size: $font-size-xl;
+      line-height: 1.3;
+      // width: 65%;
+    }
+  }
+}
+
+.search-page {
+  float: left;
+  @include breakpoint(900px, $no-query: true) {
+    float: right;
+    margin-top: .25em;
+    width: 35%;
+    p {
+      text-align: right;
+    }
+  }
+}
+.search__toggle {
+
+  cursor: pointer;
+  display: none;
+  height: 30px;
+  margin: .75em 0 0 1em;
+  width: 20px;
+  @include breakpoint(900px, $no-query: true) {
+    display: inline-block;
+  }
+  .search-page & {
+    display: none;
+  }
+  &:after {
+    color: $black;
+    content: "\f002";
+    display: inline-block;
+    font: normal normal normal 25px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+  }
+}
+.result {
+  margin-bottom: .25em;
+  h3 {
+    margin-bottom: 0;
+  }
+  .date {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}

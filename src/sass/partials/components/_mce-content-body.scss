@@ -1,0 +1,123 @@
+.mce-content-body {
+  margin-bottom: 2em;
+  .cards & {
+    margin-bottom: 0;
+  }
+  .single-job &, .single-basicpage &, .single-editmemo &, .single-pressrelease & {
+    margin-bottom: 3em;
+  }
+  .single-blogpost & {
+    margin-top: 2em;
+  }
+  span {
+    &.anchor {
+      display: block;
+      height: 50px; /*same height as header*/
+      margin-top: -50px; /*same height as header*/
+      visibility: hidden;
+      @include breakpoint(600px, $no-query: true) {
+        height: 220px; /*same height as header*/
+        margin-top: -220px; /*same height as header*/
+      }
+    }
+  }
+
+  h1 {
+    font-size: $font-size-xl;
+    margin: .25em 0 0 0;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+  }
+  h2 {
+    font-family: $header-font-family;
+    font-size: $font-size-lgr;
+    margin: .5em 0;
+    padding: 0;
+    text-transform: none;
+    &:before {
+      display: none;
+    }
+  }
+  h2 {
+    &.bar {
+      @extend %hN;
+      color: $navy;
+      font-family: "Oswald";
+      font-size: em($font-size-lgr);
+      line-height: 1.1;
+      margin: 0 0 .75em 0;
+      padding: .7em 0 0 0;
+      position: relative;
+      text-transform: uppercase;
+      &:before {
+        content: "";
+        background: $border-color;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 185px;
+        height: 5px;
+      }
+    }
+  }
+  h3 {
+    margin: .5em 0;
+    padding: 0;
+    &:first-of-type {
+      margin: 0 0 .5em 0;
+    }
+  }
+  h4 {
+    margin: .5em 0;
+    padding: 0;
+  }
+  div {
+    line-height: 1.5;
+    &.pull-quote--full, .pull-quote--right, .pull-quote--left {
+      line-height: 1.1;
+    }
+  }
+  p {
+    font-family: $base-font-family;
+    line-height: 1.5;
+  }
+  ul {
+    line-height: 1.5;
+    list-style: none;
+    li {
+      margin-bottom: .25em;
+      &:before {
+        content: "\f111";
+        color: #DAAA00;
+        display: inline-block;
+        float: left;
+        font: normal normal normal 8px FontAwesome;
+        margin-left: -2em;
+        margin-right: 1em;
+        margin-top: 1.25em;
+        width: 1em;
+      }
+      ul {
+        margin-top: .5em;
+        li {
+          &:before {
+            content: "\f10c";
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+body {
+  &.mce-content-body {
+    font-family: $base-font-family;
+    margin: 3em 5em;
+    p {
+      line-height: 1.5;
+    }
+  }
+}

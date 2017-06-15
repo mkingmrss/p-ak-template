@@ -1,0 +1,17 @@
+.bottom {
+  background: url(/wp-content/themes/pfaw/images/swatch.png) repeat;
+  margin-top: 1.25em;
+  padding: 1.25em 0 1.25em 0;
+  @include breakpoint(800px, $no-query: true) {
+    margin-top: 3em;
+    padding: 3em 0 3em 0;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+}
+.bottom__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+} 

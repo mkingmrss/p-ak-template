@@ -1,0 +1,9 @@
+
+.middle {
+  padding: 2.5em 0 1em 0;
+  @include breakpoint(900px, $no-query: true) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5em 0 3em 0;
+  }
+}

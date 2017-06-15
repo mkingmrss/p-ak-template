@@ -1,0 +1,25 @@
+.is-sticky {
+  .header {
+    height: 140px;
+  }
+  .header__ghost {
+    height: 165px;
+  }
+  .header__inner {
+    height: 85px;
+    picture {
+      display: none;
+      &.is-sticky {
+        display: block;
+      }
+    }
+    img {
+      width: 140px;
+    }
+  }
+}
+picture {
+  &.is-sticky {
+    display: none;
+  }
+}

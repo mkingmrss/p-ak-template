@@ -1,0 +1,60 @@
+.report__image {
+  margin-right: 1em;
+}
+.report__text {
+  p {
+    a{
+      &:after {
+        content: "\f105";
+        display: inline;
+        font: normal normal normal 19px/1 FontAwesome;
+        margin-left: .25em;
+      }
+    }
+  }
+}
+.report__header {
+  margin-top: 3em;
+  position: relative;
+    &:before {
+    content: "";
+    background: $border-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 185px;
+    height: 5px;
+  }
+  h1 {
+    margin: 0;
+    &:before {
+      background: none;
+      margin: 0;
+    }
+  }
+}
+.report__source {
+  font-family: $header-font-family;
+  font-size: $font-size-md-between;
+  margin-top: .5em;
+  @include breakpoint(700px, $no-query: true) {
+    font-size: $font-size-lg;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.reports {
+  li.full-image {
+    img {
+      display: none;
+    }
+    a.image-link {
+      display: none;
+    }
+  }
+  .featured-posts {
+    width: 100%;
+  }
+}

@@ -1,0 +1,163 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 0 0 0;
+  padding: 0;
+  @include breakpoint(800px, $no-query: true) {
+    flex-wrap: nowrap;
+  }
+  .dots &, .dots--home & {
+    margin: 0;
+  }
+
+  h3 {
+    color: $black;
+    font-size: $font-size-featured;
+    .single-post & {
+      font-size: $font-size-md-between;
+      a {
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+    .campaigns & {
+      color: $white;
+      font-size: $font-size-lg;
+    }
+  }
+}
+.cards__intro {
+  margin: 0 1em 1em 0;
+  width: 100%;
+}
+.cards__content {
+  background: $white;
+  border: 1px solid $light-grey;
+  border-bottom: 5px solid $brown;
+  box-shadow: 0 0 2px #dddddd;
+  margin: 0 0 1em 0;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 0 10px #cccccc;
+  }
+  .dots & {
+    margin: 0 0 1.25em 0;
+    border-bottom: none;
+    @include breakpoint(800px, $no-query: true) {
+      margin: 0 1.25em 1.25em 0;
+    }
+  }
+  &:nth-child(4){
+    .home & {
+      margin-right: 0;
+    }
+  }
+  .campaigns & {
+    border-bottom: none;
+  }
+  @include breakpoint(800px, $no-query: true) {
+    margin: 0 1.25em 1em 0;
+  }
+  .bottom &, .rww & {
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    @include breakpoint(800px, $no-query: true) {
+      width: 25%;
+    }
+    .cards__content__inner {
+      background: $white;
+      border: 1px solid $light-grey;
+      box-shadow: 0 0 2px #dddddd;
+      border-bottom: 5px solid $brown;
+      margin-top: -5px;
+      &:hover {
+        box-shadow: 0 0 10px #cccccc;
+      }
+    }
+  }
+  .single-authors & {
+    width: 100%;
+    h3 {
+      font-size: $font-size-lg;
+    }
+    .date {
+      text-transform: none;
+    }
+    &:nth-child(2n){
+      width: 100%;
+      @include breakpoint(800px, $no-query: true) {
+        width: 60%;
+        margin-right: 0;
+      }
+    }
+    @include breakpoint(800px, $no-query: true) {
+      width: 40%;
+    }
+  }
+}
+.cards__content__inner {
+  img {
+    height: auto;
+    width: 100%;
+  }
+  .date {
+    font-size: 10px;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+  }
+  .video {
+    position: relative;
+    a {
+      border: none !important;
+      background: url(/wp-content/themes/pfaw/images/youtube-play.png) no-repeat center center;
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
+.cards--spokespeople {
+  flex-wrap: wrap;
+  margin: 2em 0;
+  @extend .cards;
+  .cards__content {
+    width: 100%;
+    @include breakpoint(800px, $no-query: true) {
+      width: 47%;
+      &:nth-child(2n){
+      }
+    }
+    @include breakpoint(1000px, $no-query: true) {
+      width: 32%;
+      &:nth-child(3n){
+        margin-right:0 ;
+      }
+    }
+  }
+}
+.cards__content__padding {
+  margin: 1.25em;
+  .home & {
+    margin: 1em;
+  }
+}
+.cards--two-up {
+  flex-wrap: wrap;
+  margin: 0 0 2em 0;
+  @extend .cards;
+  .cards__content {
+    width: 100%;
+    margin: 0 0 3% 0;
+    @include breakpoint(600px, $no-query: true) {
+      width: 48%;
+      margin: 0 4% 1.25em 0;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+}

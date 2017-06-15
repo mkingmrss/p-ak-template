@@ -1,0 +1,17 @@
+.section-header {
+  background: $navy;
+  margin: .5em 0 1.5em 0;
+  h2 {
+    color: $white;
+    font-size: $font-size-lgr;
+    margin: 0;
+    padding: 2em 0 .5em 0;
+    @include breakpoint(700px, $no-query: true) {
+      font-size: $font-size-xl;
+    }
+  }
+  a {
+    margin:-190px auto 0 auto;
+    padding-top: 190px;
+  }
+}

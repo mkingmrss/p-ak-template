@@ -1,0 +1,35 @@
+.related-reports {
+  overflow: hidden;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    margin-bottom: 2em;
+    overflow: hidden;
+  }
+  margin-bottom: 2em;
+  h3 {
+    margin-top: 10px;
+    line-height: .9;
+    a {
+      color: $black;
+      font-size: $font-size-md;
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+    }
+    @include breakpoint(600px, $no-query: true) {
+      display: inline;
+      margin-top: 0;
+    }
+  }
+  img {
+    @include breakpoint(600px, $no-query: true) {
+      float: left;
+      margin-right: 1em;
+    }
+  }
+}

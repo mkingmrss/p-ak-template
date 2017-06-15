@@ -1,0 +1,28 @@
+.collapseomatic {
+  background-position: right top;
+  background: none;
+  font-family: $header-font-family;
+  font-size: $font-size-md-between;
+  padding: 0;
+  color: $navy;
+  text-decoration: none;
+  &:hover {
+    color: $red;
+  }
+  &:after {
+    color: $black;
+    content: "\f078";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;;
+    padding-left: 5px;
+  }
+  &.colomat-close {
+    &:after {
+      color: $black;
+      content: "\f077";
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;;
+      padding-left: 10px;
+    }
+  }
+}

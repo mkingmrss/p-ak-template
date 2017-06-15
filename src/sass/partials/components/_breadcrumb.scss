@@ -1,0 +1,35 @@
+.breadcrumb {
+  background: url(/wp-content/themes/pfaw/images/breadcrumb.png);
+  position: relative;
+  z-index: 100;
+  .home & {
+    display: none;
+  }
+  &:hover {
+    background-color: $light-grey;
+  }
+  ul {
+    margin: 0;
+    padding: .25em 0 .5em 0;
+    width: 100%;
+    z-index: 10;
+    @include breakpoint(1000px, $no-query: true) {
+      margin: 0;
+      padding: .25em 0 .5em 1em;
+    }
+  }
+  li {
+    display: inline;
+    font-family: $base-font-family-regular;
+    font-size: $font-size-sm;
+  }
+  i {
+    margin-left: .25em;
+    margin-right: .50em;
+    font-size: 12px;
+  }
+  span {
+    font-family: $base-font-family-regular;
+    font-size: $font-size-sm;
+  }
+}

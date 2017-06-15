@@ -1,0 +1,8 @@
+.mtsnb .mtsnb-button {
+  @extend %button;
+  border-radius: 0;
+  line-height: 2;
+  a {
+    color: $white;
+  }
+}

@@ -1,0 +1,14 @@
+.contact {
+  width: 100%;
+  h3 {
+
+  }
+  @include breakpoint(800px, $no-query: true) {
+    margin-top: -4em;
+    width: 32%;
+  }
+}
+.contact__inner {
+  background: $light-grey;
+  padding: 1.5em;
+}

@@ -1,0 +1,40 @@
+.grey {
+	background: $light-grey;
+	margin: 0 -1.25em;
+	padding: .5em 1.25em 1.25em 1.25em;
+	@include breakpoint(700px, $no-query: true) {
+		margin: 0;
+	}
+	.error404 & {
+		margin: 3em 0;
+	}
+	h3 {
+		font-size: $font-size-md-between;
+		margin: 0 0 1em 0;
+		a {
+			color: $black;
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+	p {
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+	form {
+		margin: 1em 0;
+		input[type="email"] {
+			float:left;
+			font-size: $font-size-md-sm;
+			height: 40px;
+			margin-right: 1em;
+			padding: 1em;
+			width: 150px;
+		}
+		input[type="submit"] {
+			padding: 1em 1.5em
+		}
+	}
+}

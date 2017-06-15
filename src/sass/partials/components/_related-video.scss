@@ -1,0 +1,18 @@
+.related-video {
+  h3 {
+    line-height: .9;
+    color: $black;
+    font-size: $font-size-md;
+    a {
+      color: $black;
+      font-size: $font-size-md;
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+    }
+  }
+}
+.video__player {
+  margin-bottom: 1em;
+}

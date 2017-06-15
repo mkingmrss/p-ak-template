@@ -1,0 +1,22 @@
+.featured-profile {
+
+  justify-content: space-between;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  @include breakpoint(700px, $no-query: true) {
+    display: flex;
+  }
+}
+.featured-profile--column {
+  text-align: center;
+  margin: 0 auto;
+  width: 250px;
+  @include breakpoint(700px, $no-query: true) {
+    margin: 0;
+  }
+}
+.featured-content {
+  h2 {
+    margin-top: 2em;
+  }
+}

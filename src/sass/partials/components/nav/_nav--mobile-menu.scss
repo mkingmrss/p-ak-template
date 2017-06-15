@@ -1,0 +1,115 @@
+// @file
+// Styles for the mobile menu.
+
+.nav--mobile-menu {
+  clear: both;
+  display: block;
+  height: auto;
+  margin-bottom: 100px;
+
+  .nav__item {
+    margin: 0;
+    padding: .25em 0 0 .5em;
+    &.mobile-only--red {
+      background: $red;
+      margin-top: .25em;
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .nav__link {
+    background-color: transparent;
+    border: 0;
+    color: $black;
+    display: block;
+    font-family: $mobile-menu-font-family;
+    font-size: em(18px);
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 0;
+    padding: .5em;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
+    width: auto;
+    z-index: 3;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+      color: $mobile-menu-hover-color;
+    }
+  }
+
+  .nav__item--parent {
+    position: relative;
+
+    &.is-open {
+      background: $mobile-submenu-fallback-bg-color;
+      background: $mobile-submenu-bg-color;
+    }
+    &.active {
+      background: $mobile-submenu-bg-color;
+    }
+    > .nav__link {
+      display: inline-block;
+    }
+  }
+
+  .nav__subnav-arrow {
+    @include image-replace(100%, 44px);
+    @include svg-background-inline(mobile-arrow-down);
+    background-color: transparent;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+    border: 0;
+    box-shadow: none;
+    height: em(44px);
+    position: absolute;;
+    vertical-align: top;
+    z-index: 2;
+    @include breakpoint(900px, $no-query: true) {
+      background-position: 95% 50%;
+    }
+    &:focus {
+      outline: thin dotted;
+    }
+
+    &.is-active {
+      @include svg-background-inline(mobile-arrow-up);
+    }
+
+    @if $support-for-rtl {
+      [dir="rtl"] & {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  .nav--subnav {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav__item {}
+
+    .nav__link {
+      color: $navy;
+      padding-left: 2em;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: $mobile-submenu-hover-color;
+      }
+    }
+  }
+}

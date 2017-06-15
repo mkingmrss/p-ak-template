@@ -1,0 +1,42 @@
+// @file
+// Typography variables
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+$base-font-family:  "Helvetica-Light", "Helvetica Light", "Helvetica", Arial, sans-serif;
+$base-font-family-regular:  "Helvetica", Arial, sans-serif;
+$header-font-family: "Sanchez";
+$sans-serif: "Helvetica-Light", "Helvetica Light", "Roboto";
+$nav-font-family:  "Sanchez";
+$rww-font-family:  "Oswald";
+$monospace-font-family: Consolas, "Lucida Console", "Liberation Mono", "Courier New", monospace, sans-serif;
+$base-font-size: 18px;
+$base-line-height: 1;
+$font-size-xxl: 49px;
+$font-size-xl-between: 42px;
+$font-size-xl: 40px;
+$font-size-lgrr: 38px;
+$font-size-lgr: 30px;
+$font-size-lg-between: 28px;
+$font-size-lg: 26px;
+$font-size-featured: 24px;
+$font-size-normal: $base-font-size;
+$font-size-md: 22px;
+$font-size-md-between: 20px;
+$font-size-md-alt: 16px;
+$font-size-md-sm: 14px;
+$font-size-sm: 12px;
+$font-size-xs: 10px;
+
+// Buttons
+$button-font-family: $base-font-family;
+$button-large: 16px;
+$button-medium: 12px;
+$button-small: 12px;
+// Forms
+$form-text-size: $font-size-normal;
+
+// Menu
+$menu-font-size: 20px;
+
+// Mobile Menu
+$mobile-menu-font-family: "Helvetica-Light", "Helvetica Light", Arial, sans-serif;

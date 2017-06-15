@@ -1,0 +1,22 @@
+.dots {
+  background: url(/wp-content/themes/pfaw/images/swatch.png) repeat;
+  margin-top: 2em;
+  padding: 1em 0;
+  @include breakpoint(700px, $no-query: true) {
+    padding: 3em 0 1.25em 0;
+  }
+}
+.dots--home {
+  background: url(/wp-content/themes/pfaw/images/swatch.png) repeat;
+  padding: 1em 0;
+  @include breakpoint(700px, $no-query: true) {
+    padding: 3em 0 1.25em 0;
+  }
+}
+.dots--search {
+  background: url(/wp-content/themes/pfaw/images/swatch.png) repeat;
+  padding: 1em 0;
+  @include breakpoint(700px, $no-query: true) {
+    padding: 3em 0 1.25em 0;
+  }
+}

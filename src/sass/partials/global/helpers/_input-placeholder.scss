@@ -1,0 +1,19 @@
+// @file
+// easy form placeholder color
+
+// @see https://firmhouse.com/blog/style-form-input-placeholders-using-css3-and-easy-to-re-use-with-sass/
+
+@mixin input-placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}

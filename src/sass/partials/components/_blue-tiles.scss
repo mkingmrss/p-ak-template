@@ -1,0 +1,40 @@
+.blue-tiles{
+  margin: 2em 0;
+  @include breakpoint(700px, $no-query: true) {
+    display: flex;
+  }
+  @include breakpoint(900px, $no-query: true) {
+    display: block;
+  }
+  @include breakpoint(1100px, $no-query: true) {
+    display: flex;
+  }
+}
+
+.blue-tiles__tile {
+  background: $navy;
+  color: $white;
+  margin: 0 0 3% 0;
+  padding: 1.25em;
+  width: 100%;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  h3 {
+    color: $white;
+  }
+  a{
+    color: $white;
+  }
+  @include breakpoint(700px, $no-query: true) {
+    margin-right: 3%;
+    width: 32%;
+  }
+  @include breakpoint(900px, $no-query: true) {
+    width: 100%;
+  }
+  @include breakpoint(1100px, $no-query: true) {
+    margin-right: 3%;
+    width: 32%;
+  }
+}

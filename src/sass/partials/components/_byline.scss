@@ -1,0 +1,22 @@
+.byline {
+  font-family: $header-font-family;
+  margin: 1em 0 1em 0;
+  a {
+    font-size: $font-size-md-between;
+    text-decoration: none;
+    @include breakpoint(700px, $no-query: true) {
+      font-size: $font-size-lg;
+    }
+  }
+  img {
+    float: left;
+    margin: 0 .5em 0 0;
+  }
+  span {
+    font-size: $font-size-md-between;
+    line-height: 1.5em;
+    @include breakpoint(700px, $no-query: true) {
+      font-size: $font-size-lg;
+    }
+  }
+}

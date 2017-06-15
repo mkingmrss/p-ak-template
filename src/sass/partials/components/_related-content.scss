@@ -1,0 +1,35 @@
+.related-content {
+  background: $white;
+  float: right;
+  line-height: 1.25em;
+  width: 200px;
+  margin: 0;
+  padding: 0 0 0 1em;
+  div {
+    line-height: 1.25;
+  }
+  a {
+    font-family: $header-font-family;
+    font-size: $font-size-md-between;
+    &:after {
+      content: "\f105";
+      display: inline;
+      font: bold normal normal 19px/1 FontAwesome;
+      margin-left: .35em;
+    }
+  }
+  h3 {
+    font-size: $font-size-lg;
+    margin: 0 0 .5em 0;
+    padding: .7em 0 0 0;
+    &:before {
+      content: "";
+      background: $border-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 185px;
+      height: 5px;
+    }
+  }
+}

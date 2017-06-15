@@ -1,0 +1,32 @@
+.our-experts {
+  display: flex;
+  img {
+    border-radius: 50%;
+    float: left;
+    margin: 0;
+  }
+  h3 {
+    margin-bottom: 0;
+    a {
+      color: $navy;
+      &:after {
+        content: none;
+      }
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  p {
+    font-family: $base-font-family-regular;
+    font-size: $font-size-md-sm;
+    font-weight: bold;
+  }
+}
+.our-experts__image {
+  width: 100px;
+  margin-right: .75em;
+}
+.our-experts__meta {
+  width: 260px;
+}

@@ -1,0 +1,42 @@
+.column-list {
+  background: url(/wp-content/themes/pfaw/images/swatch.png) repeat;
+  overflow: hidden;
+  padding-top: 2em;
+  ul {
+    column-count: 1;
+    margin: 0;
+    padding: 0;
+    @include breakpoint(700px, $no-query: true) {
+      column-count: 2;
+    }
+    @include breakpoint(900px, $no-query: true) {
+      column-count: 3;
+    }
+  }
+  li {
+    background: #FFFFFF;
+    border: 1px solid #EFF3F3;
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 1em;
+    padding: 1em 1em 1em 1em;
+    width: 100%;
+    a {
+      color: $black;
+      display: inline-block;
+      font-family: $header-font-family;
+      font-size: $font-size-md;
+      padding-bottom: 0;
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+    }
+  }
+  h3 {
+    margin-bottom: .25em;
+    a {
+      padding-bottom: .5em;
+    }
+  }
+}

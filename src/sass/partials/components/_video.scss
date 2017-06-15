@@ -1,0 +1,14 @@
+.videos {
+  display: flex;
+  justify-content: space-between;
+  .video {
+    width: 48%;
+  }
+}
+.video__thumbnail {
+  margin: 0 0 .5em 0;
+  @include breakpoint(800px, $no-query: true) {
+    float: left;
+    margin: 0 1em .25em 0;
+  }
+}

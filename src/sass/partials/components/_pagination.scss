@@ -1,0 +1,36 @@
+.pagination {
+  text-align: left;
+  a,span {
+    display: inline-block;
+    padding: 5px;
+    &.active {
+      color: $black;
+      font-weight: normal;
+    }
+  }
+  span {
+    font-weight: bold;
+  }
+  ul {
+    display: inline-block;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+  .button {
+    padding: 10px 15px;
+    &:before {
+      font-weight: bold;
+    }
+  }
+}
+.pagination {
+  .facetwp-pager-label {
+    display: none;
+  }
+}
+.displayResult {
+  margin: 1em 0;
+}
