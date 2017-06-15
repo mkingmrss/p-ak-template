@@ -1,0 +1,12 @@
+.footer-sidebar__widgets {
+  text-align: center;
+  color: $white;
+  font-size: 90%;
+
+  div,
+  .textwidget {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+}

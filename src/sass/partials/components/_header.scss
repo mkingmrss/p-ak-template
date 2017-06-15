@@ -11,13 +11,13 @@
   display: none;
   @include breakpoint(900px, $no-query: true) {
     display: block;
-    height: 224px;
+    height: auto;
   }
 }
 .header__ghost {
   height: 75px;
   @include breakpoint(900px, $no-query: true) {
-    height: 224px;
+    height: auto;
   }
 }
 .header__top {
@@ -101,12 +101,6 @@
   height: 80px;
   overflow: hidden;
   width: 180px;
-  &:before {
-    content: '';
-    display: block;
-    height: 150%;
-    width: 0;
-  }
   .is-sticky & {
     background-size: 140px 62px;
     height: 62px;
@@ -153,7 +147,7 @@ header {
   &.banner {
     background: $white;
     display: none;
-    position: fixed;
+    position: static;
     width: 100%;
     z-index: 101;
     @include breakpoint(900px, $no-query: true) {
