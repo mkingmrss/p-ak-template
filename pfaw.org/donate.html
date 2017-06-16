@@ -62,9 +62,8 @@
                             <!-- monthly specific string goes here -->
                             {% endif %}
 
-                            {% for row in amounts|columns:3 %}
                             <ul class="ak-unstyled">
-                                {% for amount in row %}
+                            {% for amount in amounts %}
                                 {% if amount == "other" %}
                                 <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other">
                                     <noscript><input type="radio" value="" class="ak-amount-radio-button" name="amount"></noscript>
@@ -81,9 +80,8 @@
                                     </label>
                                 </li>
                                 {% endif %}
-                                {% endfor %}
-                            </ul>
                             {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
