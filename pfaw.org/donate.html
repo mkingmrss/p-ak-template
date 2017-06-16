@@ -20,23 +20,31 @@
             <input type="hidden" name="orig_akid" value="{{ akid }}">
 
             <!--Add .ak-donate-three-step for three-step-->
-            <div class="ak-donate-menu ak-donate-three-step-visible">
-                <label class="ak-donate-step ak-donate-step-1">
-                    <span>Amount</span>
-                    <input type="radio" id="ak-donate-step-1" name="ak-donate-step" value="1" checked="checked">
-                    <div class="ak-step-number">1</div>
-                </label>
-                <label class="ak-donate-step ak-donate-step-2">
-                    <span>Name</span>
-                    <input type="radio" id="ak-donate-step-2" name="ak-donate-step" value="2">
-                    <div class="ak-step-number">2</div>
-                </label>
-                <label class="ak-donate-step ak-donate-step-3">
-                    <span>Finish</span>
-                    <input type="radio" id="ak-donate-step-3" name="ak-donate-step" value="3">
-                    <div class="ak-step-number">3</div>
-                </label>
-            </div>
+            <nav class="ak-donate-menu ak-donate-three-step-visible multistep-nav">
+                <ul>
+                    <li>
+                        <label class="ak-donate-step ak-donate-step-1 multistep-nav-item">
+                            <span>Amount</span>
+                            <input type="radio" id="ak-donate-step-1" name="ak-donate-step" value="1" checked="checked">
+                            <div class="ak-step-number">1</div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="ak-donate-step ak-donate-step-2 multistep-nav-item">
+                            <span>Name</span>
+                            <input type="radio" id="ak-donate-step-2" name="ak-donate-step" value="2">
+                            <div class="ak-step-number">2</div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="ak-donate-step ak-donate-step-3 multistep-nav-item">
+                            <span>Finish</span>
+                            <input type="radio" id="ak-donate-step-3" name="ak-donate-step" value="3">
+                            <div class="ak-step-number">3</div>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
 
             <div id="ak-donation-details" class="xak-errs-below">
 
@@ -231,7 +239,7 @@
             </div>
 
         </form>
-        
+
     </article>
 
 </div>

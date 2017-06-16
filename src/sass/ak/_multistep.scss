@@ -820,3 +820,180 @@
     margin-left: 4%;
   }
 }
+/* Donation Style Overrides */
+body .layout-constrain
+{
+  max-width: 1200px;
+}
+body .mobile-menu__bar
+{
+  height: 84px;
+}
+body .header__buttons ul
+{
+  display: none;
+}
+body .header__buttons li a
+{
+  color: #fff;
+}
+body a, body a:link
+{
+  color: #004b8e;
+}
+#main 
+{
+  padding-bottom: 20px;
+}
+#main div.content
+{
+  font-family: "Helvetica-Light", "Helvetica Light", "Helvetica", Arial, sans-serif;
+}
+#main .layout-constrain:after
+{
+  content: "";
+  display: block;
+  clear: both;
+}
+#main input[type="checkbox"]
+{
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+h1
+{
+  padding-bottom: 20px;
+}
+h1:before
+{
+  content: "";
+  display: block;
+  width: 185px;
+  height: 5px;
+  background-color: #daaa00;
+  top: -20px;
+  position: relative;
+}
+span.test-headline
+{
+  display: block;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-size: 38px !important;
+  color: #192f58 !important;
+  font-family: "Sanchez" !important;
+  font-weight: normal;
+  line-height: 1.1;
+}
+span.test-headline:before
+{
+  content: "";
+  display: block;
+  width: 185px;
+  height: 5px;
+  background-color: #daaa00;
+  top: -20px;
+  position: relative;
+}
+body .donation-form .logged-in-message
+{
+  background-color: #eff3f4;
+  max-width: 500px;
+  margin: auto;
+}
+.logged-in-message p
+{
+  margin-top: 1em; 
+}
+#stayInformed
+{
+  padding: 2em;
+  background-color: #eff3f4;
+}
+#stayInformed .content div
+{
+  width: 100%;
+  text-align: left !important;
+  padding-left: 0 !important;
+  padding-bottom: 20px;
+}
+body .multistep-form
+{
+  margin-top: 1em;
+  background-color: #eff3f4;
+}
+body .multistep-form h1
+{
+  font-size: 24px;
+  padding-bottom: 0;
+}
+body .multistep-form h1:before
+{
+  display: none;
+}
+section.multistep-step
+{
+  margin-top: 1em; 
+}
+.multistep-form .form-row .form-content .giving-levels-level--other input
+{
+  height: auto;
+  margin-right: 0 !important;
+}
+body .multistep-form label .required
+{
+  color: #b02528;
+}
+body .multistep-form .form-row .form-content.form-content-multi input, body .multistep-form .form-row .form-content.form-content-multi select,
+body .multistep-form .form-row .form-content.form-content-multi input.form-field-three-quarter,
+body .multistep-form .form-row .form-content.form-content-multi input.form-field-quarter
+{
+  margin-right: 0;
+}
+body .multistep-form select, body .multistep-form input[type="email"]
+{
+  height: 39px;
+  font-weight: bold;
+}
+body .form-content--checkbox
+{
+  padding-top: 10px;
+}
+body .multistep-nav-item--active span,
+body .multistep-form .form-row .form-content .recurring-options-option input[type="radio"]:checked + label,
+body .multistep-form .form-row .form-content .giving-levels-level input[type="radio"]:checked + label,
+body .multistep-form .form-row .form-content .giving-levels-level input[type="radio"] + label.giving-levels-level-label--selected
+{
+  background-color: #b02528;
+}
+body .multistep-form input[type="submit"], body .multistep-form button[type="submit"], body .multistep-form button[type="button"],
+body .multistep-form input[type="submit"]:hover, body .multistep-form button[type="submit"]:hover, body .multistep-form button[type="button"]:hover,
+.multistep-form button[type="submit"]:disabled
+{
+  background-color: #b02528;
+  background: #b02528 linear-gradient(to bottom, #b02528 50%, #192f58 50%);
+  background-size: 100px 100px;
+  border-bottom: 5px solid #192f58;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+body .multistep-form input[type="submit"]:hover, body .multistep-form button[type="submit"]:hover, body .multistep-form button[type="button"]:hover,
+body .multistep-form input[type="submit"]:active, body .multistep-form button[type="submit"]:active, body .multistep-form button[type="button"]:active,
+body .multistep-form button[type="submit"]:disabled
+{
+  background-position: 0 100%;
+}
+body .multistep-form button[type="submit"][disabled]
+{
+  background: #b02528 linear-gradient(to bottom, #b02528 50%, #192f58 50%);
+  background-size: 100px 100px;
+}
+body noscript + script + p,
+body noscript + script + p + script + p
+{
+  /* Some tracking script inserts a p tag */
+  margin: 0;
+}
+
