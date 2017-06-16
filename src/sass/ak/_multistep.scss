@@ -1,0 +1,822 @@
+
+.multistep-logo img {
+  max-width: 100%;
+  height: auto;
+}
+.onetimelink .lbp2 {
+  line-height: 29px !important;
+}
+.onetimelink .lbp3 {
+  margin-bottom: 6px !important;
+}
+.onetimelink .lbottextlink {
+  margin-top: 10px !important;
+}
+.onetimelink .lbottextlink,
+.onetimelink .lbottextlink a,
+.onetimelink .lbottextlink a:hover {
+  color: #fff !important;
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+#s63Container {
+  min-height: 600px;
+}
+.donation-form,
+.donation-content {
+  width: 50%;
+  float: left;
+}
+.donation-form {
+  float: right;
+}
+.donation-content {
+  font-size: 1em;
+  line-height: 1.3em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-right: 3em;
+  padding-left: 2em;
+}
+#s63Container .donation-content h1 {
+  font-size: 22px;
+}
+.donation-content p {
+  font-size: 15px;
+  line-height: 1.4em;
+}
+.donation-form-seals {
+  text-align: center;
+  margin-top: 1em;
+}
+.donation-form-seals #vs_seal {
+  display: inline-block;
+  vertical-align: middle;
+}
+.donation-form-seals .donation-form-seals--paypal {
+  display: none;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+.donation-form-seals .donation-form-seals--paypal img {
+  max-height: 85px;
+  width: auto;
+}
+.is-paypal-active .donation-form-seals .donation-form-seals--paypal {
+  display: inline-block;
+}
+.donation-form .logged-in-message {
+  background: #ddd;
+  color: #777;
+  padding: 1px 1em;
+  border-bottom: 1px solid #fff;
+}
+.donation-form .logged-in-message p::before {
+  content: "i";
+  font-weight: bold;
+  border-radius: 50%;
+  width: 1.375em;
+  height: 1.375em;
+  background: #aaa;
+  display: inline-block;
+  text-align: center;
+  color: #ddd;
+  line-height: 1.375em;
+  font-family: monospace;
+  font-size: 1.125em;
+  margin-right: .25em;
+}
+.donation-form .logged-in-message p {
+  font-size: 12px;
+}
+.donation-form .logged-in-message a {
+  text-decoration: underline;
+}
+.multistep-form {
+  background: #eee;
+  padding: 1em 2em 2em 2em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#s63Container .multistep-form h1 {
+  color: #2c4667;
+  font-weight: bold;
+}
+.multistep-form .disclaimer {
+  font-style: italic;
+  margin-top: 2.5em;
+  color: #444;
+}
+.multistep-form .form-content .disclaimer {
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+.multistep-form ul.disclaimer {
+  margin: 1em 0;
+  padding: 0 0 0 .25em;
+}
+.multistep-form ul.disclaimer li {
+  font-style: italic;
+}
+.multistep-form .disclaimer + .disclaimer {
+  margin-top: 0;
+}
+.multistep-nav {
+  padding-bottom: 1em;
+  padding-top: .25em;
+}
+.multistep-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.multistep-nav-item {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  font-size: 0.9em;
+}
+.multistep-nav-item::after {
+  content: "\2014";
+  color: #999;
+  display: inline-block;
+  padding: 0 .5em;
+}
+.multistep-nav-item:last-child::after {
+  display: none;
+}
+.multistep-nav-item span {
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  text-align: center;
+  line-height: 1.55em;
+  border: 1px solid #ccc;
+  color: #999;
+  transition: background .5s, color .5s;
+}
+.multistep-nav-item--active span {
+  background: #c70e47;
+  border: 1px solid transparent;
+  color: #fff;
+}
+.multistep-nav-item a {
+  color: #777;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .5s;
+}
+.multistep-nav-item--active a {
+  color: #2c4667;
+}
+.multistep-form .form-row .form-content .giving-levels-level {
+  display: block;
+  width: 31%;
+  float: left;
+  margin: 1em 0 0 3.5%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+}
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-0,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-3,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-6 {
+  margin-left: 0;
+}
+.multistep-form--nudge .giving-levels-level-1:before {
+    left: 50%;
+    top: -30px;
+    width: 25px;
+    content: "";
+    height: 25px;
+    display: block;
+    margin-left: -8px;
+    position: absolute;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('//secure3.convio.net/pfaw/images/content/pagebuilder/arrow-red.jpg');
+}
+.multistep-form--nudge .nudge-content,
+.multistep-form--nudge .nudge-amount,
+.multistep-form--monthly-nudge .nudge-content-monthly {
+    color: #b02528;
+    font-size: 18px;
+    margin-bottom: 0;
+    font-family: 'Architects Daughter', cursive;
+    margin-top: -10px;
+}
+.multistep-form--monthly-nudge .nudge-content-monthly {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 18%;
+  position: relative;
+  overflow: visible;
+  margin-bottom: .5em;
+}
+.multistep-form--monthly-nudge .nudge-content-monthly:before {
+    left: -25px;
+    top: -10px;
+    width: 25px;
+    content: "";
+    height: 25px;
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('//secure3.convio.net/pfaw/images/content/pagebuilder/pfaw-arrow-up_red.png');
+}
+.multistep-form--monthly-nudge .nudge-content-monthly,
+.multistep-form--nudge .nudge-content {
+    padding-left: 10px;
+}
+.multistep-form:not(.multistep-form--nudge) .nudge-content,
+.multistep-form:not(.multistep-form--nudge) .nudge-amount {
+    display: none;
+}
+@media (max-width: 800px) {
+    .multistep-form--nudge .nudge-content {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+.multistep-form:not(.multistep-form--nudge) .giving-levels-level-1:before {
+    display: none;
+}
+.multistep-form .form-row .form-content .giving-levels-level * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.multistep-form .form-row .form-content .giving-levels-level input[type="radio"] {
+  position: absolute;
+  left: -999px;
+}
+.multistep-form .form-row .form-content .giving-levels-level input[type="radio"] + label {
+  display: block;
+  width: 100%;
+  padding: .75em .25em;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.375em;
+  border: 1px solid #d2d2d2;
+  background: #fff;
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+  background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(top, #ffffff, #eeeeee);
+}
+.multistep-form .form-row .form-content .giving-levels-level input[type="radio"] + label.giving-levels-level-label--selected {
+  background: #c6134a;
+  color: #fff;
+  -webkit-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+}
+.multistep-form .form-row .form-content .giving-levels-level input[type="radio"]:checked + label {
+  background: #c6134a;
+  color: #fff;
+  -webkit-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+}
+.multistep-form .form-row .form-content.giving-levels {
+  text-align: justify;
+}
+.multistep-form .form-row .form-content.giving-levels ul {
+  margin: -1em 0 0 0;
+  width: 100%;
+  padding: 0;
+}
+.multistep-form .form-row .form-content.giving-levels ul::after {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+}
+.multistep-form .form-row .form-content .giving-levels-level--other input {
+  vertical-align: middle;
+  display: inline-block;
+  width: 85%;
+  padding: .75em .5em;
+  font-size: 1.375em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.multistep-form .form-row .form-content .giving-levels-level--other span {
+  font-size: 1.375em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15%;
+}
+
+.multistep-form .form-row .form-content .payment-types {
+  padding: 0;
+  margin: 0 0 1.5em 0;
+  width: 100%;
+  overflow: hidden;
+}
+.multistep-form .form-row .form-content .payment-types-type {
+  display: block;
+  width: 37.5%;
+  float: left;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+  font-size: 1.375em;
+}
+.multistep-form .form-row .form-content .payment-types-type * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.multistep-form .form-row .form-content .payment-types-type input[type="radio"] {
+  position: absolute;
+  left: -999px;
+}
+.multistep-form .form-row .form-content .payment-types-type input[type="radio"] + label {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  padding: .75em .25em;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.375em;
+  color: #2c4667;
+  border: 1px solid #d2d2d2;
+  border-width: 1px 1px 1px 0;
+  background: #fff;
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+  background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(top, #ffffff, #eeeeee);
+}
+.multistep-form .form-row .form-content .payment-types-type--paypal input[type="radio"] + label span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url(https://secure.pfaw.org/images/content/pagebuilder/paypal-logo-2015.png);
+  background-size: auto 1.325em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.multistep-form .form-row .form-content .payment-types-type:first-child input[type="radio"] + label {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+.multistep-form .form-row .form-content .payment-types-type input[type="radio"] + label.payment-types-type-label--selected {
+  background: #ddd;
+  -webkit-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+}
+.multistep-form .form-row .form-content .payment-types-type input[type="radio"]:checked + label {
+  background: #ddd;
+  -webkit-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.multistep-form label {
+  white-space: normal;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  overflow: hidden;
+}
+.multistep-form label .required {
+  color: #c70e47;
+  font-weight: bold;
+  font-size: 1.375em;
+  line-height: 1em;
+}
+.multistep-form label .help {
+  font-weight: normal;
+}
+.multistep-form label .help a {
+  color: #006699;
+  font-size: 0.9em;
+}
+.multistep-form label .card-set {
+  float: right;
+  vertical-align: bottom;
+}
+.multistep-form label .card-set img {
+  border: 1px solid #ddd;
+  width: 30px;
+  height: auto;
+  margin-left: .25em;
+  margin-top: -0.25em;
+  display: inline-block;
+}
+.multistep-form .form-content--checkbox.form-content--checkbox--annual {
+  display: none; /* the checkbox is now displayed in a different location */
+  background: #fff;
+  border: 1px solid #d2d2d2;
+  padding: 1em;
+}
+.multistep-form .form-content--checkbox.form-content--checkbox--annual label span,
+.autorenewal-external label span {
+  color: #666;
+  font-weight: normal;
+  font-style: italic;
+  display: inline-block;
+  margin-top: .5em;
+}
+.autorenewal-external > div {
+  border: 1px solid #ddd;
+  padding: 1em .75em;
+}
+.multistep-form .form-content--checkbox label,
+.autorenewal-external label {
+  display: inline-block;
+  max-width: 90%;
+  margin-left: .5em;
+  color: #2c4667;
+  font-weight: bold;
+  width: auto;
+  vertical-align: top;
+  font-size: 1.05em;
+  cursor: pointer;
+  white-space: normal;
+}
+@media screen and (max-width: 480px) {
+  .autorenewal-external label {
+    max-width: 87%;
+  }
+}
+.multistep-form .form-content--credit-card label {
+  padding-top: .25em;
+}
+.multistep-form input[type="text"],
+.multistep-form input[type="email"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.multistep-form input[type="text"],
+.multistep-form input[type="email"],
+.multistep-form select {
+  border: 1px solid #d2d2d2;
+  background: #fff;
+  padding: .5em .35em;
+  font-size: 1em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  transition: background .25s, border .25s;
+}
+.multistep-form input[type="text"].error,
+.multistep-form input[type="email"].error,
+.multistep-form select.error {
+  border: 1px solid #c70e47;
+  background: #fef0f4;
+}
+.multistep-form select {
+  height: 2.25em;
+}
+.multistep-form .form-row {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: .5em;
+}
+.multistep-form--nudge .giving-levels {
+  padding-top: 30px;
+}
+.multistep-form .form-row .form-content {
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.multistep-form .form-row .form-content.form-content-half {
+  float: left;
+  width: 50%;
+  padding-right: .5em;
+}
+.multistep-form .form-row .form-content.form-content-three-quarter {
+  float: left;
+  width: 75%;
+  padding-right: .5em;
+}
+.multistep-form .form-row .form-content.form-content-third {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+.multistep-form .form-row .form-content.form-content-third:last-child {
+  margin-right: 0;
+}
+.multistep-form .form-row .form-content.form-content-quarter {
+  float: left;
+  width: 25%;
+  padding-right: .5em;
+}
+.multistep-form .form-row .form-content.form-content-quarter:last-child {
+  padding-right: 0;
+}
+.multistep-form .error-message {
+  display: inline-block;
+  color: #c70e47;
+  margin-top: .25em;
+  font-size: 0.9em;
+}
+.multistep-form .error-message.error-message--global {
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin: 1em 0 0 0;
+  padding: .75em 1em;
+  background: #fff;
+}
+.multistep-form .form-row .form-content.form-content-multi input,
+.multistep-form .form-row .form-content.form-content-multi select {
+  float: left;
+  width: 50%;
+}
+.multistep-form .form-row .form-content.form-content-multi input + input {
+  border-left: 0;
+}
+.multistep-form .form-row .form-content.form-content-multi select + select {
+  width: 48%;
+  margin-left: 2%;
+}
+.multistep-form .form-row .form-content.form-content-multi input.form-field-quarter {
+  width: 25%;
+}
+.multistep-form .form-row .form-content.form-content-multi input.form-field-three-quarter {
+  width: 75%;
+}
+.multistep-form input[type="submit"],
+.multistep-form button[type="submit"],
+.multistep-form button[type="button"] {
+  color: #fff;
+  background: #c70e47;
+  border: 0;
+  font-size: 1.5em;
+  padding: .5em .75em;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 175px;
+  background-color: #c70e47;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c70e47), to(#970b36));
+  background: -webkit-linear-gradient(top, #c70e47, #970b36);
+  background: -moz-linear-gradient(top, #c70e47, #970b36);
+  background: -ms-linear-gradient(top, #c70e47, #970b36);
+  background: -o-linear-gradient(top, #c70e47, #970b36);
+}
+.multistep-form input[type="submit"]:hover,
+.multistep-form button[type="submit"]:hover,
+.multistep-form button[type="button"]:hover {
+  background: #c70e47;
+}
+.multistep-form button[type="submit"][disabled] {
+  background-color: #cccccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#999999));
+  background: -webkit-linear-gradient(top, #cccccc, #999999);
+  background: -moz-linear-gradient(top, #cccccc, #999999);
+  background: -ms-linear-gradient(top, #cccccc, #999999);
+  background: -o-linear-gradient(top, #cccccc, #999999);
+}
+.multistep-form .email-disclaimer {
+  color: #2c4667;
+  font-style: italic;
+  font-size: 90%;
+  margin-top: .5em;
+  display: block;
+  font-weight: bold;
+}
+.multistep-controls {
+  width: 100%;
+  text-align: center;
+  margin-top: 2.5em;
+  position: relative;
+}
+.multistep-controls .error {
+  color: #c70e47;
+  font-weight: bold;
+  margin-top: -2em;
+}
+.multistep-controls .multistep-back {
+  display: inline-block;
+  color: #777;
+  position: absolute;
+  left: 0;
+  bottom: 1.25em;
+  font-size: 90%;
+}
+.mobile-payment-options {
+  display: none;
+}
+@media (max-width: 800px) {
+  .donation-form,
+  .donation-content,
+  .is-mobile .mobile-payment-options {
+    float: none;
+    width: 100%;
+    padding: 0;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .is-mobile .mobile-payment-options {
+    margin-bottom: 1.5em;
+  }
+  .is-mobile .mobile-payment-options img {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .is-mobile .mobile-payment-options img.paypal {
+    width: 60px;
+  }
+  .donation-content {
+    margin-bottom: 1.5em;
+  }
+}
+@media (max-width: 480px) {
+  #s63Container .multistep-form h1 {
+    font-size: 1.125em;
+  }
+  .multistep-form .form-row .form-content .giving-levels-level {
+    width: 48%;
+    margin: 1em 0 0 4%;
+  }
+  .multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-0,
+  .multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-2,
+  .multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-4,
+  .multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-6 {
+    margin-left: 0;
+  }
+  .multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-3 {
+    margin-left: 4%;
+  }
+  .multistep-form .form-row .form-content {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  .multistep-form .form-row .form-content.form-content-half,
+  .multistep-form .form-row .form-content.form-content-three-quarter,
+  .multistep-form .form-row .form-content.form-content-third,
+  .multistep-form .form-row .form-content.form-content-quarter {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+    margin-top: .5em;
+  }
+  .multistep-form .form-row .form-content:first-child {
+    margin-top: 0;
+  }
+  .multistep-form .form-row .form-content.form-content-multi input,
+  .multistep-form .form-row .form-content.form-content-multi select {
+    float: none;
+    width: 100%;
+  }
+  .multistep-form .form-row .form-content.form-content-multi input + input {
+    border: 1px solid #d2d2d2;
+    margin-top: .25em;
+  }
+  .multistep-form .form-row .form-content.form-content-multi input + input.error {
+    border: 1px solid #c70e47;
+  }
+  .multistep-form .form-row .form-content.form-content-multi select + select {
+    width: 100%;
+    margin-left: 0;
+    margin-top: .25em;
+  }
+  .multistep-form .form-row .form-content.form-content-multi input.form-field-quarter,
+  .multistep-form .form-row .form-content.form-content-multi input.form-field-three-quarter {
+    width: 100%;
+  }
+  .multistep-form .form-content--checkbox label {
+    max-width: 81%;
+  }
+  .multistep-form label .card-set {
+    float: none;
+    display: block;
+  }
+  .multistep-form label .card-set img {
+    border: 1px solid #ddd;
+    width: 30px;
+    height: auto;
+    margin-right: .25em;
+    margin-top: 0.25em;
+    margin-left: 0;
+    display: inline-block;
+  }
+  .multistep-nav-item {
+    font-size: .75em;
+  }
+  .multistep-controls .multistep-back {
+    display: block;
+    position: static;
+    left: auto;
+    bottom: auto;
+    width: 8em;
+    background: #dfdfdf;
+    padding: .75em .25em;
+    margin: 2em auto 0 auto;
+  }
+  .multistep-form .form-row .form-content .payment-types-type {
+    width: 50%;
+  }
+  .multistep-form .form-row .form-content .payment-types-type input[type="radio"] + label {
+    font-size: .85em;
+  }
+}
+
+/* Monthly Toggle CSS */
+.multistep-form .form-row .recurring-options {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+.multistep-form .form-row .form-content .recurring-options-option {
+  display: block;
+  width: 31%;
+  float: left;
+  margin: 1em 0 0 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+}
+.multistep-form .form-row .form-content .recurring-options-option + .recurring-options-option {
+  margin-left: 3.5%;
+}
+.multistep-form .form-row .form-content .recurring-options-option * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.multistep-form .form-row .form-content .recurring-options-option input[type="radio"] {
+  position: absolute;
+  left: -999px;
+}
+.multistep-form .form-row .form-content .recurring-options-option input[type="radio"] + label {
+  display: block;
+  width: 100%;
+  padding: .75em .25em;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.375em;
+  border: 1px solid #d2d2d2;
+  background: #fff;
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+  background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(top, #ffffff, #eeeeee);
+}
+.multistep-form .form-row .form-content .recurring-options-option input[type="radio"] + label.recurring-options-option-label--selected {
+  background: #c6134a;
+  color: #fff;
+  -webkit-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+}
+.multistep-form .form-row .form-content .recurring-options-option input[type="radio"]:checked + label {
+  background: #c6134a;
+  color: #fff;
+  -webkit-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.15);
+}
+.multistep-form .form-row .form-content.recurring-options {
+  text-align: justify;
+}
+.multistep-form .form-row .form-content.recurring-options ul {
+  margin: -1em 0 0 0;
+  width: 100%;
+  padding: 0;
+}
+.multistep-form .form-row .form-content .giving-levels-level--monthly {
+  display: none;
+}
+.form-content--inactive {
+  display: none !important;
+}
+.js--multistep-step--amount .multistep-controls {
+  margin-top: 1.5em;
+}
+@media (max-width: 480px) {
+  .multistep-form .form-row .form-content .recurring-options-option {
+    width: 48%;
+  }
+  .multistep-form .form-row .form-content .recurring-options-option + .recurring-options-option {
+    margin-left: 4%;
+  }
+}
