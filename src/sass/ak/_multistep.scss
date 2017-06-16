@@ -97,6 +97,7 @@
   padding: 1em 2em 2em 2em;
   max-width: 500px;
   margin: 0 auto;
+  font-size: 90%;
 }
 #s63Container .multistep-form h1 {
   color: #2c4667;
@@ -124,6 +125,7 @@
 .multistep-nav {
   padding-bottom: 1em;
   padding-top: .25em;
+  font-size: 95%;
 }
 .multistep-nav ul {
   list-style: none;
@@ -839,10 +841,6 @@ body .header__buttons ul
 body .header__buttons li a
 {
   color: #fff;
-}
-body a, body a:link
-{
-  color: #004b8e;
 }
 #main 
 {
