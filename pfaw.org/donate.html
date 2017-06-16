@@ -50,7 +50,7 @@
 
             <div id="ak-donation-details" class="xak-errs-below">
 
-                <div id="ak-amount-list" class="ak-err-above ak-donate-area-step-1">
+                <div class="ak-err-above ak-donate-area-step-1">
                     
                     <header>
                         <h1>Please select your gift amount</h1>
@@ -74,8 +74,10 @@
                                 </li>
                                 {% else %}
                                 <li class="giving-levels-level">
+                                    <span class="ak-currency-sym"></span>
+                                    <input type="radio" id="id_amount_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
                                     <label for="id_amount_{{amount}}" class="ak-btn">
-                                        <span class="ak-currency-sym"></span><input type="radio" id="id_amount_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>{{ page.currency_sym }}{{ amount|commify }}
+                                        {{ page.currency_sym }}{{ amount|commify }}
                                     </label>
                                 </li>
                                 {% endif %}
