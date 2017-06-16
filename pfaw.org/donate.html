@@ -68,8 +68,7 @@
                                 <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }}">
                                     <input type="radio" value="" class="ak-amount-radio-button" name="amount">
                                     <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
-                                    <span>{{ page.currency_sym }}</span>
-                                    <input type="text" id="ak-other-amount-field" name="amount_other" placeholder="Other">
+                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" placeholder="Other">
                                 </li>
                                 {% else %}
                                 <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }}">
