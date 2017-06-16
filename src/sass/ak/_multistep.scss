@@ -132,6 +132,9 @@
   width: 100%;
   text-align: center;
 }
+.multistep-nav ul li {
+  display: inline-block;
+}
 .multistep-nav-item {
   padding: 0;
   margin: 0;
@@ -144,7 +147,7 @@
   display: inline-block;
   padding: 0 .5em;
 }
-.multistep-nav-item:last-child::after {
+.multistep-nav-item.ak-donate-step-3::after {
   display: none;
 }
 .multistep-nav-item span {
@@ -159,7 +162,7 @@
   color: #999;
   transition: background .5s, color .5s;
 }
-.multistep-nav-item--active span {
+.ak-donate-menu input:checked + span.ak-step-number {
   background: #c70e47;
   border: 1px solid transparent;
   color: #fff;

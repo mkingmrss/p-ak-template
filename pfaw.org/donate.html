@@ -491,8 +491,8 @@
         validate_step(current_step);
 
         if (!step_has_errors) {
-            $('input[name="ak-donate-step"]:checked').closest('label').
-                next('label').find('input[type="radio"]').prop('checked', true);
+            $('input[name="ak-donate-step"]:checked').closest('li').
+                next('li').find('input[type="radio"]').prop('checked', true);
             three_step_reveal();
         }
     }
