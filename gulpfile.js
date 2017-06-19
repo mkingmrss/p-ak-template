@@ -1,22 +1,27 @@
 var gulp        = require( 'gulp' );
 var sass        = require( 'gulp-sass' );
 var watch       = require( 'gulp-watch' );
+var insert      = require( 'gulp-insert' );
+var rename      = require( 'gulp-rename' );
 
 /*var processHtml = require( 'gulp-processhtml' );
-var rename      = require( 'gulp-rename' );
+
 var uglify      = require( 'gulp-uglify' );
 var concat      = require( 'gulp-concat' );
-var insert      = require( 'gulp-insert' );*/
+*/
  
 
 //
 //  SCSS
 //
 gulp.task( 'sass', function() {
-  console.log( 'sassing...' );
   gulp.src( './src/sass/main.scss' )
     .pipe( sass() )
-    .pipe( gulp.dest( './localhost/css/' ) );
+    .pipe( gulp.dest( './localhost/css/' ) )
+    .pipe( insert.prepend( '<style type="text/css">\n' ) )
+    .pipe( insert.append( '</style>' ) )
+    .pipe( rename( 'main.css.html' ) )
+    .pipe( gulp.dest( './pfaw.org/') )
 });
 
 //

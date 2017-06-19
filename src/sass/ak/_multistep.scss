@@ -142,6 +142,7 @@
   margin: 0;
   display: inline-block;
   font-size: 0.9em;
+  cursor: pointer;
 }
 .multistep-nav-item::after {
   content: "\2014";
@@ -169,14 +170,15 @@
   border: 1px solid transparent;
   color: #fff;
 }
-.multistep-nav-item a {
+.multistep-nav-item {
   color: #777;
   text-decoration: none;
   font-weight: bold;
   transition: color .5s;
 }
-.multistep-nav-item--active a {
-  color: #2c4667;
+.multistep-nav-item input[type="radio"] {
+  position: absolute;
+  left: -9999px;
 }
 .multistep-form .form-row .form-content .giving-levels-level {
   display: block;
@@ -400,6 +402,9 @@
   display: block;
   font-weight: bold;
   overflow: hidden;
+}
+.multistep-form label.multistep-nav-item {
+  overflow: visible;
 }
 .multistep-form label .required {
   color: #c70e47;

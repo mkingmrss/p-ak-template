@@ -19,8 +19,10 @@
     {% block meta_additions %}{% endblock %}
 
     {% load_css %}
-        //localhost/PFAW/4_ak_transition/p-ak-template/localhost/css/main.css
     {% end %}
+
+    {# For development only #}
+    {% include "./main.css.html" %}
 
     {% block css_additions %}{% endblock %}
 
