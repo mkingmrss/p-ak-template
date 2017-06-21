@@ -50,7 +50,7 @@
 
             <div id="ak-donation-details" class="xak-errs-below">
 
-                <div class="ak-err-above ak-donate-area-step-1">
+                <section class="ak-err-above ak-donate-area-step-1 multistep-step">
                     
                     <header>
                         <h1>Please select your gift amount</h1>
@@ -99,9 +99,9 @@
                         <input type="hidden" name="donation_type" value="single">
                         {% endif %}
                     {% endif %}
-                </div>
+                </section>
                         
-                <div id="ak-donation-contact" class="ak-styled-fields ak-donate-area-step-2 ak-errs-below ak-margin-top-1">
+                <section id="ak-donation-contact" class="ak-styled-fields ak-donate-area-step-2 ak-errs-below ak-margin-top-1 multistep-step">
                     <ul id="ak-errors"></ul>
                     <div style="display: none"><div id="known_user">
                         Not <span id="known_user_name"></span>?  <a href="?" onclick="return actionkit.forms.logOut()">Click here.</a>
@@ -155,9 +155,9 @@
                         {% if has_candidates %}{# ZZZ #}{% endif %}
 
                     </div>
-                </div>
+                </section>
 
-                <div class="ak-labels-above ak-styled-fields ak-donate-area-step-3 ak-errs-below">
+                <section class="ak-labels-above ak-styled-fields ak-donate-area-step-3 ak-errs-below multistep-step">
 
                     <header>
                         <h1>Payment Information</h1>
@@ -211,7 +211,7 @@
                         <div id="ak-card_code-hosted" class="hosted-field"></div>
                         <input id="ak-card_code" class="form-field-half" required type="text" name="card_code" size="4">
                     </div>
-                </div>
+                </section>
 
                 <button class="ak-donate-three-step-visible" type="button" id="ak-continue-button">Continue</button>
 
