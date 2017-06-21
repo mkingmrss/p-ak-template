@@ -77,9 +77,10 @@
                                     {% endif %}
                                 {% endif %}
 
-                                {% for custom_amount in "10 15 30 50" %}
+                                {% width '10 15 30 50' as monthly_amounts %}
+                                {% for amount in monthly_amounts.split %}
                                     Testing:
-                                    {{ custom_amount }}
+                                    {{ amount }}
                                 {% endfor %}
 
                                 <ul class="ak-unstyled">
