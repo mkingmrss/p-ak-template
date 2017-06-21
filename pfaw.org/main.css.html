@@ -1338,11 +1338,17 @@ header.banner {
   width: 100%;
   transition: background .25s, border .25s; }
 
-.multistep-form input[type="text"].error,
-.multistep-form input[type="email"].error,
-.multistep-form select.error {
+.multistep-form input[type="text"].ak-error,
+.multistep-form input[type="email"].ak-error,
+.multistep-form select.ak-error {
   border: 1px solid #c70e47;
   background: #fef0f4; }
+
+.multistep-form .ak-err {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
 .multistep-form select {
   height: 2.25em; }
@@ -1392,7 +1398,8 @@ header.banner {
 .multistep-form .form-row .form-content.form-content-quarter:last-child {
   padding-right: 0; }
 
-.multistep-form .error-message {
+.multistep-form .error-message,
+.multistep-form .ak-err li {
   display: inline-block;
   color: #c70e47;
   margin-top: .25em;
@@ -1542,7 +1549,7 @@ header.banner {
   .multistep-form .form-row .form-content.form-content-multi input + input {
     border: 1px solid #d2d2d2;
     margin-top: .25em; }
-  .multistep-form .form-row .form-content.form-content-multi input + input.error {
+  .multistep-form .form-row .form-content.form-content-multi input + input.ak-error {
     border: 1px solid #c70e47; }
   .multistep-form .form-row .form-content.form-content-multi select + select {
     width: 100%;
