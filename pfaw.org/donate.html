@@ -77,8 +77,9 @@
                                     {% endif %}
                                 {% endif %}
 
-                                {% for thing in [10,15,30,50] %}
-                                    {{ thing }}
+                                {% for custom_amount in "10 15 30 50" %}
+                                    Testing:
+                                    {{ custom_amount }}
                                 {% endfor %}
 
                                 <ul class="ak-unstyled">
