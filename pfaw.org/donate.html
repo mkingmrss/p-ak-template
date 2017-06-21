@@ -116,6 +116,7 @@
 
                         <div class="form-row">
                             <div class="form-content">
+                                <input type="hidden" name="required" value="name">
                                 <label for="id_name">Name: <span class="required">*</span></label>
                                 <input type="text" id="id_name" name="name" required />
                             </div>
@@ -123,6 +124,7 @@
                         <div class="form-row">
                             <div class="form-content form-content-multi">
                                 <label for="id_address1">Address: <span class="required">*</span></label>
+                                <input type="hidden" name="required" value="address1">
                                 <input type="text" class="form-field-three-quarter" name="address1" id="id_address1" required />
                                 <input type="text" name="address2" class="form-field-quarter" id="id_address2" placeholder="Apt., Fl. #" />
                                 {% if has_shippable_products %}{# ZZZ #}{% endif %}
@@ -130,6 +132,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-content form-content-third">
+                                <input type="hidden" name="required" value="city">
                                 <label for="id_city">City: <span class="required">*</span></label>
                                 <input type="text" name="city" id="id_city" required />
                             </div>
@@ -147,6 +150,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-content form-content">
+                                <input type="hidden" name="required" value="email">
                                 <label for="id_email">Email: <span class="required">*</span></label>
                                 <input type="email" name="email" id="id_email" required />
                             </div>
