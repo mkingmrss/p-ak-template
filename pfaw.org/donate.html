@@ -204,16 +204,10 @@
                             </select>
                         </div>
                         <div class="form-content form-content-half form-content-multi">
-                            <label for="card_cvv">CVV Number: <span class="required">*</span> <span class="help"><a href="http://help.convio.net/site/PageServer?s_site=pfaw&amp;pagename=user_donation_cvv" class="HelpLink" tabindex="100"></a></span></label>
-                            <input type="text" name="card_cvv" id="card_cvv" required="" class="form-field-half">
+                            <label for="ak-card_code">CVV Number: <span class="required">*</span> <span class="help"><a href="http://help.convio.net/site/PageServer?s_site=pfaw&amp;pagename=user_donation_cvv" class="HelpLink" tabindex="100"></a></span></label>
+                            <input type="text" name="card_code" id="ak-card_code" required="" class="form-field-half">
+                            <input type="hidden" name="required" value="card_code" id="ak-card_code-required">
                         </div>
-                    </div>
-                    <div class="form-content form-content-half form-content-multi">
-                        <label for="ak-card_code">Verification Code: <span class="required">*</span></label>
-                        <input type="text" name="card_cvv" id="card_cvv" required="" class="form-field-half">
-                        <input type="hidden" name="required" value="card_code" id="ak-card_code-required">
-                        <div id="ak-card_code-hosted" class="hosted-field"></div>
-                        <input id="ak-card_code" class="form-field-half" required type="text" name="card_code" size="4">
                     </div>
                 </section>
 
