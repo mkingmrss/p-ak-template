@@ -946,7 +946,8 @@ header.banner {
   padding: 1em 2em 2em 2em;
   max-width: 500px;
   margin: 0 auto;
-  font-size: 90%; }
+  font-size: 90%;
+  overflow: hidden; }
 
 #s63Container .multistep-form h1, #s63Container .multistep-form h2 {
   color: #2c4667;
