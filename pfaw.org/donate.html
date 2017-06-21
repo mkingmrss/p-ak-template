@@ -58,8 +58,17 @@
 
                     <div class="ak-amount-wrapper form-row">
                         <div class="form-content giving-levels">
-                            {% if page.custom_fields.monthly_specific_ask_string %}
-                            <!-- monthly specific string goes here -->
+                        
+                            {% if page.custom_fields.monthly_specific_ask_string == 1 %}
+                                {% comment %}
+                                    A value of 1 means the monthly ask string is enabled and the pre-selected frequency is monthly.
+                                {% endcomment %}
+                                MONTHLY!
+                            {% elif page.custom_fields.monthly_specific_ask_string == 2 %}
+                                {% comment %}
+                                    A value of 2 means the monthly ask string is enabled and the pre-selected frequency is one-time.
+                                {% endcomment %}
+                                ONE-TIME!
                             {% endif %}
 
                             <ul class="ak-unstyled">
@@ -209,26 +218,36 @@
                             <input type="hidden" name="required" value="card_code" id="ak-card_code-required">
                         </div>
                     </div>
-                    
-                    {% if page.payment_processor_information.init_submit_disabled %}
 
-                    {% comment %}
-                    For pages that use Braintree, the submit button will be enabled by javascript.
-                    {% endcomment %}
+                    <nav class="multistep-controls">
+                        {% if page.payment_processor_information.init_submit_disabled %}
 
-                    <button disabled="true" type="submit" class="ak-submit-button ak-donate-area-step-3">Donate Now</button>
-                    <noscript>
-                        <p>
-                            <b>JavaScript is required</b> so this page
-                            can securely submit your donation.
-                        </p>
-                    </noscript>
+                        {% comment %}
+                        For pages that use Braintree, the submit button will be enabled by javascript.
+                        {% endcomment %}
 
-                    {% else %}
+                        <button disabled="true" type="submit" class="ak-submit-button ak-donate-area-step-3">Donate Now</button>
+                        <noscript>
+                            <p>
+                                <b>JavaScript is required</b> so this page
+                                can securely submit your donation.
+                            </p>
+                        </noscript>
 
-                    <button type="submit" class="ak-submit-button ak-donate-area-step-3">Donate Now</button>
+                        {% else %}
+                        <button type="submit" class="ak-submit-button ak-donate-area-step-3">Donate Now</button>
+                        {% endif %}
 
-                    {% endif %}
+                        {% if page.custom_fields.entity == 'c4' %}
+                            <p class="disclaimer">PFAW will send you periodic updates by email.</p>
+                            <p class="disclaimer">Because we lobby Congress, donations to People For the American Way, a nonprofit 501(c)(4) organization, are not tax deductible.</p>
+                        {% elif page.custom_fields.entity == 'PAC' %}
+                            PAC DISCLAIMER
+                        {% else %}
+                            DEFAULT DISCLAIMER
+                        {% endif %}
+                        </div>
+                    </nav>
                 </section>
 
                 <nav class="multistep-controls">
