@@ -58,13 +58,13 @@
 
                     <div class="ak-amount-wrapper form-row">
                         <div class="form-content giving-levels">
-                        
-                            {% if page.custom_fields.monthly_specific_ask_string == 1 %}
+                            {{ page.custom_fields.monthly_specific_ask_string }}
+                            {% if page.custom_fields.monthly_specific_ask_string == "1" %}
                                 {% comment %}
                                     A value of 1 means the monthly ask string is enabled and the pre-selected frequency is monthly.
                                 {% endcomment %}
                                 MONTHLY!
-                            {% elif page.custom_fields.monthly_specific_ask_string == 2 %}
+                            {% elif page.custom_fields.monthly_specific_ask_string == "2" %}
                                 {% comment %}
                                     A value of 2 means the monthly ask string is enabled and the pre-selected frequency is one-time.
                                 {% endcomment %}
