@@ -313,13 +313,9 @@
             $toggles = $( '.js-recurring-options-option-input' ),
             toggleLevels;
 
-        console.log( 'toggles', $toggles );
-
         toggleLevels = function() {
 
-            console.log( 'toggling' );
-
-            var $checked = $toggle.filter( ':checked' );
+            var $checked = $toggles.filter( ':checked' );
 
             // set recurring input to correct value
             $( 'input[name="donation_type"]' ).prop( 'checked', $checked.val() === 'recurring' );
