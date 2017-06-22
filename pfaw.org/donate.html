@@ -321,9 +321,6 @@
 
             var $checked = $toggles.filter( ':checked' );
 
-            // set recurring input to correct value
-            $( 'input[name="donation_type"]' ).prop( 'checked', $checked.val() === 'recurring' );
-
             // show correct amounts
             $monthly_levels.toggle( $checked.val() === 'recurring' );
             $onetime_levels.toggle( $checked.val() !== 'recurring' );
