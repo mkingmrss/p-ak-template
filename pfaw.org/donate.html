@@ -308,12 +308,16 @@
     // Monthly-specific ask string module
     (function( window ) {
 
+        console.log( 'setup' );
+
         var $monthly_levels = $( '.js--giving-levels-level--monthly' ),
             $onetime_levels = $( '.js--giving-levels-level' ).not( $monthly_levels ),
             $toggles = $( '.js-recurring-options-option-input' ),
             toggleLevels;
 
         toggleLevels = function() {
+
+            console.log( 'toggling' );
 
             var $checked = $toggle.filter( ':checked' );
 
