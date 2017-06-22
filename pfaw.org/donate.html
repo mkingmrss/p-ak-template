@@ -51,6 +51,8 @@
             <div id="ak-donation-details" class="xak-errs-below">
 
                 <section class="ak-err-above ak-donate-area-step-1 multistep-step">
+
+                    {% with page.custom_fields.monthly_specific_ask_string as monthly_ask_string %}
                     
                     <header>
                         <h1>Please select your gift amount</h1>
@@ -58,68 +60,68 @@
 
                     <div class="ak-amount-wrapper form-row">
                         <div class="form-content giving-levels">
-                            {% with page.custom_fields.monthly_specific_ask_string as monthly_ask_string %}
+                            
 
-                                {% if allow_monthly %}
-                                    {% if monthly_ask_string == "1" or monthly_ask_string == "2" %}
-                                    <div class="form-content recurring-options">
-                                        <ul>
-                                            <li class="recurring-options-option">
-                                                <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_recurring" value="recurring" {% if monthly_ask_string == "1" %} checked {% endif %}>
-                                                <label class="recurring-options-option-label" for="id_donation_type_recurring">Monthly</label>
-                                            </li>
-                                            <li class="recurring-options-option">
-                                                <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_onetime" value="" {% if monthly_ask_string == "2" %} checked {% endif %}>
-                                                <label class="recurring-options-option-label" for="id_donation_type_onetime">One-time</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    {% endif %}
-                                {% endif %}
-
-                                <ul class="ak-unstyled">
-                                {# monthly amounts, if needed #}
-                                {% if allow_monthly %}
+                            {% if allow_monthly %}
                                 {% if monthly_ask_string == "1" or monthly_ask_string == "2" %}
-                                    {% with '10 15 30 50' as monthly_amounts %}
-                                        {% for amount in monthly_amounts.split %}
-                                            <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--monthly">
-                                                <span class="ak-currency-sym"></span>
-                                                <input type="radio" id="id_amount_m_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                                                <label for="id_amount_m_{{amount}}" class="ak-btn">
-                                                    {{ page.currency_sym }}{{ amount|commify }}
-                                                </label>
-                                            </li>
-                                        {% endfor %}
-                                    {% endwith %}
+                                <div class="form-content recurring-options">
+                                    <ul>
+                                        <li class="recurring-options-option">
+                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_recurring" value="recurring" {% if monthly_ask_string == "1" %} checked {% endif %}>
+                                            <label class="recurring-options-option-label" for="id_donation_type_recurring">Monthly</label>
+                                        </li>
+                                        <li class="recurring-options-option">
+                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_onetime" value="" {% if monthly_ask_string == "2" %} checked {% endif %}>
+                                            <label class="recurring-options-option-label" for="id_donation_type_onetime">One-time</label>
+                                        </li>
+                                    </ul>
+                                </div>
                                 {% endif %}
-                                {% endif %}
+                            {% endif %}
 
-                                {# normal amounts #}
-                                {% for amount in amounts %}
-                                    {% if amount == "other" %}
-                                    <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
-                                        <input type="radio" value="" class="ak-amount-radio-button" name="amount">
-                                        <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
-                                        <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" placeholder="Other">
-                                    </li>
-                                    {% else %}
-                                    <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level">
-                                        <span class="ak-currency-sym"></span>
-                                        <input type="radio" id="id_amount_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                                        <label for="id_amount_{{amount}}" class="ak-btn">
-                                            {{ page.currency_sym }}{{ amount|commify }}
-                                        </label>
-                                    </li>
-                                    {% endif %}
-                                {% endfor %}
-                                </ul>
-                            {% endwith %}
+                            <ul class="ak-unstyled">
+                            {# monthly amounts, if needed #}
+                            {% if allow_monthly %}
+                            {% if monthly_ask_string == "1" or monthly_ask_string == "2" %}
+                                {% with '10 15 30 50' as monthly_amounts %}
+                                    {% for amount in monthly_amounts.split %}
+                                        <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--monthly">
+                                            <span class="ak-currency-sym"></span>
+                                            <input type="radio" id="id_amount_m_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                            <label for="id_amount_m_{{amount}}" class="ak-btn">
+                                                {{ page.currency_sym }}{{ amount|commify }}
+                                            </label>
+                                        </li>
+                                    {% endfor %}
+                                {% endwith %}
+                            {% endif %}
+                            {% endif %}
+
+                            {# normal amounts #}
+                            {% for amount in amounts %}
+                                {% if amount == "other" %}
+                                <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
+                                    <input type="radio" value="" class="ak-amount-radio-button" name="amount">
+                                    <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
+                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" placeholder="Other">
+                                </li>
+                                {% else %}
+                                <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level">
+                                    <span class="ak-currency-sym"></span>
+                                    <input type="radio" id="id_amount_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label for="id_amount_{{amount}}" class="ak-btn">
+                                        {{ page.currency_sym }}{{ amount|commify }}
+                                    </label>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
                     {% if not has_products %}
                         {% if allow_monthly %}
+                        {% if monthly_ask_string != "1" and monthly_ask_string != "2" }
                         <div class="form-row giving-recurring js--giving-recurring">
                             <div class="form-content form-content--checkbox">
                                 <input type='hidden' name='recurring_period' value='monthly'>
@@ -133,7 +135,9 @@
                         <div id="ak-recurring-type"></div>
                         <input type="hidden" name="donation_type" value="single">
                         {% endif %}
+                        {% endif %}
                     {% endif %}
+                {% endwith %}
                 </section>
                         
                 <section id="ak-donation-contact" class="ak-styled-fields ak-donate-area-step-2 ak-errs-below ak-margin-top-1 multistep-step">
@@ -315,11 +319,7 @@
 
         toggleLevels = function( event ) {
 
-            console.log( event );
-
             var $checked = $toggles.filter( ':checked' );
-
-            console.log( $checked );
 
             // set recurring input to correct value
             $( 'input[name="donation_type"]' ).prop( 'checked', $checked.val() === 'recurring' );
