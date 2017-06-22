@@ -55,7 +55,7 @@
                     {% with page.custom_fields.monthly_specific_ask_string as monthly_ask_string %}
                     
                     <header>
-                        <h1>Please select your gift amount</h1>
+                        <h1>{{ page.custom_fields.ask_string_headline|default:"Please select your gift amount" }}</h1>
                     </header>
 
                     <div class="ak-amount-wrapper form-row">
