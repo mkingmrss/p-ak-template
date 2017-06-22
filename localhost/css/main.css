@@ -943,7 +943,7 @@ header.banner {
 
 .multistep-form {
   background: #eee;
-  padding: 1em 2em 2em 2em;
+  padding: 1em 2em 2.5em 2em;
   max-width: 500px;
   margin: 0 auto;
   font-size: 90%;
@@ -1472,7 +1472,7 @@ header.banner {
 .multistep-controls {
   width: 100%;
   text-align: center;
-  margin-top: 2.5em;
+  margin-top: 2em;
   position: relative; }
 
 .multistep-controls .error {
@@ -1589,7 +1589,7 @@ header.banner {
 /* Monthly Toggle CSS */
 .multistep-form .form-row .recurring-options {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.125rem;
   overflow: hidden; }
 
 .multistep-form .form-row .form-content .recurring-options-option {
