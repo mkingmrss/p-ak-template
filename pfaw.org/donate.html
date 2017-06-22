@@ -71,7 +71,7 @@
                                             <label class="recurring-options-option-label" for="id_donation_type_recurring">Monthly</label>
                                         </li>
                                         <li class="recurring-options-option">
-                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_onetime" value="" {% if monthly_ask_string == "2" %} checked {% endif %}>
+                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_onetime" value="single" {% if monthly_ask_string == "2" %} checked {% endif %}>
                                             <label class="recurring-options-option-label" for="id_donation_type_onetime">One-time</label>
                                         </li>
                                     </ul>
@@ -121,20 +121,20 @@
 
                     {% if not has_products %}
                         {% if allow_monthly %}
-                        {% if monthly_ask_string != "1" and monthly_ask_string != "2" %}
-                        <div class="form-row giving-recurring js--giving-recurring">
-                            <div class="form-content form-content--checkbox">
-                                <input type='hidden' name='recurring_period' value='monthly'>
-                                <input type="checkbox" name="donation_type" id="donation_type" value="recurring" class="js--recurring-input">
-                                <label for="donation_type">
-                                    Yes, automatically repeat this gift every month.
-                                </label>
+                            {% if monthly_ask_string != "1" and monthly_ask_string != "2" %}
+                            <div class="form-row giving-recurring js--giving-recurring">
+                                <div class="form-content form-content--checkbox">
+                                    <input type='hidden' name='recurring_period' value='monthly'>
+                                    <input type="checkbox" name="donation_type" id="donation_type" value="recurring" class="js--recurring-input">
+                                    <label for="donation_type">
+                                        Yes, automatically repeat this gift every month.
+                                    </label>
+                                </div>
                             </div>
-                        </div>
+                            {% endif %}
                         {% else %}
                         <div id="ak-recurring-type"></div>
                         <input type="hidden" name="donation_type" value="single">
-                        {% endif %}
                         {% endif %}
                     {% endif %}
                 {% endwith %}
