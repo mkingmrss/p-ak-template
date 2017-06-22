@@ -298,8 +298,8 @@
 
 {% endblock %}
 
-{% block script_additions %}
-
+{% block below_form %}
+{{ block.super }}
 <script language="javascript">
 
     // M+R script additions
@@ -339,6 +339,9 @@
     })( window );
 
 </script>
+{% endblock %}
+
+{% block script_additions %}
 
 <script language="javascript">
 //<!--
