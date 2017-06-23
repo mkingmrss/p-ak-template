@@ -340,15 +340,17 @@
     (function( window ) {
 
         var $monthly_levels = $( '.js--giving-levels-level--monthly' ),
+            $monthly_radios = $monthly_levels.find( 'input[type="checkbox"]'),
             $onetime_levels = $( '.js--giving-levels-level' ).not( $monthly_levels ),
+            $onetime_radios = $onetime_levels.find( 'input[type="checkbox"]'),
             $toggles = $( '.js-recurring-options-option-input' ),
             toggleLevels;
 
         toggleLevels = function( event ) {
 
             var $checked = $toggles.filter( ':checked' ),
-                $switchingFromLevels = $checked.val() === 'recurring' ? $monthly_levels : $onetime_levels,
-                $switchingToLevels  = $checked.val() !== 'recurring' ? $monthly_levels : $onetime_levels,
+                $switchingFromRadios = $checked.val() === 'recurring' ? $monthly_radios : $onetime_radios,
+                $switchingToRadios  = $checked.val() !== 'recurring' ? $monthly_radios : $onetime_radios,
                 checkedIndex;
 
             // show correct amounts
@@ -360,9 +362,9 @@
             $checked.next( 'label' ).addClass( 'recurring-options-option--selected' );
 
             // keep amount at same index checked
-            checkedIndex = $switchingFromLevels.index( $switchingFromLevels.filter( ':checked' ) );
-            if ( checkedIndex && $switchingToLevels[checkedIndex] ) {
-                $switchingToLevels[checkedIndex].checked = true;
+            checkedIndex = $switchingFromRadios.index( $switchingFromRadios.filter( ':checked' ) );
+            if ( checkedIndex && $switchingToRadios[checkedIndex] ) {
+                $switchingToRadios[checkedIndex].checked = true;
             }
 
         }
