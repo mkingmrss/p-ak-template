@@ -346,7 +346,10 @@
 
         toggleLevels = function( event ) {
 
-            var $checked = $toggles.filter( ':checked' );
+            var $checked = $toggles.filter( ':checked' ),
+                $switchingFromLevels = $checked.val() === 'recurring' ? $monthly_levels : $onetime_levels,
+                $switchingToLevels  = $checked.val() !== 'recurring' ? $monthly_levels : $onetime_levels,,
+                checkedIndex;
 
             // show correct amounts
             $monthly_levels.toggle( $checked.val() === 'recurring' );
@@ -355,6 +358,12 @@
             // add selected CSS support for older browsers
             $toggles.next( 'label' ).removeClass( 'recurring-options-option--selected' );
             $checked.next( 'label' ).addClass( 'recurring-options-option--selected' );
+
+            // keep amount at same index checked
+            checkedIndex = $switchingFromLevels.index( $switchingFromLevels.filter( ':checked' ) );
+            if ( checkedIndex && $switchingToLevels[checkedIndex] ) {
+                $switchingToLevels[checkedIndex].checked = true;
+            }
 
         }
 
