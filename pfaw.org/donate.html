@@ -340,9 +340,9 @@
     (function( window ) {
 
         var $monthly_levels = $( '.js--giving-levels-level--monthly' ),
-            $monthly_radios = $monthly_levels.find( 'input[type="checkbox"]'),
+            $monthly_radios = $monthly_levels.find( 'input[type="radio"]'),
             $onetime_levels = $( '.js--giving-levels-level' ).not( $monthly_levels ),
-            $onetime_radios = $onetime_levels.find( 'input[type="checkbox"]'),
+            $onetime_radios = $onetime_levels.find( 'input[type="radio"]'),
             $toggles = $( '.js-recurring-options-option-input' ),
             toggleLevels;
 
@@ -363,6 +363,7 @@
 
             // keep amount at same index checked
             checkedIndex = $switchingFromRadios.index( $switchingFromRadios.filter( ':checked' ) );
+            console.log( checkedIndex );
             if ( checkedIndex && $switchingToRadios[checkedIndex] ) {
                 $switchingToRadios[checkedIndex].checked = true;
             }
