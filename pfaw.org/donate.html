@@ -355,7 +355,7 @@
 
             // make sure that the visible levels are not the "switching to" levels,
             // and, if not, check the level in the switching to levels that is at
-            // the same index as the currently checked level
+            // the same index as the currently checked level.
             if ( !$switchingToRadios.is( ':visible' ) ) {
                 checkedIndex = $switchingFromRadios.index( $switchingFromRadios.filter( ':checked' ) );
                 if ( checkedIndex && $switchingToRadios[checkedIndex] ) {
