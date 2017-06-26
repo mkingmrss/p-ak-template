@@ -361,15 +361,12 @@
             $toggles.next( 'label' ).removeClass( 'recurring-options-option--selected' );
             $checked.next( 'label' ).addClass( 'recurring-options-option--selected' );
 
-            // keep amount at same index checked
-            if ($switchingFromRadios.index( $switchingFromRadios.filter( ':checked' ) ) > -1 &&
-                $switchingFromRadios !== $switchingToRadios )
-            {
+            // keep amount at same index checked, but only if actually changing what's visible
+            if ( $switchingFromRadios.is( ':visible' ) && !$switchingToRadios.is( ':visible' ) ) {
                 checkedIndex = $switchingFromRadios.index( $switchingFromRadios.filter( ':checked' ) );
                 if ( checkedIndex && $switchingToRadios[checkedIndex] ) {
                     $switchingToRadios[checkedIndex].checked = true;
                 }
-
             }
         }
 
