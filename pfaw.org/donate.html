@@ -349,8 +349,8 @@
         toggleLevels = function( event ) {
 
             var $checked = $toggles.filter( ':checked' ),
-                $switchingFromRadios = $checked.val() === 'recurring' ? $monthly_radios : $onetime_radios,
-                $switchingToRadios  = $checked.val() !== 'recurring' ? $monthly_radios : $onetime_radios,
+                $switchingFromRadios = $checked.val() !== 'recurring' ? $monthly_radios : $onetime_radios,
+                $switchingToRadios  = $checked.val() === 'recurring' ? $monthly_radios : $onetime_radios,
                 checkedIndex;
 
             // make sure that the visible levels are not the "switching to" levels,
