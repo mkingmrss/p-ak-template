@@ -85,7 +85,7 @@
                             {% if monthly_ask_string == "1" or monthly_ask_string == "2" %}
                                 {% with '10 15 30 50' as monthly_amounts %}
                                     {% for amount in monthly_amounts.split %}
-                                        <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--monthly">
+                                        <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--monthly" {% if monthly_ask_string == "2" %} style="display: none;" {% endif %}>
                                             <span class="ak-currency-sym"></span>
                                             <input type="radio" id="id_amount_m_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if monthly_ask_string == "1" and forloop.counter == 2 %} checked {% endif %}>
                                             <label for="id_amount_m_{{amount}}" class="ak-btn">
@@ -106,7 +106,7 @@
                                     <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" placeholder="Other">
                                 </li>
                                 {% else %}
-                                <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level">
+                                <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}>
                                     <span class="ak-currency-sym"></span>
                                     <input type="radio" id="id_amount_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount and monthly_ask_string != "1" %} checked {% endif %}>
                                     <label for="id_amount_{{amount}}" class="ak-btn">
