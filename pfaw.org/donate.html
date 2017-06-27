@@ -59,6 +59,272 @@
         }
     </style>
     {% endif %}
+
+    {% if page.custom_fields.lightbox == "1" %}
+    <style>
+        .lightbox_desktop, .lightbox_desktop *
+        {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        }
+        .lightbox_desktop
+        {
+                position: relative;
+                background-color: #fff;
+                background-image: url(https://secure.pfaw.org/images/content/pagebuilder/liberty-medium-2015.jpg);
+                background-repeat: no-repeat;
+                background-position: 0 72px;
+                width: 678px;
+                height: 510px;
+                border: 7px solid #fff;
+                font-family: Helvetica, Arial, sans-serif;
+                margin: 2% auto;
+        }
+        .lightbox_desktop button
+        {
+                margin-top: 16px;
+                color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+                border: 0;
+                text-shadow: 0 0 6px rgba(0, 0, 0, 1);
+                display: inline-block;
+                vertical-align: top;
+                padding: 10px 9px 10px 9px;
+                font-family: "Arial Black", Helvetica, Arial, sans-serif;
+                font-size: 18px !important;
+                line-height: 22px !important;
+                font-weight: bold;
+                cursor: pointer;
+                width: 254px;
+                bottom: 14px;
+                background: #c1272d; /* Old browsers */
+                background: -moz-linear-gradient(top,  #c1272d 0%, #ed1c24 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1272d), color-stop(100%,#ed1c24)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #c1272d 0%,#ed1c24 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #c1272d 0%,#ed1c24 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #c1272d 0%,#ed1c24 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #c1272d 0%,#ed1c24 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1272d', endColorstr='#ed1c24',GradientType=0 ); /* IE6-9 */
+                
+        }
+        .lightbox_desktop button p, .lightbox_desktop button p span
+        {
+                font-family: "Arial Black", Helvetica, Arial, sans-serif;
+                font-size: 22px !important;
+                line-height: 25px !important;
+                font-weight: bold;
+        }
+        .lightbox_desktop button p
+        {
+                width: 234px;
+        }
+        .orig { float: left; margin-left: 10px; }
+        .recurring { float: right; margin-right: 10px; }
+        #onetime_override, #onetime_override_mobile {
+                color: #0000FF;
+                text-decoration: underline;
+                text-align: center;
+                cursor: pointer;
+                display: none;
+        }
+        #onetime_override {
+                color: #FFFFFF;
+                position: absolute;
+                left: 180px;
+                bottom: 0;
+        }
+        .yes
+        {
+                font-size: 22px;
+                font-weight: bold;
+        }
+        .lightbox_desktop button p
+        {
+                border: 1px solid #fff;
+                border-radius: 10px;
+        }
+        .ty
+        {
+                height: 72px;
+                text-indent: -9999999px;
+                background: url(https://secure.pfaw.org/images/content/pagebuilder/title-monthly-2015.png) no-repeat 0px 0px;
+        }
+        .orig p
+        {
+                box-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+                padding: 5px;
+        }
+        .recurring p
+        {
+                box-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+                padding: 5px 4px 5px 4px;
+        }
+        .lightbox_desktop p
+        {
+                margin: 0;
+                color: #fff;
+        }
+        .body
+        {
+                font-size: 16px;
+                line-height: 22px;
+                width: 65%;
+                padding-top: 10px;
+                padding-left: 14px;
+                text-align: left;
+        }
+        p.large
+        {
+                padding-top: 15px;
+                font-size: 24px;
+                line-height: 30px;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 1), 2px 2px 10px rgba(0, 0, 0, 1);
+        }
+        p.large span
+        {
+                font-size: 27px;
+                letter-spacing: 0px;
+        }
+        p.lbp3
+        {
+                font-size: 21px;
+                line-height: 25px;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 1), 2px 2px 10px rgba(0, 0, 0, 1);
+                margin: 0.5em 0;
+        }
+        .body span
+        {
+                font-size: 29px;
+                letter-spacing: 1px;
+        }
+
+        /* Mobile Lightbox */
+        .lightbox_mobile { 
+                display: none;
+                width: 90%;
+                margin: 50px auto 0;
+                background: #FFF;
+                padding-bottom: 10px;
+        }
+
+        .lightbox_mobile .thank-you .header {
+                float: left;
+                height: 76px;
+                width: 140px;
+                text-indent: -9999999px;
+                background-size: cover !important;
+                background: url(https://secure.pfaw.org/images/content/pagebuilder/logo.png) no-repeat 0px 0px;
+        }
+
+        .lightbox_mobile .thank-you .banner {
+                height: 76px;
+                width: 100%;
+                text-indent: -9999999px;
+                background: url(https://secure.pfaw.org/images/content/pagebuilder/banner.png) repeat 0px 0px;
+        }
+
+        .lightbox_mobile p, .lightbox_mobile h1 {
+                color: #2e486a;
+                font-size: 24px;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: left;
+        }
+
+        .lightbox_mobile p {
+                font-size: 14px;
+        }
+
+        .lightbox_mobile h1 {
+                font-size: 20px;
+        }
+
+        .lightbox_mobile button {
+                width: 90%;
+                font-weight: bold;
+                display: block;
+                margin: 10px auto;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 14px;
+                background: #cd1f29; /* Old browsers */
+                background: -moz-linear-gradient(top,  #cd1f29 0%, #a5121b 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1272d), color-stop(100%,#a5121b)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #cd1f29 0%,#a5121b 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #cd1f29 0%,#a5121b 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #cd1f29 0%,#a5121b 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #cd1f29 0%,#a5121b 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd1f29', endColorstr='#a5121b',GradientType=0 ); /* IE6-9 */
+        }
+
+        .lightbox_mobile button br {
+                display: none;
+        }
+
+        .lightbox_mobile button p {
+                color: #FFF;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+        }
+
+        .lightbox_mobile > .close,
+        .lightbox_desktop > .close {
+                top: -20px;
+                width: 40px;
+                right: 13px;
+                height: 40px;
+                position: absolute;
+                background: url(https://secure.pfaw.org/images/content/pagebuilder/x.png) no-repeat 0px 0px;
+                background-size: contain;
+                cursor: pointer;
+        }
+        .lightbox_desktop > .close {
+            right: -20px;
+        }
+
+        @media screen and (max-width: 680px) {
+                .lightbox_desktop {display: none;}
+                .lightbox_mobile {display: block;}
+        }
+
+
+        /* For Annual Membership form (need to override existing CSS) */
+        .onetimelink p.lbp2
+        {
+                line-height: 30px !important;
+        }
+        .onetimelink p.lbp3
+        {
+                margin-bottom: 0px !important;
+        }
+        .onetimelink .lightbox_desktop button
+        {
+                bottom: 42px !important;
+        }
+        .onetimelink .lightbox_desktop p.lbottextlink
+        {
+                margin-top: 0px !important;
+                position: absolute;
+                bottom: 15px;
+                left: 0;
+                right: 0;
+                text-align: center;
+        }
+        .onetimelink p.lbottextlink, p.lbottextlink a, p.lbottextlink a:hover
+        {
+                color: #fff !important;
+                text-decoration: underline !important;
+        }
+        .onetimelink p.lbottextlink a, p.lbottextlink a:hover
+        {
+                cursor: pointer;
+        }
+    </style>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -404,12 +670,204 @@
 
 {% block below_form %}
 {{ block.super }}
+
+{% if page.custom_fields.lightbox == "1" }
+<div id="lightbox_23msf90" style="display: none;">
+        <div class="lightbox_desktop">
+                <div class="close" id="close_desktop"></div>
+                <p class="ty lbp1">Make your support monthly?</p>
+                <p class="body large lbp2">Maximize your impact &ndash; if you convert your contribution to a monthly gift now, it will be <strong>MATCHED</strong> for the first three months!</p>
+                <p class="body lbp3">Your monthly commitment as a Defender of Democracy will help give People For the American Way the steady resources we need to expose the Right's lies and stop their attacks on our freedoms.</p>
+                <button id="orig" class="orig"></button>
+                <button id="recurring" class="recurring"><p>Convert my<br>donation to a $<span id="amountR">XX</span> monthly gift</p></button>
+                <a id="onetime_override" class="onetime_override">Process my gift as a one-time donation instead &gt;&gt;</a>
+        </div>
+        <div class="lightbox_mobile">
+                <div class="close" id="close_mobile"></div>
+                <div class="thank-you">
+                        <div class="header"></div>
+                        <div class="banner"></div>
+                </div>
+                <h1>Make your support monthly?</h1>
+                <p>Maximize your impact &ndash; if you convert your contribution to a monthly gift now, it will be <strong>MATCHED</strong> for the first three months!</p>
+                <button id="recurring_mobile" class="recurring_mobile"><p>Convert my donation to<br style="display:block"/>a $<span id="amountR_mobile">XX</span> monthly gift</p></button>
+                <button id="orig_mobile" class="orig_mobile"></button>
+                <a id="onetime_override_mobile" class="onetime_override_mobile">Process my gift as a one-time donation instead &gt;&gt;</a>
+        </div>
+</div>
+{% include "./mr.js.html" %}
 <script>
-    window.Multistep = window.Multistep || { settings: {} };
-    {% if page.custom_fields.lightbox == "1" %}
-    window.Multistep.settings.lightbox.show = true;
-    {% endif %}
+window.showUpsell = true;
 </script>
+<script>
+    (function( window ) {
+
+        var lightbox = {},
+            calculateUpsellRecurring,
+            show;
+
+        calculateUpsellRecurring = function( amount ) {
+            if ( amount < 5 ) {
+                return false;
+            } else if ( amount >= 5 && amount < 7 ) {
+                return 5;
+            } else if ( amount >= 7 && amount < 9 ) {
+                return 7;
+            } else if ( amount >= 9 && amount < 50 ){
+                return 9;
+            } else if ( amount >= 50 && amount < 75 ){
+                return 15;
+            } else if ( amount >= 75 && amount < 100 ){
+                return 19;
+            } else if ( amount >= 100 && amount < 150 ){
+                return 24;
+            } else if ( amount >= 150 && amount < 200 ){
+                return 30;
+            } else if ( amount >= 200 && amount < 250 ){
+                return 36;
+            } else {
+                return false;
+            }
+        };
+            
+        show = function( $form, event) {
+
+            lightbox = lightbox || { amount: {} };
+
+            //  Get upsell values
+            lightbox.amount.original = window.update_total();
+            lightbox.amount.onetime = Math.floor( lightbox.amount.original );
+            lightbox.amount.recurring = caculateUpsellRecurring( lightbox.amount.onetime );
+
+            //  Gift is outside our range for upsells, process the donation
+            if( !lightbox.amount.recurring ) return true;
+
+            //
+            //  Gift is within our range, set up lightbox
+            //
+
+            //  If we don't already have the lightbox html from a previous showing
+            if( !lightbox.html ) {
+
+                //  Lightbox settings
+                lightbox.elementId = 'lightbox_23msf90';
+                
+                //  Check to make sure lightbox HTML exists
+                if( !document.getElementById( lightbox.elementId ) ) return true;
+
+                //  Lightbox exists, grab HTML and continue set up
+                lightbox.html = document.getElementById( this.settings.lightbox.elementId ).innerHTML;
+                lightbox.width = 678;
+                lightbox.height = 591;
+
+                //  Kill placeholder lightbox, to keep jQuery working and save lightbox to Multistep class
+                $( '#' + lightbox.elementId ).remove();
+            }
+
+            //  Show lightbox
+            lightbox.self = new mr.Lightbox();
+            lightbox.self.Show( lightbox.html, lightbox.width, lightbox.height );
+            lightbox.triggered = true;
+              
+            // Correct the width and height on mobile
+            if (mr.Browser.isMobile) {
+                lightbox.self.backgroundDiv.style.maxHeight = "";
+                lightbox.self.backgroundDiv.style.maxWidth = "";
+
+                lightbox.self.popupDiv.style.minHeight = "";
+                lightbox.self.popupDiv.style.minWidth = "";
+
+                lightbox.self.contentDiv.style.height = "";
+                lightbox.self.contentDiv.style.width = "";
+            }
+
+            //  Update ask amounts on buttons
+            $( '.lightbox_desktop #orig, #orig_mobile' ).html( '<p>Confirm my <br/> one-time <br/> donation</p>' );
+            $( '.lightbox_desktop #amountR, .lightbox_mobile #amountR_mobile' ).text( lightbox.amount.recurring );
+
+            //  Update match amount
+            if( lightbox.amount.recurring >= 15 ) {
+                $( '.lightbox_desktop #match_amount, .lightbox_mobile #match_amount' ).text( '$50' );
+            }
+
+            //  If annual checkbox is checked, add One-time donation link to lightbox
+            //  Formatting is set up to mirror what happens in reus_annual_checkbox
+            // if( lightbox.annual && $( '.js--recurring-input:checked' ).length ) {
+
+            //     //  Add link
+            //     $( '#onetime_override, #onetime_override_mobile' ).show();
+
+            //     //  Add one-time gift functionality to one-time link
+            //     $( '#onetime_override, #onetime_override_mobile' ).click( function() {
+                  
+            //       $( '.js--recurring-input', $form ).prop( 'checked', false ).change();
+            //       that.submitApi( $form );
+            //       that.settings.lightbox.self.Hide();
+
+            //     });
+
+            //     //  Update text to say "annual"
+            //     $( '.lightbox_desktop #orig, #orig_mobile' ).html( '<p>Confirm my <br/> annual <br/> donation</p>' );
+            // }
+
+            //  Activate processing before window closes
+            window.onbeforeunload = function() {
+                window.showUpsell = false;
+                $( '#act' ).submit();
+
+                dataLayer.push({ 
+                  'ga_event_category': 'Multistep form', 
+                  'ga_event_action': 'Lightbox', 
+                  'ga_event_label': 'Window Closed', 
+                  'ga_event_value': 0, 
+                  'event': 'ga_track_event' 
+                });
+            };
+
+            //  Activate lightbox buttons
+            $( '#orig, #close_mobile, #orig_mobile, #close_desktop' ).click( function() {
+                $( '#action_lightbox_sustainer_join' ).val( '' ); // do not track sustainer donation from lightbox
+                window.showUpsell = false;
+                $( '#act' ).submit() //  No need to change form
+                lightbox.self.Hide();
+            });
+
+            $( '.lightbox_desktop #recurring, .lightbox_mobile #recurring_mobile' ).click( function() {
+
+                //  Update value and check appropraite checkbox
+                $( '.js--amount-other-input' ).val( lightbox.amount.recurring ).change();
+                $( '#action_lightbox_sustainer_join' ).val( 'true' ); // track sustainer lightbox donation
+
+                //  If annual checkbox is present, change frequency and duration and unset monthly options
+                if( lightbox.annual ) {
+                  $( '.js--sustaining-frequency', $form ).val( 'monthly' );
+                  $( '.js--sustaining-duration', $form ).val( '0' );
+                } else {
+                  $( '.js--recurring-input', $form ).prop( 'checked', true );
+                }
+                lightbox.submitted = true;
+                
+                $( '#act' ).submit();
+                lightbox.self.Hide();
+              });
+
+            // stop the original form submission event
+            return false;
+
+        };
+
+        window.showUpsell = function() {
+            console.log( 'show upsell' );
+            return show();
+        };
+
+    });
+    
+
+</script>
+
+{% endif %}
+
 <script language="javascript">
 
     // M+R script additions
@@ -1102,6 +1560,10 @@
             if (step_has_errors) {
                 return false;
             } else {
+                // fire upsell lightbox if necessary
+                if ( window.upsellSwitch && $( '[name="donation_type"]:checked' ).val() !== 'recurring' ) {
+                    return window.showUpsell();
+                }
                 return true;
             }
         }
