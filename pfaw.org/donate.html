@@ -377,33 +377,25 @@
 
     </article>
 
-    <pre>Path "{{ request.path }}"</pre>
-    <pre>Domain "{% with client_domain as domain %}{{domain}}{% endwith %}"</pre>
-    <pre>Concat "{{ request.path|concatenate:page.custom_fields.designation }}"</pre>
-
 </div>
 
-{% if page.custom_fields.social_share %}
-{% if page.custom_fields.social_share_fb_url and
-      page.custom_fields.social_share_tw_text and
-      page.custom_fields.social_share_tw_url %}
+{% if page.custom_fields.social_share_fb_url and page.custom_fields.social_share_tw_text %}
 <div class="share-social-row">
     <div id="stayInformed">
         <span align="center"><h3>Share it!</h3></span>
         <div class="content">
             <div style="text-align: center;{% if page.custom_fields.social_share_intro %}float: right; padding-left: 10px;{% endif %}">
-                <a href="https://www.facebook.com/sharer/sharer.php?u={% if page.custom_fields_social_share %}{{ page.custom_fields.social_share_intro|urlencode }}{% else %}{% client_ssl_domain %} $}" target="_blank" class="share-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.custom_fields.social_share_intro|urlencode }}" target="_blank" class="share-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                     <img src="//secure3.convio.net/pfaw/images/content/pagebuilder/pfaw_df_sidebar_fb.png" width="55" height="55" border="0" alt="Share on Facebook">
                 </a>
-                <a href="https://twitter.com/share[[?xx[[S80:twitter_share_text]]::xxxx::::?text=[[T1:[[S80:twitter_share_text]]]]]]&url=false" target="_blank" class="share-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <a href="https://twitter.com/share?text={{ page.custom_fields.social_share_tw_text|urlencode }}&url=false" target="_blank" class="share-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                     <img src="//secure3.convio.net/pfaw/images/content/pagebuilder/pfaw_df_sidebar_tw.png" width="55" height="55" border="0" alt="Share on Twitter">
                 </a>
             </div>
-            [[?xx[[S80:share_intro]]xx::xxxx::<!-- No share info text included. -->::[[S80:share_intro]]]]
+            {{ page.custom_fields.social_share_intro }}
         </div>
     </div>
 </div>
-{% endif %}
 {% endif %}
 
 {% endblock %}
