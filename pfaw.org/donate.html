@@ -76,6 +76,7 @@
             class="{{ templateset.custom_fields.donation_steps }} {% if page.custom_fields.nudge == "1" %}multistep-form--nudge{% endif %} {% if page.custom_fields.nudge == "2" %}multistep-form--monthly-nudge{% endif %}" method="POST" action="/act/" accept-charset="utf-8">
             <input type="hidden" name="page" value="{{ page.name }}">
             <input type="hidden" name="orig_akid" value="{{ akid }}">
+            <input id="action_lightbox_sustainer_join" name="action_lightbox_sustainer_join" type="hidden" value="">
 
             <!--Add .ak-donate-three-step for three-step-->
 
@@ -403,6 +404,12 @@
 
 {% block below_form %}
 {{ block.super }}
+<script>
+    window.Multistep = window.Multistep || { settings: {} };
+    {% if page.custom_fields.lightbox == "1" %}
+    window.Multistep.settings.lightbox.show = true;
+    {% endif %}
+</script>
 <script language="javascript">
 
     // M+R script additions
