@@ -1254,6 +1254,10 @@ header.banner {
   font-weight: bold;
   overflow: hidden; }
 
+.multistep-form .giving-levels-level--other label {
+  display: inline;
+  width: auto; }
+
 .multistep-form label.multistep-nav-item {
   overflow: visible; }
 
