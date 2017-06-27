@@ -702,7 +702,7 @@ window.upsellSwitch = true;
 <script>
     (function( window ) {
 
-        var lightbox = {},
+        var lightbox = { amount: {} },
             calculateUpsellRecurring,
             show;
 
@@ -732,7 +732,7 @@ window.upsellSwitch = true;
             
         show = function( $form, event) {
 
-            lightbox = lightbox || { amount: {} };
+            var lightbox = lightbox || { amount: {} };
 
             //  Get upsell values
             lightbox.amount.original = window.update_total();
