@@ -882,6 +882,7 @@ window.upsellSwitch = true;
         });
     })( window );
 
+    {% if page.custom_fields.monthly_specific_ask_string == "1" or page.custom_fields.monthly_specific_ask_string == "2" %}
     // Monthly-specific ask string module
     (function( window ) {
 
@@ -922,6 +923,7 @@ window.upsellSwitch = true;
         $toggles.on( 'change', toggleLevels ).trigger( 'change' );
 
     })( window );
+    {% endif %}
 
 </script>
 {% endblock %}
