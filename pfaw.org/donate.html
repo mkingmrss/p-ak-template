@@ -835,7 +835,7 @@ window.upsellSwitch = true;
             $( '.lightbox_desktop #recurring, .lightbox_mobile #recurring_mobile' ).click( function() {
 
                 //  Update value and check appropraite checkbox
-                $( '.js--amount-other-input' ).val( lightbox.amount.recurring ).change();
+                $( '.js--amount-other-input' ).val( lightbox.amount.recurring ).trigger( 'click' );
                 $( '.js-recurring-options-option-input[value="recurring"]' ).prop( 'checked', true );
                 $( '#action_lightbox_sustainer_join' ).val( 'true' ); // track sustainer lightbox donation
 
