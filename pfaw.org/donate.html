@@ -268,44 +268,42 @@
                         <button type="submit" class="ak-submit-button ak-donate-area-step-3">Donate Now</button>
                         <a href="#" data-step="2" class="js--multistep-back multistep-back ak-donate-area-step-3">← Back</a>
                         {% endif %}
-
-                        {% with page.custom_fields.designation as designation %}
-                            <p class="disclaimer">PFAW will send you periodic updates by email.</p>
-                            <p class="disclaimer">
-                                {% if not designation or designation == 'c4' %}
-                                    Because we lobby Congress, donations to People For the American Way, a nonprofit 501(c)(4) organization, are not tax deductible.
-                                {% elif designation == 'c3' %}
-                                    Donations to People For the American Way Foundation, a nonprofit 501(c)(3) organization, are tax deductible.
-                                {% endif %}
-                            </p>
-
-                            {% if designation == 'PAC' %}
-                                <p class="disclaimer">Contribution Rules:</p>
-                                <ul class="disclaimer">
-                                    <li>This contribution is made from my own funds, and funds are not being provided to me by another person or entity for the purpose of making this contribution.</li>
-                                    <li>I am making this contribution with my own personal credit card or payment account and not with a corporate or business credit card or a card issued to another person.</li>
-                                    <li>I am not a federal contractor.</li>
-                                    <li>I am at least eighteen years old.</li>
-                                    <li>I am a U.S. citizen or lawfully admitted permanent resident (i.e., green card holder).</li>
-                                    <li>I affirm that this contribution is not made from the general treasury funds of a corporation, labor organization, or national bank.</li>
-                                </ul>
-                                <p class="disclaimer">Contributions to PFAW&#8217;s Voters Alliance PAC are not tax deductible and are subject to a $5,000 per calendar year limit.</p>
-                                <p class="disclaimer">Federal law requires us to use our best efforts to collect and report the name, mailing address, occupation and name of employer of individuals whose contributions exceed $200 in a calendar year.</p>
-                            {% elif designation == '527' %}
-                                <p class="disclaimer">Contribution Rules:</p>
-                                <ul class="disclaimer">
-                                    <li>This contribution is made from my own funds, and funds are not being provided to me by another person or entity for the purpose of making this contribution.</li>
-                                    <li>I am making this contribution with my own personal credit card or payment account and not with a corporate or business credit card or a card issued to another person.</li>
-                                    <li>I am at least eighteen years old.</li>
-                                    <li>I am a U.S. citizen or lawfully admitted permanent resident (i.e., green card holder).</li>
-                                    <li>I affirm that this contribution is not made from the general treasury funds of a corporation, labor organization, or national bank.</li>
-                                </ul>
-                                <p class="disclaimer">Contributions to PFAW&#8217;s Action Fund are not tax deductible.</p>
-                                <p class="disclaimer">State laws require us to use our best efforts to collect and report the name and mailing address of individuals who contribute to the fund.</p>
-                            {% endif %}
-                        {% endwith %}
-                        </div>
                     </nav>
+                    {% with page.custom_fields.designation as designation %}
+                        <p class="disclaimer">PFAW will send you periodic updates by email.</p>
+                        <p class="disclaimer">
+                            {% if not designation or designation == 'c4' %}
+                                Because we lobby Congress, donations to People For the American Way, a nonprofit 501(c)(4) organization, are not tax deductible.
+                            {% elif designation == 'c3' %}
+                                Donations to People For the American Way Foundation, a nonprofit 501(c)(3) organization, are tax deductible.
+                            {% endif %}
+                        </p>
+
+                        {% if designation == 'PAC' %}
+                            <p class="disclaimer">Contribution Rules:</p>
+                            <ul class="disclaimer">
+                                <li>This contribution is made from my own funds, and funds are not being provided to me by another person or entity for the purpose of making this contribution.</li>
+                                <li>I am making this contribution with my own personal credit card or payment account and not with a corporate or business credit card or a card issued to another person.</li>
+                                <li>I am not a federal contractor.</li>
+                                <li>I am at least eighteen years old.</li>
+                                <li>I am a U.S. citizen or lawfully admitted permanent resident (i.e., green card holder).</li>
+                                <li>I affirm that this contribution is not made from the general treasury funds of a corporation, labor organization, or national bank.</li>
+                            </ul>
+                            <p class="disclaimer">Contributions to PFAW&#8217;s Voters Alliance PAC are not tax deductible and are subject to a $5,000 per calendar year limit.</p>
+                            <p class="disclaimer">Federal law requires us to use our best efforts to collect and report the name, mailing address, occupation and name of employer of individuals whose contributions exceed $200 in a calendar year.</p>
+                        {% elif designation == '527' %}
+                            <p class="disclaimer">Contribution Rules:</p>
+                            <ul class="disclaimer">
+                                <li>This contribution is made from my own funds, and funds are not being provided to me by another person or entity for the purpose of making this contribution.</li>
+                                <li>I am making this contribution with my own personal credit card or payment account and not with a corporate or business credit card or a card issued to another person.</li>
+                                <li>I am at least eighteen years old.</li>
+                                <li>I am a U.S. citizen or lawfully admitted permanent resident (i.e., green card holder).</li>
+                                <li>I affirm that this contribution is not made from the general treasury funds of a corporation, labor organization, or national bank.</li>
+                            </ul>
+                            <p class="disclaimer">Contributions to PFAW&#8217;s Action Fund are not tax deductible.</p>
+                            <p class="disclaimer">State laws require us to use our best efforts to collect and report the name and mailing address of individuals who contribute to the fund.</p>
+                        {% endif %}
+                    {% endwith %}
                 </section>
 
                 <nav class="multistep-controls">
