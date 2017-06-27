@@ -737,7 +737,7 @@ window.upsellSwitch = true;
             //  Get upsell values
             lightbox.amount.original = window.update_total();
             lightbox.amount.onetime = Math.floor( lightbox.amount.original );
-            lightbox.amount.recurring = caculateUpsellRecurring( lightbox.amount.onetime );
+            lightbox.amount.recurring = calculateUpsellRecurring( lightbox.amount.onetime );
 
             //  Gift is outside our range for upsells, process the donation
             if( !lightbox.amount.recurring ) return true;
