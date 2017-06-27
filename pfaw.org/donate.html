@@ -331,7 +331,7 @@
 
     // Back button
     (function( window ) {
-        $( '.js--multistep-back' ).on( 'click' function( e ) {
+        $( '.js--multistep-back' ).on( 'click', function( e ) {
             three_step_goto( $( this ).data( 'step' ) );
             return false;
         });
