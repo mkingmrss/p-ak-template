@@ -4,6 +4,13 @@
 {# remove menu on donation pages #}
 {% block navigation %}{% endblock %}
 
+{# add custom font if nudge #}
+{% block css_additions %}
+    {% if page.custom_fields.nudge %}
+    <link href="//fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+    {% endif %}
+{% endblock %}
+
 {% block content %}
 
 <div class="donation-content">
