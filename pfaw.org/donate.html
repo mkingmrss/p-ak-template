@@ -378,7 +378,8 @@
     </article>
 
     <pre>Path "{{ request.path }}"</pre>
-    <pre>Domain "{% client_ssl_domain %}"</pre>
+    <pre>Domain "{% client_ssl_domain|concatenate:request.path %}"</pre>
+    <pre>Concat "{{ request.path|concatenate:page.custom_fields.designation }}"</pre>
 
 </div>
 
@@ -391,7 +392,7 @@
         <span align="center"><h3>Share it!</h3></span>
         <div class="content">
             <div style="text-align: center;{% if page.custom_fields.social_share_intro %}float: right; padding-left: 10px;{% endif %}">
-                <a href="https://www.facebook.com/sharer/sharer.php?u={% if page.custom_fields_social_share %}{{ page.custom_fields.social_share_intro|urlencode }}{% else %}" target="_blank" class="share-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={% if page.custom_fields_social_share %}{{ page.custom_fields.social_share_intro|urlencode }}{% else %}{% client_ssl_domain %} $}" target="_blank" class="share-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                     <img src="//secure3.convio.net/pfaw/images/content/pagebuilder/pfaw_df_sidebar_fb.png" width="55" height="55" border="0" alt="Share on Facebook">
                 </a>
                 <a href="https://twitter.com/share[[?xx[[S80:twitter_share_text]]::xxxx::::?text=[[T1:[[S80:twitter_share_text]]]]]]&url=false" target="_blank" class="share-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
