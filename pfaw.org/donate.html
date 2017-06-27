@@ -309,7 +309,7 @@
 
                 <nav class="multistep-controls">
                     <button class="ak-donate-three-step-visible" type="button" id="ak-continue-button">Continue</button>
-                    <a href="#" data-step="1" class="js--multistep-back multistep-back ak-donate-step-2">← Back</a>
+                    <a href="#" data-step="1" class="js--multistep-back multistep-back ak-donate-step-2" style="display:none;">← Back</a>
                 </nav>
 
             </div>
@@ -331,8 +331,9 @@
 
     // Back button
     (function( window ) {
-        $( '.js--multistep-back' ).click(function() {
-            three_step_goto( +$( this ).data( 'step' ) );
+        $( '.js--multistep-back' ).on( 'click' function( e ) {
+            three_step_goto( $( this ).data( 'step' ) );
+            return false;
         });
     })( window );
 
