@@ -429,9 +429,9 @@
                             {% for amount in amounts %}
                                 {% if amount == "other" %}
                                 <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
-                                    <input type="radio" value="" class="ak-amount-radio-button" name="amount">
+                                    <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
                                     <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
-                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" placeholder="Other">
+                                    <span>{{ page.currency_sym }}</span><label for="amount-other-radio"><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" placeholder="Other"></label>
                                 </li>
                                 {% else %}
                                 <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}>
@@ -836,7 +836,6 @@ window.upsellSwitch = true;
 
                 //  Update value and check appropraite checkbox
                 $( '.js--amount-other-input' ).val( lightbox.amount.recurring ).change();
-                highlight_selected_amount_button();
                 $( '.js-recurring-options-option-input[value="recurring"]' ).prop( 'checked', true );
                 $( '#action_lightbox_sustainer_join' ).val( 'true' ); // track sustainer lightbox donation
 
