@@ -378,7 +378,7 @@
     </article>
 
     <pre>Path "{{ request.path }}"</pre>
-    <pre>Domain ""</pre>
+    <pre>Domain "{% with client_domain as domain %}{{domain}}{% endwith %}"</pre>
     <pre>Concat "{{ request.path|concatenate:page.custom_fields.designation }}"</pre>
 
 </div>
