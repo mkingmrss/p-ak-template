@@ -431,7 +431,7 @@
                                 <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
                                     <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
                                     <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
-                                    <span>{{ page.currency_sym }}</span><label for="amount-other-radio"><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" placeholder="Other"></label>
+                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" placeholder="Other">
                                 </li>
                                 {% else %}
                                 <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}>
@@ -637,6 +637,13 @@
                 <nav class="multistep-controls">
                     <button class="ak-donate-three-step-visible" type="button" id="ak-continue-button">Continue</button>
                     <a href="#" data-step="1" class="js--multistep-back multistep-back ak-donate-area-step-2">← Back</a>
+                    {% if show_paypal %}
+                        <div class="ak-payment-options ak-margin-bottom-1 ak-donate-area-step-2">
+                            <input type="hidden" name="paypal" value="0" id="ak-pay-by-paypal">
+                            Or check out with
+                            <button type="submit" id="ak-paypal-button" class="ak-inline ak-paypal-button"><img src="/media/modern/paypal-logo-1.svg"></button>
+                        </div>
+                    {% endif %}
                 </nav>
 
             </div>
