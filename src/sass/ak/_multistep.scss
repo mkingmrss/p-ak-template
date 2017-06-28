@@ -853,12 +853,16 @@
   }
 }
 .ak-payment-options {
-  display: none;
+  display: none !important;
 }
 @media (max-width: 767px) {
   body .multistep-form .ak-payment-options button[type="submit"] {
     background: #fff;
 
+    img {
+      vertical-align: middle;
+      display: inline-block;
+    }
     &:hover {
       background: #ddd;
     }
