@@ -72,7 +72,7 @@
         {
                 position: relative;
                 background-color: #fff;
-                background-image: url(https://secure.pfaw.org/images/content/pagebuilder/liberty-medium-2015.jpg);
+                background-image: url(https://s3.amazonaws.com/s3.pfaw.org/images/lightbox/liberty-medium-2015.jpg);
                 background-repeat: no-repeat;
                 background-position: 0 72px;
                 width: 678px;
@@ -149,7 +149,7 @@
         {
                 height: 72px;
                 text-indent: -9999999px;
-                background: url(https://secure.pfaw.org/images/content/pagebuilder/title-monthly-2015.png) no-repeat 0px 0px;
+                background: url(https://s3.amazonaws.com/s3.pfaw.org/images/lightbox/title-monthly-2015.png) no-repeat 0px 0px;
         }
         .orig p
         {
@@ -215,14 +215,14 @@
                 width: 140px;
                 text-indent: -9999999px;
                 background-size: cover !important;
-                background: url(https://secure.pfaw.org/images/content/pagebuilder/logo.png) no-repeat 0px 0px;
+                background: url(https://s3.amazonaws.com/s3.pfaw.org/images/lightbox/logo.png) no-repeat 0px 0px;
         }
 
         .lightbox_mobile .thank-you .banner {
                 height: 76px;
                 width: 100%;
                 text-indent: -9999999px;
-                background: url(https://secure.pfaw.org/images/content/pagebuilder/banner.png) repeat 0px 0px;
+                background: url(https://s3.amazonaws.com/s3.pfaw.org/images/lightbox/banner.png) repeat 0px 0px;
         }
 
         .lightbox_mobile p, .lightbox_mobile h1 {
@@ -278,7 +278,7 @@
                 right: 13px;
                 height: 40px;
                 position: absolute;
-                background: url(https://secure.pfaw.org/images/content/pagebuilder/x.png) no-repeat 0px 0px;
+                background: url(https://s3.amazonaws.com/s3.pfaw.org/images/lightbox/x.png) no-repeat 0px 0px;
                 background-size: contain;
                 cursor: pointer;
         }
@@ -332,6 +332,10 @@
 <div class="donation-content">
     <h1 class="section-title">{{ page.title }}</h1>
     {% include_tmpl form.ask_text %}
+</div>
+
+<div class="mobile-payment-options">
+  We accept: <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" class="paypal" /> <img src="https://s3.amazonaws.com/s3.pfaw.org/images/visa.png" alt="Visa" /> <img src="https://s3.amazonaws.com/s3.pfaw.org/images/mastercard.png" alt="Mastercard" /> <img src="https://s3.amazonaws.com/s3.pfaw.org/images/amex.png" alt="American Express" /> <img src="https://s3.amazonaws.com/s3.pfaw.org/images/discover.png" alt="Discover" />
 </div>
 
 <div class="donation-form">
