@@ -1673,11 +1673,14 @@ header.banner {
     margin-left: 4%; } }
 
 .ak-payment-options {
-  display: none; }
+  display: none !important; }
 
 @media (max-width: 767px) {
   body .multistep-form .ak-payment-options button[type="submit"] {
     background: #fff; }
+    body .multistep-form .ak-payment-options button[type="submit"] img {
+      vertical-align: middle;
+      display: inline-block; }
     body .multistep-form .ak-payment-options button[type="submit"]:hover {
       background: #ddd; }
   .ak-payment-options {
