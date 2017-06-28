@@ -852,6 +852,25 @@
     margin-left: 4%;
   }
 }
+.ak-payment-options {
+  display: none;
+}
+@media (max-width: 767px) {
+  body .multistep-form .ak-payment-options button[type="submit"] {
+    background: #fff;
+
+    &:hover {
+      background: #ddd;
+    }
+  }
+  .ak-payment-options {
+    display: block;
+    span {
+      display: block;
+      margin: .5rem;
+    }
+  }
+}
 /* Donation Style Overrides */
 body .layout-constrain
 {
