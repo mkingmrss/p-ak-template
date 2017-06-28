@@ -1672,8 +1672,9 @@ header.banner {
   .multistep-form .form-row .form-content .recurring-options-option + .recurring-options-option {
     margin-left: 4%; } }
 
-.ak-payment-options {
-  display: none !important; }
+@media (min-width: 768px) {
+  .ak-payment-options {
+    display: none !important; } }
 
 @media (max-width: 767px) {
   body .multistep-form .ak-payment-options button[type="submit"] {
@@ -1684,7 +1685,7 @@ header.banner {
     body .multistep-form .ak-payment-options button[type="submit"]:hover {
       background: #ddd; }
   .ak-payment-options {
-    display: block !important; }
+    display: block; }
     .ak-payment-options span {
       display: block;
       margin: .5rem; } }
