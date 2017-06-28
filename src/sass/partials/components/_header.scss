@@ -87,7 +87,6 @@
   justify-content: space-between;
 }
 .header__logo {
-  @include svg-background(PFAW_logo);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 180px 80px;
