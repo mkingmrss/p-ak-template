@@ -392,7 +392,7 @@
                             
 
                             {% if allow_monthly %}
-                                {% if monthly_ask_string == "1" or monthly_ask_string == "2" %}
+                                {% if monthly_ask_String %}
                                 <div class="form-content recurring-options">
                                     <ul>
                                         <li class="recurring-options-option">
@@ -414,7 +414,7 @@
                             <ul class="ak-unstyled">
                             {# monthly amounts, if needed #}
                             {% if allow_monthly %}
-                            {% if monthly_ask_string == "1" or monthly_ask_string == "2" %}
+                            {% if monthly_ask_string %}
                                 {% with '10 15 30 50' as monthly_amounts %}
                                     {% for amount in monthly_amounts.split %}
                                         <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--monthly" {% if monthly_ask_string == "2" %} style="display: none;" {% endif %}>
@@ -451,9 +451,30 @@
                         </div>
                     </div>
 
+                    {% comment %}
+                    Recurring functionality can get a bit wild depending on the settings. There are 4 possible options:
+                        * Annual checkbox without one-time / monthly buttons above ask string
+                        * Annual checkbox *with* one-time / monthly buttons above ask string
+                        * Monthly checkbox without one-time / monthly buttons above ask string (otherwise monthly is handled by those buttons)
+                        * Forced single donation
+                    {% endcomment %}
+
+                    {% if page.custom_fields.annual_checkbox %}
+                        {% if not monthly_ask_string %}
+                        <!-- BASIC Annual checkbox -->
+                        {% else %}
+                        <!-- ADVANCED Annual checkbox -->
+                        {% endif %}
+                    {% elif allow_monthly and not monthly_ask_string %}
+                        <!-- BASIC monthly checkbox -->
+                    {% else %}
+                        <!-- FORCED single -->
+                    {% endif %}
+
+
                     {% if not has_products %}
                         {% if allow_monthly %}
-                            {% if monthly_ask_string != "1" and monthly_ask_string != "2" %}
+                            {% if not monthly_ask_string %}
                             <div class="form-row giving-recurring js--giving-recurring">
                                 <div class="form-content form-content--checkbox">
                                     <input type='hidden' name='recurring_period' value='monthly'>
