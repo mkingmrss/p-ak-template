@@ -465,8 +465,12 @@
                         {% else %}
                         <!-- ADVANCED Annual checkbox -->
                         {% endif %}
-                    {% elif allow_monthly and not monthly_ask_string %}
+                    {% elif allow_monthly %}
+                        {% if not monthly_ask_strgin %}
                         <!-- BASIC monthly checkbox -->
+                        {% else %}
+                        <!-- No checkbox -->
+                        {% endif %}
                     {% else %}
                         <!-- FORCED single -->
                     {% endif %}
