@@ -392,7 +392,7 @@
                             
 
                             {% if allow_monthly %}
-                                {% if monthly_ask_String %}
+                                {% if monthly_ask_string %}
                                 <div class="form-content recurring-options">
                                     <ul>
                                         <li class="recurring-options-option">
@@ -461,24 +461,32 @@
 
                     {% if page.custom_fields.annual_checkbox %}
                         {% if not monthly_ask_string %}
-                        <!-- BASIC Annual checkbox -->
+                            {# Basic annual checkbox #}
+                            <div class="donation-content autorenewal-external js-autorenewal-external">
+                              <div>
+                                <input type='hidden' name='recurring_period' value='years'>
+                                <input type="checkbox" id="donation_type_years" name="donation_type" value="recurring" checked>
+                                <label for="donation_type_years">
+                                  Please set my PFAW membership to annually renew each year. <span>Your card will automatically be processed on today's date each subsequent year.</span>
+                                </label>
+                              </div>
+                            </div>
                         {% else %}
-                        <!-- ADVANCED Annual checkbox -->
+                            {# Advanced annual checkbox #}
+                            <div class="form-row giving-recurring js--giving-recurring">
+                                <div class="form-content form-content--checkbox">
+                                    {# here we sync this hidden radio with the "annual gift" checkbox #}
+                                    <input type='radio' name='recurring_period' value='years'>
+                                    <input type="checkbox" name="annual_gift" id="annual_gift" value="" class="js--recurring-input">
+                                    <label for="annual_gift">
+                                        Yes, automatically repeat this gift every year.
+                                    </label>
+                                </div>
+                            </div>
                         {% endif %}
                     {% elif allow_monthly %}
-                        {% if not monthly_ask_strgin %}
-                        <!-- BASIC monthly checkbox -->
-                        {% else %}
-                        <!-- No checkbox -->
-                        {% endif %}
-                    {% else %}
-                        <!-- FORCED single -->
-                    {% endif %}
-
-
-                    {% if not has_products %}
-                        {% if allow_monthly %}
-                            {% if not monthly_ask_string %}
+                        {% if not monthly_ask_string %}
+                            {# Basic monthly checkbox #}
                             <div class="form-row giving-recurring js--giving-recurring">
                                 <div class="form-content form-content--checkbox">
                                     <input type='hidden' name='recurring_period' value='monthly'>
@@ -488,12 +496,14 @@
                                     </label>
                                 </div>
                             </div>
-                            {% endif %}
                         {% else %}
-                        <div id="ak-recurring-type"></div>
-                        <input type="hidden" name="donation_type" value="single">
+                            {# No checkbox #}
                         {% endif %}
+                    {% else %}
+                        {# force "single" donation #}
+                        <input type="hidden" name="donation_type" id="donation_type" value="single">
                     {% endif %}
+
                 {% endwith %}
                 </section>
                         
