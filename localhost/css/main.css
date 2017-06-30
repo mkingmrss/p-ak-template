@@ -1826,3 +1826,6 @@ body noscript + script + p,
 body noscript + script + p + script + p {
   /* Some tracking script inserts a p tag */
   margin: 0; }
+
+.ak-pagetype-petition h2 {
+  font-size: 42px; }
