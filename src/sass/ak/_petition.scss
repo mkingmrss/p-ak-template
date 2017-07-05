@@ -92,16 +92,17 @@
 				}
 			}
 		}
+		@media (max-width: $max-reading-width){
+			.advocacy-intro, .pull-right, .advocacy-action header {
+				width: 100%;
+	    		float: none;
+			}
+
+			.advocacy-intro {
+				margin-top: 2em;
+			}
+		}
 	}
 
-	@media (max-width: $max-reading-width){
-		.advocacy-intro, .pull-right, .advocacy-action header {
-			width: 100%;
-    		float: none;
-		}
-
-		.advocacy-intro {
-			margin-top: 2em;
-		}
-	}
+	
 }

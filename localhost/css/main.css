@@ -1891,10 +1891,9 @@ body noscript + script + p + script + p {
     .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name {
       width: 100%;
       margin-right: 0; } }
-
-@media (max-width: 800px) {
-  .ak-pagetype-petition .advocacy-intro, .ak-pagetype-petition .pull-right, .ak-pagetype-petition .advocacy-action header {
-    width: 100%;
-    float: none; }
-  .ak-pagetype-petition .advocacy-intro {
-    margin-top: 2em; } }
+  @media (max-width: 800px) {
+    .ak-pagetype-petition .advocacy-action .advocacy-intro, .ak-pagetype-petition .advocacy-action .pull-right, .ak-pagetype-petition .advocacy-action .advocacy-action header {
+      width: 100%;
+      float: none; }
+    .ak-pagetype-petition .advocacy-action .advocacy-intro {
+      margin-top: 2em; } }
