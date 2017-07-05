@@ -11,7 +11,13 @@
 		    .ak-progress-bar {
 		    	height: 20px;
 		    	box-shadow: 1px 0 1px #aaa;
-    			background-color: #133e79;
+    			background-image: linear-gradient(to bottom, #184f9a, #0e2d58);
+    			font-size: 13px;
+    			color: #fff;
+    			line-height: 21px;
+    			text-align:right;
+    			padding-right: 5px;
+    			font-weight:bold;
 		    }
 		}
 	}
