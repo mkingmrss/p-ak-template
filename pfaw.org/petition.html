@@ -11,7 +11,34 @@
         <div class="pull-right">
             {% include "./progress_meter.html" %}
 
-            //form
+            <div class="statement-text-wrapper ak-field-box ak-field-box-borderless">
+            
+                <h3>Sign the petition</h3>
+                
+                {% if page.custom_fields.featured_image or form.about_text %}
+                           {% if form.statement_leadin %}
+                            <p class="ak-petition-leadin">
+                                {% include_tmpl form.statement_leadin %}
+                                </p>
+                        {% endif %}
+                
+                        <div class="ak-margin-bottom-1">
+                            {% include_tmpl form.statement_text %}
+                        </div>
+                {% endif %}
+                
+                <div id="petition-form" class="ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
+                    {% include "./user_form_wrapper.html" %}
+                    <div class="ak-field">
+                        <label for="id_comment">Comment</label>
+                        <textarea id="id_comment" name="action_comment"></textarea>
+                    </div>
+
+                    {# Optional TAF {% include "./inline_tellafriend.html" %} #}
+
+                    <button type="submit" class="ak-submit-button">Sign</button>
+                </div>
+            </div> 
         </div>
         <div class="advocacy-intro js--advocacy-intro">
             {% if page.custom_fields.featured_image or form.about_text %}
@@ -39,6 +66,12 @@
         </div>
     </form>
 </div>
+
+
+
+
+
+
 
 
 <form class="ak-form" name="act" method="POST" action="/act/" accept-charset="utf-8" style="display:none;">

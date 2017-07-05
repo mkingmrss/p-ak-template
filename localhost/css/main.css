@@ -1827,15 +1827,34 @@ body noscript + script + p + script + p {
   /* Some tracking script inserts a p tag */
   margin: 0; }
 
-.ak-pagetype-petition .advocacy-action .pull-right {
-  padding-top: 36px; }
+.ak-pagetype-petition .advocacy-action {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .ak-pagetype-petition .advocacy-action .advocacy-intro, .ak-pagetype-petition .advocacy-action .pull-right, .ak-pagetype-petition .advocacy-action .advocacy-action header {
+    width: 48.5%; }
+  .ak-pagetype-petition .advocacy-action .advocacy-action header {
+    float: left;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 12px; }
+  .ak-pagetype-petition .advocacy-action .pull-right {
+    padding-top: 36px;
+    float: right; }
+  .ak-pagetype-petition .advocacy-action .statement-text-wrapper {
+    padding: 1.5em;
+    background: #eff3f3; }
+    .ak-pagetype-petition .advocacy-action .statement-text-wrapper h3 {
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      font-size: 24px;
+      color: #353b3a;
+      padding-top: 6px;
+      padding-bottom: 20px; }
 
-@media (min-width: 800px) {
-  .ak-pagetype-petition .advocacy-action {
-    position: relative;
+@media (max-width: 800px) {
+  .ak-pagetype-petition .advocacy-intro, .ak-pagetype-petition .pull-right, .ak-pagetype-petition .advocacy-action header {
     width: 100%;
-    overflow: hidden; }
-    .ak-pagetype-petition .advocacy-action .pull-right {
-      float: right; }
-  .ak-pagetype-petition .advocacy-intro, .ak-pagetype-petition .pull-right {
-    width: 48.5%; } }
+    float: none; }
+  .ak-pagetype-petition .advocacy-intro {
+    margin-top: 2em; } }

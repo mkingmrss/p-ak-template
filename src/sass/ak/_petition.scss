@@ -5,17 +5,39 @@
 	    width: 100%;
 	    overflow: hidden;
 
-		.advocacy-intro, .pull-right {
+		.advocacy-intro, .pull-right, .advocacy-action header {
 		    width: 48.5%;
 		}
+
+		.advocacy-action header {
+			float: left;
+			text-align: left;
+			padding-top: 20px;
+			padding-bottom: 12px;
+		}
+
 		.pull-right {
 			padding-top: 36px;
 			float: right;
 		}
+
+		.statement-text-wrapper {
+			padding: 1.5em;
+    		background: #eff3f3;
+
+    		h3 {
+    			text-transform: uppercase;
+			    letter-spacing: .03em;
+			    font-size: 24px;
+			    color: #353b3a;
+			    padding-top: 6px;
+    			padding-bottom: 20px;
+    		}
+		}
 	}
 
 	@media (max-width: $max-reading-width){
-		.advocacy-intro, .pull-right {
+		.advocacy-intro, .pull-right, .advocacy-action header {
 			width: 100%;
     		float: none;
 		}
