@@ -22,10 +22,7 @@
                             </span> <br> 
                             of our goal of {{ page.currency_sym|default:"$" }}[%= add_commas(goal)  %]!
                         [% } else { %]  
-                            <span class="ak-progress-actions">
-                                [%= add_commas(total.actions) %] [%= total.actions != 1 ? 'actions' : 'action' %] taken so far 
-                            </span> <br> 
-                            of our goal of [%= add_commas(goal) %]!
+                            <span class="ak-progress-actions">We've reached <span>[%= add_commas(total.actions) %]</span></span> of our goal of [%= add_commas(goal) %].
                         [% } %]
                     </div>
                 </div>

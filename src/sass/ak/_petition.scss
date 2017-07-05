@@ -29,6 +29,10 @@
 			float: right;
 		}
 
+		#progress {
+			.ak-progress-percent { display: none; }
+		}
+
 		.statement-text-wrapper {
 			padding: 1.5em;
     		background: #eff3f3;

@@ -1848,6 +1848,8 @@ body noscript + script + p + script + p {
   .ak-pagetype-petition .advocacy-action .pull-right {
     padding-top: 36px;
     float: right; }
+  .ak-pagetype-petition .advocacy-action #progress .ak-progress-percent {
+    display: none; }
   .ak-pagetype-petition .advocacy-action .statement-text-wrapper {
     padding: 1.5em;
     background: #eff3f3; }
@@ -1927,21 +1929,30 @@ body noscript + script + p + script + p {
 .ak-pagetype-thanks p {
   font-size: 14px; }
 
-#progress .ak-progress-holder {
-  width: 100%; }
-  #progress .ak-progress-holder .ak-progress-meter-border {
-    width: 100%;
-    background: #eeeeee;
-    box-shadow: inset 1px 1px 1px #aaa;
-    height: 20px; }
-    #progress .ak-progress-holder .ak-progress-meter-border .ak-progress-bar {
-      height: 20px;
-      box-shadow: 1px 0 1px #aaa;
-      background-image: linear-gradient(to bottom, #184f9a, #0e2d58);
-      font-size: 13px;
-      color: #fff;
-      line-height: 21px;
-      text-align: right;
-      padding-right: 5px;
-      font-weight: bold; }
+#progress {
+  margin-bottom: 1em; }
+  #progress .ak-progress-holder {
+    width: 100%; }
+    #progress .ak-progress-holder .ak-progress-meter-border {
+      width: 100%;
+      background: #eeeeee;
+      box-shadow: inset 1px 1px 1px #aaa;
+      height: 20px; }
+      #progress .ak-progress-holder .ak-progress-meter-border .ak-progress-bar {
+        height: 20px;
+        box-shadow: 1px 0 1px #aaa;
+        background-image: linear-gradient(to bottom, #184f9a, #0e2d58);
+        font-size: 13px;
+        color: #fff;
+        line-height: 21px;
+        text-align: right;
+        padding-right: 5px;
+        font-weight: bold; }
+  #progress .ak-progress-goals {
+    text-align: center; }
+    #progress .ak-progress-goals .ak-progress-actions {
+      font-size: 15px; }
+      #progress .ak-progress-goals .ak-progress-actions span {
+        font-weight: bold;
+        color: #133e79; }
 </style>
