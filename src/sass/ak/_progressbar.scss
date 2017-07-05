@@ -1,0 +1,18 @@
+#progress {
+	.ak-progress-holder {
+		width: 100%;
+
+		.ak-progress-meter-border {
+			width: 100%;
+			background: #eeeeee;
+		    box-shadow: inset 1px 1px 1px #aaa;
+		    height: 20px;
+
+		    .ak-progress-bar {
+		    	height: 20px;
+		    	box-shadow: 1px 0 1px #aaa;
+    			background-color: #133e79;
+		    }
+		}
+	}
+}
