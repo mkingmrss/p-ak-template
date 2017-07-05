@@ -1948,9 +1948,9 @@ body noscript + script + p + script + p {
         padding-right: 5px;
         font-weight: bold; }
   #progress .ak-progress-goals {
-    text-align: center; }
-    #progress .ak-progress-goals .ak-progress-actions {
-      font-size: 15px; }
-      #progress .ak-progress-goals .ak-progress-actions span {
-        font-weight: bold;
-        color: #133e79; }
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px; }
+    #progress .ak-progress-goals .ak-progress-actions span {
+      font-weight: bold;
+      color: #133e79; }
