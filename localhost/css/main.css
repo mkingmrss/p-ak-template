@@ -1854,6 +1854,9 @@ body noscript + script + p + script + p {
       color: #353b3a;
       padding-top: 6px;
       padding-bottom: 20px; }
+  .ak-pagetype-petition .advocacy-action #petition-form .form-row {
+    width: 100%;
+    padding-bottom: .5em; }
   .ak-pagetype-petition .advocacy-action #petition-form label {
     white-space: normal;
     width: 100%;
@@ -1865,6 +1868,10 @@ body noscript + script + p + script + p {
     color: #183157; }
     .ak-pagetype-petition .advocacy-action #petition-form label .ak-required-flag {
       color: #ae272b; }
+  .ak-pagetype-petition .advocacy-action #petition-form input[type="text"] {
+    width: 100%;
+    border: 1px solid #afb9b8;
+    margin-bottom: .675em; }
 
 @media (max-width: 800px) {
   .ak-pagetype-petition .advocacy-intro, .ak-pagetype-petition .pull-right, .ak-pagetype-petition .advocacy-action header {
