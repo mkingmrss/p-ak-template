@@ -5,15 +5,15 @@
 	    width: 100%;
 	    overflow: hidden;
 
-		.advocacy-intro, .pull-right, .advocacy-action header {
+		.advocacy-intro, .pull-right, header {
 		    width: 48.5%;
 		}
 
-		.advocacy-action header {
-			float: left;
-			text-align: left;
+		header {
 			padding-top: 20px;
 			padding-bottom: 12px;
+			float: left;
+			text-align: left;
 		}
 
 		.pull-right {
