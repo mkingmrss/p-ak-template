@@ -1,5 +1,27 @@
 .ak-pagetype-petition {
-	h2 {
-		font-size: 42px;
+	
+	.advocacy-action {
+		position: relative;
+	    width: 100%;
+	    overflow: hidden;
+
+		.advocacy-intro, .pull-right {
+		    width: 48.5%;
+		}
+		.pull-right {
+			padding-top: 36px;
+			float: right;
+		}
+	}
+
+	@media (max-width: $max-reading-width){
+		.advocacy-intro, .pull-right {
+			width: 100%;
+    		float: none;
+		}
+
+		.advocacy-intro {
+			margin-top: 2em;
+		}
 	}
 }

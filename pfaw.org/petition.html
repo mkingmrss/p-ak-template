@@ -2,7 +2,46 @@
 
 {% block content %}
 
-<form class="ak-form" name="act" method="POST" action="/act/" accept-charset="utf-8">
+<div class="advocacy-action js--advocacy-action">
+    <form class="ak-form" name="act" method="POST" action="/act/" accept-charset="utf-8">
+        <input type="hidden" name="page" value="{{ page.name }}">
+        <header class="js--advocacy-header">
+            <h1>{{ page.title }}</h1>
+        </header>
+        <div class="pull-right">
+            {% include "./progress_meter.html" %}
+
+            //form
+        </div>
+        <div class="advocacy-intro js--advocacy-intro">
+            {% if page.custom_fields.featured_image or form.about_text %}
+                <div id="ak-petition-story">
+                    {% if page.custom_fields.featured_image %}
+                    <img class="ak-featured-img {% if page.goal %}ak-margin-top-1{% endif %}" src="{{page.custom_fields.featured_image}}">
+                    {% endif %}
+                    {% autoescape off %}
+                        <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
+                        <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
+                    {% endautoescape %}
+                </div>
+            {% else %}
+                {% if form.statement_leadin %}
+                    <p class="ak-petition-leadin">
+                        {% include_tmpl form.statement_leadin %}
+                    </p>
+                {% endif %}
+
+                <div class="ak-margin-bottom-1 ak-text-expander">
+                    {% include_tmpl form.statement_text %}
+                </div>
+                <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
+            {% endif %}
+        </div>
+    </form>
+</div>
+
+
+<form class="ak-form" name="act" method="POST" action="/act/" accept-charset="utf-8" style="display:none;">
     <input type="hidden" name="page" value="{{ page.name }}">
 
     <div class="ak-grid-row">

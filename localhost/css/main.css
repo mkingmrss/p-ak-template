@@ -1827,5 +1827,15 @@ body noscript + script + p + script + p {
   /* Some tracking script inserts a p tag */
   margin: 0; }
 
-.ak-pagetype-petition h2 {
-  font-size: 42px; }
+.ak-pagetype-petition .advocacy-action .pull-right {
+  padding-top: 36px; }
+
+@media (min-width: 800px) {
+  .ak-pagetype-petition .advocacy-action {
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+    .ak-pagetype-petition .advocacy-action .pull-right {
+      float: right; }
+  .ak-pagetype-petition .advocacy-intro, .ak-pagetype-petition .pull-right {
+    width: 48.5%; } }
