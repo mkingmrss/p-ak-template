@@ -4,6 +4,9 @@
 {% block content %}
 {% autoescape off %}
 
+<!-- for dev testing -->
+<link href="http://localhost:8888/pfaw/crmMigration/p-ak-template/localhost/css/main.css" rel="stylesheet" type="text/css" />
+
 <form name="taf" method="POST" action="/update_action/" accept-charset="utf-8" class="ak-thanks ak-styled-fields">
     <input type="hidden" name="page" value="{{ page.name }}">
 
