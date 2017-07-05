@@ -47,6 +47,8 @@
 			.form-row {
 				width: 100%;
 				margin-bottom: .675em;
+				position: relative;
+				float:left;
 			}
 			label {
 				white-space: normal;
@@ -75,6 +77,19 @@
 				font-size:12px;
 				margin-top: .25em;
 				color: $red;
+			}
+			#ak-fieldbox-first_name, #ak-fieldbox-last_name {
+				width: 48%;
+			}
+			#ak-fieldbox-first_name {
+				margin-right: 4%;
+			}
+
+			@media (max-width: $max-reading-width){
+				#ak-fieldbox-first_name, #ak-fieldbox-last_name {
+					width: 100%;
+					margin-right: 0;
+				}
 			}
 		}
 	}
