@@ -17,7 +17,7 @@
                             
                 {% if page.custom_fields.featured_image or form.about_text %}
                         {% if form.statement_leadin %}
-                            <h3>{{ form.statement_leadin }}</h3>
+                            {% include_tmpl form.statement_leadin %}
                         {% else %}
                             <h3>Sign the petition</h3>
                         {% endif %}
@@ -30,7 +30,7 @@
                 <div id="petition-form" class="ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
                     {% include "./user_form_wrapper.html" %}
-                    
+
                     <div class="ak-field">
                         <label for="id_comment">Comment</label>
                         <textarea id="id_comment" name="action_comment"></textarea>
