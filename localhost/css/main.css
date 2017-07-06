@@ -2010,3 +2010,15 @@ body noscript + script + p + script + p {
 
 .ak-pagetype-letter p {
   font-size: 14px; }
+
+.ak-pagetype-letter .advocacy-action {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.ak-pagetype-letter #column1 {
+  width: 38%; }
+
+.ak-pagetype-letter #column2 {
+  width: 58%;
+  float: right; }

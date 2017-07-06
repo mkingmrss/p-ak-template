@@ -2,4 +2,18 @@
 	p {
 		font-size: 14px;
 	}
+
+	.advocacy-action {
+		position: relative;
+	    width: 100%;
+	    overflow: hidden;
+	}
+
+	#column1 {
+	    width: 38%;
+	}
+	#column2 {
+	    width: 58%;
+	    float:right;
+	}
 }
