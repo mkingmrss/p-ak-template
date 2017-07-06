@@ -1946,6 +1946,36 @@ body noscript + script + p + script + p {
 .ak-pagetype-thanks #ak-taf-form, .ak-pagetype-thanks #copy-and-paste, .ak-pagetype-thanks #ak-confirmation {
   display: none; }
 
+.ak-pagetype-thanks #social-wrapper {
+  width: 50%;
+  margin: 2em auto;
+  background-color: #eff3f4;
+  text-align: center; }
+  .ak-pagetype-thanks #social-wrapper p {
+    font-size: 1.2222222222em;
+    padding-top: 1em;
+    margin-bottom: 0; }
+  .ak-pagetype-thanks #social-wrapper ul#social-holder {
+    list-style: none;
+    margin: 0 auto .25em auto;
+    padding: 20px 0 40px 0;
+    width: 100%;
+    text-align: center; }
+    .ak-pagetype-thanks #social-wrapper ul#social-holder li {
+      display: inline-block;
+      padding: 5px 40px; }
+      .ak-pagetype-thanks #social-wrapper ul#social-holder li a {
+        display: block;
+        height: 55px;
+        width: 55px;
+        text-indent: -99999px;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      .ak-pagetype-thanks #social-wrapper ul#social-holder li a.ak-facebook {
+        background: url(https://s3.amazonaws.com/s3.pfaw.org/images/pfaw_df_sidebar_fb.png) transparent no-repeat; }
+      .ak-pagetype-thanks #social-wrapper ul#social-holder li a.ak-twitter {
+        background: url(https://s3.amazonaws.com/s3.pfaw.org/images/pfaw_df_sidebar_tw.png) transparent no-repeat; }
+
 #progress {
   margin-bottom: 1em;
   width: 90%;

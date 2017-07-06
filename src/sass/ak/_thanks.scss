@@ -15,4 +15,47 @@
 	#ak-taf-form, #copy-and-paste, #ak-confirmation { 
 		display: none; 
 	}
+
+	#social-wrapper {
+
+		width: 50%;
+		margin: 2em auto;
+		background-color: #eff3f4;
+		text-align:center;
+
+		p {
+			font-size: 1.2222222222em;
+			padding-top: 1em;
+			margin-bottom: 0;
+
+		}
+
+		ul#social-holder {
+			list-style: none;
+			margin: 0 auto .25em auto;
+			padding: 20px 0 40px 0;
+			width: 100%;
+			text-align:center;
+			
+
+			li { 
+				display: inline-block;
+				padding: 5px 40px;
+
+				a {
+					display: block;
+					height: 55px;
+					width: 55px;
+					text-indent: -99999px;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+
+				a.ak-facebook { background: url(https://s3.amazonaws.com/s3.pfaw.org/images/pfaw_df_sidebar_fb.png) transparent no-repeat; }
+				a.ak-twitter { background: url(https://s3.amazonaws.com/s3.pfaw.org/images/pfaw_df_sidebar_tw.png) transparent no-repeat; }
+			}
+		}
+	}
+
+	
 }
