@@ -1933,11 +1933,24 @@ body noscript + script + p + script + p {
     .ak-pagetype-petition .advocacy-action .advocacy-intro {
       margin-top: 2em; } }
 
-.ak-pagetype-thanks p {
-  font-size: 14px; }
+.ak-pagetype-thanks #confirmation-text {
+  margin-bottom: 2em; }
+  .ak-pagetype-thanks #confirmation-text p {
+    font-size: 18px; }
+
+.ak-pagetype-thanks #progress {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%; }
+
+.ak-pagetype-thanks #ak-taf-form, .ak-pagetype-thanks #copy-and-paste, .ak-pagetype-thanks #ak-confirmation {
+  display: none; }
 
 #progress {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%; }
   #progress .ak-progress-holder {
     width: 100%; }
     #progress .ak-progress-holder .ak-progress-meter-border {

@@ -1,3 +1,18 @@
 .ak-pagetype-thanks {
-	p { font-size: 14px; }
+	#confirmation-text {
+		margin-bottom: 2em;
+		p { 
+			font-size: 18px; 
+		}
+	}
+
+	#progress {
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
+	#ak-taf-form, #copy-and-paste, #ak-confirmation { 
+		display: none; 
+	}
 }
