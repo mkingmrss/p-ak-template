@@ -940,6 +940,27 @@ window.upsellSwitch = true;
     // M+R script additions
     // —
 
+    // Annual autorenewal
+    (function( window ) {
+
+        var $externalInput = $( '.js-autorenewal-external' ),
+            $internalType = $( '.js--giving-recurring input[type="checkbox"]' ),
+            $internalPeriod = $( '.js--giving-recurring input[name="recurring_period"]' );
+
+        $externalInput.on( 'change', function() {
+            var checked = $(this).is( ':checked' );
+            
+            // Check the "donation_type"
+            $internalType.prop( 'checked', checked );
+
+            // If the "recurring_period" input is a radio, sync its state
+            if ( $internalPeriod.is( '[type="radio"]' ) ) {
+                $internalPeriod.prop( 'checked', checked );
+            }
+        }).trigger( 'change' );
+
+    })( window );
+
     // Back button
     (function( window ) {
         $( '.js--multistep-back' ).on( 'click', function( e ) {
