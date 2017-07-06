@@ -334,8 +334,8 @@
     {% include_tmpl form.ask_text %}
 
     {% if page.custom_fields.annual_checkbox %}
-    <div class="form-row giving-recurring js--giving-recurring">
-        <div class="form-content form-content--checkbox">
+    <div class="autorenewal-external js-autorenewal-external">
+        <div>
             {# here we sync this hidden radio with the "annual gift" checkbox #}
             <input type='radio' name='recurring_period' value='years'>
             <input type="checkbox" name="annual_gift" id="annual_gift" value="" class="js--recurring-input">
