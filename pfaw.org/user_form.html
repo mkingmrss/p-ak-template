@@ -29,7 +29,7 @@
 {% for field in user_fields %}
     <div id="ak-fieldbox-{{ field.field_name }}" class="form-row{% if field.field_name|is_in:context.required %} required{% endif %}">
         <label for="id_{{ field.field_name }}">
-            {{ field.label_text }}{% if field.field_name|is_in:context.required %}<span class="ak-required-flag">*</span>{% endif %}
+            {{ field.label_text }}{% if field.field_name|is_in:context.required %} <span class="ak-required-flag">*</span>{% endif %}
         </label>
         {% switch field.field_name %}
             {% case 'country' %}
