@@ -1293,7 +1293,8 @@ header.banner {
 
 .autorenewal-external {
   font-size: 80%;
-  line-height: 1.4em; }
+  line-height: 1.4em;
+  margin-top: 2em; }
 
 .multistep-form .form-content--checkbox.form-content--checkbox--annual label span,
 .autorenewal-external label span {
