@@ -32,7 +32,7 @@
                 <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
                 {% endif %}
 
-                <h3>Send the letter</h3>
+                <h3>Contact</h3>
 
                 <div id="letter-form" class="ak-field-box ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
@@ -53,6 +53,7 @@
             <div class="ak-grid-col ak-grid-col-4-of-12" id="column2">
                 
                 <div id="letter-story">
+                    <h3>Message</h3>
                     {% if form.statement_leadin %}
                     {% autoescape off %}
                     <div class="ak-p-before-textarea ak-margin-top-3">
@@ -61,9 +62,12 @@
                     {% endautoescape %}
                     {% endif %}
 
+                    <p>Dear&nbsp;[Decision Maker],</p>
+
                     <div class="ak-margin-bottom-1 ak-styled-fields">
-                    <textarea id="id_comment" name="action_comment" class="ak-letter-text ">{% include_tmpl form.letter_text escaped %}</textarea>
+                        <textarea id="id_comment" name="action_comment" class="ak-letter-text ">{% include_tmpl form.letter_text escaped %}</textarea>
                     </div>
+                    <p>Sincerely,<br><em>[Your Name]</em><br> <em>[Your Address]</em><br> <em>[City, State ZIP]</em></p>
 
                 </div>
             </div><!-- /right col -->

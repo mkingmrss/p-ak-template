@@ -3,6 +3,25 @@
 		font-size: 14px;
 	}
 
+	h2 {
+		margin: 0 0 15px 0;
+	    padding-top: 5px;
+	    padding-bottom: 0;
+	    color: #555;
+	    font: bold 20px Tahoma, Arial, Helvetica, sans-serif;
+	}
+
+	h3 {
+		margin: 0;
+		padding: 6px 0;
+		font-size: 13px;
+		color: #192f58;
+		font-family: "Sanchez";
+		font-weight: normal;
+		line-height: 1.1;
+		position: relative
+	}
+
 	.advocacy-action {
 		position: relative;
 	    width: 100%;
@@ -11,9 +30,39 @@
 
 	#column1 {
 	    width: 38%;
+	    position: relative;
+	    float:left;
 	}
 	#column2 {
 	    width: 58%;
+	    position: relative;
 	    float:right;
+
+	    #letter-story {
+	    	margin-bottom: 15px;
+    		padding: 10px 10px 0 10px;
+    		border: 1px solid #ccc;
+
+    		p {
+    			clear: both;
+    			margin: 0;
+    			padding: 0 0 10px 5px;
+    		}
+
+    		h3 {
+    			margin: -11px -11px 3px -6px;
+    			padding-left:12px;
+    		}
+
+    		textarea{
+    			margin: 8px;
+    			margin-bottom: 25px;
+    			font: 13px Arial, Helvetica, sans-serif;
+    			height: 25em;
+    			border: 1px solid #999;
+    			resize: none;
+    			width: calc(100% - 16px);
+    		}
+	    }
 	}
 }

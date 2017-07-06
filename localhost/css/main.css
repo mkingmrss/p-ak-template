@@ -2011,14 +2011,53 @@ body noscript + script + p + script + p {
 .ak-pagetype-letter p {
   font-size: 14px; }
 
+.ak-pagetype-letter h2 {
+  margin: 0 0 15px 0;
+  padding-top: 5px;
+  padding-bottom: 0;
+  color: #555;
+  font: bold 20px Tahoma, Arial, Helvetica, sans-serif; }
+
+.ak-pagetype-letter h3 {
+  margin: 0;
+  padding: 6px 0;
+  font-size: 13px;
+  color: #192f58;
+  font-family: "Sanchez";
+  font-weight: normal;
+  line-height: 1.1;
+  position: relative; }
+
 .ak-pagetype-letter .advocacy-action {
   position: relative;
   width: 100%;
   overflow: hidden; }
 
 .ak-pagetype-letter #column1 {
-  width: 38%; }
+  width: 38%;
+  position: relative;
+  float: left; }
 
 .ak-pagetype-letter #column2 {
   width: 58%;
+  position: relative;
   float: right; }
+  .ak-pagetype-letter #column2 #letter-story {
+    margin-bottom: 15px;
+    padding: 10px 10px 0 10px;
+    border: 1px solid #ccc; }
+    .ak-pagetype-letter #column2 #letter-story p {
+      clear: both;
+      margin: 0;
+      padding: 0 0 10px 5px; }
+    .ak-pagetype-letter #column2 #letter-story h3 {
+      margin: -11px -11px 3px -6px;
+      padding-left: 12px; }
+    .ak-pagetype-letter #column2 #letter-story textarea {
+      margin: 8px;
+      margin-bottom: 25px;
+      font: 13px Arial, Helvetica, sans-serif;
+      height: 25em;
+      border: 1px solid #999;
+      resize: none;
+      width: calc(100% - 16px); }
