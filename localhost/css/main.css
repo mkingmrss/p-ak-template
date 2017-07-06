@@ -2037,6 +2037,44 @@ body noscript + script + p + script + p {
   width: 38%;
   position: relative;
   float: left; }
+  .ak-pagetype-letter #column1 #ak-errors {
+    display: none; }
+  .ak-pagetype-letter #column1 p#required-flag {
+    color: #ae272b; }
+  .ak-pagetype-letter #column1 .form-row {
+    width: 100%;
+    margin-bottom: .675em;
+    position: relative;
+    float: left; }
+  .ak-pagetype-letter #column1 label {
+    white-space: normal;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    margin-bottom: .125em;
+    color: #444; }
+    .ak-pagetype-letter #column1 label .ak-required-flag {
+      color: #ae272b; }
+  .ak-pagetype-letter #column1 input[type="text"], .ak-pagetype-letter #column1 select {
+    width: 100%;
+    border: 1px solid #999;
+    resize: none;
+    padding: 3.6px 6px;
+    border-radius: 0;
+    background: #fff; }
+  .ak-pagetype-letter #column1 select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 8px 6px; }
+  .ak-pagetype-letter #column1 ul.ak-err {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    margin-top: .25em;
+    color: #ae272b; }
 
 .ak-pagetype-letter #column2 {
   width: 58%;
@@ -2060,4 +2098,5 @@ body noscript + script + p + script + p {
       height: 25em;
       border: 1px solid #999;
       resize: none;
-      width: calc(100% - 16px); }
+      width: calc(100% - 16px);
+      padding: .3em .5em; }

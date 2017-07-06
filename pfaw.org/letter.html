@@ -34,13 +34,17 @@
 
                 <h3>Contact</h3>
 
+                <p id="required-flag">* Required fields</p>
+
                 <div id="letter-form" class="ak-field-box ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
                     {% include "./user_form_wrapper.html" %}
 
                     {# Optional TAF {% include "./inline_tellafriend.html" %} #}
 
-                    <button type="submit" class="ak-submit-button">Send Letter</button>
+                    <div class="form-row form-submit">
+                        <button type="submit" class="ak-submit-button">Send My Message</button>
+                    </div>
 
                 </div>
                 
@@ -75,4 +79,12 @@
     </form>
 </div>
 
+{% endblock %}
+
+{% block script_additions %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('label[for="id_state"]').show();
+    });
+</script>
 {% endblock %}
