@@ -336,11 +336,9 @@
     {% if page.custom_fields.annual_checkbox %}
     <div class="autorenewal-external js-autorenewal-external">
         <div>
-            {# here we sync this hidden radio with the "annual gift" checkbox #}
-            <input type='radio' name='recurring_period' value='years'>
-            <input type="checkbox" name="annual_gift" id="annual_gift" value="" class="js--recurring-input">
-            <label for="annual_gift">
-                Yes, automatically repeat this gift every year.
+            <input type="checkbox" name="annual_gift_external" id="annual_gift_external" class="js--autorenewal-external-input">
+            <label for="annual_gift_external">
+                Please set my PFAW membership to annually renew each year. <span>Your card will automatically be processed on today's date each subsequent year.</span>
             </label>
         </div>
     </div>
