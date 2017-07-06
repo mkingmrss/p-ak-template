@@ -475,7 +475,7 @@
                             {# Basic annual checkbox #}
                             <div class="giving-recurring--annual js--giving-recurring">
                               <div>
-                                <input type='hidden' name='recurring_period' value='years'>
+                                <input type="checkbox" name="recurring_period" value="years">
                                 <input type="checkbox" id="donation_type_years" name="donation_type" value="recurring" checked>
                                 <label for="donation_type_years">
                                   Please set my PFAW membership to annually renew each year. <span>Your card will automatically be processed on today's date each subsequent year.</span>
@@ -944,19 +944,10 @@ window.upsellSwitch = true;
     (function( window ) {
 
         var $externalInput = $( '.js--autorenewal-external-input' ),
-            $internalType = $( '.js--giving-recurring input[type="checkbox"]' ),
-            $internalPeriod = $( '.js--giving-recurring input[name="recurring_period"]' );
+            $internalInputs = $( '.js--giving-recurring input[type="checkbox"], .js--giving-recurring input[type="radio"]');
 
         $externalInput.on( 'change', function() {
-            var checked = $(this).is( ':checked' );
-            
-            // Check the "donation_type"
-            $internalType.prop( 'checked', checked );
-
-            // If the "recurring_period" input is a radio, sync its state
-            if ( $internalPeriod.is( '[type="radio"]' ) ) {
-                $internalPeriod.prop( 'checked', checked );
-            }
+            $internalInputs.prop( 'checked', $(this).is( ':checked' ) );
         }).trigger( 'change' );
 
     })( window );
