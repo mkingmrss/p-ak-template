@@ -30,6 +30,8 @@
         [% } %]
     </script>
 
+
+{% block script_additions %}
     <script>
 
         $(document).ready(function(){
@@ -37,6 +39,7 @@
         });
         
     </script>
+{% endblock %}
 
     <input type="hidden" name="want_progress" value="1">
     <!-- End progress meter code -->
