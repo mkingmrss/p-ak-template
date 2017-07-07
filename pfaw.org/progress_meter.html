@@ -28,17 +28,18 @@
                 </div>
             [% } %]
         [% } %]
-
-        console.log('ping');
-        console.log([%= progress.percent %]);
     </script>
 
     <script>
-        $(document).ready(function(){
-            var targetWidth = $('.ak-progress-percent').html();//.replace('%','');
-            console.log(targetWidth);
-        });
-        
+    console.log('ping');
+        var targetWidth = [%= progress.percent %]; 
+
+        animateProgress(targetWidth);
+
+        function animateProgress(w){
+            console.log('func called');
+            console.log(w);
+        }        
     </script>
 
     <input type="hidden" name="want_progress" value="1">
