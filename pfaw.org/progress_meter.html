@@ -30,16 +30,13 @@
         [% } %]
     </script>
 
-
-{% block script_additions %}
     <script>
 
-        $(document).ready(function(){
-            console.log(actionkit.context);
-        });
-        
+        actionkitFormReady =  function() {
+            console.log(actionkit.context.progress.percent);
+        };
+       
     </script>
-{% endblock %}
 
     <input type="hidden" name="want_progress" value="1">
     <!-- End progress meter code -->
