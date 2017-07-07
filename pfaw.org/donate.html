@@ -877,7 +877,7 @@ window.upsellSwitch = true;
 
             //  Activate processing before window closes
             window.onbeforeunload = function() {
-                window.showUpsell = false;
+                window.upsellSwitch = false;
                 $( '#act' ).submit();
 
                 dataLayer.push({ 
@@ -892,7 +892,7 @@ window.upsellSwitch = true;
             //  Activate lightbox buttons
             $( '#orig, #close_mobile, #orig_mobile, #close_desktop' ).click( function() {
                 $( '#action_lightbox_sustainer_join' ).val( '' ); // do not track sustainer donation from lightbox
-                window.showUpsell = false;
+                window.upsellSwitch = false;
                 $( '.ak-submit-button' ).click() //  No need to change form, use click b/c braintree button
                 lightbox.self.Hide();
             });
@@ -923,7 +923,6 @@ window.upsellSwitch = true;
         };
 
         window.showUpsell = function() {
-            console.log( 'show upsell' );
             return show();
         };
 
@@ -1642,7 +1641,7 @@ window.upsellSwitch = true;
             } else {
                 // fire upsell lightbox if necessary
                 if ( window.upsellSwitch && $( '[name="donation_type"]:checked' ).val() !== 'recurring' ) {
-                    return window.showUpsell();
+                    return window.showUpsell;
                 }
                 return true;
             }
