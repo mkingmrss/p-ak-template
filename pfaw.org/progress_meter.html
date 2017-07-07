@@ -31,15 +31,11 @@
     </script>
 
     <script>
-    console.log('ping');
-        var targetWidth = [%= progress.percent %]; 
 
-        animateProgress(targetWidth);
-
-        function animateProgress(w){
-            console.log('func called');
-            console.log(w);
-        }        
+        $(document).ready(function(){
+            console.log(actionkit.context.progress.percent);
+        });
+        
     </script>
 
     <input type="hidden" name="want_progress" value="1">
