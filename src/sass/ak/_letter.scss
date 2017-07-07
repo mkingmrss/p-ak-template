@@ -118,4 +118,25 @@
     		}
 	    }
 	}
+
+	.form-row.form-submit {
+		margin-top: .675em;
+		margin-bottom: 0;
+		text-align: center;
+
+		.ak-submit-button {
+			text-transform: uppercase;
+		    background: #4b6a23 linear-gradient(to bottom, #4b6a23 50%, #192f58 50%) repeat scroll 0 0 / 100px 100px;
+		    border-color: #192f58;
+		    border-radius: 0;
+		    border-style: none none solid;
+		    border-width: 0 0 5px;
+		    color: #fff;
+		    font-size: 15px;
+		    font-weight:bold;
+		    line-height: 36px;
+		    max-width:300px;
+		    padding: 0 20px;
+		}
+	}
 }
