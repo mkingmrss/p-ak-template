@@ -10,7 +10,7 @@
                 [% progress.percent = parseInt(progress.current/goal*100); %]
                 <div class="ak-progress-holder">
                     <div class="ak-progress-meter-border">
-                        <div class="ak-progress-bar" style="width: [%= progress.current > goal ? 100 : progress.percent %]%;">[%= progress.percent %]%</div>
+                        <div class="ak-progress-bar">[%= progress.percent %]%</div>
                     </div>
                 </div>
                 <div class="ak-clearfix">
@@ -33,7 +33,10 @@
     <script>
 
         actionkitFormReady =  function() {
-            console.log(actionkit.context.progress.percent);
+            var targetWidth = actionkit.context.progress.percent;
+            $('.ak-progress-bar').delay(1000).animate({
+                width: targetWidth
+            }, 1000);
         };
        
     </script>
