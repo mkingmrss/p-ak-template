@@ -18,8 +18,7 @@
         <div class="ak-grid-row">
             <div class="ak-grid-col ak-grid-col-8-of-12">
                 {% autoescape off %}
-                <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
-                <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
+                {% include_tmpl form.about_text %}
                 {% endautoescape %}
             </div>
         </div>
