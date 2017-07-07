@@ -507,9 +507,8 @@
                             {# Basic monthly checkbox #}
                             <div class="form-row giving-recurring js--giving-recurring">
                                 <div class="form-content form-content--checkbox">
-                                    <input type='hidden' name='recurring_period' value='monthly'>
-                                    <input type="checkbox" name="donation_type" id="donation_type" value="recurring" class="js--recurring-input">
-                                    <label for="donation_type">
+                                    <input type="checkbox" name="recurring_period" id="recurring_period" value="months" class="js--recurring-input">
+                                    <label for="recurring_period">
                                         Yes, automatically repeat this gift every month.
                                     </label>
                                 </div>
@@ -596,7 +595,7 @@
                             <label for="ak-card_num">Credit Card Number: <span class="required">*</span></label>
                             <input type="hidden" name="required" value="card_num" id="ak-card_num-required">
                             <div id="ak-card_num-hosted" class="hosted-field"></div>
-                            <input id="ak-card_num" type="text" name="card_num" required>
+                            <input id="ak-card_num" type="text" name="card_num">
                         </div>
                     </div>
 
@@ -894,7 +893,7 @@ window.upsellSwitch = true;
             $( '#orig, #close_mobile, #orig_mobile, #close_desktop' ).click( function() {
                 $( '#action_lightbox_sustainer_join' ).val( '' ); // do not track sustainer donation from lightbox
                 window.showUpsell = false;
-                $( '#act' ).submit() //  No need to change form
+                $( '.ak-submit-button' ).click() //  No need to change form, use click b/c braintree button
                 lightbox.self.Hide();
             });
 
@@ -914,7 +913,7 @@ window.upsellSwitch = true;
                 // }
                 lightbox.submitted = true;
                 
-                $( '#act' ).submit();
+                $( '.ak-submit-button' ).click(); // Use click b/c braintree button
                 lightbox.self.Hide();
               });
 
