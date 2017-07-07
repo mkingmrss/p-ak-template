@@ -1835,6 +1835,9 @@ body noscript + script + p + script + p {
   /* Some tracking script inserts a p tag */
   margin: 0; }
 
+.ak-pagetype-petition .header__buttons ul {
+  display: block; }
+
 .ak-pagetype-petition p {
   font-size: 14px; }
 
@@ -1899,7 +1902,7 @@ body noscript + script + p + script + p {
       font-size: 12px;
       margin-top: .25em;
       color: #ae272b; }
-    .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name {
+    .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
       width: 48%; }
     .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name {
       margin-right: 4%; }
@@ -1923,7 +1926,7 @@ body noscript + script + p + script + p {
         max-width: 300px;
         padding: 0 20px; }
     @media (max-width: 800px) {
-      .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name {
+      .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
         width: 100%;
         margin-right: 0; } }
   @media (max-width: 800px) {
@@ -1997,7 +2000,8 @@ body noscript + script + p + script + p {
         line-height: 21px;
         text-align: right;
         padding-right: 5px;
-        font-weight: bold; }
+        font-weight: bold;
+        width: 0; }
   #progress .ak-progress-percent {
     display: none; }
   #progress .ak-progress-goals {

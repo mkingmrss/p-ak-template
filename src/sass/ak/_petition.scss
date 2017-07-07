@@ -1,5 +1,9 @@
 .ak-pagetype-petition {
 
+	.header__buttons{
+		ul { display: block; }
+	}
+
 	p {
 		font-size: 14px;
 	}
@@ -91,7 +95,7 @@
 				color: $red;
 			}
 
-			#ak-fieldbox-first_name, #ak-fieldbox-last_name {
+			#ak-fieldbox-first_name, #ak-fieldbox-last_name, #ak-fieldbox-zip {
 				width: 48%;
 			}
 			#ak-fieldbox-first_name {
@@ -124,7 +128,7 @@
 			}
 
 			@media (max-width: $max-reading-width){
-				#ak-fieldbox-first_name, #ak-fieldbox-last_name {
+				#ak-fieldbox-first_name, #ak-fieldbox-last_name, #ak-fieldbox-zip {
 					width: 100%;
 					margin-right: 0;
 				}
