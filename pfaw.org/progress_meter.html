@@ -30,11 +30,12 @@
         [% } %]
     </script>
 
-    <span>[%= progress.percent %]</span>
-
     <script>
-        //var targetWidth = [%= progress.current > goal ? 100 : progress.percent %];
-        //console.log(targetWidth);
+        $(document).ready(function(){
+            var targetWidth = $('.ak-progress-percent').html().replace('%','');
+            console.log(targetWidth);
+        });
+        
     </script>
 
     <input type="hidden" name="want_progress" value="1">
