@@ -36,7 +36,9 @@
             var targetWidth = actionkit.context.progress.percent;
             $('.ak-progress-bar').delay(1000).animate({
                 width: targetWidth+'%'
-            }, 1000).html(targetWidth+'%');
+            }, 1000,function(
+                $(this).html(targetWidth+'%');
+            ));
         };
        
     </script>
