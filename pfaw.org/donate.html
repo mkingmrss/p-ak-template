@@ -851,7 +851,7 @@ window.upsellAnnual = true;
 
             //  If annual checkbox is checked, add One-time donation link to lightbox
             //  Formatting is set up to mirror what happens in reus_annual_checkbox
-            if( window.upsellAnnual && $( '[name="donation_type"]:checked' ).val() === 'recurring' ) {
+            if( window.upsellAnnual && $( '[name="recurring_period"]:checked' ).val() === 'years' ) {
 
                 //  Add link
                 $( '#onetime_override, #onetime_override_mobile' ).show();
