@@ -28,6 +28,8 @@
 	    overflow: hidden;
 	}
 
+	.row-bottom-submit { display: none; }
+
 	#column1 {
 	    width: 38%;
 	    position: relative;
@@ -138,5 +140,15 @@
 		    max-width:300px;
 		    padding: 0 20px;
 		}
+	}
+
+	@media (max-width: $max-reading-width){
+		#column1, #column2 {
+			width: 100%;
+    		float: left;
+		}
+
+		.row-top-submit { display: none; }
+		.row-bottom-submit { display: block; }
 	}
 }
