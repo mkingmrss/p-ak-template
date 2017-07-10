@@ -28,6 +28,8 @@
 	    overflow: hidden;
 	}
 
+	.row-bottom-submit { display: none; }
+
 	#column1 {
 	    width: 38%;
 	    position: relative;
@@ -145,5 +147,8 @@
 			width: 100%;
     		float: left;
 		}
+
+		.row-top-submit { display: none; }
+		.row-bottom-submit { display: block; }
 	}
 }

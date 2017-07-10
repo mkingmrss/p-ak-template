@@ -2055,6 +2055,9 @@ body noscript + script + p + script + p {
   width: 100%;
   overflow: hidden; }
 
+.ak-pagetype-letter .row-bottom-submit {
+  display: none; }
+
 .ak-pagetype-letter #column1 {
   width: 38%;
   position: relative;
@@ -2145,4 +2148,8 @@ body noscript + script + p + script + p {
 @media (max-width: 800px) {
   .ak-pagetype-letter #column1, .ak-pagetype-letter #column2 {
     width: 100%;
-    float: left; } }
+    float: left; }
+  .ak-pagetype-letter .row-top-submit {
+    display: none; }
+  .ak-pagetype-letter .row-bottom-submit {
+    display: block; } }
