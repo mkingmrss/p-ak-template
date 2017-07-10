@@ -763,6 +763,9 @@
 {% include "./mr.js.html" %}
 <script>
 window.upsellSwitch = true;
+{% if page.custom_fields.annual_checkbox %}
+window.upsellAnnual = true;
+{% endif %}
 </script>
 <script>
     (function( window ) {
@@ -857,36 +860,37 @@ window.upsellSwitch = true;
 
             //  If annual checkbox is checked, add One-time donation link to lightbox
             //  Formatting is set up to mirror what happens in reus_annual_checkbox
-            // if( lightbox.annual && $( '.js--recurring-input:checked' ).length ) {
+            if( window.upsellAnnual && $( '[name="donation_type"]:checked' ).val() === 'recurring' ) {
 
-            //     //  Add link
-            //     $( '#onetime_override, #onetime_override_mobile' ).show();
+                //  Add link
+                $( '#onetime_override, #onetime_override_mobile' ).show();
 
-            //     //  Add one-time gift functionality to one-time link
-            //     $( '#onetime_override, #onetime_override_mobile' ).click( function() {
+                //  Add one-time gift functionality to one-time link
+                $( '#onetime_override, #onetime_override_mobile' ).click( function() {
                   
-            //       $( '.js--recurring-input', $form ).prop( 'checked', false ).change();
-            //       that.submitApi( $form );
-            //       that.settings.lightbox.self.Hide();
+                  $( '[name="donation_type"]:checked' ).prop( 'checked', false ).trigger( 'change' );
+                  window.upsellSwitch = false;
+                  $( '.ak-submit-button' ).click();
+                  lightbox.self.Hide();
 
-            //     });
+                });
 
-            //     //  Update text to say "annual"
-            //     $( '.lightbox_desktop #orig, #orig_mobile' ).html( '<p>Confirm my <br/> annual <br/> donation</p>' );
-            // }
+                //  Update text to say "annual"
+                $( '.lightbox_desktop #orig, #orig_mobile' ).html( '<p>Confirm my <br/> annual <br/> donation</p>' );
+            }
 
             //  Activate processing before window closes
             window.onbeforeunload = function() {
                 window.upsellSwitch = false;
                 $( '#act' ).submit();
 
-                dataLayer.push({ 
-                  'ga_event_category': 'Multistep form', 
-                  'ga_event_action': 'Lightbox', 
-                  'ga_event_label': 'Window Closed', 
-                  'ga_event_value': 0, 
-                  'event': 'ga_track_event' 
-                });
+                // dataLayer.push({ 
+                //   'ga_event_category': 'Multistep form', 
+                //   'ga_event_action': 'Lightbox', 
+                //   'ga_event_label': 'Window Closed', 
+                //   'ga_event_value': 0, 
+                //   'event': 'ga_track_event' 
+                // });
             };
 
             //  Activate lightbox buttons
