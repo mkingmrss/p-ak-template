@@ -1641,7 +1641,7 @@ window.upsellSwitch = true;
             } else {
                 // fire upsell lightbox if necessary
                 if ( window.upsellSwitch && $( '[name="donation_type"]:checked' ).val() !== 'recurring' ) {
-                    return window.showUpsell;
+                    return window.showUpsell();
                 }
                 return true;
             }
