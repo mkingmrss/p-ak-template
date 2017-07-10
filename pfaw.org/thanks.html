@@ -160,6 +160,7 @@
 {% endblock %}
 
 {% block script_additions %}
+
 <script type="text/javascript">
     $(document).ready(function() {
         $('.ak-emailalt').on('click', function() {
@@ -180,6 +181,31 @@
     actionkit.forms.contextRoot = '/context/';
     actionkit.forms.initTafForm('taf');
     actionkit.sharing.initShareTools();
+</script>
+
+<pre>
+{% for key, value in data.items %}
+    {{ key }}: {{ value }}
+{% endfor %}
+</pre>
+
+
+<script>
+    // dataLayer = dataLayer || [];
+    // dataLayer.push({
+    //     'transactionId': '{{ order.id }}',
+    //     'transactionAffiliation': 'PFAW',
+    //     'transactionTotal': {{ order.amt }},
+    //     'transactionTax': 0.00,
+    //     'transactionShipping': 0.00,
+    //     'transactionProducts': [{
+    //         'sku': '[[S120:dc:donFormId]] - [[E130:"[[S120:dc:donationFormName]]" "'" "" replaceall]]',
+    //         'name': '[[?xx[[S120:dc:tributeDonation]]xx[[S120:dc:memorialDonation]]xx::xxtruexx::Tribute or Memorial::[[?xx[[S120:dc:recurringFrequencyUnit]]xx::xxmonthsxx::Monthly::One-Time]]]] Gift',
+    //         'category': '[[S120:dc:campaignName]]',
+    //         'price': [[E130:[[S120:dc:giftAmount]] "$" "" replaceall "," "" replaceall]],
+    //         'quantity': 1
+    //     }]
+    // });
 </script>
 
 {% endblock %}
