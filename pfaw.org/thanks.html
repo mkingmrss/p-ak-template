@@ -183,22 +183,24 @@
     actionkit.sharing.initShareTools();
 </script>
 
-<script>
-    dataLayer = dataLayer || [];
-    dataLayer.push({
-        'transactionId': '{{ order.id }}',
-        'transactionAffiliation': 'PFAW',
-        'transactionTotal': +'{{ order.total }}',
-        'transactionTax': 0.00,
-        'transactionShipping': 0.00,
-        'transactionProducts': [{
-            'sku': '{{page.id}} - {{ page.name|escapeall }}',
-            'name': '{% if orderrecurring %}{% if orderrecurring.period == "months" %}Monthly{% else %}Yearly{% endif %}{% else %}One-time{% endif %} Gift',
-            'category': '{{ page.name|escapeall }}',
-            'price': +'{{ order.total }}',
-            'quantity': 1
-        }]
-    });
-</script>
+    {% if order %}
+        <script>
+            dataLayer = dataLayer || [];
+            dataLayer.push({
+                'transactionId': '{{ order.id }}',
+                'transactionAffiliation': 'PFAW',
+                'transactionTotal': +'{{ order.total }}',
+                'transactionTax': 0.00,
+                'transactionShipping': 0.00,
+                'transactionProducts': [{
+                    'sku': '{{page.id}} - {{ page.name|escapeall }}',
+                    'name': '{% if orderrecurring %}{% if orderrecurring.period == "months" %}Monthly{% else %}Yearly{% endif %}{% else %}One-time{% endif %} Gift',
+                    'category': '{{ page.name|escapeall }}',
+                    'price': +'{{ order.total }}',
+                    'quantity': 1
+                }]
+            });
+        </script>
+    {% endif %}
 
 {% endblock %}
