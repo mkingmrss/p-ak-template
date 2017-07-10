@@ -942,11 +942,17 @@ window.upsellAnnual = true;
             $internalInput = $( '.js--giving-recurring input[name="recurring_period"][value="years"]');
 
         // Switch "fake" checkbox to represent the initial state of the "real" checkbox
-        $externalInput.prop( 'checked', $internalInput.prop( 'checked' ) );
+        $internalInput.on( 'change', function () {
+            $externalInput.prop( 'checked', $( this ).prop( 'checked' ) )
+        }).trigger( 'change' );
 
-        // When "fake" checkbox changes, set "real" checkbox to its value
-        $externalInput.on( 'change', function() {
-            $internalInput.prop( 'checked', $(this).is( ':checked' ) );
+        // When "fake" checkbox changes, set "real" checkbox to its value but only
+        // if real checkbox does not aready have the same value as the fake checkbox
+        // (otherwise we'd have an infinite loop).
+        $externalInput.on( 'change', function () {
+            if ( $( this ).prop( 'checked' ) !== $internalInput.prop( 'checked' ) ) {
+                $internalInput.prop( 'checked', $( this ).prop( 'checked' ) );
+            }
         });
 
     })( window );
