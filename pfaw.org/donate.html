@@ -407,11 +407,11 @@
                                 <div class="form-content recurring-options">
                                     <ul>
                                         <li class="recurring-options-option">
-                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_recurring" value="recurring" {% if monthly_ask_string == "1" %} checked {% endif %}>
+                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="recurring_period" id="id_donation_type_recurring" value="months" {% if monthly_ask_string == "1" %} checked {% endif %}>
                                             <label class="recurring-options-option-label" for="id_donation_type_recurring">Monthly</label>
                                         </li>
                                         <li class="recurring-options-option">
-                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="donation_type" id="id_donation_type_onetime" value="single" {% if monthly_ask_string == "2" %} checked {% endif %}>
+                                            <input type="radio" class="recurring-options-option-input js-recurring-options-option-input" name="recurring_period" id="id_donation_type_onetime" value="" {% if monthly_ask_string == "2" %} checked {% endif %}>
                                             <label class="recurring-options-option-label" for="id_donation_type_onetime">One-time</label>
                                         </li>
                                     </ul>
@@ -475,7 +475,7 @@
                             {# Basic annual checkbox #}
                             <div class="giving-recurring--annual js--giving-recurring">
                               <div>
-                                <input type="checkbox" name="recurring_period" value="years">
+                                <input type="radio" name="recurring_period" value="years">
                                 <input type="checkbox" id="donation_type_years" name="donation_type" value="recurring" checked>
                                 <label for="donation_type_years">
                                   Please set my PFAW membership to annually renew each year. <span>Your card will automatically be processed on today's date each subsequent year.</span>
@@ -869,6 +869,8 @@ window.upsellAnnual = true;
                 $( '#onetime_override, #onetime_override_mobile' ).click( function() {
                   
                   $( '[name="donation_type"]:checked' ).prop( 'checked', false ).trigger( 'change' );
+
+                  $( '#action_lightbox_sustainer_join' ).val( '' )
                   window.upsellSwitch = false;
                   $( '.ak-submit-button' ).click();
                   lightbox.self.Hide();
@@ -905,7 +907,7 @@ window.upsellAnnual = true;
 
                 //  Update value and check appropraite checkbox
                 $( '.js--amount-other-input' ).val( lightbox.amount.recurring ).trigger( 'click' );
-                $( '.js-recurring-options-option-input[value="recurring"]' ).prop( 'checked', true );
+                $( '[name="recurring_period"][value="months"]' ).prop( 'checked', true );
                 $( '#action_lightbox_sustainer_join' ).val( 'true' ); // track sustainer lightbox donation
 
                 //  If annual checkbox is present, change frequency and duration and unset monthly options
@@ -948,6 +950,7 @@ window.upsellAnnual = true;
         var $externalInput = $( '.js--autorenewal-external-input' ),
             $internalInputs = $( '.js--giving-recurring input[type="checkbox"], .js--giving-recurring input[type="radio"]');
 
+        // NEED TO SYNC THIS THE OTHER WAY FOR ONLOAD TO WORK
         $externalInput.on( 'change', function() {
             $internalInputs.prop( 'checked', $(this).is( ':checked' ) );
         }).trigger( 'change' );
