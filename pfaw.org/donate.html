@@ -336,7 +336,7 @@
     {% if page.custom_fields.annual_checkbox %}
     <div class="autorenewal-external js-autorenewal-external">
         <div>
-            <input type="checkbox" name="annual_gift_external" id="annual_gift_external" class="js--autorenewal-external-input" checked>
+            <input type="checkbox" name="annual_gift_external" id="annual_gift_external" class="js--autorenewal-external-input">
             <label for="annual_gift_external">
                 Please set my PFAW membership to annually renew each year. <span>Your card will automatically be processed on today's date each subsequent year.</span>
             </label>
@@ -481,7 +481,7 @@
                         {% endcomment %}
                         <div class="giving-recurring--annual js--giving-recurring">
                             <div class="form-content form-content--checkbox">
-                                <input type="radio" id="recurring_period_years" name="recurring_period" value="years">
+                                <input type="radio" id="recurring_period_years" name="recurring_period" value="years" {% if page.custom_fields.annual_checkbox == '1'%} checked {% endif %}>
                                 <label for="recurring_period_years">
                                     Yes, automatically repeat this gift every year.
                                 </label>
@@ -939,12 +939,15 @@ window.upsellAnnual = true;
     (function( window ) {
 
         var $externalInput = $( '.js--autorenewal-external-input' ),
-            $internalInputs = $( '.js--giving-recurring input[type="checkbox"], .js--giving-recurring input[type="radio"]');
+            $internalInput = $( '.js--giving-recurring input[name="recurring_period"][value="years"]');
 
-        // NEED TO SYNC THIS THE OTHER WAY FOR ONLOAD TO WORK
+        // Switch "fake" checkbox to represent the initial state of the "real" checkbox
+        $externalInput.prop( 'checked', $internalInput.prop( 'checked' ) );
+
+        // When "fake" checkbox changes, set "real" checkbox to its value
         $externalInput.on( 'change', function() {
-            $internalInputs.prop( 'checked', $(this).is( ':checked' ) );
-        }).trigger( 'change' );
+            $internalInput.prop( 'checked', $(this).is( ':checked' ) );
+        });
 
     })( window );
 
