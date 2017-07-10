@@ -471,36 +471,27 @@
                     {% endcomment %}
 
                     {% if page.custom_fields.annual_checkbox %}
-                        {% if not monthly_ask_string %}
-                            {# Basic annual checkbox #}
-                            <div class="giving-recurring--annual js--giving-recurring">
-                              <div>
-                                <input type="radio" name="recurring_period" value="years">
-                                <input type="checkbox" id="donation_type_years" name="donation_type" value="recurring" checked>
-                                <label for="donation_type_years">
-                                  Please set my PFAW membership to annually renew each year. <span>Your card will automatically be processed on today's date each subsequent year.</span>
-                                </label>
-                              </div>
-                            </div>
-                        {% else %}
-                            {% comment %}
-                            "Advanced" annual checkbox.
+                        {% comment %}
+                        Annual checkbox.
 
-                            This is the info submitted with the form, but it's invisible
-                            to the user in favor of the checkbox that is placed below the
-                            intro content. That "external" checkbox is synced to this
-                            hidden checkbox.
-                            {% endcomment %}
-                            <div class="giving-recurring--annual js--giving-recurring">
-                                <div class="form-content form-content--checkbox">
-                                    {# here we sync this hidden radio with the "annual gift" checkbox #}
-                                    <input type='radio' name='recurring_period' value='years'>
-                                    <input type="checkbox" name="annual_gift" id="annual_gift" value="" class="js--recurring-input">
-                                    <label for="annual_gift">
-                                        Yes, automatically repeat this gift every year.
-                                    </label>
-                                </div>
+                        This is the info submitted with the form, but it's invisible
+                        to the user in favor of the checkbox that is placed below the
+                        intro content. That "external" checkbox is synced to this
+                        hidden checkbox.
+                        {% endcomment %}
+                        <div class="giving-recurring--annual js--giving-recurring">
+                            <div class="form-content form-content--checkbox">
+                                <input type="radio" id="recurring_period_years" name="recurring_period" value="years">
+                                <label for="recurring_period_years">
+                                    Yes, automatically repeat this gift every year.
+                                </label>
                             </div>
+                        </div>
+                        {% if not monthly_ask_string %}
+                            {% comment %}
+                            If monthly ask string is not on the page, we need to add an invisible monthly option here in order for the upsell lightbox to work.
+                            {% endcomment %}
+                            <input type="radio" id="recurring_period_months" name="recurring_period" value="months" style="display: none;">
                         {% endif %}
                     {% elif allow_monthly %}
                         {% if not monthly_ask_string %}
