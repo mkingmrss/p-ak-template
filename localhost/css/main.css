@@ -2141,3 +2141,8 @@ body noscript + script + p + script + p {
     line-height: 36px;
     max-width: 300px;
     padding: 0 20px; }
+
+@media (max-width: 800px) {
+  .ak-pagetype-letter #column1, .ak-pagetype-letter #column2 {
+    width: 100%;
+    float: left; } }
