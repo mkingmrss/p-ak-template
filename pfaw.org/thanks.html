@@ -183,28 +183,22 @@
     actionkit.sharing.initShareTools();
 </script>
 
-<pre>
-amt "{{ order.amt }}"
-total "{{ order.total }}"
-</pre>
-
-
 <script>
-    // dataLayer = dataLayer || [];
-    // dataLayer.push({
-    //     'transactionId': '{{ order.id }}',
-    //     'transactionAffiliation': 'PFAW',
-    //     'transactionTotal': {{ order.amt }},
-    //     'transactionTax': 0.00,
-    //     'transactionShipping': 0.00,
-    //     'transactionProducts': [{
-    //         'sku': '[[S120:dc:donFormId]] - [[E130:"[[S120:dc:donationFormName]]" "'" "" replaceall]]',
-    //         'name': '[[?xx[[S120:dc:tributeDonation]]xx[[S120:dc:memorialDonation]]xx::xxtruexx::Tribute or Memorial::[[?xx[[S120:dc:recurringFrequencyUnit]]xx::xxmonthsxx::Monthly::One-Time]]]] Gift',
-    //         'category': '[[S120:dc:campaignName]]',
-    //         'price': [[E130:[[S120:dc:giftAmount]] "$" "" replaceall "," "" replaceall]],
-    //         'quantity': 1
-    //     }]
-    // });
+    dataLayer = dataLayer || [];
+    dataLayer.push({
+        'transactionId': '{{ order.id }}',
+        'transactionAffiliation': 'PFAW',
+        'transactionTotal': +'{{ order.total }}',
+        'transactionTax': 0.00,
+        'transactionShipping': 0.00,
+        'transactionProducts': [{
+            'sku': '{{page.id}} - {{ page.name|escapeall }}',
+            'name': '{{% if orderrecurring %}{{% ifequal orderrecurring.period "months" %}Monthly{% else %}Yearly{% endif %}{% else %}One-time{% endif %} Gift',
+            'category': '{{ page.name|escapeall }}',
+            'price': +'{{ order.total }}',
+            'quantity': 1
+        }]
+    });
 </script>
 
 {% endblock %}
