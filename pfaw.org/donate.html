@@ -859,7 +859,7 @@ window.upsellAnnual = true;
                 //  Add one-time gift functionality to one-time link
                 $( '#onetime_override, #onetime_override_mobile' ).click( function() {
                   
-                  $( '[name="donation_type"]:checked' ).prop( 'checked', false ).trigger( 'change' );
+                  $( '[name="recurring_period"]:checked' ).prop( 'checked', false ).trigger( 'change' );
 
                   $( '#action_lightbox_sustainer_join' ).val( '' )
                   window.upsellSwitch = false;
@@ -1654,7 +1654,7 @@ window.upsellAnnual = true;
                 return false;
             } else {
                 // fire upsell lightbox if necessary
-                if ( window.upsellSwitch && $( '[name="donation_type"]:checked' ).val() !== 'recurring' ) {
+                if ( window.upsellSwitch && $( '[name="recurring_period"]:checked' ).val() !== 'recurring' ) {
                     return window.showUpsell();
                 }
                 return true;
