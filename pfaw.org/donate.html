@@ -791,15 +791,16 @@ window.upsellAnnual = true;
             
         show = function( $form, event) {
 
-            var lightbox = lightbox || { amount: {} };
-
             //  Get upsell values
             lightbox.amount.original = window.update_total();
             lightbox.amount.onetime = Math.floor( lightbox.amount.original );
             lightbox.amount.recurring = calculateUpsellRecurring( lightbox.amount.onetime );
 
             //  Gift is outside our range for upsells, process the donation
-            if( !lightbox.amount.recurring ) return true;
+            if( !lightbox.amount.recurring ) {
+                console.log( 'recurring' );
+                return true;
+            }
 
             //
             //  Gift is within our range, set up lightbox
@@ -812,7 +813,10 @@ window.upsellAnnual = true;
                 lightbox.elementId = 'lightbox_23msf90';
                 
                 //  Check to make sure lightbox HTML exists
-                if( !document.getElementById( lightbox.elementId ) ) return true;
+                if( !document.getElementById( lightbox.elementId ) ) {
+                    console.log( 'no id' );
+                    return true;
+                }
 
                 //  Lightbox exists, grab HTML and continue set up
                 lightbox.html = document.getElementById( lightbox.elementId ).innerHTML;
@@ -1647,16 +1651,23 @@ window.upsellAnnual = true;
         /* clear paypal=1 hidden field, only needed if someone hit back */
         $('#ak-pay-by-paypal').val(0);
 
+        console.log( 'submit_cc' );
+
         if ( $('form.ak-donate-three-step').length > 0 ) {
+            console.log( 'inside' );
             validate_step("3");
 
             if (step_has_errors) {
+                console.log( 'step_has_errors' );
                 return false;
             } else {
                 // fire upsell lightbox if necessary
+                console.log( 'else' );
                 if ( window.upsellSwitch && $( '[name="recurring_period"]:checked' ).val() !== 'recurring' ) {
+                    console.log( 'showUpsell' );
                     return window.showUpsell();
                 }
+                console.log( 'true' );
                 return true;
             }
         }
