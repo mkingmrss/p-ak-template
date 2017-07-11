@@ -996,8 +996,8 @@ window.upsellAnnual = true;
             }
 
             // revel correct levels
-            $monthly_levels.toggle( $checked.val() === 'recurring' );
-            $onetime_levels.toggle( $checked.val() !== 'recurring' );
+            $monthly_levels.toggle( $checked.val() === 'months' );
+            $onetime_levels.toggle( $checked.val() !== 'months' );
 
             // add selected CSS support for older browsers
             $toggles.next( 'label' ).removeClass( 'recurring-options-option--selected' );
@@ -1006,6 +1006,11 @@ window.upsellAnnual = true;
         }
 
         $toggles.on( 'change', toggleLevels ).trigger( 'change' );
+
+        // If nothing is checked / val = "", check one-time
+        if ( !$( '[name="recurring_period"]' ).filter( ':checked' ).length ) {
+            $( '[name="recurring_period"][value=""]' ).prop( 'checked', true );
+        }
 
     })( window );
     {% endif %}
