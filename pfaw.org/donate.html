@@ -798,7 +798,6 @@ window.upsellAnnual = true;
 
             //  Gift is outside our range for upsells, process the donation
             if( !lightbox.amount.recurring ) {
-                console.log( 'recurring' );
                 return true;
             }
 
@@ -814,7 +813,6 @@ window.upsellAnnual = true;
                 
                 //  Check to make sure lightbox HTML exists
                 if( !document.getElementById( lightbox.elementId ) ) {
-                    console.log( 'no id' );
                     return true;
                 }
 
@@ -985,8 +983,8 @@ window.upsellAnnual = true;
         toggleLevels = function( event ) {
 
             var $checked = $toggles.filter( ':checked' ),
-                $switchingFromRadios = $checked.val() !== 'recurring' ? $monthly_radios : $onetime_radios,
-                $switchingToRadios  = $checked.val() === 'recurring' ? $monthly_radios : $onetime_radios,
+                $switchingFromRadios = $checked.val() !== 'months' ? $monthly_radios : $onetime_radios,
+                $switchingToRadios  = $checked.val() === 'months' ? $monthly_radios : $onetime_radios,
                 checkedIndex;
 
             // make sure that the visible levels are not the "switching to" levels,
@@ -1651,23 +1649,16 @@ window.upsellAnnual = true;
         /* clear paypal=1 hidden field, only needed if someone hit back */
         $('#ak-pay-by-paypal').val(0);
 
-        console.log( 'submit_cc' );
-
         if ( $('form.ak-donate-three-step').length > 0 ) {
-            console.log( 'inside' );
             validate_step("3");
 
             if (step_has_errors) {
-                console.log( 'step_has_errors' );
                 return false;
             } else {
                 // fire upsell lightbox if necessary
-                console.log( 'else' );
                 if ( window.upsellSwitch && $( '[name="recurring_period"]:checked' ).val() !== 'recurring' ) {
-                    console.log( 'showUpsell' );
                     return window.showUpsell();
                 }
-                console.log( 'true' );
                 return true;
             }
         }
