@@ -1762,6 +1762,8 @@ $(function() {
             actionkit.errors = {};
         }
 
+        window.upsellSwitch = true;
+
         switch (err.code) {
             case 'HOSTED_FIELDS_FIELDS_EMPTY':
                 actionkit.errors['card_num:invalid'] = "Credit card fields are empty.";
