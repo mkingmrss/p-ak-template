@@ -102,6 +102,10 @@
   h1 {
     position: relative;
   }
+  img {
+    height: 100%;
+    width: auto;
+  }
   .mobile-menu & {
     margin-left: .25em;
     background-size: 140px 62px;
