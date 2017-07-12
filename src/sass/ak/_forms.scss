@@ -5,6 +5,8 @@ body {
 			margin-bottom: .675em;
 			position: relative;
 			float:left;
+
+			&.row-affirm { margin-top: 1em; }
 		}
 
 		label {
@@ -25,11 +27,23 @@ body {
 		    	width: initial;
 		    	text-align:left;
 		    	margin-left: 1.5em;
+		    	font-weight: normal;
 		    }
 		}
 		#id_affirm {
 			float:left;
 		}
 
+		p.disclaimer {
+			margin-top: .25em;
+		}
+
+		#petition-form{
+			p.disclaimer {
+				font-weight:bold;
+				font-style: italic;
+				font-size: 15px;
+			}
+		}
 	}
 }

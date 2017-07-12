@@ -2135,6 +2135,8 @@ body:not(.ak-pagetype-donate) .form-row {
   margin-bottom: .675em;
   position: relative;
   float: left; }
+  body:not(.ak-pagetype-donate) .form-row.row-affirm {
+    margin-top: 1em; }
 
 body:not(.ak-pagetype-donate) label {
   white-space: normal;
@@ -2150,8 +2152,17 @@ body:not(.ak-pagetype-donate) label {
   body:not(.ak-pagetype-donate) label.checkbox {
     width: initial;
     text-align: left;
-    margin-left: 1.5em; }
+    margin-left: 1.5em;
+    font-weight: normal; }
 
 body:not(.ak-pagetype-donate) #id_affirm {
   float: left; }
+
+body:not(.ak-pagetype-donate) p.disclaimer {
+  margin-top: .25em; }
+
+body:not(.ak-pagetype-donate) #petition-form p.disclaimer {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 15px; }
 </style>
