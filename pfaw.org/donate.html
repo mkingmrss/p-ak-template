@@ -647,6 +647,7 @@
                         {% endif %}
                     </nav>
                     {% with page.custom_fields.designation as designation %}
+                        <input type="hidden" name="action_designation" value="{{designation}}">
                         <p class="disclaimer">PFAW will send you periodic updates by email.</p>
                         <p class="disclaimer">
                             {% if not designation or designation == 'c4' %}
