@@ -2056,7 +2056,8 @@ body noscript + script + p + script + p {
     color: #ae272b;
     font-size: 12px; }
   .ak-pagetype-letter #column1 label {
-    color: #444; }
+    color: #444;
+    font-weight: normal; }
   .ak-pagetype-letter #column1 input[type="text"], .ak-pagetype-letter #column1 select {
     width: 100%;
     border: 1px solid #999;
@@ -2146,4 +2147,11 @@ body:not(.ak-pagetype-donate) label {
   color: #183157; }
   body:not(.ak-pagetype-donate) label .ak-required-flag {
     color: #ae272b; }
+  body:not(.ak-pagetype-donate) label.checkbox {
+    width: initial;
+    text-align: left;
+    margin-left: 1.5em; }
+
+body:not(.ak-pagetype-donate) #id_affirm {
+  float: left; }
 </style>

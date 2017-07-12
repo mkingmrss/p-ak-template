@@ -16,10 +16,19 @@ body {
 		    font-size: 14px;
 		    margin-bottom: .125em;
 		    color: #183157;
-		
+
 		    .ak-required-flag {
 		    	color: $red;
 		    }
+
+		    &.checkbox {
+		    	width: initial;
+		    	text-align:left;
+		    	margin-left: 1.5em;
+		    }
+		}
+		#id_affirm {
+			float:left;
 		}
 
 	}
