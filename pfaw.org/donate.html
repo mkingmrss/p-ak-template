@@ -922,7 +922,10 @@ window.upsellAnnual = true;
         };
 
         window.showUpsell = function() {
-            return show();
+            if ( $( '[name="recurring_period"]:checked' ).val() !== 'months' ) {
+                return show();
+            }
+            return true;
         };
 
     })( window );
