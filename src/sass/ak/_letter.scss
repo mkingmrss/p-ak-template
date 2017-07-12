@@ -35,7 +35,7 @@
 	    position: relative;
 	    float:left;
 
-	    #ak-errors { display: none; }
+	    #ak-errors, #known_user { display: none; }
 
 	    p#required-flag {
 	    	color: $red;

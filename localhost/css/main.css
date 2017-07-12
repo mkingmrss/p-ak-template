@@ -2049,7 +2049,7 @@ body noscript + script + p + script + p {
   width: 38%;
   position: relative;
   float: left; }
-  .ak-pagetype-letter #column1 #ak-errors {
+  .ak-pagetype-letter #column1 #ak-errors, .ak-pagetype-letter #column1 #known_user {
     display: none; }
   .ak-pagetype-letter #column1 p#required-flag {
     color: #ae272b;
