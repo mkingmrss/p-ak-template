@@ -42,25 +42,10 @@
 	    	font-size: 12px;
 	    }
 
-	    .form-row {
-			width: 100%;
-			margin-bottom: .675em;
-			position: relative;
-			float:left;
-		}
+	    
 
 	    label {
-			white-space: normal;
-		    width: 100%;
-		    display: block;
-		    overflow: hidden;
-		    font-size: 14px;
-		    margin-bottom: .125em;
 		    color: #444;
-
-		    .ak-required-flag {
-		    	color: $red;
-		    }
 		}
 		input[type="text"], select {
 			width: 100%;

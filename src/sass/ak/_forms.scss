@@ -1,0 +1,26 @@
+body {
+	&:not(.ak-pagetype-donate){
+		.form-row {
+			width: 100%;
+			margin-bottom: .675em;
+			position: relative;
+			float:left;
+		}
+
+		label {
+			white-space: normal;
+		    width: 100%;
+		    display: block;
+		    font-weight: bold;
+		    overflow: hidden;
+		    font-size: 14px;
+		    margin-bottom: .125em;
+		    color: #183157;
+		
+		    .ak-required-flag {
+		    	color: $red;
+		    }
+		}
+
+	}
+}

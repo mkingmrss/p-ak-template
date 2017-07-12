@@ -1896,22 +1896,6 @@ body noscript + script + p + script + p {
   .ak-pagetype-petition .advocacy-action #petition-form {
     overflow-x: hidden;
     overflow-y: auto; }
-    .ak-pagetype-petition .advocacy-action #petition-form .form-row {
-      width: 100%;
-      margin-bottom: .675em;
-      position: relative;
-      float: left; }
-    .ak-pagetype-petition .advocacy-action #petition-form label {
-      white-space: normal;
-      width: 100%;
-      display: block;
-      font-weight: bold;
-      overflow: hidden;
-      font-size: 14px;
-      margin-bottom: .125em;
-      color: #183157; }
-      .ak-pagetype-petition .advocacy-action #petition-form label .ak-required-flag {
-        color: #ae272b; }
     .ak-pagetype-petition .advocacy-action #petition-form input[type="text"], .ak-pagetype-petition .advocacy-action #petition-form textarea {
       width: 100%;
       border: 1px solid #afb9b8;
@@ -2070,21 +2054,8 @@ body noscript + script + p + script + p {
   .ak-pagetype-letter #column1 p#required-flag {
     color: #ae272b;
     font-size: 12px; }
-  .ak-pagetype-letter #column1 .form-row {
-    width: 100%;
-    margin-bottom: .675em;
-    position: relative;
-    float: left; }
   .ak-pagetype-letter #column1 label {
-    white-space: normal;
-    width: 100%;
-    display: block;
-    overflow: hidden;
-    font-size: 14px;
-    margin-bottom: .125em;
     color: #444; }
-    .ak-pagetype-letter #column1 label .ak-required-flag {
-      color: #ae272b; }
   .ak-pagetype-letter #column1 input[type="text"], .ak-pagetype-letter #column1 select {
     width: 100%;
     border: 1px solid #999;
@@ -2156,3 +2127,21 @@ body noscript + script + p + script + p {
     display: none; }
   .ak-pagetype-letter .row-bottom-submit {
     display: block; } }
+
+body:not(.ak-pagetype-donate) .form-row {
+  width: 100%;
+  margin-bottom: .675em;
+  position: relative;
+  float: left; }
+
+body:not(.ak-pagetype-donate) label {
+  white-space: normal;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 14px;
+  margin-bottom: .125em;
+  color: #183157; }
+  body:not(.ak-pagetype-donate) label .ak-required-flag {
+    color: #ae272b; }
