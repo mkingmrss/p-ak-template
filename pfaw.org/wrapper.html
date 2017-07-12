@@ -276,9 +276,13 @@
 
                         {% with page.custom_fields.designation as designation %}
                             {% if not designation or designation == 'c4' %}
-                                <picture>
-                                    <img src="https://s3.amazonaws.com/s3.pfaw.org/images/pfaw_logo2017.png" alt="People for the American Way">
-                                </picture>
+                                {% if page.type == 'Donation' %}
+                                    {# No logo as a QA failsafe for donation pages w/o a designation #}
+                                {% else %}
+                                    <picture>
+                                        <img src="https://s3.amazonaws.com/s3.pfaw.org/images/pfaw_logo2017.png" alt="People for the American Way">
+                                    </picture>
+                                {% endif %}
                             {% elif designation == 'c3' %}
                                 <picture>
                                     <img src="https://secure3.convio.net/pfaw/images/content/pagebuilder/pfaw_c3_logo2017.jpg" alt="People for the American Way Foundation">
