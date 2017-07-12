@@ -49,6 +49,13 @@
                         <button type="submit" class="ak-submit-button">Send My Message</button>
                     </div>
 
+                    {% if page.custom_fields.affirm_checkbox == 'yes' %}
+                    <div class="form-row form-submit">
+                        <input type="checkbox" name="action_affirm" id="id_affirm" value="y">
+                        <label for="id_affirm">I affirm my membership with People For the American Way.</label>
+                    </div>
+                    {% endif %}
+
                 </div>
                 
 
