@@ -1898,8 +1898,9 @@ body noscript + script + p + script + p {
     overflow-y: auto; }
     .ak-pagetype-petition .advocacy-action #petition-form input[type="text"], .ak-pagetype-petition .advocacy-action #petition-form textarea {
       width: 100%;
-      border: 1px solid #afb9b8;
-      resize: none; }
+      border: 1px solid #afb9b8; }
+    .ak-pagetype-petition .advocacy-action #petition-form textarea {
+      height: 64px; }
     .ak-pagetype-petition .advocacy-action #petition-form ul.ak-err {
       list-style: none;
       margin: 0;

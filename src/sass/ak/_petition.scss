@@ -63,7 +63,10 @@
 			input[type="text"], textarea {
 				width: 100%;
 				border: 1px solid #afb9b8;
-				resize:none; 
+			}
+
+			textarea {
+				height: 64px;
 			}
 
 			ul.ak-err {
