@@ -89,6 +89,10 @@
 
 {% block below_form %}
 <script type="text/javascript">
+
+    actionkit.forms.contextRoot = '/context/';
+    actionkit.forms.initForm('act');
+
     $(document).ready(function() {
         $('label[for="id_state"]').show();
     });
