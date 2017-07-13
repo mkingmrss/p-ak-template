@@ -2094,8 +2094,9 @@ body noscript + script + p + script + p {
       margin: 0;
       padding: 0 0 10px 5px; }
     .ak-pagetype-letter #column2 #letter-story h3 {
-      margin: -11px -11px 3px -6px;
-      padding-left: 12px; }
+      margin: -5px -11px 3px -6px;
+      padding-left: 12px;
+      font-size: 20px; }
     .ak-pagetype-letter #column2 #letter-story textarea {
       margin: 8px;
       margin-bottom: 25px;

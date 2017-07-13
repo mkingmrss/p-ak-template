@@ -39,10 +39,6 @@
 
                     {# Optional TAF {% include "./inline_tellafriend.html" %} #}
 
-                    <div class="form-row form-submit">
-                        <button type="submit" class="ak-submit-button">Send My Message</button>
-                    </div>
-
                     {% if page.custom_fields.affirm_checkbox == 'yes' %}
                     <div class="form-row row-affirm">
                         <input type="checkbox" name="action_affirm" id="id_affirm" value="y" checked>
@@ -81,6 +77,10 @@
                     </div>
                     <p>Sincerely,<br><em>[Your Name]</em><br> <em>[Your Address]</em><br> <em>[City, State ZIP]</em></p>
 
+                </div>
+
+                <div class="form-row form-submit">
+                    <button type="submit" class="ak-submit-button">Send My Message</button>
                 </div>
             </div><!-- /right col -->
         </div>
