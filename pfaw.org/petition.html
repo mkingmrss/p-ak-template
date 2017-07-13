@@ -66,10 +66,7 @@
                     {% if page.custom_fields.featured_image %}
                     <img class="ak-featured-img {% if page.goal %}ak-margin-top-1{% endif %}" src="{{page.custom_fields.featured_image}}">
                     {% endif %}
-                    {% autoescape off %}
-                        <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
-                        <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
-                    {% endautoescape %}
+                    {% include_tmpl form.about_text %}
                 </div>
             {% else %}
                 {% if form.statement_leadin %}
