@@ -5,16 +5,18 @@
 <!-- for dev testing -->
 <link href="http://localhost:8888/pfaw/crmMigration/p-ak-template/localhost/css/main.css" rel="stylesheet" type="text/css" />
 
-<div class="ak-grid-row">
-    <div class="ak-grid-col ak-grid-col-12-of-12">
-        <h2>{{ page.title }}</h2>
-    </div>
-</div>
+
 
 <form class="action_form" name="act" method="POST" action="/act/" accept-charset="utf-8">
     
     <div class="ak-grid-row">
         <div id="signup-story" class="ak-grid-col ak-grid-col-6-of-12">
+
+            <div class="ak-grid-row">
+                <div class="ak-grid-col ak-grid-col-12-of-12">
+                    <h2>{{ page.title }}</h2>
+                </div>
+            </div>
 
             {% if page.custom_fields.featured_image %}
             <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
@@ -31,7 +33,9 @@
 
             {% include "./user_form_wrapper.html" %}
 
-            <button type="submit" class="full">Sign Up</button>
+            <div class="form-row">
+                <button type="submit" class="full">Sign Up</button>
+            </div>
 
             <div class="form-row">
                 <p class="disclaimer">PFAW will send you periodic updates by email.</p>

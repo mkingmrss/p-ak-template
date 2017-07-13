@@ -73,5 +73,43 @@
 		background: #eff3f3;
 		padding: 1.5em;
 		float: right; 
+
+		h2 {
+		    text-transform: uppercase;
+		    letter-spacing: .03em;
+		    font-size: 24px;
+		    color: #353b3a;
+		    padding-top: 6px;
+    		padding-bottom: 20px;
+    		font-weight: normal;
+    		margin-bottom: 0;
+
+		}
+		h2:before {
+			content: none;
+		}
+		#ak-errors { display: none; }
+	}
+
+	button.ak-has-overlay {
+		text-transform: uppercase;
+	    background: #4b6a23 linear-gradient(to bottom, #4b6a23 50%, #192f58 50%) repeat scroll 0 0 / 100px 100px;
+	    border-color: #192f58;
+	    border-radius: 0;
+	    border-style: none none solid;
+	    border-width: 0 0 5px;
+	    color: #fff;
+	    font-size: 15px;
+	    font-weight:bold;
+	    line-height: 36px;
+	    max-width:300px;
+	    padding: 0 20px;
+	}
+
+	p.disclaimer {
+		margin-top: .25em;
+		font-weight:bold;
+		font-style: italic;
+		font-size: 15px;
 	}
 }
