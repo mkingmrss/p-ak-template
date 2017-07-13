@@ -276,7 +276,7 @@
 
                         {% with page.custom_fields.designation as designation %}
                             {% if not designation or designation == 'c4' %}
-                                {% if page.type == 'Donation' %}
+                                {% if page.type == 'Donation' and not designation %}
                                     {# No logo as a QA failsafe for donation pages w/o a designation #}
                                 {% else %}
                                     <picture>
