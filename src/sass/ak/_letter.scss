@@ -40,6 +40,14 @@
 	    position: relative;
 	    float:left;
 
+	    #letter-form {
+	    	position:relative;
+	    	float:left;
+	    }
+
+	    #known_user {
+	    	margin-top: 20px;
+	    }
 	    #ak-errors { display: none; }
 
 	    p#required-flag {
