@@ -1,4 +1,4 @@
-.ak-pagetype-unsubscribe {
+.ak-pagetype-unsubscribe, .ak-pagetype-signup {
 	form {
 		margin: 0 auto;
 		width: 70%;
@@ -58,6 +58,7 @@
 	@media (max-width: 550px){
 		form {
 			width: 98%;
+			padding: 1em;
 		}
 	}
 }
