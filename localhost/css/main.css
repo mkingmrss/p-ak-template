@@ -1942,6 +1942,10 @@ body noscript + script + p + script + p {
     .ak-pagetype-petition .advocacy-action .advocacy-intro {
       margin-top: 2em; } }
 
+@media (max-width: 800px) {
+  .ak-pagetype-petition .header__buttons ul {
+    display: none; } }
+
 .ak-pagetype-thanks #confirmation-text {
   margin-bottom: 2em; }
   .ak-pagetype-thanks #confirmation-text p {
@@ -2126,6 +2130,8 @@ body noscript + script + p + script + p {
     padding: 0 20px; }
 
 @media (max-width: 800px) {
+  .ak-pagetype-letter .header__buttons ul {
+    display: none; }
   .ak-pagetype-letter #column1, .ak-pagetype-letter #column2 {
     width: 100%;
     float: left; }

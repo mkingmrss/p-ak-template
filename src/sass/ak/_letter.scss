@@ -133,6 +133,9 @@
 	}
 
 	@media (max-width: $max-reading-width){
+		.header__buttons{
+			ul { display: none; }
+		}
 		#column1, #column2 {
 			width: 100%;
     		float: left;
