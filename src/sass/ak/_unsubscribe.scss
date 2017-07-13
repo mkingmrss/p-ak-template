@@ -1,4 +1,4 @@
-.ak-pagetype-unsubscribe, .ak-pagetype-signup {
+.ak-pagetype-unsubscribe {
 	form {
 		margin: 0 auto;
 		width: 70%;
@@ -61,4 +61,13 @@
 			padding: 1em;
 		}
 	}
+}
+
+.ak-pagetype-signup {
+	#signup-story, #signup-form {
+		position: relative;
+		float: left;
+		width: 48.5%;
+	}
+	#signup-form { float: right; }
 }
