@@ -64,15 +64,25 @@
 }
 
 .ak-pagetype-signup {
+	.header__buttons{
+		ul { display: block; }
+	}
+
 	#signup-story, #signup-form {
 		position: relative;
 		float: left;
 		width: 48.5%;
 	}
+	#signup-story {
+		h1 {
+			font-size: 50px;
+		}
+	}
 	#signup-form { 
 		background: #eff3f3;
 		padding: 1.5em;
 		float: right; 
+		margin-top: 36px;
 
 		h2 {
 		    text-transform: uppercase;
@@ -89,6 +99,19 @@
 			content: none;
 		}
 		#ak-errors { display: none; }
+
+		#ak-fieldbox-first_name, #ak-fieldbox-last_name, #ak-fieldbox-zip {
+			width: 48%;
+		}
+		#ak-fieldbox-first_name {
+			margin-right: 4%;
+		}
+
+		.form-row.form-submit {
+			margin-top: .675em;
+			margin-bottom: 0;
+			text-align: center;
+		}
 	}
 
 	button.ak-has-overlay {
@@ -108,6 +131,7 @@
 
 	p.disclaimer {
 		margin-top: .25em;
+		margin-bottom: 0;
 		font-weight:bold;
 		font-style: italic;
 		font-size: 15px;
