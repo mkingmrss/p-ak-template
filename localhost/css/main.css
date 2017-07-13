@@ -2032,6 +2032,14 @@ body noscript + script + p + script + p {
   .ak-pagetype-unsubscribe .ak-err-below p {
     margin-bottom: 0; }
 
+@media (max-width: 800px) {
+  .ak-pagetype-unsubscribe form {
+    width: 90%; } }
+
+@media (max-width: 550px) {
+  .ak-pagetype-unsubscribe form {
+    width: 98%; } }
+
 body:not(.ak-pagetype-donate) .form-row {
   width: 100%;
   margin-bottom: .675em;

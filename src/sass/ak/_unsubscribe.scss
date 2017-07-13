@@ -49,4 +49,15 @@
 
 		p { margin-bottom: 0; }
 	}
+
+	@media (max-width: $max-reading-width){
+		form {
+			width: 90%;
+		}
+	}
+	@media (max-width: 550px){
+		form {
+			width: 98%;
+		}
+	}
 }
