@@ -30,6 +30,12 @@ body {
 		    	font-weight: normal;
 		    }
 		}
+
+		input[type="text"] {
+			width: 100%;
+			border: 1px solid #afb9b8;
+		}
+
 		#id_affirm {
 			float:left;
 		}
