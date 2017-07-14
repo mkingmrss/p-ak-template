@@ -2044,7 +2044,7 @@ body noscript + script + p + script + p {
 .ak-pagetype-signup .header__buttons ul {
   display: block; }
 
-.ak-pagetype-signup #signup-story, .ak-pagetype-signup #signup-form {
+.ak-pagetype-signup #signup-story, .ak-pagetype-signup #signup-form, .ak-pagetype-signup #signup-header {
   position: relative;
   float: left;
   width: 48.5%; }
