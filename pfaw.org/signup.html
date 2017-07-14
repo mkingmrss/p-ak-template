@@ -10,6 +10,23 @@
 <form class="action_form" name="act" method="POST" action="/act/" accept-charset="utf-8">
     
     <div class="ak-grid-row">
+        
+        <div id="signup-form" class="ak-grid-col ak-grid-col-6-of-12 ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
+
+            {% include_tmpl form.introduction_text %}
+
+            {% include "./user_form_wrapper.html" %}
+
+            <div class="form-row form-submit">
+                <button type="submit" class="full">Sign Up</button>
+            </div>
+
+            <div class="form-row">
+                <p class="disclaimer">PFAW will send you periodic updates by email.</p>
+            </div>
+
+        </div>
+
         <div id="signup-story" class="ak-grid-col ak-grid-col-6-of-12">
 
             <div class="ak-grid-row">
@@ -27,21 +44,6 @@
             {% include "./progress_meter.html" %}
         </div>
 
-        <div id="signup-form" class="ak-grid-col ak-grid-col-6-of-12 ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
-
-            {% include_tmpl form.introduction_text %}
-
-            {% include "./user_form_wrapper.html" %}
-
-            <div class="form-row form-submit">
-                <button type="submit" class="full">Sign Up</button>
-            </div>
-
-            <div class="form-row">
-                <p class="disclaimer">PFAW will send you periodic updates by email.</p>
-            </div>
-
-        </div>
     </div>
     
     <input type="hidden" name="page" value="{{ page.name }}">
