@@ -109,7 +109,7 @@
 
 		.form-row.form-submit {
 			margin-top: .675em;
-			margin-bottom: 0;
+			margin-bottom: .5em;
 			text-align: center;
 		}
 	}
@@ -136,4 +136,14 @@
 		font-style: italic;
 		font-size: 15px;
 	}
+
+	@media (max-width: $max-reading-width){
+		#signup-story, #signup-form {
+			width: 100%;
+    		float: none;
+		}
+	}
+
+
+	
 }

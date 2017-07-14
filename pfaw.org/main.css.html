@@ -1860,7 +1860,7 @@ body noscript + script + p + script + p {
 .ak-pagetype-petition .header__buttons ul {
   display: block; }
 
-.ak-pagetype-petition p {
+.ak-pagetype-petition p, .ak-pagetype-petition ol, .ak-pagetype-petition ul {
   font-size: 14px; }
 
 .ak-pagetype-petition .ak-featured-img {
@@ -2077,7 +2077,7 @@ body noscript + script + p + script + p {
     margin-right: 4%; }
   .ak-pagetype-signup #signup-form .form-row.form-submit {
     margin-top: .675em;
-    margin-bottom: 0;
+    margin-bottom: .5em;
     text-align: center; }
 
 .ak-pagetype-signup button.ak-has-overlay {
@@ -2100,6 +2100,11 @@ body noscript + script + p + script + p {
   font-weight: bold;
   font-style: italic;
   font-size: 15px; }
+
+@media (max-width: 800px) {
+  .ak-pagetype-signup #signup-story, .ak-pagetype-signup #signup-form {
+    width: 100%;
+    float: none; } }
 
 body:not(.ak-pagetype-donate) .form-row {
   width: 100%;
@@ -2177,7 +2182,7 @@ body:not(.ak-pagetype-donate) #petition-form p.disclaimer {
 .ak-pagetype-letter .header__buttons ul {
   display: block; }
 
-.ak-pagetype-letter p {
+.ak-pagetype-letter p, .ak-pagetype-letter ol, .ak-pagetype-letter ul {
   font-size: 14px; }
 
 .ak-pagetype-letter h2 {
