@@ -112,6 +112,15 @@
 			margin-bottom: .5em;
 			text-align: center;
 		}
+
+		ul.ak-err {
+			list-style:none;
+			margin: 0;
+			padding: 0;
+			font-size:12px;
+			margin-top: .25em;
+			color: $red;
+		}
 	}
 
 	button.ak-has-overlay {
@@ -138,9 +147,18 @@
 	}
 
 	@media (max-width: $max-reading-width){
-		#signup-story, #signup-form {
+		.header__buttons{
+			ul { display: none; }
+		}
+
+		#signup-story, #signup-form, #signup-header {
 			width: 100%;
-    		float: none;
+		}
+		#signup-form { 
+			margin-top: 0;
+		}
+		#signup-story {
+			margin-top: 36px; 
 		}
 	}
 

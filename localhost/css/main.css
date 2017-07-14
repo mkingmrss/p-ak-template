@@ -2078,6 +2078,13 @@ body noscript + script + p + script + p {
     margin-top: .675em;
     margin-bottom: .5em;
     text-align: center; }
+  .ak-pagetype-signup #signup-form ul.ak-err {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    margin-top: .25em;
+    color: #ae272b; }
 
 .ak-pagetype-signup button.ak-has-overlay {
   text-transform: uppercase;
@@ -2101,9 +2108,14 @@ body noscript + script + p + script + p {
   font-size: 15px; }
 
 @media (max-width: 800px) {
-  .ak-pagetype-signup #signup-story, .ak-pagetype-signup #signup-form {
-    width: 100%;
-    float: none; } }
+  .ak-pagetype-signup .header__buttons ul {
+    display: none; }
+  .ak-pagetype-signup #signup-story, .ak-pagetype-signup #signup-form, .ak-pagetype-signup #signup-header {
+    width: 100%; }
+  .ak-pagetype-signup #signup-form {
+    margin-top: 0; }
+  .ak-pagetype-signup #signup-story {
+    margin-top: 36px; } }
 
 body:not(.ak-pagetype-donate) .form-row {
   width: 100%;
