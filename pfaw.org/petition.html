@@ -82,3 +82,17 @@
 </div>
 
 {% endblock %}
+
+
+{% block script_additions %}
+<script language="javascript">
+//<!--
+    
+    $(document).ready(function(){
+        $('#ak-fieldbox-email').addClass('form-row-two-thirds');
+        $('#ak-fieldbox-zip').addClass('form-row-second-third');
+    });
+
+//-->
+</script>
+{% endblock %}

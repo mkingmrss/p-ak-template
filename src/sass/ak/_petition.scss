@@ -22,7 +22,6 @@
 		}
 
 		header {
-			padding-top: 20px;
 			padding-bottom: 12px;
 			float: left;
 			text-align: left;
@@ -107,6 +106,16 @@
 				    line-height: 36px;
 				    max-width:300px;
 				    padding: 0 20px;
+				    -webkit-transition: background-position .3s;
+  					transition: background-position .3s;
+
+  					&:hover{
+  						background-position: 0 100%;
+					    color: #FFFFFF;
+					    outline: 0; 
+					    cursor: pointer;
+  					}
+
 				}
 			}
 
@@ -129,7 +138,7 @@
 			}
 		}
 	}
-	@media (max-width: $max-reading-width){
+	@media (max-width: 900px){
 		.header__buttons{
 			ul { display: none; }
 		}

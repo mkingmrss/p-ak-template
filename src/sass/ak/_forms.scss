@@ -9,6 +9,23 @@ body {
 			&.row-affirm { margin-top: 1em; }
 		}
 
+		.form-row-first-third {
+			float: left;
+		    width: 32%;
+		    margin-right: 2%;
+		}
+
+		.form-row-second-third {
+			float: left;
+		    width: 32%;
+		    margin-left: 2%;
+		}
+
+		.form-row-two-thirds {
+			float:left;
+			width: 66%;
+		}
+
 		label {
 			white-space: normal;
 		    width: 100%;

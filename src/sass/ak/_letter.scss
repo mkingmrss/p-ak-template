@@ -137,13 +137,25 @@
 		    line-height: 36px;
 		    max-width:300px;
 		    padding: 0 20px;
+		    -webkit-transition: background-position .3s;
+			transition: background-position .3s;
+
+			&:hover{
+				background-position: 0 100%;
+				color: #FFFFFF;
+				outline: 0; 
+				cursor: pointer;
+			}
+		}
+	}
+	@media (max-width: 900px){
+		.header__buttons{
+			ul { display: none; }
 		}
 	}
 
 	@media (max-width: $max-reading-width){
-		.header__buttons{
-			ul { display: none; }
-		}
+		
 		#column1, #column2 {
 			width: 100%;
     		float: left;
