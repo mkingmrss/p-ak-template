@@ -425,7 +425,7 @@
                             <ul class="ak-unstyled">
                             {# monthly amounts, if needed #}
                             {% if allow_monthly %}
-                            {% if monthly_ask_string and amounts %}
+                            {% if monthly_ask_string and amounts|length %}
                                 {% with '10 15 30 50' as monthly_amounts %}
                                     {% for amount in monthly_amounts.split %}
                                         <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--monthly" {% if monthly_ask_string == "2" %} style="display: none;" {% endif %}>
