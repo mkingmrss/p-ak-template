@@ -1907,7 +1907,7 @@ body noscript + script + p + script + p {
       font-size: 12px;
       margin-top: .25em;
       color: #ae272b; }
-    .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
+    .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name {
       width: 48%; }
     .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name {
       margin-right: 4%; }
