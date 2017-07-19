@@ -820,7 +820,7 @@ window.upsellAnnual = true;
                 //  Lightbox exists, grab HTML and continue set up
                 lightbox.html = document.getElementById( lightbox.elementId ).innerHTML;
                 lightbox.width = 678;
-                lightbox.height = 591;
+                lightbox.height = 615;
 
                 //  Kill placeholder lightbox, to keep jQuery working and save lightbox to Multistep class
                 $( '#' + lightbox.elementId ).remove();
@@ -857,7 +857,7 @@ window.upsellAnnual = true;
             if( window.upsellAnnual && $( '[name="recurring_period"]:checked' ).val() === 'years' ) {
 
                 //  Add link
-                $( '#onetime_override, #onetime_override_mobile' ).show();
+                $( '#onetime_override, #onetime_override_mobile' ).css( 'display', 'block' );
 
                 //  Add one-time gift functionality to one-time link
                 $( '#onetime_override, #onetime_override_mobile' ).click( function() {
