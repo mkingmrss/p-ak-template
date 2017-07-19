@@ -76,7 +76,7 @@
                 background-repeat: no-repeat;
                 background-position: 0 72px;
                 width: 678px;
-                height: 510px;
+                height: 545px;
                 border: 7px solid #fff;
                 font-family: Helvetica, Arial, sans-serif;
                 margin: 2% auto;
@@ -131,9 +131,10 @@
         }
         #onetime_override {
                 color: #FFFFFF;
-                position: absolute;
-                left: 180px;
-                bottom: 0;
+                clear: both;
+                text-align: center;
+                margin-top: 10px;
+                font-size: 16px;
         }
         .yes
         {
@@ -820,7 +821,7 @@ window.upsellAnnual = true;
                 //  Lightbox exists, grab HTML and continue set up
                 lightbox.html = document.getElementById( lightbox.elementId ).innerHTML;
                 lightbox.width = 678;
-                lightbox.height = 615;
+                lightbox.height = 550;
 
                 //  Kill placeholder lightbox, to keep jQuery working and save lightbox to Multistep class
                 $( '#' + lightbox.elementId ).remove();
