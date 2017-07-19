@@ -1253,6 +1253,9 @@ window.upsellAnnual = true;
                 focus_field_if_blank( $('#ak-card_num') )
             );
         }
+        if( window.scrollY > $( '.js--multistep-form' ).offset().top ) {
+            window.scrollTo( 0, $( '.js--multistep-form' ).offset().top );
+        }
     }
 
     function focus_field_if_blank ( field_elt ) {
