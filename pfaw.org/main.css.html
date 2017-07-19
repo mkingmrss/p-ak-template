@@ -1873,7 +1873,6 @@ body noscript + script + p + script + p {
   .ak-pagetype-petition .advocacy-action .advocacy-intro, .ak-pagetype-petition .advocacy-action .pull-right, .ak-pagetype-petition .advocacy-action header {
     width: 48.5%; }
   .ak-pagetype-petition .advocacy-action header {
-    padding-top: 20px;
     padding-bottom: 12px;
     float: left;
     text-align: left; }
@@ -1909,7 +1908,7 @@ body noscript + script + p + script + p {
       font-size: 12px;
       margin-top: .25em;
       color: #ae272b; }
-    .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
+    .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name {
       width: 48%; }
     .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name {
       margin-right: 4%; }
@@ -1931,7 +1930,25 @@ body noscript + script + p + script + p {
         font-weight: bold;
         line-height: 36px;
         max-width: 300px;
-        padding: 0 20px; }
+        padding: 0 20px;
+        -webkit-transition: background-position .3s;
+        transition: background-position .3s; }
+        .ak-pagetype-petition .advocacy-action #petition-form .form-row.form-submit .ak-submit-button:hover {
+          background-position: 0 100%;
+          color: #FFFFFF;
+          outline: 0;
+          cursor: pointer; }
+    .ak-pagetype-petition .advocacy-action #petition-form .form-row-first-third {
+      float: left;
+      width: 32%;
+      margin-right: 2%; }
+    .ak-pagetype-petition .advocacy-action #petition-form .form-row-second-third {
+      float: left;
+      width: 32%;
+      margin-left: 2%; }
+    .ak-pagetype-petition .advocacy-action #petition-form .form-row-two-thirds {
+      float: left;
+      width: 66%; }
     @media (max-width: 800px) {
       .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
         width: 100%;
@@ -1943,7 +1960,7 @@ body noscript + script + p + script + p {
     .ak-pagetype-petition .advocacy-action .advocacy-intro {
       margin-top: 2em; } }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .ak-pagetype-petition .header__buttons ul {
     display: none; } }
 
@@ -2126,6 +2143,20 @@ body:not(.ak-pagetype-donate) .form-row {
   body:not(.ak-pagetype-donate) .form-row.row-affirm {
     margin-top: 1em; }
 
+body:not(.ak-pagetype-donate) .form-row-first-third {
+  float: left;
+  width: 32%;
+  margin-right: 2%; }
+
+body:not(.ak-pagetype-donate) .form-row-second-third {
+  float: left;
+  width: 32%;
+  margin-left: 2%; }
+
+body:not(.ak-pagetype-donate) .form-row-two-thirds {
+  float: left;
+  width: 66%; }
+
 body:not(.ak-pagetype-donate) label {
   white-space: normal;
   width: 100%;
@@ -2301,11 +2332,20 @@ body:not(.ak-pagetype-donate) #petition-form p.disclaimer {
     font-weight: bold;
     line-height: 36px;
     max-width: 300px;
-    padding: 0 20px; }
+    padding: 0 20px;
+    -webkit-transition: background-position .3s;
+    transition: background-position .3s; }
+    .ak-pagetype-letter .form-row.form-submit .ak-submit-button:hover {
+      background-position: 0 100%;
+      color: #FFFFFF;
+      outline: 0;
+      cursor: pointer; }
+
+@media (max-width: 900px) {
+  .ak-pagetype-letter .header__buttons ul {
+    display: none; } }
 
 @media (max-width: 800px) {
-  .ak-pagetype-letter .header__buttons ul {
-    display: none; }
   .ak-pagetype-letter #column1, .ak-pagetype-letter #column2 {
     width: 100%;
     float: left; }
@@ -2321,6 +2361,20 @@ body:not(.ak-pagetype-donate) .form-row {
   float: left; }
   body:not(.ak-pagetype-donate) .form-row.row-affirm {
     margin-top: 1em; }
+
+body:not(.ak-pagetype-donate) .form-row-first-third {
+  float: left;
+  width: 32%;
+  margin-right: 2%; }
+
+body:not(.ak-pagetype-donate) .form-row-second-third {
+  float: left;
+  width: 32%;
+  margin-left: 2%; }
+
+body:not(.ak-pagetype-donate) .form-row-two-thirds {
+  float: left;
+  width: 66%; }
 
 body:not(.ak-pagetype-donate) label {
   white-space: normal;
