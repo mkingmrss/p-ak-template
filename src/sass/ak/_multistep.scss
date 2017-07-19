@@ -1,4 +1,3 @@
-
 .multistep-logo img {
   max-width: 100%;
   height: auto;
@@ -1069,3 +1068,11 @@ body noscript + script + p + script + p
   margin: 0;
 }
 
+.receipt {
+  td:first-child {
+    background: $light-grey;
+  }
+  tr {
+    border-bottom: 1px solid $white;
+  }
+}
