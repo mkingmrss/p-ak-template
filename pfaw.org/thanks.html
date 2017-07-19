@@ -8,6 +8,41 @@
     <h2>Thanks for your donation</h2>
     <div>
         {% include_tmpl form.thank_you_text %}
+
+        {% if order %}
+        <p>Please print or save this message for your personal records.</p>
+
+        <table class="receipt">
+          <tr>
+            <td>Name</td>
+            <td>{{ user.name }}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{ user.email }}</td>
+          </tr>
+          <tr>
+            <td>Card Number</td>
+            <td>************ {{ order.card_num_last_four }}</td>
+          </tr>
+          <tr>
+            <td>Amount</td>
+            <td>{{ order.amt  }}</td>
+          </tr>
+          
+          {% if action.orderrecurring %}
+          <tr>
+            <td>Recurring gift frequency</td>
+            <td>{{ orderrecurring.get_period_display }}</td>
+          </tr>
+          <tr>
+            <td>Next Gift Processed On:</td>
+            <td>{{ orderrecurring.next_payment_date }}</td>
+          </tr>
+          {% endif %}
+
+        </table>
+        {% endif %}
     </div>
 {% else %}
 
