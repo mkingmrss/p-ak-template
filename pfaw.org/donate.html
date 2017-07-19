@@ -134,6 +134,7 @@
                 clear: both;
                 text-align: center;
                 margin-top: 10px;
+                padding-top: 8px;
                 font-size: 16px;
         }
         .yes
@@ -858,7 +859,7 @@ window.upsellAnnual = true;
             if( window.upsellAnnual && $( '[name="recurring_period"]:checked' ).val() === 'years' ) {
 
                 //  Add link
-                $( '#onetime_override, #onetime_override_mobile' ).css( 'display', 'block' );
+                $( '#onetime_override, #onetime_override_mobile' ).css( 'display', 'inline-block' );
 
                 //  Add one-time gift functionality to one-time link
                 $( '#onetime_override, #onetime_override_mobile' ).click( function() {
