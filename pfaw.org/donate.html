@@ -1657,6 +1657,11 @@ window.upsellAnnual = true;
         $('#ak-pay-by-paypal').val(0);
 
         if ( $('form.ak-donate-three-step').length > 0 ) {
+            // only submit if we are on the thrid step
+            if ( $('input[name="ak-donate-step"]:checked').val() !== '3' ) {
+                three_step_advance();
+                return false;
+            }
             validate_step("3");
 
             if (step_has_errors) {
