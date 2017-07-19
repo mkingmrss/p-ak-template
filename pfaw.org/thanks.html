@@ -21,10 +21,14 @@
             <td>Email</td>
             <td>{{ user.email }}</td>
           </tr>
+
+          {% if order.card_num_last_four %}
           <tr>
             <td>Card Number</td>
             <td>************ {{ order.card_num_last_four }}</td>
           </tr>
+          {% endif %}
+          
           <tr>
             <td>Amount</td>
             <td>{{ order.amt  }}</td>
