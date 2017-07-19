@@ -1067,12 +1067,3 @@ body noscript + script + p + script + p
   /* Some tracking script inserts a p tag */
   margin: 0;
 }
-
-.receipt {
-  td:first-child {
-    background: $light-grey;
-  }
-  tr {
-    border-bottom: 1px solid $white;
-  }
-}

@@ -1856,12 +1856,6 @@ body noscript + script + p + script + p {
   /* Some tracking script inserts a p tag */
   margin: 0; }
 
-.receipt td:first-child {
-  background: #eff3f3; }
-
-.receipt tr {
-  border-bottom: 1px solid #FFFFFF; }
-
 .ak-pagetype-petition .header__buttons ul {
   display: block; }
 
@@ -1995,6 +1989,25 @@ body noscript + script + p + script + p {
       .ak-pagetype-thanks #social-wrapper ul#social-holder li a.ak-twitter {
         background: url(https://s3.amazonaws.com/s3.pfaw.org/images/pfaw_df_sidebar_tw.png) transparent no-repeat; }
 
+.receipt td:first-child {
+  background: #eff3f3; }
+
+.receipt tr {
+  border-bottom: 1px solid #FFFFFF; }
+
+.match-survey {
+  border: 3px solid #353b3a;
+  margin: 1rem auto 2rem auto;
+  padding: 2rem;
+  font-size: 16px; }
+  .match-survey .button--red, .match-survey .header__buttons li a, .header__buttons li .match-survey a {
+    font-size: 1em;
+    margin: 2em auto 0 auto;
+    display: block; }
+  .match-survey label {
+    color: #ae272b;
+    font-size: 1em; }
+
 .ak-pagetype-unsubscribe form {
   margin: 0 auto;
   width: 70%;
@@ -2122,46 +2135,6 @@ body noscript + script + p + script + p {
     margin-top: 0; }
   .ak-pagetype-signup #signup-story {
     margin-top: 36px; } }
-
-body:not(.ak-pagetype-donate) .form-row {
-  width: 100%;
-  margin-bottom: .675em;
-  position: relative;
-  float: left; }
-  body:not(.ak-pagetype-donate) .form-row.row-affirm {
-    margin-top: 1em; }
-
-body:not(.ak-pagetype-donate) label {
-  white-space: normal;
-  width: 100%;
-  display: block;
-  font-weight: bold;
-  overflow: hidden;
-  font-size: 14px;
-  margin-bottom: .125em;
-  color: #183157; }
-  body:not(.ak-pagetype-donate) label .ak-required-flag {
-    color: #ae272b; }
-  body:not(.ak-pagetype-donate) label.checkbox {
-    width: initial;
-    text-align: left;
-    margin-left: 1.5em;
-    font-weight: normal; }
-
-body:not(.ak-pagetype-donate) input[type="text"] {
-  width: 100%;
-  border: 1px solid #afb9b8; }
-
-body:not(.ak-pagetype-donate) #id_affirm {
-  float: left; }
-
-body:not(.ak-pagetype-donate) p.disclaimer {
-  margin-top: .25em; }
-
-body:not(.ak-pagetype-donate) #petition-form p.disclaimer {
-  font-weight: bold;
-  font-style: italic;
-  font-size: 15px; }
 
 #progress {
   margin-bottom: 1em;
