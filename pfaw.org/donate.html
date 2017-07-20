@@ -879,10 +879,13 @@ window.upsellAnnual = true;
                 $( '.lightbox_desktop #orig, #orig_mobile' ).html( '<p>Confirm my <br/> annual <br/> donation</p>' );
             }
 
+            //  Focus on something else to avoid keyboard popping up after lb selection
+            $( '.ak-submit-button' ).focus();
+
             //  Activate processing before window closes
             window.onbeforeunload = function() {
                 window.upsellSwitch = false;
-                $( '#act' ).submit();
+                $( '.ak-submit-button' ).click();
 
                 // dataLayer.push({ 
                 //   'ga_event_category': 'Multistep form', 
@@ -897,7 +900,7 @@ window.upsellAnnual = true;
             $( '#orig, #close_mobile, #orig_mobile, #close_desktop' ).click( function() {
                 $( '#action_lightbox_sustainer_join' ).val( '' ); // do not track sustainer donation from lightbox
                 window.upsellSwitch = false;
-                $( '.ak-submit-button' ).click() //  No need to change form, use click b/c braintree button
+                $( '.ak-submit-button' ).click(); //  No need to change form, use click b/c braintree button
                 lightbox.self.Hide();
             });
 
