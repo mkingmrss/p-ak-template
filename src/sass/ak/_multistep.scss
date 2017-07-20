@@ -1070,3 +1070,9 @@ body noscript + script + p + script + p
   /* Some tracking script inserts a p tag */
   margin: 0;
 }
+#ak-fieldbox-subscription_consent {
+  margin: 1em 0;
+}
+#ak-fieldbox-subscription_consent input[type="checkbox"] + label {
+  display: inline;
+}
