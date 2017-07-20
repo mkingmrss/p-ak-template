@@ -565,7 +565,8 @@
   width: 32%;
   margin-right: 2%;
 }
-.multistep-form .form-row .form-content.form-content-third:last-child {
+.multistep-form .form-row .form-content.form-content-third:last-child,
+.multistep-form .form-row .form-content.form-content-third:nth-child(3) {
   margin-right: 0;
 }
 .multistep-form .form-row .form-content.form-content-quarter {
