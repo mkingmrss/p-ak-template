@@ -563,7 +563,9 @@
                                 {% include "./state_select.html" %}
                             </div>
                             <div class="form-content form-content-third">
+                                {% if not page.allow_international %}
                                 <input type="hidden" name="required" value="zip">
+                                {% endif %}
                                 <label for="id_zip">Zip: <span class="required">*</span></label>
                                 <input id="id_zip" type="text" name="zip" maxlength="5" size="5">
                             </div>
