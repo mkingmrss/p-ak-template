@@ -47,7 +47,7 @@
                     $('#id_suppress_subscribe').val('')
                     $('#ak-fieldbox-subscription_consent').hide()
                 }
-            });
+            }).trigger( 'change' );
             </script>
 
             <!-- With JavaScript off, we can't show a consent box -->
