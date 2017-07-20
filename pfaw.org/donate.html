@@ -557,12 +557,12 @@
                                 <label for="id_city">City: <span class="required">*</span></label>
                                 <input type="text" name="city" id="id_city" required />
                             </div>
-                            <div class="form-content form-content-third">
+                            <div class="form-content form-content-third ak-us-billing-fields">
                                 <input type="hidden" name="required" value="state">
                                 <label for="id_state">State: <span class="required">*</span></label>
                                 {% include "./state_select.html" %}
                             </div>
-                            <div class="form-content form-content-third">
+                            <div class="form-content form-content-third ak-us-billing-fields">
                                 {% if not page.allow_international %}
                                 <input type="hidden" name="required" value="zip">
                                 {% endif %}
@@ -570,16 +570,16 @@
                                 <input id="id_zip" type="text" name="zip" maxlength="5" size="5">
                             </div>
                             {% if page.allow_international %}
-                            <div class="form-content form-content-third">
+                            <div class="form-content form-content-third ak-intl-billing-fields">
                                 <label for="id_region">Region</label>
                                 <input id="id_region"  type="text" name="region" size="20">
                             </div>
-                            <div class="form-content form-content-third">
+                            <div class="form-content form-content-third ak-intl-billing-fields">
                                 <label for="id_postal">Postal Code</label>
                                 <input id="id_postal"  type="text" name="postal" size="10">
                             </div>
                         </div>
-                        <div class="form-row">
+                        <div class="form-row ak-intl-billing-fields">
                             <div class="form-content">
                                 <label for="id_country">Country</label>
                                 {% include "./country_select.html" %}
