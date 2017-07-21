@@ -413,7 +413,7 @@
                                 {% for product in products %}
                                 <li class="product">
                                     <label>
-                                        <input type="radio" name="product" value="{{ product.id }}"
+                                        <input type="radio" name="product" value="product_{{ product.id }}"
                                         <input type="hidden" value="" name="product_{{ product.id }}">
                                         {{ product.price }} <span>{{ product.name }}</span>
                                     </label>
@@ -977,6 +977,20 @@ window.upsellAnnual = true;
 
     // M+R script additions
     // —
+
+    // Products
+    (function( window ) {
+
+        var $productInputs = $( 'input[name="product"]' );
+
+        $productInputs.on( 'change', function() {
+            $productInputs.each( function() {
+                $( 'input[name="' + $(this).val() + '"]' ).val( $( this ).prop( 'checked') ? 1 : 0 );
+            });
+        }).trigger( 'change' );
+
+    })( window );
+    
 
     // Annual autorenewal
     (function( window ) {
