@@ -1876,11 +1876,14 @@ body noscript + script + p + script + p {
   .products label {
     text-indent: -1.625em;
     overflow: visible;
-    font-weight: normal; }
+    font-weight: normal;
+    cursor: pointer; }
     .products label strong {
       font-weight: bold;
       margin-left: .5em;
       margin-bottom: .25em; }
+    .products label .description {
+      display: block; }
 
 .ak-pagetype-petition .header__buttons ul {
   display: block; }
