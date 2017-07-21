@@ -414,8 +414,13 @@
                                 <li class="product">
                                     <label>
                                         <input type="radio" name="product" value="product_{{ product.id }}">
-                                        <input type="hidden" value="" name="product_{{ product.id }}">
-                                        <strong>{{ product.price }} — <span>{{ product.name }}</span></strong><span class="description">
+                                        <input type="hidden" value="" id="product_{{ product.id }}" name="product_{{ product.id }}">
+                                        <strong>
+                                            <span id="product_{{ product_id }}_price" data-price="{{ product.price }}">{{ product.price }}</span>
+                                            —
+                                            <span>{{ product.name }}</span>
+                                        </strong>
+                                        <span class="description">
                                             {{ product.desc }}
                                         </span>
                                     </label>
