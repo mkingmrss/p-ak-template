@@ -413,7 +413,7 @@
                                 {% for product in products %}
                                 <li class="product">
                                     <label>
-                                        <input type="radio" name="product" value="product_{{ product.id }}"
+                                        <input type="radio" name="product" value="product_{{ product.id }}">
                                         <input type="hidden" value="" name="product_{{ product.id }}">
                                         {{ product.price }} <span>{{ product.name }}</span>
                                     </label>
