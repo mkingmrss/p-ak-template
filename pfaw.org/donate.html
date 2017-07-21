@@ -468,7 +468,7 @@
                                 <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
                                     <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
                                     <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
-                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" {% if amounts|length > 1 %}placeholder="Other"{% endif %}>
+                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" {% if amounts|length > 1 or has_products %}placeholder="Other"{% endif %}>
                                 </li>
                                 {% else %}
                                 <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}>
