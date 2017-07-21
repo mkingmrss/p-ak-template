@@ -415,9 +415,9 @@
                                     <label>
                                         <input type="radio" name="product" value="product_{{ product.id }}">
                                         <input type="hidden" value="" name="product_{{ product.id }}">
-                                        {{ product.price }} — <span>{{ product.name }}</span>
+                                        <strong>{{ product.price }} — <span>{{ product.name }}</span></strong>
+                                        {{ product.desc }}
                                     </label>
-                                    {{ product.desc }}
                                 </li>
                                 {% endfor %}
                             </ul>

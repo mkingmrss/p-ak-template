@@ -1084,14 +1084,21 @@ body noscript + script + p + script + p
   .product {
     background: $white;
     background: rgba( 255, 255, 255, .5 );
-    padding-left: 1em;
+    padding: 1em 1em 1em 2.5em;
 
     &.selected {
       background: $white;
     }
   }
   label {
-    text-indent: -1em;
+    text-indent: -1.625em;
     overflow: visible;
+    font-weight: normal;
+
+    strong {
+      font-weight: bold;
+      margin-left: .5em;
+      margin-bottom: .25em;
+    }
   }
 }
