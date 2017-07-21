@@ -405,55 +405,24 @@
                         <h1>{{ page.custom_fields.ask_string_headline|default:"Please select your gift amount" }}</h1>
                     </header>
 
-                    <div>
-                    {% if has_products %}
-                        <table class="ak-margin-bottom-1">
-                            <thead>
-                            <tr>
-                                <th class="ak-product-details-header ak-small-header">Product</th>
-                                <th class="ak-product-amount-header ak-small-header">Price</th>
-                                <th class="ak-product-quantity-header ak-small-header">Quantity</th>
-                                <th class="ak-product-quantity-header ak-small-header">Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for product in products %}
-                            <tr>
-                                <td class="ak-product-details">
-                                    <div class="ak-product-name">{{ product.name }}</div>
-                                    {% if product.desc %}<div class="ak-product-description">{{ product.desc }}</div>{% endif %}
-                                </td>
-                                <td class="ak-product-amount">
-                                    <span id="product_{{ product.id }}_price" data-price="{{ product.price }}">
-                                        {% if product.price == 0 %}
-                                            FREE!
-                                        {% else %}
-                                            <span class="ak-currency-sym">{{ page.currency_sym }}</span>{{ product.price|commify }}
-                                        {% endif %}
-                                    </span>
-                                </td>
-                                <td class="ak-product-quantity">
-                                    {% if product.max == 1 %}
-                                    <input type="checkbox" value="1" name="product_{{ product.id }}" id="product_{{ product.id }}" data-product="{{ product.id }}" class="ak_product_inputs">
-                                    {% else %}
-                                    <input type="number" min="0" max="{{ product.max }}" onvalidate="return validate_product_count(this)" name="product_{{ product.id }}" id="product_{{ product.id }}" size="2" data-product="{{ product.id }}" class="ak_product_inputs">
-                                    {% endif %}
-                                </td>
-                                <td class="ak-product-subtotal">
-                                    <span class="ak-currency-sym">{{ page.currency_sym }}</span><span class="ak_product_subtotal_{{ product.id }}"></span>
-                                </td>
-                            </tr>
-                            {% endfor %}
-
-                            </tbody>
-                        </table>
-                    {% endif %}
-                    </div>
-
                     <div class="ak-amount-wrapper form-row">
                         <div class="form-content giving-levels">
-                            
 
+                            {% if has_products %}
+                            <ul class="products">
+                                {% for product in products %}
+                                <li class="product">
+                                    <label>
+                                        <input type="radio" name="product" value="{{ product.id }}"
+                                        <input type="hidden" value="" name="product_{{ product.id }}">
+                                        {{ product.price }} <span>{{ product.name }}</span>
+                                    </label>
+                                    {{ product.description }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        
                             {% if allow_monthly %}
                                 {% if monthly_ask_string %}
                                 <div class="form-content recurring-options">
@@ -468,9 +437,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                                {% if page.custom_fields.nudge == "2" %}
-                                <p class="js--nudge-content-monthly nudge-content-monthly" id="nudge-content-monthly">A monthly gift goes even further to defend progressive values</p>
-                                {% endif %}
+                                    {% if page.custom_fields.nudge == "2" %}
+                                    <p class="js--nudge-content-monthly nudge-content-monthly" id="nudge-content-monthly">A monthly gift goes even further to defend progressive values</p>
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
 
