@@ -1076,3 +1076,22 @@ body noscript + script + p + script + p
 #ak-fieldbox-subscription_consent input[type="checkbox"] + label {
   display: inline;
 }
+
+
+.products {
+  list-style: none;
+
+  .product {
+    background: $white;
+    background: rgba( 255, 255, 255, .5 );
+    padding-left: 1em;
+
+    &.selected {
+      background: $white;
+    }
+  }
+  label {
+    text-indent: -1em;
+    overflow: visible;
+  }
+}
