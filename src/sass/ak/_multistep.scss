@@ -875,31 +875,31 @@
     margin-left: 4%;
   }
 }
+
+body .multistep-form .ak-payment-options button[type="submit"] {
+  background: #fff;
+
+  img {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &:hover {
+    background: #ddd;
+  }
+}
+.ak-payment-options {
+  display: block;
+  span {
+    display: block;
+    margin: .5rem;
+  }
+}
 @media (min-width: 768px) {
   .ak-payment-options--mobile {
     display: none !important;
   }
 }
-@media (max-width: 767px) {
-  body .multistep-form .ak-payment-options button[type="submit"] {
-    background: #fff;
 
-    img {
-      vertical-align: middle;
-      display: inline-block;
-    }
-    &:hover {
-      background: #ddd;
-    }
-  }
-  .ak-payment-options {
-    display: block;
-    span {
-      display: block;
-      margin: .5rem;
-    }
-  }
-}
 /* Donation Style Overrides */
 body .layout-constrain
 {

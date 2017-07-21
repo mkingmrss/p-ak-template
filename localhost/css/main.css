@@ -1701,23 +1701,23 @@ header.banner {
   .multistep-form .form-row .form-content .recurring-options-option + .recurring-options-option {
     margin-left: 4%; } }
 
+body .multistep-form .ak-payment-options button[type="submit"] {
+  background: #fff; }
+  body .multistep-form .ak-payment-options button[type="submit"] img {
+    vertical-align: middle;
+    display: inline-block; }
+  body .multistep-form .ak-payment-options button[type="submit"]:hover {
+    background: #ddd; }
+
+.ak-payment-options {
+  display: block; }
+  .ak-payment-options span {
+    display: block;
+    margin: .5rem; }
+
 @media (min-width: 768px) {
   .ak-payment-options--mobile {
     display: none !important; } }
-
-@media (max-width: 767px) {
-  body .multistep-form .ak-payment-options button[type="submit"] {
-    background: #fff; }
-    body .multistep-form .ak-payment-options button[type="submit"] img {
-      vertical-align: middle;
-      display: inline-block; }
-    body .multistep-form .ak-payment-options button[type="submit"]:hover {
-      background: #ddd; }
-  .ak-payment-options {
-    display: block; }
-    .ak-payment-options span {
-      display: block;
-      margin: .5rem; } }
 
 /* Donation Style Overrides */
 body .layout-constrain, body .layout-constrain--hero, body .layout-constrain--narrow {
