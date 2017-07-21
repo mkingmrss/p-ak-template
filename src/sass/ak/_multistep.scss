@@ -1095,6 +1095,7 @@ body noscript + script + p + script + p
     overflow: visible;
     font-weight: normal;
     cursor: pointer;
+    text-align: left;
 
     strong {
       font-weight: bold;
@@ -1102,7 +1103,8 @@ body noscript + script + p + script + p
       margin-bottom: .25em;
     }
     .description {
-      display: block;
+      display: inline-block;
+      text-indent: 0;
     }
   }
 }

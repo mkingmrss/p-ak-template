@@ -987,7 +987,7 @@ window.upsellAnnual = true;
         $productInputs.on( 'change', function() {
             $productInputs.each( function() {
                 $( 'input[name="' + $(this).val() + '"]' ).val( $( this ).prop( 'checked') ? 1 : 0 );
-                $( this ).parent( '.product' ).toggleClass( 'selected', $( this ).prop( 'checked' ) );
+                $( this ).parents( '.product' ).first().toggleClass( 'selected', $( this ).prop( 'checked' ) );
             });
         }).trigger( 'change' );
 
