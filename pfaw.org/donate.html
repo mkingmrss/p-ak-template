@@ -410,7 +410,7 @@
 
                             {% if has_products %}
                             <ul class="products">
-                                {% for product in products %}
+                                {% for product|dictsort:"price" in products %}
                                 <li class="product">
                                     <label>
                                         <input type="radio" name="product" value="product_{{ product.id }}">

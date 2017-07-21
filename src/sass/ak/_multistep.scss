@@ -1103,8 +1103,11 @@ body noscript + script + p + script + p
       margin-bottom: .25em;
     }
     .description {
-      display: inline-block;
+      display: block;
       text-indent: 0;
     }
+  }
+  .product + .product {
+    margin-top: .5em;
   }
 }
