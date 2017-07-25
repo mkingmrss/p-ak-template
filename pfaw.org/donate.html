@@ -1001,8 +1001,8 @@ window.upsellAnnual = true;
             $amountOther = $( 'input[name="amount_other"]' );
 
         $productInputs.on( 'change', function() {
-            if ( $productInputs.is( ':checked' ).length ) {
-                $amountInputs.prop( 'checked', false );
+            if ( $productInputs.is( ':checked' ) ) {
+                $amountInputs.prop( 'checked', false ).trigger( 'change' );
                 $amountOther.val( '' );
             }
             $productInputs.each( function() {
@@ -1012,8 +1012,8 @@ window.upsellAnnual = true;
         }).trigger( 'change' );
 
         $amountInputs.on( 'change', function() {
-            if ( $amountInputs.is( ':checked' ).length ) {
-                $productInputs.prop( 'checked', false );
+            if ( $amountInputs.is( ':checked' ) ) {
+                $productInputs.prop( 'checked', false ).trigger( 'change' );
             }
         });
 
