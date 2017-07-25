@@ -22,7 +22,7 @@
                             </span> <br> 
                             of our goal of {{ page.currency_sym|default:"$" }}[%= add_commas(goal)  %]!
                         [% } else { %]  
-                            <span class="ak-progress-actions">We've reached <span>[%= add_commas(total.actions) %]</span></span> of our goal of [%= add_commas(goal) %].
+                            <span class="ak-progress-actions">We've reached <span>[%= add_commas(total.actions) %]</span></span> of our goal of <span id="goal">[%= add_commas(goal) %]</span>.
                         [% } %]
                     </div>
                 </div>
@@ -33,7 +33,21 @@
     <script>
 
         actionkitFormReady =  function() {
-            var targetWidth = actionkit.context.progress.percent;
+
+            var thisProgress = actionkit.context.progress;
+
+            if(thisProgress.current >= thisProgress.goal){
+                if('static_progress_meter' in actionkit.context.page.custom_fields && actionkit.context.page.custom_fields.static_progress_meter == 'yes'){
+                    var targetWidth = 100;
+                } else {
+                    var newGoal = Math.round(parseInt(thisProgress.current * 1.25));
+                    var targetWidth = Math.round((thisProgress.current / newGoal) * 100);
+                    $('#goal').text(newGoal);
+                }
+            } else {
+                var targetWidth = actionkit.context.progress.percent;
+            }            
+
             $('.ak-progress-bar').delay(1000).animate({
                 width: targetWidth+'%'
             }, 1000,function(){
