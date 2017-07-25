@@ -992,19 +992,39 @@ window.upsellAnnual = true;
     // M+R script additions
     // —
 
+    {% if has_products %}
     // Products
     (function( window ) {
 
-        var $productInputs = $( 'input[name="product"]' );
+        var $productInputs = $( 'input[name="product"]' ),
+            $amountInputs = $( 'input[name="amount"]' ),
+            $amountOther = $( 'input[name="amount_other"]' );
 
         $productInputs.on( 'change', function() {
+            if ( $productInputs.is( ':checked' ).length ) {
+                $amountInputs.prop( 'checked', false );
+                $amountOther.val( '' );
+            }
             $productInputs.each( function() {
                 $( 'input[name="' + $(this).val() + '"]' ).prop( 'checked', $( this ).prop( 'checked') );
                 $( this ).parents( '.product' ).first().toggleClass( 'selected', $( this ).prop( 'checked' ) );
             });
         }).trigger( 'change' );
 
+        $amountInputs.on( 'change', function() {
+            if ( $amountInputs.is( ':checked' ).length ) {
+                $productInputs.prop( 'checked', false );
+            }
+        });
+
+        $amountOther.on( 'change', function() {
+            if ( $( this ).val() ) {
+                $productInputs.prop( 'checked', false );
+            }
+        });
+
     })( window );
+    {% endif %}
     
 
     // Annual autorenewal
