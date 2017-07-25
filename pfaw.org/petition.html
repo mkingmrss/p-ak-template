@@ -84,15 +84,15 @@
 {% endblock %}
 
 
-{% block script_additions %}
-<script language="javascript">
-//<!--
-    
+{% block below_form %}
+<script type="text/javascript">
+
+    actionkit.forms.contextRoot = '/context/';
+    actionkit.forms.initForm('act');
+
     $(document).ready(function(){
         $('#ak-fieldbox-email').addClass('form-row-two-thirds');
         $('#ak-fieldbox-zip').addClass('form-row-second-third');
     });
-
-//-->
 </script>
 {% endblock %}
