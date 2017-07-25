@@ -419,6 +419,7 @@
   display: block;
   font-weight: bold;
   overflow: hidden;
+  line-height: 1.65em;
 }
 .multistep-form .giving-levels-level--other label {
   display: inline;
@@ -565,7 +566,8 @@
   width: 32%;
   margin-right: 2%;
 }
-.multistep-form .form-row .form-content.form-content-third:last-child {
+.multistep-form .form-row .form-content.form-content-third:last-child,
+.multistep-form .form-row .form-content.form-content-third:nth-child(3) {
   margin-right: 0;
 }
 .multistep-form .form-row .form-content.form-content-quarter {
@@ -873,31 +875,31 @@
     margin-left: 4%;
   }
 }
+
+body .multistep-form .ak-payment-options button[type="submit"] {
+  background: #fff;
+
+  img {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &:hover {
+    background: #ddd;
+  }
+}
+.ak-payment-options {
+  display: block;
+  span {
+    display: block;
+    margin: .5rem;
+  }
+}
 @media (min-width: 768px) {
-  .ak-payment-options {
+  .ak-payment-options--mobile {
     display: none !important;
   }
 }
-@media (max-width: 767px) {
-  body .multistep-form .ak-payment-options button[type="submit"] {
-    background: #fff;
 
-    img {
-      vertical-align: middle;
-      display: inline-block;
-    }
-    &:hover {
-      background: #ddd;
-    }
-  }
-  .ak-payment-options {
-    display: block;
-    span {
-      display: block;
-      margin: .5rem;
-    }
-  }
-}
 /* Donation Style Overrides */
 body .layout-constrain
 {
@@ -1067,4 +1069,45 @@ body noscript + script + p + script + p
 {
   /* Some tracking script inserts a p tag */
   margin: 0;
+}
+#ak-fieldbox-subscription_consent {
+  margin: 1em 0;
+}
+#ak-fieldbox-subscription_consent input[type="checkbox"] + label {
+  display: inline;
+}
+
+
+.products {
+  list-style: none;
+
+  .product {
+    background: $white;
+    background: rgba( 255, 255, 255, .5 );
+    padding: 1em 1em 1em 2.5em;
+
+    &.selected {
+      background: $white;
+    }
+  }
+  label {
+    text-indent: -1.625em;
+    overflow: visible;
+    font-weight: normal;
+    cursor: pointer;
+    text-align: left;
+
+    strong {
+      font-weight: bold;
+      margin-left: .5em;
+      margin-bottom: .25em;
+    }
+    .description {
+      display: block;
+      text-indent: 0;
+    }
+  }
+  .product + .product {
+    margin-top: .5em;
+  }
 }

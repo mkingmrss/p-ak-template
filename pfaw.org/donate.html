@@ -362,6 +362,9 @@
             <input type="hidden" name="page" value="{{ page.name }}">
             <input type="hidden" name="orig_akid" value="{{ akid }}">
             <input id="action_lightbox_sustainer_join" name="action_lightbox_sustainer_join" type="hidden" value="">
+            {% if page.custom_fields.lightbox == "1" %}
+            <input id="lightbox_no" name="lb_no" type="hidden" value="">
+            {% endif %}
 
             <!--Add .ak-donate-three-step for three-step-->
 
@@ -404,8 +407,28 @@
 
                     <div class="ak-amount-wrapper form-row">
                         <div class="form-content giving-levels">
-                            
 
+                            {% if has_products %}
+                            <ul class="products">
+                                {% for product in products|dictsortreversed:"price" %}
+                                <li class="product">
+                                    <label>
+                                        <input type="radio" name="product" value="product_{{ product.id }}">
+                                        <input type="checkbox" style="display: none" value="1" id="product_{{ product.id }}" name="product_{{ product.id }}" data-product="{{ product.id }}">
+                                        <strong>
+                                            <span id="product_{{ product.id }}_price" data-price="{{ product.price }}">{{ product.price }}</span>
+                                            —
+                                            <span>{{ product.name }}</span>
+                                        </strong>
+                                        <span class="description">
+                                            {{ product.desc }}
+                                        </span>
+                                    </label>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        
                             {% if allow_monthly %}
                                 {% if monthly_ask_string %}
                                 <div class="form-content recurring-options">
@@ -420,9 +443,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                                {% if page.custom_fields.nudge == "2" %}
-                                <p class="js--nudge-content-monthly nudge-content-monthly" id="nudge-content-monthly">A monthly gift goes even further to defend progressive values</p>
-                                {% endif %}
+                                    {% if page.custom_fields.nudge == "2" %}
+                                    <p class="js--nudge-content-monthly nudge-content-monthly" id="nudge-content-monthly">A monthly gift goes even further to defend progressive values</p>
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
 
@@ -444,14 +467,15 @@
                             {% endif %}
                             {% endif %}
 
-                            {# normal amounts #}
-                            {% for amount in amounts %}
+                            {# amounts via AK #}
+                            {% for amount in amounts|split[:5] %}
                                 {% if amount == "other" %}
-                                <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
-                                    <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
-                                    <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
-                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" placeholder="Other">
-                                </li>
+                                    {% comment %}
+                                    Because we are only showing the first 5 levels but
+                                    always want the other field to display, we spit out
+                                    the other field below in case it's included in the
+                                    amounts list but not in the first 5.
+                                    {% endcomment %}
                                 {% else %}
                                 <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}>
                                     <span class="ak-currency-sym"></span>
@@ -462,6 +486,13 @@
                                 </li>
                                 {% endif %}
                             {% endfor %}
+                            {% if "other" in amounts %}
+                                <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
+                                    <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
+                                    <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
+                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" {% if amounts|length > 1 or has_products %}placeholder="Other"{% endif %}>
+                                </li>
+                            {% endif %}
                             </ul>
                         </div>
                     </div>
@@ -554,17 +585,36 @@
                                 <label for="id_city">City: <span class="required">*</span></label>
                                 <input type="text" name="city" id="id_city" required />
                             </div>
-                            <div class="form-content form-content-third">
+                            <div class="form-content form-content-third ak-us-billing-fields">
                                 <input type="hidden" name="required" value="state">
                                 <label for="id_state">State: <span class="required">*</span></label>
                                 {% include "./state_select.html" %}
                             </div>
-                            <div class="form-content form-content-third">
+                            <div class="form-content form-content-third ak-us-billing-fields">
+                                {% if not page.allow_international %}
                                 <input type="hidden" name="required" value="zip">
+                                {% endif %}
                                 <label for="id_zip">Zip: <span class="required">*</span></label>
                                 <input id="id_zip" type="text" name="zip" maxlength="5" size="5">
                             </div>
-                            {% if page.allow_international %}{# ZZZ #}{% endif %}
+                            {% if page.allow_international %}
+                            <div class="form-content form-content-third ak-intl-billing-fields">
+                                <label for="id_region">Region</label>
+                                <input id="id_region"  type="text" name="region" size="20">
+                            </div>
+                            <div class="form-content form-content-third ak-intl-billing-fields">
+                                <label for="id_postal">Postal Code</label>
+                                <input id="id_postal"  type="text" name="postal" size="10">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-content">
+                                <label for="id_country">Country</label>
+                                {% include "./country_select.html" %}
+                            </div>
+                            {% else %}
+                            <input type="hidden" name="country" value="United States">
+                            {% endif %}
                         </div>
                         <div class="form-row">
                             <div class="form-content form-content">
@@ -692,7 +742,7 @@
                     <button class="ak-donate-three-step-visible" type="button" id="ak-continue-button">Continue &rarr;</button>
                     <a href="#" data-step="1" class="js--multistep-back multistep-back ak-donate-area-step-2">← Back</a>
                     {% if show_paypal %}
-                        <div class="ak-payment-options ak-margin-bottom-1 ak-donate-area-step-2">
+                        <div class="ak-payment-options {% if not page.custom_fields.paypal_desktop %} ak-payment-options--mobile {% endif %} ak-margin-bottom-1 ak-donate-area-step-2">
                             <input type="hidden" name="paypal" value="0" id="ak-pay-by-paypal">
                             <span>Or check out with</span>
                             <button type="submit" id="ak-paypal-button" class="ak-inline ak-paypal-button"><img src="/media/modern/paypal-logo-1.svg"></button>
@@ -879,25 +929,29 @@ window.upsellAnnual = true;
                 $( '.lightbox_desktop #orig, #orig_mobile' ).html( '<p>Confirm my <br/> annual <br/> donation</p>' );
             }
 
+            //  Focus on something else to avoid keyboard popping up after lb selection
+            $( '.ak-submit-button' ).focus();
+
             //  Activate processing before window closes
             window.onbeforeunload = function() {
                 window.upsellSwitch = false;
-                $( '#act' ).submit();
+                $( '.ak-submit-button' ).click();
 
-                // dataLayer.push({ 
-                //   'ga_event_category': 'Multistep form', 
-                //   'ga_event_action': 'Lightbox', 
-                //   'ga_event_label': 'Window Closed', 
-                //   'ga_event_value': 0, 
-                //   'event': 'ga_track_event' 
-                // });
+                dataLayer.push({ 
+                  'ga_event_category': 'Multistep form', 
+                  'ga_event_action': 'Lightbox', 
+                  'ga_event_label': 'Window Closed', 
+                  'ga_event_value': 0, 
+                  'event': 'ga_track_event' 
+                });
             };
 
             //  Activate lightbox buttons
             $( '#orig, #close_mobile, #orig_mobile, #close_desktop' ).click( function() {
                 $( '#action_lightbox_sustainer_join' ).val( '' ); // do not track sustainer donation from lightbox
+                $( '#lightbox_no' ).val( '1' ); // remember no selection even if refresh
                 window.upsellSwitch = false;
-                $( '.ak-submit-button' ).click() //  No need to change form, use click b/c braintree button
+                $( '.ak-submit-button' ).click(); //  No need to change form, use click b/c braintree button
                 lightbox.self.Hide();
             });
 
@@ -908,13 +962,6 @@ window.upsellAnnual = true;
                 $( '[name="recurring_period"][value="months"]' ).prop( 'checked', true );
                 $( '#action_lightbox_sustainer_join' ).val( 'true' ); // track sustainer lightbox donation
 
-                //  If annual checkbox is present, change frequency and duration and unset monthly options
-                // if( lightbox.annual ) {
-                //   $( '.js--sustaining-frequency', $form ).val( 'monthly' );
-                //   $( '.js--sustaining-duration', $form ).val( '0' );
-                // } else {
-                  // $( '.js--recurring-input', $form ).prop( 'checked', true );
-                // }
                 lightbox.submitted = true;
                 
                 $( '.ak-submit-button' ).click(); // Use click b/c braintree button
@@ -927,7 +974,7 @@ window.upsellAnnual = true;
         };
 
         window.showUpsell = function() {
-            if ( $( '[name="recurring_period"]:checked' ).val() !== 'months' ) {
+            if ( $( '[name="recurring_period"]:checked' ).val() !== 'months' && $( '#lightbox_no' ).val() !== '1' ) {
                 return show();
             }
             return true;
@@ -944,6 +991,41 @@ window.upsellAnnual = true;
 
     // M+R script additions
     // —
+
+    {% if has_products %}
+    // Products
+    (function( window ) {
+
+        var $productInputs = $( 'input[name="product"]' ),
+            $amountInputs = $( 'input[name="amount"]' ),
+            $amountOther = $( 'input[name="amount_other"]' );
+
+        $productInputs.on( 'change', function() {
+            if ( $productInputs.is( ':checked' ).length ) {
+                $amountInputs.prop( 'checked', false );
+                $amountOther.val( '' );
+            }
+            $productInputs.each( function() {
+                $( 'input[name="' + $(this).val() + '"]' ).prop( 'checked', $( this ).prop( 'checked') );
+                $( this ).parents( '.product' ).first().toggleClass( 'selected', $( this ).prop( 'checked' ) );
+            });
+        }).trigger( 'change' );
+
+        $amountInputs.on( 'change', function() {
+            if ( $amountInputs.is( ':checked' ).length ) {
+                $productInputs.prop( 'checked', false );
+            }
+        });
+
+        $amountOther.on( 'change', function() {
+            if ( $( this ).val() ) {
+                $productInputs.prop( 'checked', false );
+            }
+        });
+
+    })( window );
+    {% endif %}
+    
 
     // Annual autorenewal
     (function( window ) {
