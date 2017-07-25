@@ -32,7 +32,7 @@
                     {% include "./user_form_wrapper.html" %}
 
                     <div class="ak-field ak-field-comment">
-                        <label for="id_comment">Add a comment (optional):</label>
+                        <label for="id_comment">{{ page.custom_fields.custom_comment_label|default:"Add a comment (optional):" }}</label>
                         <textarea id="id_comment" name="action_comment"></textarea>
                     </div>
 

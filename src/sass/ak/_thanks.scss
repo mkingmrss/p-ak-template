@@ -56,6 +56,30 @@
 			}
 		}
 	}
+}
 
-	
+.receipt {
+  td:first-child {
+    background: $light-grey;
+  }
+  tr {
+    border-bottom: 1px solid $white;
+  }
+}
+
+.match-survey {
+	border: 3px solid $black;
+	margin: 1rem auto 2rem auto;
+	padding: 2rem;
+	font-size: 16px;
+
+	.button--red {
+		font-size: 1em;
+		margin: 2em auto 0 auto;
+		display: block;
+	}
+	label {
+		color: $red;
+		font-size: 1em;
+	}
 }

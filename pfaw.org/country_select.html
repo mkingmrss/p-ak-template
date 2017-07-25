@@ -21,7 +21,7 @@
             <input class="no-overlay" type="checkbox" id="id_subscription_consent" name="subscription_consent" value="1">
             <label for="id_subscription_consent">Subscribe me to email updates</label>
             <span id="id_subscription_consent_more_lnk">(<a href="#">details</a>)</span>
-            <div id="id_subscription_consent_more">
+            <div id="id_subscription_consent_more" style="display:none;">
                 If you don't subscribe, you might miss news on this campaign 
                 or future opportunities to act. (If you're already subscribed, 
                 leaving this box unchecked won't remove you.)
@@ -47,7 +47,7 @@
                     $('#id_suppress_subscribe').val('')
                     $('#ak-fieldbox-subscription_consent').hide()
                 }
-            });
+            }).trigger( 'change' );
             </script>
 
             <!-- With JavaScript off, we can't show a consent box -->

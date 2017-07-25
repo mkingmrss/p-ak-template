@@ -7,7 +7,72 @@
 {% if page.type == 'Donation' %}
     <h2>Thanks for your donation</h2>
     <div>
+        {% if page.custom_fields.match_survey and user.email and order %}
+            <div class="match-survey">
+                <p><strong>Can we add the gift you just made to our matching fund to match future grassroots donations (at no additional cost to you)?</strong></p>
+                
+                <p><em>Your gift has already been processed and this step is totally optional.</em></p>
+                
+                <p>Match opportunities mean more resources for the fights you care about. By allowing us to use the gift you just made to match future donations, you&#8217;re inspiring others to give too, multiplying the impact of your contribution towards the work you just chose to support.</p>
+
+                <form class="actionkit-widget" name="signup" action="https://act.pfaw.org/act/" onsubmit="this.submitted=1;return false">
+                    <input type="hidden" name="page" value="donation-match-survey">
+                    <input type="hidden" value="{{ user.email }}" id="id_email" name="email">
+                    <input type="hidden" name="action_match_order_total" value="{{ order.total }}">
+                    <input type="hidden" name="action_match_order_id" value="{{ order.id }}">
+
+                    <label>
+                        <input type="checkbox" name="action_match_confirm" value="yes">
+                        Yes! Maximize my impact — use my gift in PFAW's Match Fund.
+                    </label>
+                    <input type="submit" class="button--red" value="Submit">
+                </form>
+
+                <div id="signup-replacement" style="display: none;">Thank you!</div>
+                <script src="https://act.pfaw.org/samples/widget.js"></script>
+            </div>
+        {% endif %}
+
         {% include_tmpl form.thank_you_text %}
+
+        {% if order %}
+        <p>Please print or save this message for your personal records.</p>
+
+        <table class="receipt">
+          <tr>
+            <td>Name</td>
+            <td>{{ user.name }}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{ user.email }}</td>
+          </tr>
+
+          {% if order.card_num_last_four %}
+          <tr>
+            <td>Card Number</td>
+            <td>************ {{ order.card_num_last_four }}</td>
+          </tr>
+          {% endif %}
+          
+          <tr>
+            <td>Amount</td>
+            <td>{{ order.amt  }}</td>
+          </tr>
+          
+          {% if action.orderrecurring %}
+          <tr>
+            <td>Recurring gift frequency</td>
+            <td>{{ orderrecurring.get_period_display }}</td>
+          </tr>
+          <tr>
+            <td>Next Gift Processed On:</td>
+            <td>{{ orderrecurring.next_payment_date }}</td>
+          </tr>
+          {% endif %}
+
+        </table>
+        {% endif %}
     </div>
 {% else %}
 
