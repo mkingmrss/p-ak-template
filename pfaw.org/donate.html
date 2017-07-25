@@ -468,7 +468,7 @@
                             {% endif %}
 
                             {# amounts via AK #}
-                            {% for amount in amounts|split[:5] %}
+                            {% for amount in amounts|split:":5" %}
                                 {% if amount == "other" %}
                                     {% comment %}
                                     Because we are only showing the first 5 levels but
