@@ -467,14 +467,15 @@
                             {% endif %}
                             {% endif %}
 
-                            {# normal amounts #}
-                            {% for amount in amounts %}
+                            {# amounts via AK #}
+                            {% for amount in amounts|split[:5] %}
                                 {% if amount == "other" %}
-                                <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
-                                    <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
-                                    <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
-                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" {% if amounts|length > 1 or has_products %}placeholder="Other"{% endif %}>
-                                </li>
+                                    {% comment %}
+                                    Because we are only showing the first 5 levels but
+                                    always want the other field to display, we spit out
+                                    the other field below in case it's included in the
+                                    amounts list but not in the first 5.
+                                    {% endcomment %}
                                 {% else %}
                                 <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}>
                                     <span class="ak-currency-sym"></span>
@@ -485,6 +486,13 @@
                                 </li>
                                 {% endif %}
                             {% endfor %}
+                            {% if "other" in amounts %}
+                                <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
+                                    <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
+                                    <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
+                                    <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" {% if amounts|length > 1 or has_products %}placeholder="Other"{% endif %}>
+                                </li>
+                            {% endif %}
                             </ul>
                         </div>
                     </div>
