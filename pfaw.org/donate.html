@@ -1013,7 +1013,7 @@ window.upsellAnnual = true;
 
         $amountInputs.on( 'change', function() {
             if ( $amountInputs.is( ':checked' ) ) {
-                $productInputs.prop( 'checked', false ).trigger( 'change' );
+                $productInputs.prop( 'checked', false );
             }
         });
 
