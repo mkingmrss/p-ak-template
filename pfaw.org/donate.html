@@ -530,6 +530,7 @@
                         {% endif %}
                     {% elif allow_monthly %}
                         {% if not monthly_ask_string %}
+                            {% if not page.custom_fields.hide_monthly_checkbox %}
                             {# Basic monthly checkbox #}
                             <div class="form-row giving-recurring js--giving-recurring">
                                 <div class="form-content form-content--checkbox">
@@ -539,6 +540,7 @@
                                     </label>
                                 </div>
                             </div>
+                            {% endif %}
                         {% else %}
                             {# No checkbox #}
                         {% endif %}
@@ -782,7 +784,7 @@
 {% block below_form %}
 {{ block.super }}
 
-{% if page.custom_fields.lightbox == "1" %}
+{% if page.custom_fields.lightbox == "1" and not page.custom_fields.hide_monthly_checkbox %}
 <div id="lightbox_23msf90" style="display: none;">
         <div class="lightbox_desktop">
                 <div class="close" id="close_desktop"></div>
@@ -1013,7 +1015,7 @@ window.upsellAnnual = true;
 
         $amountInputs.on( 'change', function() {
             if ( $amountInputs.is( ':checked' ) ) {
-                $productInputs.prop( 'checked', false ).trigger( 'change' );
+                $productInputs.prop( 'checked', false );
             }
         });
 
