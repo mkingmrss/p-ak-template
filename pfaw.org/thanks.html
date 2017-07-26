@@ -71,6 +71,13 @@
           </tr>
           {% endif %}
 
+          {% for detail in  action.order.order_details %}
+          <tr>
+            <td>Gift Level</td>
+            <td>{{ detail.product.name }} ({{ detail.amt }})</td>
+          </tr>
+          {% endfor %}
+
         </table>
         {% endif %}
     </div>
