@@ -948,18 +948,18 @@ window.upsellAnnual = true;
             $( '.ak-submit-button' ).focus();
 
             //  Activate processing before window closes
-            window.onbeforeunload = function() {
-                window.upsellSwitch = false;
-                $( '.ak-submit-button' ).click();
+            // window.onbeforeunload = function() {
+            //     window.upsellSwitch = false;
+            //     $( '.ak-submit-button' ).click();
 
-                dataLayer.push({ 
-                  'ga_event_category': 'Multistep form', 
-                  'ga_event_action': 'Lightbox', 
-                  'ga_event_label': 'Window Closed', 
-                  'ga_event_value': 0, 
-                  'event': 'ga_track_event' 
-                });
-            };
+            //     dataLayer.push({ 
+            //       'ga_event_category': 'Multistep form', 
+            //       'ga_event_action': 'Lightbox', 
+            //       'ga_event_label': 'Window Closed', 
+            //       'ga_event_value': 0, 
+            //       'event': 'ga_track_event' 
+            //     });
+            // };
 
             //  Activate lightbox buttons
             $( '#orig, #close_mobile, #orig_mobile, #close_desktop' ).click( function() {
