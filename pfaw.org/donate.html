@@ -1020,13 +1020,13 @@ window.upsellAnnual = true;
 
         $amountInputs.on( 'change', function() {
             if ( $amountInputs.is( ':checked' ) ) {
-                $productInputs.prop( 'checked', false );
+                $productInputs.prop( 'checked', false ).trigger( 'change' );
             }
         });
 
         $amountOther.on( 'change', function() {
             if ( $( this ).val() ) {
-                $productInputs.prop( 'checked', false );
+                $productInputs.prop( 'checked', false ).trigger( 'change' );
             }
         });
 
