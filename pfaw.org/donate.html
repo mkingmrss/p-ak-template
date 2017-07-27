@@ -531,15 +531,20 @@
                     {% elif allow_monthly %}
                         {% if not monthly_ask_string %}
                             {% if not page.custom_fields.hide_monthly_checkbox %}
-                            {# Basic monthly checkbox #}
-                            <div class="form-row giving-recurring js--giving-recurring">
-                                <div class="form-content form-content--checkbox">
-                                    <input type="checkbox" name="recurring_period" id="recurring_period" value="months" class="js--recurring-input">
-                                    <label for="recurring_period">
-                                        Yes, automatically repeat this gift every month.
-                                    </label>
-                                </div>
-                            </div>
+                                {% if page.custom_fields.monthly_only_form %}
+                                    {# force monthly #}
+                                    <input type="hidden" name="recurring_period" value="months">
+                                {% else %}
+                                    {# Basic monthly checkbox #}
+                                    <div class="form-row giving-recurring js--giving-recurring">
+                                        <div class="form-content form-content--checkbox">
+                                            <input type="checkbox" name="recurring_period" id="recurring_period" value="months" class="js--recurring-input">
+                                            <label for="recurring_period">
+                                                Yes, automatically repeat this gift every month.
+                                            </label>
+                                        </div>
+                                    </div>
+                                {% endif %}
                             {% endif %}
                         {% else %}
                             {# No checkbox #}
@@ -1015,13 +1020,13 @@ window.upsellAnnual = true;
 
         $amountInputs.on( 'change', function() {
             if ( $amountInputs.is( ':checked' ) ) {
-                $productInputs.prop( 'checked', false );
+                $productInputs.prop( 'checked', false ).trigger( 'change' );
             }
         });
 
         $amountOther.on( 'change', function() {
             if ( $( this ).val() ) {
-                $productInputs.prop( 'checked', false );
+                $productInputs.prop( 'checked', false ).trigger( 'change' );
             }
         });
 
