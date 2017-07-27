@@ -948,24 +948,25 @@ window.upsellAnnual = true;
             $( '.ak-submit-button' ).focus();
 
             //  Activate processing before window closes
-            // window.onbeforeunload = function() {
-            //     window.upsellSwitch = false;
-            //     $( '.ak-submit-button' ).click();
+            window.onbeforeunload = function() {
+                window.upsellSwitch = false;
+                $( '.ak-submit-button' ).click();
 
-            //     dataLayer.push({ 
-            //       'ga_event_category': 'Multistep form', 
-            //       'ga_event_action': 'Lightbox', 
-            //       'ga_event_label': 'Window Closed', 
-            //       'ga_event_value': 0, 
-            //       'event': 'ga_track_event' 
-            //     });
-            // };
+                dataLayer.push({ 
+                  'ga_event_category': 'Multistep form', 
+                  'ga_event_action': 'Lightbox', 
+                  'ga_event_label': 'Window Closed', 
+                  'ga_event_value': 0, 
+                  'event': 'ga_track_event' 
+                });
+            };
 
             //  Activate lightbox buttons
             $( '#orig, #close_mobile, #orig_mobile, #close_desktop' ).click( function() {
                 $( '#action_lightbox_sustainer_join' ).val( '' ); // do not track sustainer donation from lightbox
                 $( '#lightbox_no' ).val( '1' ); // remember no selection even if refresh
                 window.upsellSwitch = false;
+                window.onbeforeunload = function( ){ };
                 $( '.ak-submit-button' ).click(); //  No need to change form, use click b/c braintree button
                 lightbox.self.Hide();
             });
@@ -978,7 +979,7 @@ window.upsellAnnual = true;
                 $( '#action_lightbox_sustainer_join' ).val( 'true' ); // track sustainer lightbox donation
 
                 lightbox.submitted = true;
-                
+                window.onbeforeunload = function( ){ };
                 $( '.ak-submit-button' ).click(); // Use click b/c braintree button
                 lightbox.self.Hide();
               });
@@ -1882,7 +1883,9 @@ $(function() {
             actionkit.errors = {};
         }
 
+        {% if page.custom_fields.lightbox == "1" and not page.custom_fields.hide_monthly_checkbox %}
         window.upsellSwitch = true;
+        {% endif %}
 
         switch (err.code) {
             case 'HOSTED_FIELDS_FIELDS_EMPTY':
