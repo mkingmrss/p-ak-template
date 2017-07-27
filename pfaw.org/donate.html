@@ -61,7 +61,7 @@
     </style>
     {% endif %}
 
-    {% if page.custom_fields.lightbox == "1" %}
+    {% if page.custom_fields.lightbox == "5" %}
     <style>
         .lightbox_desktop, .lightbox_desktop *
         {
@@ -362,7 +362,7 @@
             <input type="hidden" name="page" value="{{ page.name }}">
             <input type="hidden" name="orig_akid" value="{{ akid }}">
             <input id="action_lightbox_sustainer_join" name="action_lightbox_sustainer_join" type="hidden" value="">
-            {% if page.custom_fields.lightbox == "1" %}
+            {% if page.custom_fields.lightbox == "5" %}
             <input id="lightbox_no" name="lb_no" type="hidden" value="">
             {% endif %}
 
@@ -402,7 +402,15 @@
                     {% with page.custom_fields.monthly_specific_ask_string as monthly_ask_string %}
                     
                     <header>
-                        <h1>{{ page.custom_fields.ask_string_headline|default:"Please select your gift amount" }}</h1>
+                        <h1>
+                            {% if page.custom_fields.ask_string_headline %}
+                                {{ page.custom_fields.ask_string_headline|default:"Please select your gift amount" }}
+                            {% elif page.custom_fields.monthly_only_form %}
+                                Please select your monthly gift amount
+                            {% else %}
+                                Please select your gift amount
+                            {% endif %}
+                        </h1>
                     </header>
 
                     <div class="ak-amount-wrapper form-row">
@@ -789,7 +797,7 @@
 {% block below_form %}
 {{ block.super }}
 
-{% if page.custom_fields.lightbox == "1" and not page.custom_fields.hide_monthly_checkbox %}
+{% if page.custom_fields.lightbox == "5" and not page.custom_fields.hide_monthly_checkbox %}
 <div id="lightbox_23msf90" style="display: none;">
         <div class="lightbox_desktop">
                 <div class="close" id="close_desktop"></div>
