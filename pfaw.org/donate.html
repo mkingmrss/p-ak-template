@@ -695,6 +695,26 @@
                         </div>
                     </div>
 
+                    {% with page.custom_fields.desigation as designation %}
+                        {% if designation == 'PAC' or designation == '527' or page.custom_fields.show_employer %}
+                        <div class="form-row">
+                          <div class="form-content">
+                            <p class="disclaimer">Federal law requires us to collect the following information:</p>
+                            <label for="donor_employer">Employer <span class="required">*</span></label>
+                            <input type="text" name="donor.employer" id="donor_employer" value="" required>
+                          </div>
+                        </div>
+                        {% endif %}
+                        {% if designation == 'PAC' or designation == '527' or page.custom_fields.show_occupation %}
+                        <div class="form-row">
+                          <div class="form-content">
+                            <label for="donor_occupation">Occupation <span class="required">*</span></label>
+                            <input type="text" name="donor.occupation" id="donor_occupation" value="" required>
+                          </div>
+                        </div>
+                        {% endif %}
+                    {% endwith %}
+
                     <nav class="multistep-controls">
                         {% if page.payment_processor_information.init_submit_disabled %}
 
