@@ -695,9 +695,8 @@
                         </div>
                     </div>
 
-                    <!-- designation fields -->
                     {% with page.custom_fields.desigation as designation %}
-                        {% if designation == 'PAC' or designation == '527' or page.custom_fields.show_employer %}
+                        {% if designation == "PAC" or designation == "527" or page.custom_fields.show_employer %}
                         <div class="form-row">
                           <div class="form-content">
                             <p class="disclaimer">Federal law requires us to collect the following information:</p>
@@ -706,7 +705,7 @@
                           </div>
                         </div>
                         {% endif %}
-                        {% if designation == 'PAC' or designation == '527' or page.custom_fields.show_occupation %}
+                        {% if designation == "PAC" or designation == "527" or page.custom_fields.show_occupation %}
                         <div class="form-row">
                           <div class="form-content">
                             <label for="donor_occupation">Occupation <span class="required">*</span></label>
