@@ -639,7 +639,38 @@
                             </div>
                         </div>
                     
-                        {% if has_candidates %}{# ZZZ #}{% endif %}
+                        {% with page.custom_fields.designation as designation %}
+                            {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_employer %}
+                            <div class="form-row">
+                              <div class="form-content">
+                                
+                                {% if has_candidates or designation == "PAC" or designation == "527" %}
+                                <p class="disclaimer">Federal law requires us to collect the following information:</p>
+                                {% endif %}
+
+                                {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_employer == "required" %}
+                                <input type="hidden" name="required" value="action_employer">
+                                {% endif %}
+
+                                <label for="action_employer_id">Employer <span class="required">*</span></label>
+                                <input type="text" name="action_employer" id="action_employer_id" value="" required>
+                              </div>
+                            </div>
+                            {% endif %}
+                            {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_occupation %}
+                            <div class="form-row">
+                              <div class="form-content">
+
+                                {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_occupation == "required" %}
+                                <input type="hidden" name="required" value="action_occupation">
+                                {% endif %}
+
+                                <label for="action_occupation_id">Occupation <span class="required">*</span></label>
+                                <input type="text" name="action_occupation" id="action_occupation_id" value="" required>
+                              </div>
+                            </div>
+                            {% endif %}
+                        {% endwith %}
 
                     </div>
                 </section>
@@ -694,39 +725,6 @@
                             <input type="hidden" name="required" value="card_code" id="ak-card_code-required">
                         </div>
                     </div>
-
-                    {% with page.custom_fields.designation as designation %}
-                        {% if designation == "PAC" or designation == "527" or page.custom_fields.show_employer %}
-                        <div class="form-row">
-                          <div class="form-content">
-                            
-                            {% if designation == "PAC" or designation == "527" %}
-                            <p class="disclaimer">Federal law requires us to collect the following information:</p>
-                            {% endif %}
-
-                            {% if designation == "PAC" or designation == "527" or page.custom_fields.show_employer == "required" %}
-                            <input type="hidden" name="required" value="user_employer">
-                            {% endif %}
-
-                            <label for="user_employer_id">Employer <span class="required">*</span></label>
-                            <input type="text" name="user_employer" id="user_employer_id" value="" required>
-                          </div>
-                        </div>
-                        {% endif %}
-                        {% if designation == "PAC" or designation == "527" or page.custom_fields.show_occupation %}
-                        <div class="form-row">
-                          <div class="form-content">
-
-                            {% if designation == "PAC" or designation == "527" or page.custom_fields.show_occupation == "required" %}
-                            <input type="hidden" name="required" value="user_occupation">
-                            {% endif %}
-
-                            <label for="user_occupation_id">Occupation <span class="required">*</span></label>
-                            <input type="text" name="user_occupation" id="user_occupation_id" value="" required>
-                          </div>
-                        </div>
-                        {% endif %}
-                    {% endwith %}
 
                     <nav class="multistep-controls">
                         {% if page.payment_processor_information.init_submit_disabled %}
@@ -1470,7 +1468,12 @@ window.upsellAnnual = true;
                                "shipping_city", "shipping_state",
                                "shipping_zip", "shipping_country",
                                "shipping_region", "shipping_postal"
-                               {% if has_candidates %},"action_employer", "action_occupation"{% endif %}];
+                               {% if has_candidates or page.custom_fields.designation == "527" or page.custom_fields.designation == "PAC" or page.custom_fields.show_employer == "required" %}
+                               ,"action_employer"
+                               {% endif %}
+                               {% if has_candidates or page.custom_fields.designation == "527" or page.custom_fields.designation == "PAC" or page.custom_fields.show_occupation == "required" %}
+                               , "action_occupation"
+                               {% endif %}];
         } else {
             validate_fields = ["card_num", "card_code",
                                "exp_date_year", "exp_date_month", "exp_date"];
