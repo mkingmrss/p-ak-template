@@ -699,7 +699,15 @@
                         {% if designation == "PAC" or designation == "527" or page.custom_fields.show_employer %}
                         <div class="form-row">
                           <div class="form-content">
+                            
+                            {% if designation == "PAC" or designation == "527" %}
                             <p class="disclaimer">Federal law requires us to collect the following information:</p>
+                            {% endif %}
+
+                            {% if designation == "PAC" or designation == "527" or page.custom_fields.show_employer == "required" %}
+                            <input type="hidden" name="required" value="user_employer">
+                            {% endif %}
+
                             <label for="user_employer_id">Employer <span class="required">*</span></label>
                             <input type="text" name="user_employer" id="user_employer_id" value="" required>
                           </div>
@@ -708,6 +716,11 @@
                         {% if designation == "PAC" or designation == "527" or page.custom_fields.show_occupation %}
                         <div class="form-row">
                           <div class="form-content">
+
+                            {% if designation == "PAC" or designation == "527" or page.custom_fields.show_occupation == "required" %}
+                            <input type="hidden" name="required" value="user_occupation">
+                            {% endif %}
+
                             <label for="user_occupation_id">Occupation <span class="required">*</span></label>
                             <input type="text" name="user_occupation" id="user_occupation_id" value="" required>
                           </div>
