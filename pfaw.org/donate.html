@@ -648,11 +648,11 @@
                                 <p class="disclaimer">Federal law requires us to collect the following information:</p>
                                 {% endif %}
 
-                                {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_employer == "required" %}
+                                {% if not page.custom_fields.show_employer == "show" %}
                                 <input type="hidden" name="required" value="action_employer">
                                 {% endif %}
 
-                                <label for="action_employer_id">Employer <span class="required">*</span></label>
+                                <label for="action_employer_id">Employer {% if not page.custom_fields.show_employer == "show" %}<span class="required">*</span>{% endif %}</label>
                                 <input type="text" name="action_employer" id="action_employer_id" value="" required>
                               </div>
                             </div>
@@ -661,11 +661,11 @@
                             <div class="form-row">
                               <div class="form-content">
 
-                                {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_occupation == "required" %}
+                                {% if not page.custom_fields.show_occupation == "show" %}
                                 <input type="hidden" name="required" value="action_occupation">
                                 {% endif %}
 
-                                <label for="action_occupation_id">Occupation <span class="required">*</span></label>
+                                <label for="action_occupation_id">Occupation {% if not page.custom_fields.show_occupation == "show" %}<span class="required">*</span>{% endif %}</label>
                                 <input type="text" name="action_occupation" id="action_occupation_id" value="" required>
                               </div>
                             </div>
