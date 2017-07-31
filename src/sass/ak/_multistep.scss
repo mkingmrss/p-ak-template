@@ -479,18 +479,20 @@
   border: 1px solid #ddd;
   padding: 1em .75em;
 }
-.multistep-form .form-content--checkbox label,
-.autorenewal-external label {
+.multistep-form .form-content--checkbox label {
   display: inline-block;
   max-width: 90%;
   margin-left: .5em;
   color: #2c4667;
   font-weight: bold;
   width: auto;
-  vertical-align: top;
+  vertical-align: middle;
   font-size: 1.05em;
   cursor: pointer;
   white-space: normal;
+}
+.autorenewal-external label {
+  vertical-align: top;
 }
 @media screen and (max-width: 480px) {
   .autorenewal-external label {
