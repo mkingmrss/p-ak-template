@@ -97,6 +97,19 @@
     $(document).ready(function(){
         $('#ak-fieldbox-email').addClass('form-row-two-thirds');
         $('#ak-fieldbox-zip').addClass('form-row-second-third');
+
+
+        $('.scrollTop').click(function(){
+            $('html, body').animate({
+                scrollTop: ($('.statement-text-wrapper').offset().top)
+            },500);
+        });
+
+
+
+
+
+        
     });
 </script>
 {% endblock %}
