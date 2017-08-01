@@ -2351,6 +2351,9 @@ body noscript + script + p + script + p {
       outline: 0;
       cursor: pointer; }
 
+.ak-pagetype-letter .form-row.scrollTop {
+  margin-top: 1.25em; }
+
 @media (max-width: 900px) {
   .ak-pagetype-letter .header__buttons ul {
     display: none; } }
