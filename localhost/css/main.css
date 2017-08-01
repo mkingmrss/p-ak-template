@@ -1989,7 +1989,15 @@ body noscript + script + p + script + p {
         width: 100%;
         margin-right: 0; }
       .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
-        margin-left: 0; } }
+        margin-left: 0; }
+      .ak-pagetype-petition .advocacy-action #petition-form .form-row-first-third {
+        width: 100%;
+        margin-right: 0; }
+      .ak-pagetype-petition .advocacy-action #petition-form .form-row-second-third {
+        width: 100%;
+        margin-left: 0; }
+      .ak-pagetype-petition .advocacy-action #petition-form .form-row-two-thirds {
+        width: 100%; } }
   @media (max-width: 800px) {
     .ak-pagetype-petition .advocacy-action .advocacy-intro, .ak-pagetype-petition .advocacy-action .pull-right, .ak-pagetype-petition .advocacy-action header {
       width: 100%;
@@ -2424,4 +2432,9 @@ body:not(.ak-pagetype-donate) .scrollTop {
   display: none; }
   body:not(.ak-pagetype-donate) .scrollTop:before {
     content: "\2191";
-    color: #004b8e; }
+    color: #004b8e;
+    margin-right: 5px; }
+
+@media (max-width: 800px) {
+  body:not(.ak-pagetype-donate) .scrollTop {
+    display: block; } }

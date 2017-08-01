@@ -85,7 +85,12 @@ body {
 			&:before{
 				content: "\2191";
 				color: $blue;
+				margin-right: 5px;
 			}
+		}
+
+		@media (max-width: $max-reading-width){
+			.scrollTop { display: block; }
 		}
 
 	}
