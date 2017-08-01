@@ -68,5 +68,25 @@ body {
 				font-size: 15px;
 			}
 		}
+
+		.scrollTop {
+			color: $blue;
+			background-color: $light-grey;
+			color: #004b8e;
+			text-align: center;
+			width: 80%;
+			margin-left: 5%;
+			margin-right: 5%;
+			font-size: 13px;
+			padding: 10px;
+			cursor: pointer;
+			display:none;
+
+			&:before{
+				content: "\2191";
+				color: $blue;
+			}
+		}
+
 	}
 }

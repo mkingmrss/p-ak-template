@@ -1988,7 +1988,9 @@ body noscript + script + p + script + p {
     @media (max-width: 800px) {
       .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
         width: 100%;
-        margin-right: 0; } }
+        margin-right: 0; }
+      .ak-pagetype-petition .advocacy-action #petition-form #ak-fieldbox-zip {
+        margin-left: 0; } }
   @media (max-width: 800px) {
     .ak-pagetype-petition .advocacy-action .advocacy-intro, .ak-pagetype-petition .advocacy-action .pull-right, .ak-pagetype-petition .advocacy-action header {
       width: 100%;
@@ -2408,4 +2410,20 @@ body:not(.ak-pagetype-donate) #petition-form p.disclaimer {
   font-weight: bold;
   font-style: italic;
   font-size: 15px; }
+
+body:not(.ak-pagetype-donate) .scrollTop {
+  color: #004b8e;
+  background-color: #eff3f3;
+  color: #004b8e;
+  text-align: center;
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 13px;
+  padding: 10px;
+  cursor: pointer;
+  display: none; }
+  body:not(.ak-pagetype-donate) .scrollTop:before {
+    content: "\2191";
+    color: #004b8e; }
 </style>
