@@ -97,6 +97,13 @@
 
     $(document).ready(function() {
         $('label[for="id_state"]').show();
+
+        $('.scrollTop').click(function(){
+            $('html, body').animate({
+                scrollTop: ($('#column1').offset().top)
+            },500);
+        });
+
     });
 </script>
 {% endblock %}
