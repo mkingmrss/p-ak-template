@@ -32,6 +32,10 @@
 
     <script>
 
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
         actionkitFormReady =  function() {
 
             var thisProgress = actionkit.context.progress;
@@ -40,9 +44,16 @@
                 if('static_progress_meter' in actionkit.context.page.custom_fields && actionkit.context.page.custom_fields.static_progress_meter == 'yes'){
                     var targetWidth = 100;
                 } else {
-                    var newGoal = Math.round(parseInt(thisProgress.current * 1.25));
+
+                    var roundVal;
+                    if(thisProgress.current <= 100) { roundVal = 10; }
+                    if(thisProgress.current > 100 && thisProgress.current< 1000){ roundVal = 100;  }
+                    if(thisProgress.current >= 1000) { roundVal = 1000; }
+
+                    var newGoal = roundVal * Math.ceil((thisProgress.current * 1.25) / roundVal);
+
                     var targetWidth = Math.round((thisProgress.current / newGoal) * 100);
-                    $('#goal').text(newGoal);
+                    $('#goal').text(numberWithCommas(newGoal));
                 }
             } else {
                 var targetWidth = actionkit.context.progress.percent;
