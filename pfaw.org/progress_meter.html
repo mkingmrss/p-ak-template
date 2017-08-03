@@ -40,6 +40,10 @@
 
             var thisProgress = actionkit.context.progress;
 
+            if("thermometer_starting_point" in actionkit.context.page.custom_fields){
+                thisProgress = thisProgress + actionkit.context.page.custom_fields.thermometer_starting_point;
+            }
+
             if(thisProgress.current >= thisProgress.goal){
                 if('static_progress_meter' in actionkit.context.page.custom_fields && actionkit.context.page.custom_fields.static_progress_meter == 'yes'){
                     var targetWidth = 100;
