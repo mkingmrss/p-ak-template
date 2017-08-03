@@ -22,7 +22,7 @@
                             </span> <br> 
                             of our goal of {{ page.currency_sym|default:"$" }}[%= add_commas(goal)  %]!
                         [% } else { %]  
-                            <span class="ak-progress-actions">We've reached <span>[%= add_commas(total.actions) %]</span></span> of our goal of <span id="goal">[%= add_commas(goal) %]</span>.
+                            <span class="ak-progress-actions">We've reached <span id="current">[%= add_commas(total.actions) %]</span></span> of our goal of <span id="goal">[%= add_commas(goal) %]</span>.
                         [% } %]
                     </div>
                 </div>
@@ -58,6 +58,7 @@
 
                     var targetWidth = Math.round((thisProgress.current / newGoal) * 100);
                     $('#goal').text(numberWithCommas(newGoal));
+                    $('#current').text(numberWithCommas(thisProgress.current));
                 }
             } else {
                 var targetWidth = actionkit.context.progress.percent;
