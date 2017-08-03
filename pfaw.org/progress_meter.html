@@ -41,7 +41,7 @@
             var thisProgress = actionkit.context.progress;
 
             if("thermometer_starting_point" in actionkit.context.page.custom_fields){
-                thisProgress = thisProgress + actionkit.context.page.custom_fields.thermometer_starting_point;
+                thisProgress.current = thisProgress.current + actionkit.context.page.custom_fields.thermometer_starting_point;
             }
 
             if(thisProgress.current >= thisProgress.goal){
