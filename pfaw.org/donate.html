@@ -424,7 +424,7 @@
                                         <input type="radio" name="product" value="product_{{ product.id }}">
                                         <input type="checkbox" style="display: none" value="1" id="product_{{ product.id }}" name="product_{{ product.id }}" data-product="{{ product.id }}">
                                         <strong>
-                                            <span id="product_{{ product.id }}_price" data-price="{{ product.price }}">{{ product.price }}</span>
+                                            <span id="product_{{ product.id }}_price" data-price="{{ product.price }}">{{ page.currency_sym }}{{ product.price|floatformat:"-2"|commify }}</span>
                                             —
                                             <span>{{ product.name }}</span>
                                         </strong>
