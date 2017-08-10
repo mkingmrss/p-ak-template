@@ -1,0 +1,95 @@
+.ak-accordion {}
+.ak-accordion ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+.ak-accordion ul li {
+    background: #f3f6f7;
+    padding: 13px 16px;
+    margin-bottom: 2px;
+}
+.ak-accordion ul li .ak-accordion-head {
+    cursor: pointer;
+}
+.ak-accordion .ak-accordion-head {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+}
+.ak-accordion .ak-arrow {
+    position: relative;
+    top: 4px;
+}
+
+.ak-arrow,
+.ak-arrow-inline {
+    float: right;
+    font-size: 0.58em;
+    font-size: 0.58rem;
+    transition: 0.4s;
+}
+.ak-arrow-inline {
+    top: 6px;
+}
+li.active .ak-arrow,
+p.active .ak-arrow-inline,
+h3.active .ak-arrow  {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 12px;
+    left: 5px;
+}
+.ak-arrow:after,
+.ak-arrow-inline:after {
+    content: "\25B6 \FE0E";
+    color: #268ECD;
+}
+
+.ak-rtl .ak-arrow,
+.ak-rtl .ak-arrow-inline { /* mirror the styles if RTL */
+    float: left;
+}
+
+.ak-newspaper-row {
+    background: #EEEEEE;
+    margin-bottom: 5px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 200;
+    font-size: 0.90em;
+    font-size: 0.90rem;
+}
+.ak-newspaper-row:nth-of-type(2n) {
+    /* background-color: #e7e7e7; */
+}
+
+.ak-newspaper-row a {
+    font-weight: 600;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+    padding-bottom: 5px;
+}
+.ak-newspaper-row .ak-newspaper-choice {
+    float: right;
+    margin: 0;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+    padding-top: 6px;
+}
+
+.ak-newspaper-row .ak-newspaper-choice input {
+    display: none;
+}
+
+#ak-newspaper-change {
+    font-size: smaller;
+    margin-left: 1em;
+}
+
+.ak-rtl .ak-newspaper-row .ak-newspaper-choice { /* mirror the styles if RTL */
+    float: left;
+}
