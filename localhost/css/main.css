@@ -2441,3 +2441,85 @@ body:not(.ak-pagetype-donate) .scrollTop {
 @media (max-width: 800px) {
   body:not(.ak-pagetype-donate) .scrollTop {
     display: block; } }
+
+.lte {
+  /* Grid system based on http://www.responsivegridsystem.com/calculator/
+   ========================================================================== */
+  /* Inverted grid rows have their cells in reverse order */
+  /* On RTL pages, all of the above column order logic is switched */
+  /* Switch to single-column full-width layout on screens narrower than 750 px */ }
+  .lte .ak-grid-row:before,
+  .lte .ak-grid-row:after {
+    content: "";
+    display: table; }
+  .lte .ak-grid-row:after {
+    clear: both; }
+  .lte .ak-grid-row {
+    zoom: 1;
+    /* For IE 6/7 */
+    clear: both;
+    padding: 0;
+    margin: 0; }
+  .lte .ak-grid-col {
+    display: block;
+    float: left;
+    margin: 0;
+    min-height: 1px; }
+  .lte .ak-grid-col-12-of-12 {
+    width: 100%; }
+  .lte .ak-grid-col-11-of-12 {
+    width: 91.5%; }
+  .lte .ak-grid-col-10-of-12 {
+    width: 83%; }
+  .lte .ak-grid-col-9-of-12 {
+    width: 74.5%; }
+  .lte .ak-grid-col-8-of-12 {
+    width: 66%; }
+  .lte .ak-grid-col-7-of-12 {
+    width: 57.5%; }
+  .lte .ak-grid-col-6-of-12 {
+    width: 49%; }
+  .lte .ak-grid-col-5-of-12 {
+    width: 40.5%; }
+  .lte .ak-grid-col-4-of-12 {
+    width: 32%; }
+  .lte .ak-grid-col-3-of-12 {
+    width: 23.5%; }
+  .lte .ak-grid-col-2-of-12 {
+    width: 15%; }
+  .lte .ak-grid-col-1-of-12 {
+    width: 6.5%; }
+  .lte .ak-grid-col:first-child {
+    margin-left: 0; }
+  .lte .ak-grid-col:not(:first-child) {
+    margin-left: 2%; }
+  .lte .ak-grid-col.ak-grid-centered {
+    margin: 0 auto;
+    float: none; }
+  .lte .ak-grid-row-inverted .ak-grid-col {
+    float: right; }
+  .lte .ak-grid-row-inverted .ak-grid-col:last-child {
+    margin-left: 0; }
+  .lte .ak-grid-row-inverted .ak-grid-col:not(:last-child) {
+    margin-left: 2%; }
+  .lte .ak-rtl .ak-grid-row .ak-grid-col {
+    float: right; }
+  .lte .ak-rtl .ak-grid-row .ak-grid-col:last-child {
+    margin-left: 0; }
+  .lte .ak-rtl .ak-grid-row .ak-grid-col:not(:last-child) {
+    margin-left: 2%; }
+  .lte .ak-rtl .ak-grid-row-inverted .ak-grid-col {
+    float: left; }
+  .lte .ak-rtl .ak-grid-row-inverted .ak-grid-col:first-child {
+    margin-left: 0; }
+  .lte .ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) {
+    margin-left: 2%; }
+  @media only screen and (max-width: 749px) {
+    .lte .ak-grid-col {
+      width: 100%;
+      margin: 0; }
+    .lte .ak-grid-col:not(:first-child),
+    .lte .ak-grid-row-inverted .ak-grid-col:not(:last-child),
+    .lte .ak-rtl .ak-grid-row .ak-grid-col:not(:last-child),
+    .lte .ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) {
+      margin: 0; } }
