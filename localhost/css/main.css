@@ -854,6 +854,10 @@ header.banner {
     .main {
       padding: 30px 0; } }
 
+@media (max-width: 900px) {
+  .header__buttons ul {
+    display: none; } }
+
 .multistep-logo img {
   max-width: 100%;
   height: auto; }
