@@ -7,7 +7,8 @@
         font-weight: bold;
         margin-bottom: 1em;
     }
-    .lte-submit {
+    .lte-submit,
+    #lte-submit {
         text-align: center;
     }
     ul.ak-err {
@@ -18,7 +19,31 @@
         margin-top: .25em;
         color: #ae272b;
     }
+    #known_user {
+        font-weight: bold;
 
+        hr {
+            border: 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    #ak-newspaper-change {
+        font-weight: bold;
+    }
+    textarea {
+        width: 100%;
+        border: 1px solid #afb9b8;
+        min-height: 4em;
+    }
+    .ak-message-form {
+        th, td {
+            vertical-align: top;
+        }
+        td {
+            font-size: .8em;
+        }
+    }
 
     .ak-accordion {}
     .ak-accordion ul {
