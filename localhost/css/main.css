@@ -2754,11 +2754,13 @@ body:not(.ak-pagetype-donate) .scrollTop {
 .ak-pagetype-survey .ak-survey-question-label {
   margin-bottom: .25em; }
 
-.ak-pagetype-survey .ak-survey-radio-choice {
+.ak-pagetype-survey .ak-survey-radio-choice,
+.ak-pagetype-survey .ak-survey-checkbox-choice {
   margin-bottom: .5em;
   text-indent: -1.75em;
   padding-left: 1.75em; }
-  .ak-pagetype-survey .ak-survey-radio-choice input {
+  .ak-pagetype-survey .ak-survey-radio-choice input,
+  .ak-pagetype-survey .ak-survey-checkbox-choice input {
     margin-right: .5em; }
 
 .ak-pagetype-survey input[type="text"].ak-survey-input,
