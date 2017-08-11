@@ -109,7 +109,23 @@
     .ak-rtl .ak-arrow-inline { /* mirror the styles if RTL */
         float: left;
     }
+    #ak-lte-help {
+        .ak-accordion ul ul {
+            list-style: disc;
+            padding-left: 1.5em;
 
+            li {
+                padding: 0;
+            }
+            li + li {
+                margin-top: 1em;
+            }
+        }
+    }
+
+    .ak-newspaper h3 {
+        margin-top: 1.25em;
+    }
     .ak-newspaper-row {
         background: $white;
         background: rgba( 255, 255, 255, .75 );;
