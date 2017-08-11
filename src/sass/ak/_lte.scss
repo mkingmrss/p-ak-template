@@ -1,4 +1,8 @@
 .lte {
+    #media_target,
+    #to_target_row {
+        transition: none;
+    }
     .form-area {
         padding: 1.5em;
         background: #eff3f3;
