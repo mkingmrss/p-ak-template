@@ -2726,3 +2726,9 @@ body:not(.ak-pagetype-donate) .scrollTop {
     .lte .ak-rtl .ak-grid-row .ak-grid-col:not(:last-child),
     .lte .ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) {
       margin: 0; } }
+
+.ak-pagetype-survey .ak-survey-questions {
+  background: #eff3f3;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 2em; }
