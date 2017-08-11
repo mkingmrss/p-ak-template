@@ -2463,10 +2463,14 @@ body:not(.ak-pagetype-donate) .scrollTop {
   color: #ae272b; }
 
 .lte #known_user {
-  font-weight: bold; }
+  font-style: italic;
+  font-size: .9em; }
   .lte #known_user hr {
     border: 0;
     border-bottom: 1px solid #ccc; }
+
+.lte #media_target > p {
+  font-weight: bold; }
 
 .lte #ak-newspaper-change {
   font-weight: bold; }
@@ -2544,10 +2548,11 @@ body:not(.ak-pagetype-donate) .scrollTop {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  padding: 8px;
+  padding: .75em;
   font-weight: 200;
   font-size: 0.90em;
-  font-size: 0.90rem; }
+  font-size: 0.90rem;
+  line-height: 1.4em; }
 
 .lte .ak-newspaper-row a {
   font-weight: 600;
