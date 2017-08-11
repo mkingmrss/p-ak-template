@@ -2442,6 +2442,16 @@ body:not(.ak-pagetype-donate) .scrollTop {
   body:not(.ak-pagetype-donate) .scrollTop {
     display: block; } }
 
+.lte .form-area {
+  padding: 1.5em;
+  background: #eff3f3; }
+
+.lte .ak-instructions {
+  font-weight: bold; }
+
+.lte .lte-submit {
+  text-align: center; }
+
 .lte .ak-accordion ul {
   padding: 0;
   list-style: none;
