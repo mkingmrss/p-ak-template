@@ -138,7 +138,7 @@
                             <div class="ak-accordion-head">
                                 Writing Tips
                             </div>
-                            <div>
+                            <div {% if page.custom_fields.writing_tips_expanded %} style="display: block; overflow: hidden;" {% endif %}">
                                 {% include_tmpl form.writing_tips %}
                             </div>
                         </li>
