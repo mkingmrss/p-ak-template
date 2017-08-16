@@ -95,6 +95,14 @@
 
 </script>
 
+    {% if page.custom_fields.writing_tips_expanded %}
+    <script type="text/javascript">
+        $( window ).load( function() {
+            $( '.writing-tips .ak-accordion-head' ).trigger( 'click' );
+        });
+    </script>
+    {% endif %}
+
 {% endblock %}
 
 {% block content %}
@@ -134,11 +142,11 @@
                         </li>
                         {% endif %}
                         {% if form.writing_tips %}
-                        <li {% if page.custom_fields.writing_tips_expanded %} class="active" {% endif %}>
+                        <li class="writing-tips">
                             <div class="ak-accordion-head">
                                 Writing Tips
                             </div>
-                            <div {% if page.custom_fields.writing_tips_expanded %} style="display: block; overflow: hidden;" {% endif %}">
+                            <div>
                                 {% include_tmpl form.writing_tips %}
                             </div>
                         </li>
