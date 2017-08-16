@@ -134,7 +134,7 @@
                         </li>
                         {% endif %}
                         {% if form.writing_tips %}
-                        <li>
+                        <li {% if page.custom_fields.writing_tips_expanded %} class="active" {% endif %}>
                             <div class="ak-accordion-head">
                                 Writing Tips
                             </div>
