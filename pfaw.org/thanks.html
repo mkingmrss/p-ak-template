@@ -256,7 +256,7 @@
 {% block above_gtm %}
     {% if order %}
         <script>
-            dataLayer = dataLayer || [];
+            var dataLayer = dataLayer || [];
             dataLayer.push({
                 'transactionId': '{{ order.id }}',
                 'transactionAffiliation': 'PFAW',
