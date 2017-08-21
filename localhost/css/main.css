@@ -2785,7 +2785,7 @@ body:not(.ak-pagetype-donate) .scrollTop {
   height: 2.25em; }
 
 .ak-pagetype-survey textarea.ak-survey-input {
-  max-width: 30em; }
+  max-width: 100%; }
 
 .ak-pagetype-survey .ak-submit-button {
   text-transform: uppercase;
