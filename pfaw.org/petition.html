@@ -105,10 +105,10 @@
             },500);
         });
 
-
-
-
-
+    {% if page.custom_fields.email_zip_full_width == 'true' %}
+        $('#ak-fieldbox-email').removeClass('form-row-two-thirds');
+        $('#ak-fieldbox-zip').removeClass('form-row-second-third');
+    {% endif %}
         
     });
 </script>
