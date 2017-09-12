@@ -1897,6 +1897,7 @@ body noscript + script + p + script + p {
   .products .product + .product {
     margin-top: .5em; }
 
+/* version bump */
 .ak-pagetype-petition .header__buttons ul {
   display: block; }
 
@@ -2012,6 +2013,124 @@ body noscript + script + p + script + p {
 
 @media (max-width: 900px) {
   .ak-pagetype-petition .header__buttons ul {
+    display: none; } }
+
+/* version bump */
+.ak-pagetype-call .header__buttons ul {
+  display: block; }
+
+.ak-pagetype-call p, .ak-pagetype-call ol, .ak-pagetype-call ul {
+  font-size: 14px; }
+
+.ak-pagetype-call .ak-featured-img {
+  margin-bottom: 1em; }
+
+.ak-pagetype-call .advocacy-action {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .ak-pagetype-call .advocacy-action .advocacy-intro, .ak-pagetype-call .advocacy-action .pull-right, .ak-pagetype-call .advocacy-action header {
+    width: 48.5%; }
+  .ak-pagetype-call .advocacy-action header {
+    padding-bottom: 12px;
+    float: left;
+    text-align: left; }
+  .ak-pagetype-call .advocacy-action .pull-right {
+    padding-top: 36px;
+    float: right; }
+  .ak-pagetype-call .advocacy-action #progress .ak-progress-percent {
+    display: none; }
+  .ak-pagetype-call .advocacy-action .statement-text-wrapper {
+    padding: 1.5em;
+    background: #eff3f3; }
+    .ak-pagetype-call .advocacy-action .statement-text-wrapper h3 {
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      font-size: 24px;
+      color: #353b3a;
+      padding-top: 6px;
+      padding-bottom: 20px; }
+    .ak-pagetype-call .advocacy-action .statement-text-wrapper .ak-margin-bottom-1 {
+      font-size: 14px; }
+  .ak-pagetype-call .advocacy-action #petition-form {
+    overflow-x: hidden;
+    overflow-y: auto; }
+    .ak-pagetype-call .advocacy-action #petition-form input[type="text"], .ak-pagetype-call .advocacy-action #petition-form textarea {
+      width: 100%;
+      border: 1px solid #afb9b8; }
+    .ak-pagetype-call .advocacy-action #petition-form textarea {
+      height: 64px; }
+    .ak-pagetype-call .advocacy-action #petition-form ul.ak-err {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      margin-top: .25em;
+      color: #ae272b; }
+    .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-last_name {
+      width: 48%; }
+    .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-first_name {
+      margin-right: 4%; }
+    .ak-pagetype-call .advocacy-action #petition-form .ak-field-comment {
+      margin-bottom: .675em; }
+    .ak-pagetype-call .advocacy-action #petition-form .form-row.form-submit {
+      margin-top: .675em;
+      margin-bottom: 0;
+      text-align: center; }
+      .ak-pagetype-call .advocacy-action #petition-form .form-row.form-submit .ak-submit-button {
+        text-transform: uppercase;
+        background: #4b6a23 linear-gradient(to bottom, #4b6a23 50%, #192f58 50%) repeat scroll 0 0/100px 100px;
+        border-color: #192f58;
+        border-radius: 0;
+        border-style: none none solid;
+        border-width: 0 0 5px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 36px;
+        max-width: 300px;
+        padding: 0 20px;
+        -webkit-transition: background-position .3s;
+        transition: background-position .3s; }
+        .ak-pagetype-call .advocacy-action #petition-form .form-row.form-submit .ak-submit-button:hover {
+          background-position: 0 100%;
+          color: #FFFFFF;
+          outline: 0;
+          cursor: pointer; }
+    .ak-pagetype-call .advocacy-action #petition-form .form-row-first-third {
+      float: left;
+      width: 32%;
+      margin-right: 2%; }
+    .ak-pagetype-call .advocacy-action #petition-form .form-row-second-third {
+      float: left;
+      width: 32%;
+      margin-left: 2%; }
+    .ak-pagetype-call .advocacy-action #petition-form .form-row-two-thirds {
+      float: left;
+      width: 66%; }
+    @media (max-width: 800px) {
+      .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-zip {
+        width: 100%;
+        margin-right: 0; }
+      .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-zip {
+        margin-left: 0; }
+      .ak-pagetype-call .advocacy-action #petition-form .form-row-first-third {
+        width: 100%;
+        margin-right: 0; }
+      .ak-pagetype-call .advocacy-action #petition-form .form-row-second-third {
+        width: 100%;
+        margin-left: 0; }
+      .ak-pagetype-call .advocacy-action #petition-form .form-row-two-thirds {
+        width: 100%; } }
+  @media (max-width: 800px) {
+    .ak-pagetype-call .advocacy-action .advocacy-intro, .ak-pagetype-call .advocacy-action .pull-right, .ak-pagetype-call .advocacy-action header {
+      width: 100%;
+      float: none; }
+    .ak-pagetype-call .advocacy-action .advocacy-intro {
+      margin-top: 2em; } }
+
+@media (max-width: 900px) {
+  .ak-pagetype-call .header__buttons ul {
     display: none; } }
 
 .ak-pagetype-thanks #confirmation-text {
@@ -2203,7 +2322,6 @@ body noscript + script + p + script + p {
     margin-top: 0; }
   .ak-pagetype-signup #signup-story {
     margin-top: 36px; } }
-
 
 #progress {
   margin-bottom: 1em;

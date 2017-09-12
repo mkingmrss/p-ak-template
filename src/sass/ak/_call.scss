@@ -1,0 +1,184 @@
+/* version bump */
+
+.ak-pagetype-call {
+
+	.header__buttons{
+		ul { display: block; }
+	}
+
+	p, ol, ul {
+		font-size: 14px;
+	}
+
+	.ak-featured-img {
+		margin-bottom: 1em;
+	}
+	
+	.advocacy-action {
+		position: relative;
+	    width: 100%;
+	    overflow: hidden;
+
+		.advocacy-intro, .pull-right, header {
+		    width: 48.5%;
+		}
+
+		header {
+			padding-bottom: 12px;
+			float: left;
+			text-align: left;
+		}
+
+		.pull-right {
+			padding-top: 36px;
+			float: right;
+		}
+
+		#progress {
+			.ak-progress-percent { display: none; }
+		}
+
+		.statement-text-wrapper {
+			padding: 1.5em;
+    		background: #eff3f3;
+
+    		h3 {
+    			text-transform: uppercase;
+			    letter-spacing: .03em;
+			    font-size: 24px;
+			    color: #353b3a;
+			    padding-top: 6px;
+    			padding-bottom: 20px;
+    		}
+
+    		.ak-margin-bottom-1 {
+    			font-size:14px;
+    		}
+		}
+
+		#petition-form {
+
+			overflow-x:hidden;
+			overflow-y: auto;
+
+			input[type="text"], textarea {
+				width: 100%;
+				border: 1px solid #afb9b8;
+			}
+
+			textarea {
+				height: 64px;
+			}
+
+			ul.ak-err {
+				list-style:none;
+				margin: 0;
+				padding: 0;
+				font-size:12px;
+				margin-top: .25em;
+				color: $red;
+			}
+
+			#ak-fieldbox-first_name, #ak-fieldbox-last_name {
+				width: 48%;
+			}
+			#ak-fieldbox-first_name {
+				margin-right: 4%;
+			}
+
+			.ak-field-comment {
+			    margin-bottom: .675em;
+			}
+
+			.form-row.form-submit {
+				margin-top: .675em;
+				margin-bottom: 0;
+				text-align: center;
+
+				.ak-submit-button {
+					text-transform: uppercase;
+				    background: #4b6a23 linear-gradient(to bottom, #4b6a23 50%, #192f58 50%) repeat scroll 0 0 / 100px 100px;
+				    border-color: #192f58;
+				    border-radius: 0;
+				    border-style: none none solid;
+				    border-width: 0 0 5px;
+				    color: #fff;
+				    font-size: 15px;
+				    font-weight:bold;
+				    line-height: 36px;
+				    max-width:300px;
+				    padding: 0 20px;
+				    -webkit-transition: background-position .3s;
+  					transition: background-position .3s;
+
+  					&:hover{
+  						background-position: 0 100%;
+					    color: #FFFFFF;
+					    outline: 0; 
+					    cursor: pointer;
+  					}
+
+				}
+			}
+
+			.form-row-first-third {
+				float: left;
+			    width: 32%;
+			    margin-right: 2%;
+			}
+
+			.form-row-second-third {
+				float: left;
+			    width: 32%;
+			    margin-left: 2%;
+			}
+
+			.form-row-two-thirds {
+				float:left;
+				width: 66%;
+			}
+			
+
+			@media (max-width: $max-reading-width){
+				#ak-fieldbox-first_name, #ak-fieldbox-last_name, #ak-fieldbox-zip {
+					width: 100%;
+					margin-right: 0;
+				}
+				#ak-fieldbox-zip {
+					margin-left: 0;
+				}
+
+				.form-row-first-third {
+				    width: 100%;
+				    margin-right: 0;
+				}
+
+				.form-row-second-third {
+				    width: 100%;
+				    margin-left: 0;
+				}
+
+				.form-row-two-thirds {
+					width: 100%;
+				}
+
+			}
+		}
+		@media (max-width: $max-reading-width){
+			
+			.advocacy-intro, .pull-right, header {
+				width: 100%;
+	    		float: none;
+			}
+
+			.advocacy-intro {
+				margin-top: 2em;
+			}
+		}
+	}
+	@media (max-width: 900px){
+		.header__buttons{
+			ul { display: none; }
+		}
+	}
+}
