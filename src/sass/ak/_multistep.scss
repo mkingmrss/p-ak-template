@@ -487,10 +487,13 @@
   color: #2c4667;
   font-weight: bold;
   width: auto;
-  vertical-align: top;
+  vertical-align: middle;
   font-size: 1.05em;
   cursor: pointer;
   white-space: normal;
+}
+.autorenewal-external label {
+  vertical-align: top;
 }
 @media screen and (max-width: 480px) {
   .autorenewal-external label {
@@ -528,6 +531,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.multistep-form .ak-err li + li {
+  margin-left: .5em;
 }
 .multistep-form select {
   height: 2.25em;
@@ -908,10 +914,6 @@ body .layout-constrain
 body .mobile-menu__bar
 {
   height: 84px;
-}
-body .header__buttons ul
-{
-  display: none;
 }
 body .header__buttons li a
 {

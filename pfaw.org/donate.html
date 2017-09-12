@@ -424,7 +424,7 @@
                                         <input type="radio" name="product" value="product_{{ product.id }}">
                                         <input type="checkbox" style="display: none" value="1" id="product_{{ product.id }}" name="product_{{ product.id }}" data-product="{{ product.id }}">
                                         <strong>
-                                            <span id="product_{{ product.id }}_price" data-price="{{ product.price }}">{{ product.price }}</span>
+                                            <span id="product_{{ product.id }}_price" data-price="{{ product.price }}">{{ page.currency_sym }}{{ product.price|floatformat:"-2"|commify }}</span>
                                             —
                                             <span>{{ product.name }}</span>
                                         </strong>
@@ -579,10 +579,12 @@
                     <div class="ak-errs-below test2">
 
                         <div class="form-row">
-                            <div class="form-content">
-                                <input type="hidden" name="required" value="name">
-                                <label for="id_name">Name: <span class="required">*</span></label>
-                                <input type="text" id="id_name" name="name" required />
+                            <div class="form-content form-content-multi">
+                                <input type="hidden" name="required" value="first_name">
+                                <input type="hidden" name="required" value="last_name">
+                                <label for="id_first_name">Name: <span class="required">*</span></label>
+                                <input type="text" class="form-field-half" id="id_first_name" name="first_name" required />
+                                <input type="text" class="form-field-half" id="id_last_name" name="last_name" required />
                             </div>
                         </div>
                         <div class="form-row">

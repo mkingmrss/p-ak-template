@@ -80,6 +80,8 @@
                 <div class="form-row form-submit">
                     <button type="submit" class="ak-submit-button">Send My Message</button>
                 </div>
+
+                <div class="form-row scrollTop">Sign Now</div>
             </div><!-- /right col -->
         </div>
     </form>
@@ -95,6 +97,13 @@
 
     $(document).ready(function() {
         $('label[for="id_state"]').show();
+
+        $('.scrollTop').click(function(){
+            $('html, body').animate({
+                scrollTop: ($('#column1').offset().top)
+            },500);
+        });
+
     });
 </script>
 {% endblock %}

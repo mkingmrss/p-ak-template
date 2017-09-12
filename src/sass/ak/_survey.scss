@@ -1,0 +1,91 @@
+.ak-pagetype-survey {
+
+  #ak-survey-questions {
+    background: #eff3f3;
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 2em;
+    line-height: 1.2em;
+
+    #ak-errors {
+      display: none;
+    }
+    ul.ak-err {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      margin-top: .25em;
+      color: #ae272b;
+    }
+  }
+  .ak-field-box > div {
+    margin-bottom: 1rem;
+  }
+
+  .radio-item,
+  .checkbox-item {
+    label {
+      overflow: visible;
+      font-weight: normal;
+    }
+  }
+  .ak-survey-question-label {
+    margin-bottom: .25em;
+  }
+  .ak-survey-radio-choice,
+  .ak-survey-checkbox-choice {
+    margin-bottom: .5em;
+    text-indent: -1.75em;
+    padding-left: 1.75em;
+    input {
+      margin-right: .5em;
+    }
+  }
+  input[type="text"].ak-survey-input,
+  select.ak-survey-input,
+  textarea.ak-survey-input {
+    width: 100%;
+    max-width: 16em;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    padding: .5em .35em;
+  }
+  select.ak-survey-input {
+    font-size: .9em;
+    height: 2.25em;
+  }
+  textarea.ak-survey-input {
+    max-width: 100%;
+  }
+  .ak-submit-button {
+    text-transform: uppercase;
+    background: #4b6a23 linear-gradient(to bottom, #4b6a23 50%, #192f58 50%) repeat scroll 0 0/100px 100px;
+    border-color: #192f58;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: 0 0 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 36px;
+    width: auto;
+    margin: 1em auto;
+    display: inline-block;
+    max-width: 300px;
+    padding: 0 20px;
+    -webkit-transition: background-position .3s;
+    transition: background-position .3s;
+
+    &:hover {
+      background-position: 0 100%;
+      color: #FFFFFF;
+      outline: 0;
+      cursor: pointer;
+    }
+  }
+  
+}

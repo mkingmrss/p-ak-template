@@ -252,17 +252,11 @@
 </script>
 {% endblock %}
 
-{% block below_form %}
 
-<script type="text/javascript">
-    actionkit.forms.contextRoot = '/context/';
-    actionkit.forms.initTafForm('taf');
-    actionkit.sharing.initShareTools();
-</script>
-
+{% block above_gtm %}
     {% if order %}
         <script>
-            dataLayer = dataLayer || [];
+            var dataLayer = dataLayer || [];
             dataLayer.push({
                 'transactionId': '{{ order.id }}',
                 'transactionAffiliation': 'PFAW',
@@ -279,5 +273,14 @@
             });
         </script>
     {% endif %}
+{% endblock %}
+
+{% block below_form %}
+
+<script type="text/javascript">
+    actionkit.forms.contextRoot = '/context/';
+    actionkit.forms.initTafForm('taf');
+    actionkit.sharing.initShareTools();
+</script>
 
 {% endblock %}

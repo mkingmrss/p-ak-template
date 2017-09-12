@@ -22,7 +22,7 @@
                             </span> <br> 
                             of our goal of {{ page.currency_sym|default:"$" }}[%= add_commas(goal)  %]!
                         [% } else { %]  
-                            <span class="ak-progress-actions">We've reached <span>[%= add_commas(total.actions) %]</span></span> of our goal of <span id="goal">[%= add_commas(goal) %]</span>.
+                            <span class="ak-progress-actions">We've reached <span id="current">[%= add_commas(total.actions) %]</span></span> of our goal of <span id="goal">[%= add_commas(goal) %]</span>.
                         [% } %]
                     </div>
                 </div>
@@ -32,17 +32,33 @@
 
     <script>
 
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
         actionkitFormReady =  function() {
 
             var thisProgress = actionkit.context.progress;
+
+            if("thermometer_starting_point" in actionkit.context.page.custom_fields){
+                thisProgress.current = thisProgress.current + parseInt(actionkit.context.page.custom_fields.thermometer_starting_point);
+            }
 
             if(thisProgress.current >= thisProgress.goal){
                 if('static_progress_meter' in actionkit.context.page.custom_fields && actionkit.context.page.custom_fields.static_progress_meter == 'yes'){
                     var targetWidth = 100;
                 } else {
-                    var newGoal = Math.round(parseInt(thisProgress.current * 1.25));
+
+                    var roundVal;
+                    if(thisProgress.current <= 100) { roundVal = 10; }
+                    if(thisProgress.current > 100 && thisProgress.current< 1000){ roundVal = 100;  }
+                    if(thisProgress.current >= 1000) { roundVal = 1000; }
+
+                    var newGoal = roundVal * Math.ceil((thisProgress.current * 1.25) / roundVal);
+
                     var targetWidth = Math.round((thisProgress.current / newGoal) * 100);
-                    $('#goal').text(newGoal);
+                    $('#goal').text(numberWithCommas(newGoal));
+                    $('#current').text(numberWithCommas(thisProgress.current));
                 }
             } else {
                 var targetWidth = actionkit.context.progress.percent;

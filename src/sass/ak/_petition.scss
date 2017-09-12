@@ -144,6 +144,24 @@
 					width: 100%;
 					margin-right: 0;
 				}
+				#ak-fieldbox-zip {
+					margin-left: 0;
+				}
+
+				.form-row-first-third {
+				    width: 100%;
+				    margin-right: 0;
+				}
+
+				.form-row-second-third {
+				    width: 100%;
+				    margin-left: 0;
+				}
+
+				.form-row-two-thirds {
+					width: 100%;
+				}
+
 			}
 		}
 		@media (max-width: $max-reading-width){
