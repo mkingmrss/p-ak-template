@@ -2039,44 +2039,43 @@ body noscript + script + p + script + p {
     float: right; }
   .ak-pagetype-call .advocacy-action #progress .ak-progress-percent {
     display: none; }
-  .ak-pagetype-call .advocacy-action .statement-text-wrapper {
+  .ak-pagetype-call .advocacy-action .form-container {
+    overflow-x: hidden;
+    overflow-y: auto;
     padding: 1.5em;
     background: #eff3f3; }
-    .ak-pagetype-call .advocacy-action .statement-text-wrapper h3 {
+    .ak-pagetype-call .advocacy-action .form-container h3 {
       text-transform: uppercase;
       letter-spacing: .03em;
       font-size: 24px;
       color: #353b3a;
       padding-top: 6px;
       padding-bottom: 20px; }
-    .ak-pagetype-call .advocacy-action .statement-text-wrapper .ak-margin-bottom-1 {
+    .ak-pagetype-call .advocacy-action .form-container .ak-margin-bottom-1 {
       font-size: 14px; }
-  .ak-pagetype-call .advocacy-action #petition-form {
-    overflow-x: hidden;
-    overflow-y: auto; }
-    .ak-pagetype-call .advocacy-action #petition-form input[type="text"], .ak-pagetype-call .advocacy-action #petition-form textarea {
+    .ak-pagetype-call .advocacy-action .form-container input[type="text"], .ak-pagetype-call .advocacy-action .form-container textarea {
       width: 100%;
       border: 1px solid #afb9b8; }
-    .ak-pagetype-call .advocacy-action #petition-form textarea {
+    .ak-pagetype-call .advocacy-action .form-container textarea {
       height: 64px; }
-    .ak-pagetype-call .advocacy-action #petition-form ul.ak-err {
+    .ak-pagetype-call .advocacy-action .form-container ul.ak-err {
       list-style: none;
       margin: 0;
       padding: 0;
       font-size: 12px;
       margin-top: .25em;
       color: #ae272b; }
-    .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-last_name {
+    .ak-pagetype-call .advocacy-action .form-container #ak-fieldbox-first_name, .ak-pagetype-call .advocacy-action .form-container #ak-fieldbox-last_name {
       width: 48%; }
-    .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-first_name {
+    .ak-pagetype-call .advocacy-action .form-container #ak-fieldbox-first_name {
       margin-right: 4%; }
-    .ak-pagetype-call .advocacy-action #petition-form .ak-field-comment {
+    .ak-pagetype-call .advocacy-action .form-container .ak-field-comment {
       margin-bottom: .675em; }
-    .ak-pagetype-call .advocacy-action #petition-form .form-row.form-submit {
+    .ak-pagetype-call .advocacy-action .form-container .form-row.form-submit {
       margin-top: .675em;
       margin-bottom: 0;
       text-align: center; }
-      .ak-pagetype-call .advocacy-action #petition-form .form-row.form-submit .ak-submit-button {
+      .ak-pagetype-call .advocacy-action .form-container .form-row.form-submit .ak-submit-button {
         text-transform: uppercase;
         background: #4b6a23 linear-gradient(to bottom, #4b6a23 50%, #192f58 50%) repeat scroll 0 0/100px 100px;
         border-color: #192f58;
@@ -2091,35 +2090,35 @@ body noscript + script + p + script + p {
         padding: 0 20px;
         -webkit-transition: background-position .3s;
         transition: background-position .3s; }
-        .ak-pagetype-call .advocacy-action #petition-form .form-row.form-submit .ak-submit-button:hover {
+        .ak-pagetype-call .advocacy-action .form-container .form-row.form-submit .ak-submit-button:hover {
           background-position: 0 100%;
           color: #FFFFFF;
           outline: 0;
           cursor: pointer; }
-    .ak-pagetype-call .advocacy-action #petition-form .form-row-first-third {
+    .ak-pagetype-call .advocacy-action .form-container .form-row-first-third {
       float: left;
       width: 32%;
       margin-right: 2%; }
-    .ak-pagetype-call .advocacy-action #petition-form .form-row-second-third {
+    .ak-pagetype-call .advocacy-action .form-container .form-row-second-third {
       float: left;
       width: 32%;
       margin-left: 2%; }
-    .ak-pagetype-call .advocacy-action #petition-form .form-row-two-thirds {
+    .ak-pagetype-call .advocacy-action .form-container .form-row-two-thirds {
       float: left;
       width: 66%; }
     @media (max-width: 800px) {
-      .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-first_name, .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-last_name, .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-zip {
+      .ak-pagetype-call .advocacy-action .form-container #ak-fieldbox-first_name, .ak-pagetype-call .advocacy-action .form-container #ak-fieldbox-last_name, .ak-pagetype-call .advocacy-action .form-container #ak-fieldbox-zip {
         width: 100%;
         margin-right: 0; }
-      .ak-pagetype-call .advocacy-action #petition-form #ak-fieldbox-zip {
+      .ak-pagetype-call .advocacy-action .form-container #ak-fieldbox-zip {
         margin-left: 0; }
-      .ak-pagetype-call .advocacy-action #petition-form .form-row-first-third {
+      .ak-pagetype-call .advocacy-action .form-container .form-row-first-third {
         width: 100%;
         margin-right: 0; }
-      .ak-pagetype-call .advocacy-action #petition-form .form-row-second-third {
+      .ak-pagetype-call .advocacy-action .form-container .form-row-second-third {
         width: 100%;
         margin-left: 0; }
-      .ak-pagetype-call .advocacy-action #petition-form .form-row-two-thirds {
+      .ak-pagetype-call .advocacy-action .form-container .form-row-two-thirds {
         width: 100%; } }
   @media (max-width: 800px) {
     .ak-pagetype-call .advocacy-action .advocacy-intro, .ak-pagetype-call .advocacy-action .pull-right, .ak-pagetype-call .advocacy-action header {
@@ -2131,6 +2130,203 @@ body noscript + script + p + script + p {
 @media (max-width: 900px) {
   .ak-pagetype-call .header__buttons ul {
     display: none; } }
+
+/* Steps -- Used on call and whipcount pages
+   ========================================================================== */
+.ak-steps-area h3 {
+  padding: 3px 0 1px;
+  font-size: 1.29em;
+  font-size: 1.29rem;
+  color: #000; }
+
+.ak-steps-area label.ak-step-label {
+  font-weight: 200; }
+
+.ak-steps-area h3 div.ak-step-number {
+  border-radius: 50%;
+  behavior: url(PIE.htc);
+  /* remove if you don't care about IE8 */
+  display: inline-block;
+  font-size: 1.10em;
+  font-size: 1.10rem;
+  line-height: 1.52;
+  width: 1.52em;
+  height: 1.52em;
+  text-align: center;
+  background: #fff;
+  color: #4b4b4b;
+  position: relative;
+  top: -1px;
+  margin: 2px; }
+
+.ak-steps-area h3.clickable {
+  margin: 5px -15px 0;
+  padding-left: 13px; }
+
+.ak-steps-area h3.clickable,
+.ak-steps-area h3.clickable label,
+.ak-steps-area h3.clickable span,
+.ak-steps-area h3.clickable span span,
+.ak-steps-area h3.clickable div.ak-step-number,
+.ak-steps-area h3.clickable label div {
+  cursor: pointer; }
+
+.ak-steps-area h3 .ak-arrow-holder {
+  display: block;
+  color: #fff;
+  float: right;
+  padding-right: 10px;
+  position: relative;
+  top: 9px; }
+
+.ak-steps-area h3 .ak-arrow:after {
+  color: #fff; }
+
+@media (max-width: 479px) {
+  .ak-steps-area h3 {
+    background: #4b4b4b;
+    color: #fff;
+    padding: 8px 5px 6px; }
+  .ak-steps-area h3 ~ div {
+    display: none; } }
+
+@media (min-width: 480px) {
+  .ak-steps-area h3 label.ak-step-label {
+    color: #4b4b4b; }
+  .ak-steps-area h3 div.ak-step-number {
+    /* border: 2px solid #fff; */
+    background: #4b4b4b;
+    color: #fff; }
+  .ak-steps-area h3 .ak-arrow-holder {
+    display: none; }
+  .ak-steps-area .ak-fieldbox {
+    margin-left: 0;
+    margin-right: 0; } }
+
+.ak-steps-area .ak-fieldbox {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 15px;
+  padding: 0 15px; }
+
+.ak-steps-area .ak-fieldbox p {
+  margin: 0;
+  padding: 10px 0; }
+
+body.ak-pagetype-call .ak-steps-area #ak-survey_question label p {
+  margin-top: 0; }
+
+h3#report-call label p {
+  margin: 10px 0 10px; }
+
+/* Grid system based on http://www.responsivegridsystem.com/calculator/
+   ========================================================================== */
+.ak-grid-row:before,
+.ak-grid-row:after {
+  content: "";
+  display: table; }
+
+.ak-grid-row:after {
+  clear: both; }
+
+.ak-grid-row {
+  zoom: 1;
+  /* For IE 6/7 */
+  clear: both;
+  padding: 0;
+  margin: 0; }
+
+.ak-grid-col {
+  display: block;
+  float: left;
+  margin: 0;
+  min-height: 1px; }
+
+.ak-grid-col-12-of-12 {
+  width: 100%; }
+
+.ak-grid-col-11-of-12 {
+  width: 91.5%; }
+
+.ak-grid-col-10-of-12 {
+  width: 83%; }
+
+.ak-grid-col-9-of-12 {
+  width: 74.5%; }
+
+.ak-grid-col-8-of-12 {
+  width: 66%; }
+
+.ak-grid-col-7-of-12 {
+  width: 57.5%; }
+
+.ak-grid-col-6-of-12 {
+  width: 49%; }
+
+.ak-grid-col-5-of-12 {
+  width: 40.5%; }
+
+.ak-grid-col-4-of-12 {
+  width: 32%; }
+
+.ak-grid-col-3-of-12 {
+  width: 23.5%; }
+
+.ak-grid-col-2-of-12 {
+  width: 15%; }
+
+.ak-grid-col-1-of-12 {
+  width: 6.5%; }
+
+.ak-grid-col:first-child {
+  margin-left: 0; }
+
+.ak-grid-col:not(:first-child) {
+  margin-left: 2%; }
+
+.ak-grid-col.ak-grid-centered {
+  margin: 0 auto;
+  float: none; }
+
+/* Inverted grid rows have their cells in reverse order */
+.ak-grid-row-inverted .ak-grid-col {
+  float: right; }
+
+.ak-grid-row-inverted .ak-grid-col:last-child {
+  margin-left: 0; }
+
+.ak-grid-row-inverted .ak-grid-col:not(:last-child) {
+  margin-left: 2%; }
+
+/* On RTL pages, all of the above column order logic is switched */
+.ak-rtl .ak-grid-row .ak-grid-col {
+  float: right; }
+
+.ak-rtl .ak-grid-row .ak-grid-col:last-child {
+  margin-left: 0; }
+
+.ak-rtl .ak-grid-row .ak-grid-col:not(:last-child) {
+  margin-left: 2%; }
+
+.ak-rtl .ak-grid-row-inverted .ak-grid-col {
+  float: left; }
+
+.ak-rtl .ak-grid-row-inverted .ak-grid-col:first-child {
+  margin-left: 0; }
+
+.ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) {
+  margin-left: 2%; }
+
+/* Switch to single-column full-width layout on screens narrower than 750 px */
+@media only screen and (max-width: 749px) {
+  .ak-grid-col {
+    width: 100%;
+    margin: 0; }
+  .ak-grid-col:not(:first-child),
+  .ak-grid-row-inverted .ak-grid-col:not(:last-child),
+  .ak-rtl .ak-grid-row .ak-grid-col:not(:last-child),
+  .ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) {
+    margin: 0; } }
 
 .ak-pagetype-thanks #confirmation-text {
   margin-bottom: 2em; }
