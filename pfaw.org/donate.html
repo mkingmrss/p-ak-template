@@ -485,7 +485,9 @@
                                     amounts list but not in the first 5.
                                     {% endcomment %}
                                 {% else %}
-                                <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}>
+                                <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}
+                                    {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 and amount < 500 %}style="display: none"{% endif %}
+                                >
                                     <span class="ak-currency-sym"></span>
                                     <input
                                         type="radio"
@@ -493,7 +495,6 @@
                                         value="{{ amount }}"
                                         class="ak-amount-radio-button" name="amount"
                                         {% if not args.amount_other and amount == default_amount and monthly_ask_string != "1" %} checked {% endif %}
-                                        {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 and amount < 500 %}style="display: none"{% endif %}
                                     >
                                     <label for="id_amount_{{amount}}" class="ak-btn">
                                         {{ page.currency_sym }}{{ amount|commify }}
