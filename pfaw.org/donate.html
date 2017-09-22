@@ -488,19 +488,14 @@
                                 <li {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}
                                     {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 %}
                                         {% if amount < request.GET.hpc|add:"0" %}
-                                            style="display: none"
-                                            class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level"
+                                            class="giving-levels-level js--giving-levels-level"
                                         {% else %}
-                                            class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} 
-                                            giving-levels-level-visible js--giving-levels-level"
+                                            class="giving-levels-level giving-levels-level-visible js--giving-levels-level"
                                         {% endif %}
                                     {% elif forloop.counter > 5 %}
-                                        style="display: none"
-                                        class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} 
-                                            js--giving-levels-level"
+                                        class="giving-levels-level js--giving-levels-level"
                                     {% else %}
-                                        class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} 
-                                            giving-levels-level-visible js--giving-levels-level"
+                                        class="giving-levels-level giving-levels-level-visible js--giving-levels-level"
                                     {% endif %}
                                 >
                                     <span class="ak-currency-sym"></span>
@@ -518,7 +513,7 @@
                                 {% endif %}
                             {% endfor %}
                             {% if "other" in amounts %}
-                                <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level--other">
+                                <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other js--giving-levels-level--other giving-levels-level-visible">
                                     <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
                                     <label for="ak-other-amount-field" class="aural-only">Enter amount</label>
                                     <span>{{ page.currency_sym }}</span><input type="text" id="ak-other-amount-field" name="amount_other" class="js--amount-other-input" {% if amounts|length > 1 or has_products %}placeholder="Other"{% endif %}>
