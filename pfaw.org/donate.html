@@ -487,7 +487,7 @@
                                 {% else %}
                                 <li {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}
                                     {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 %}
-                                        {% if amount < 500 %}
+                                        {% if amount < request.GET.hpc|add:"0" %}
                                             style="display: none"
                                             class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level"
                                         {% else %}
