@@ -492,19 +492,6 @@
                                     {% elif forloop.counter < 5 %}
                                        {% include "./donate_multistep_ask_amount.html" %}
                                     {% endif %}
-                                >
-                                    <span class="ak-currency-sym"></span>
-                                    <input
-                                        type="radio"
-                                        id="id_amount_{{amount}}"
-                                        value="{{ amount }}"
-                                        class="ak-amount-radio-button" name="amount"
-                                        {% if not args.amount_other and amount == default_amount and monthly_ask_string != "1" %} checked {% endif %}
-                                    >
-                                    <label for="id_amount_{{amount}}" class="ak-btn">
-                                        {{ page.currency_sym }}{{ amount|commify }}
-                                    </label>
-                                </li>
                                 {% endif %}
                             {% endfor %}
                             {% if "other" in amounts %}
