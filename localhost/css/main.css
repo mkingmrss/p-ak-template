@@ -1069,9 +1069,9 @@ header.banner {
   display: inline-block;
   vertical-align: top; }
 
-.multistep-form .form-row .form-content .giving-levels .giving-levels-wrap {
+.multistep-form .form-row .form-content.giving-levels .giving-levels-wrap {
   text-align: justify; }
-  .multistep-form .form-row .form-content .giving-levels .giving-levels-wrap:after {
+  .multistep-form .form-row .form-content.giving-levels .giving-levels-wrap:after {
     content: ' ';
     display: block;
     width: 100%;
