@@ -476,6 +476,7 @@
                             {% endif %}
 
                             {# amounts via AK #}
+                            {% with 0 as counter %}
                             {% for amount in amounts %}
                                 {% if amount == "other" %}
                                     {% comment %}
@@ -486,14 +487,16 @@
                                     {% endcomment %}
                                 {% else %}
                                     {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 %}
-                                        {% if amount > request.GET.hpc|add:"0" %}
+                                        {% if amount > request.GET.hpc|add:"0" and counter < 5 %}
                                             {% include "./donate_multistep_ask_amount.html" %}
+                                            {% save_sum 1 counter as counter %}
                                         {% endif %}
                                     {% elif forloop.counter < 5 %}
                                        {% include "./donate_multistep_ask_amount.html" %}
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
+                            {% endwith %}
                             {% if "other" in amounts %}
                                 <li id="ak-other-amount-container" class="giving-levels-level giving-levels-level--other js--giving-levels-level--other giving-levels-level-visible">
                                     <input type="radio" value="" id="amount-other-radio" class="ak-amount-radio-button" name="amount">
