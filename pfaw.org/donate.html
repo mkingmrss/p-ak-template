@@ -485,31 +485,7 @@
                                     amounts list but not in the first 5.
                                     {% endcomment %}
                                 {% else %}
-                                <li {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}
-                                    {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 %}
-                                        {% if amount < request.GET.hpc|add:"0" %}
-                                            class="giving-levels-level js--giving-levels-level"
-                                        {% else %}
-                                            class="giving-levels-level giving-levels-level-visible js--giving-levels-level"
-                                        {% endif %}
-                                    {% elif forloop.counter > 5 %}
-                                        class="giving-levels-level js--giving-levels-level"
-                                    {% else %}
-                                        class="giving-levels-level giving-levels-level-visible js--giving-levels-level"
-                                    {% endif %}
-                                >
-                                    <span class="ak-currency-sym"></span>
-                                    <input
-                                        type="radio"
-                                        id="id_amount_{{amount}}"
-                                        value="{{ amount }}"
-                                        class="ak-amount-radio-button" name="amount"
-                                        {% if not args.amount_other and amount == default_amount and monthly_ask_string != "1" %} checked {% endif %}
-                                    >
-                                    <label for="id_amount_{{amount}}" class="ak-btn">
-                                        {{ page.currency_sym }}{{ amount|commify }}
-                                    </label>
-                                </li>
+                                    {% include "./donate_multistep_ask_amount.html" %}
                                 {% endif %}
                             {% endfor %}
                             {% if "other" in amounts %}
