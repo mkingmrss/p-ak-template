@@ -1058,7 +1058,7 @@ header.banner {
   left: -9999px; }
 
 .multistep-form .form-row .form-content .giving-levels-level {
-  display: block;
+  display: none;
   width: 31%;
   float: left;
   margin: 1em 0 0 3.5%;
@@ -1066,9 +1066,10 @@ header.banner {
   -moz-box-sizing: border-box;
   position: relative; }
 
-.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-0,
-.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-3,
-.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-6 {
+.multistep-form .form-row .form-content .giving-levels-level-visible {
+  display: block; }
+
+.multistep-form .form-row .form-content .giving-levels-level-visible:nth-of-type(3n+1) {
   margin-left: 0; }
 
 .multistep-form--nudge .giving-levels-level-1:before {
