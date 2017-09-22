@@ -486,8 +486,10 @@
                                     {% endcomment %}
                                 {% else %}
                                 <li class="giving-levels-level giving-levels-level-{{ forloop.counter0 }} js--giving-levels-level" {% if monthly_ask_string == "1" %} style="display: none;" {% endif %}
-                                    {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 and amount < 500 %}
-                                        style="display: none"
+                                    {% if request.GET.hpc and request.GET.hpc|add:"0" > 489 %}
+                                        {% if amount < 500 %}
+                                            style="display: none"
+                                        {% endif %}
                                     {% elif forloop.counter > 5 %}
                                         style="display: none"
                                     {% endif %}
