@@ -487,7 +487,7 @@
                                     {% endcomment %}
                                 {% else %}
                                     {% if request.GET.hpc and request.GET.hpc|add:"0" > 469 %}
-                                        {% if amount > request.GET.hpc|add:"0" and counter < 5 %}
+                                        {% if amount > request.GET.hpc|add:"0" and counter < 6 %}
                                             {% include "./donate_multistep_ask_amount.html" with counter=counter %}
                                             {% save_sum 1 counter as counter %}
                                         {% endif %}
