@@ -1069,7 +1069,10 @@ header.banner {
 .multistep-form .form-row .form-content .giving-levels-level-visible {
   display: block; }
 
-.multistep-form .form-row .form-content .giving-levels-level-visible:nth-of-type(3n+1) {
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-0,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-3,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-6,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-9 {
   margin-left: 0; }
 
 .multistep-form--nudge .giving-levels-level-1:before {
@@ -1176,7 +1179,8 @@ header.banner {
 .multistep-form .form-row .form-content.giving-levels ul {
   margin: -1em 0 0 0;
   width: 100%;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 .multistep-form .form-row .form-content.giving-levels ul::after {
   content: " ";
