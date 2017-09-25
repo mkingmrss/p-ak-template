@@ -209,7 +209,10 @@
 .multistep-form .form-row .form-content .giving-levels-level-visible {
   display: block;
 }
-.multistep-form .form-row .form-content .giving-levels-level-visible:nth-of-type(3n+1) {
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-0,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-3,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-6,
+.multistep-form .form-row .form-content .giving-levels-level.giving-levels-level-9 {
   margin-left: 0;
 }
 .multistep-form--nudge .giving-levels-level-1:before {
