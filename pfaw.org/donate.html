@@ -492,7 +492,7 @@
                                             {% save_sum 1 counter as counter %}
                                         {% endif %}
                                     {% elif forloop.counter < 5 %}
-                                       {% include "./donate_multistep_ask_amount.html" with counter=forloop.counter %}
+                                       {% include "./donate_multistep_ask_amount.html" with counter=forloop.counter0 %}
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
