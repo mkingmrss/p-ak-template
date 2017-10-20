@@ -20,7 +20,7 @@
         <div id="signup-form" class="ak-grid-col ak-grid-col-6-of-12 ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
             {% if page.custom_fields.signup_form_intro_header != '' %}
-                <h2>{{ page.custom_fields.custom_comment_label }}</h2>
+                <h2>{{ page.custom_fields.signup_form_intro_header }}</h2>
             {% endif %}
 
             {% include "./user_form_wrapper.html" %}
