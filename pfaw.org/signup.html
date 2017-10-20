@@ -19,7 +19,6 @@
     
         <div id="signup-form" class="ak-grid-col ak-grid-col-6-of-12 ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
-            {% include_tmpl form.introduction_text %}
 
             {% include "./user_form_wrapper.html" %}
 
@@ -45,6 +44,8 @@
             {% if page.custom_fields.featured_image %}
             <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
             {% endif %}
+
+            {% include_tmpl form.introduction_text %}
 
             <div class="ak-mobile-lead"></div>
 
