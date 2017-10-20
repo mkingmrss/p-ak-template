@@ -2183,6 +2183,11 @@ body noscript + script + p + script + p {
     font-size: 12px;
     margin-top: .25em;
     color: #ae272b; }
+  .ak-pagetype-signup #signup-form textarea {
+    height: 64px;
+    resize: none;
+    width: 100%;
+    border: 1px solid #afb9b8; }
 
 .ak-pagetype-signup button.ak-has-overlay {
   text-transform: uppercase;
