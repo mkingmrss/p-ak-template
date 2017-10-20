@@ -23,6 +23,13 @@
 
             {% include "./user_form_wrapper.html" %}
 
+            {% if page.custom_fields.hide_comment_field != 'yes' %}
+            <div class="ak-field ak-field-comment">
+                <label for="id_comment">{{ page.custom_fields.custom_comment_label|default:"Add a comment (optional):" }}</label>
+                <textarea id="id_comment" name="action_comment"></textarea>
+            </div>
+            {% endif %}
+
             <div class="form-row form-submit">
                 <button type="submit" class="full">Sign Up</button>
             </div>
