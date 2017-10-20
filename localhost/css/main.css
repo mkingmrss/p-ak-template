@@ -917,11 +917,11 @@ header.banner {
   font-size: 15px;
   line-height: 1.4em; }
 
-.donation-content ul {
+.donation-content ul, .donation-content ol {
   font-size: 15px;
   line-height: 1.4em; }
 
-.donation-content ul li {
+.donation-content ul li, .donation-content ol li {
   margin-bottom: 4px; }
 
 .donation-form-seals {
