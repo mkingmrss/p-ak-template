@@ -40,7 +40,7 @@
 
                     {# Optional TAF {% include "./inline_tellafriend.html" %} #}
                     <div class="form-row form-submit">
-                        <button type="submit" class="ak-submit-button">Add My Name</button>
+                        <button type="submit" class="ak-submit-button">{{ page.custom_fields.custom_submit_text|default:"Add My Name" }}</button>
                     </div>
 
                     {% if page.custom_fields.affirm_checkbox == 'yes' %}
