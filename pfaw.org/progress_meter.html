@@ -37,26 +37,17 @@
         }
 
         actionkitFormReady =  function() {
-            console.log('actionkitformready');
             setTimeout(function(){
                 var thisProgress = actionkit.context.progress;
 
-                console.log('thisProgress: ');
-                console.log(thisProgress);
-
                 if("thermometer_starting_point" in actionkit.context.page.custom_fields){
                     thisProgress.current = thisProgress.current + parseInt(actionkit.context.page.custom_fields.thermometer_starting_point);
-                    console.log('starting point');
-                    console.log(thisProgress);
-                } else {
-                    console.log('no thermo starting point');
+
                 }
 
                 if(thisProgress.current >= thisProgress.goal){
-                    console.log('goal is greater');
                     if('static_progress_meter' in actionkit.context.page.custom_fields && actionkit.context.page.custom_fields.static_progress_meter == 'yes'){
                         var targetWidth = 100;
-                        console.log('make static');
                     } else {
 
                         var roundVal;
@@ -67,8 +58,6 @@
                         console.log(roundVal);
 
                         var newGoal = roundVal * Math.ceil((thisProgress.current * 1.25) / roundVal);
-                        console.log('new goal');
-                        console.log(newGoal);
 
                         var targetWidth = Math.round((thisProgress.current / newGoal) * 100);
                         $('#goal').text(numberWithCommas(newGoal));
@@ -77,9 +66,7 @@
                     }
                 } else {
                     var targetWidth = actionkit.context.progress.percent;
-                    console.log('less than or equal to');
                 }            
-                console.log(targetWidth);
                 $('.ak-progress-bar').delay(1000).animate({
                     width: targetWidth+'%'
                 }, 1000,function(){
