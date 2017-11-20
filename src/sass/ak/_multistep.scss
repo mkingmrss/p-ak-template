@@ -1118,3 +1118,20 @@ body noscript + script + p + script + p
     margin-top: .5em;
   }
 }
+
+#id_honor_gift { 
+  float:left; 
+  width: initial;
+  margin-top: .125em;
+}
+label[for="id_honor_gift"] { 
+  width: initial; 
+  font-size: 14px;
+  margin-left: 1.5em;
+  line-height: 1em;
+  margin-bottom: .125em;
+  margin-top: -.125em;
+}
+.multistep-form .form-row .form-content.giving-levels ul.ak-err { }
+#honor-row-wrapper, #honor-row-wrapper ul.ak-err { display: none; }
+#honor-row-checkbox { margin: 1em 0;}
