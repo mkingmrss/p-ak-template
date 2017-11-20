@@ -1886,7 +1886,7 @@ window.upsellAnnual = true;
                   $(this).siblings('ul.ak-err').hide();
                 } else {
                   $(this).addClass('ak-error');
-                  $(this).siblings('ul.ak-err').show();
+                  $(this).siblings('ul.ak-err').html('<li>Please enter a valid email address.</li>').show();
                 }
             } else {
                 $(this).removeClass('ak-error');
