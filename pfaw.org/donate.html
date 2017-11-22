@@ -506,23 +506,25 @@
                             {% endif %}
                             </ul>
 
-                            <div class="form-row" id="honor-row-checkbox">
-                              <div class="form-content form-content-multi ak-err-below">
-                                <input type="checkbox" name="action_honor_gift" id="id_honor_gift" value="y">
-                                <label for="id_honor_gift" class="checkbox">Make this an Honor or Memorial gift</label>
-                              </div>
-                            </div>
-                            <div class="form-row" id="honor-row-wrapper">
-                              <div class="form-content form-content-half ak-err-below">
-                                <label for="id_in_honor_name" class="form-label-half ak-error">Name:</label>
-                                <input type="text" id="id_in_honor_name" name="action_in_honor_name">
-                              </div>
-                              <div class="form-content form-content-half ak-err-below">
-                                <label for="id_in_honor_name" class=" ak-error">Email:</label>
-                                <input type="text" id="id_in_honor_email" name="action_in_honor_email">
-                                <ul class="ak-err"><li>Please enter a valid email address.</li></ul>
-                              </div>
-                            </div>
+                            {% if page.custom_fields.show_honor_fields == 'Yes' %}
+                                <div class="form-row" id="honor-row-checkbox">
+                                  <div class="form-content form-content-multi ak-err-below">
+                                    <input type="checkbox" name="action_honor_gift" id="id_honor_gift" value="y">
+                                    <label for="id_honor_gift" class="checkbox">Make this an Honor or Memorial gift</label>
+                                  </div>
+                                </div>
+                                <div class="form-row" id="honor-row-wrapper">
+                                  <div class="form-content form-content-half ak-err-below">
+                                    <label for="id_in_honor_name" class="form-label-half ak-error">Name:</label>
+                                    <input type="text" id="id_in_honor_name" name="action_in_honor_name">
+                                  </div>
+                                  <div class="form-content form-content-half ak-err-below">
+                                    <label for="id_in_honor_name" class=" ak-error">Email:</label>
+                                    <input type="text" id="id_in_honor_email" name="action_in_honor_email">
+                                    <ul class="ak-err"><li>Please enter a valid email address.</li></ul>
+                                  </div>
+                                </div>
+                            {% endif %}
 
                             <div class="form-content form-content-multi ak-err-below">
                             </div>
