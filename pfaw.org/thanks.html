@@ -37,12 +37,8 @@
 
         {% if order %}
 
-            {% if page.custom_fields.show_honor_fields == 'Yes' %}
-                <!-- page.custom_fields.show_honor_fields -->
-
-                {% if action.custom_fields.in_honor_email %}
-                    <!-- {{ action.custom_fields.in_honor_email }} -->
-                {% endif %}
+            {% if page.custom_fields.show_honor_fields == 'Yes' and action.custom_fields.in_honor_email %}
+                <!-- render honor thank you text -->
             {% endif %}
 
         <p>Please print or save this message for your personal records.</p>
