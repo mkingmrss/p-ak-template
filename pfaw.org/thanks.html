@@ -36,6 +36,11 @@
         {% include_tmpl form.thank_you_text %}
 
         {% if order %}
+
+            {% if page.custom_fields.show_honor_fields == 'Yes' and page.custom_fields.in_honor_email %}
+                <!-- {{ page.custom_fields.in_honor_email }} -->
+            {% endif %}
+
         <p>Please print or save this message for your personal records.</p>
 
         <table class="receipt">
