@@ -36,6 +36,12 @@
         {% include_tmpl form.thank_you_text %}
 
         {% if order %}
+
+            {% if page.custom_fields.show_honor_fields == 'Yes' and action.custom_fields.in_honor_name %}
+                <!-- render honor thank you text -->
+                <p>Your donation was made in honor of {{ action.custom_fields.in_honor_name }}. If you provided an email address for your honoree, a notification has been sent.</p>
+            {% endif %}
+
         <p>Please print or save this message for your personal records.</p>
 
         <table class="receipt">
