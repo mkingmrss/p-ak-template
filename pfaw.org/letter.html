@@ -28,7 +28,7 @@
                 {% endif %}
 
                 <div class="form-row form-submit row-top-submit">
-                    <button type="submit" class="ak-submit-button">Send My Message</button>
+                    <button type="submit" class="ak-submit-button">{{ page.custom_fields.custom_submit_text|default:"Send My Message" }}</button>
                 </div>
 
                 <div id="letter-form" class="ak-field-box ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
@@ -45,7 +45,7 @@
                     {% endif %}
 
                     <div class="form-row">
-                        <p class="disclaimer">PFAW will send you periodic updates by email.</p>
+                        <p class="disclaimer">{{ page.custom_fields.custom_disclaimer_text|default:"PFAW will send you periodic updates by email." }}</p>
                     </div>
 
                 </div>
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="form-row form-submit">
-                    <button type="submit" class="ak-submit-button">Send My Message</button>
+                    <button type="submit" class="ak-submit-button">{{ page.custom_fields.custom_submit_text|default:"Send My Message" }}</button>
                 </div>
 
                 <div class="form-row scrollTop">Sign Now</div>

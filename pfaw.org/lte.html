@@ -115,6 +115,10 @@
             <div class="ak-grid-col ak-grid-col-6-of-12">
 
                 <h2>{{ page.title }}</h2>
+
+
+
+
                 
                 {% if page.custom_fields.featured_image %}
                 <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
@@ -124,6 +128,7 @@
                     {% include_tmpl form.introduction_text %}
                 </div>
                 <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
+               
 
                 <div id="lte-prelim"></div>
 
@@ -224,7 +229,7 @@
                                 shade = !shade;
                                 %]
                                 <div class="[%= shade ? "ak-alternate-row" : "" %] ak-newspaper-row">
-                                    <div class="ak-newspaper-title">[%=label%]</div>
+                                    <div class="ak-newspaper-title">[%=label|safe%]</div>
                                     <div>
 
                                         <label class="ak-button ak-newspaper-choice" for="[%=targetId%]">
@@ -310,6 +315,20 @@
                 <div id="lte-submit">
                     <button type="submit" class="ak-submit-button">Submit</button>
                 </div>
+
+  {% if page.custom_fields.affirm_checkbox == 'yes' %}
+                    <div class="form-row row-affirm">
+                        <input type="checkbox" name="action_affirm" id="id_affirm" value="y" checked>
+                        <label for="id_affirm" class="checkbox">I affirm my membership with People For the American Way.</label>
+                    </div>
+                    {% endif %}
+                    
+ 
+                    
+
+                    <div class="form-row">
+                        <p class="disclaimer">{{ page.custom_fields.custom_disclaimer_text|default:"PFAW will send you periodic updates by email." }}</p>
+                    </div>
 
             </div>
 

@@ -64,6 +64,19 @@
         </ul>
         {% endif %}
 
+        {% for campaign in campaigns_moderating %}
+          {% if forloop.first %}
+            <h3>Event Moderation</h3>
+            <ul>
+          {% endif %}
+          <li>
+            <b>{{ campaign.title }}</b> campaign with {{ campaign.event_set.all|length }} events. <a href='/event/{{campaign.moderate_page.name}}/moderator_search/?akid={{akid}}'>Moderate</a>
+          </li>
+          {% if forloop.last %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+
         {% if donations %}
             <h3> Donation History </h3>
             <ul>

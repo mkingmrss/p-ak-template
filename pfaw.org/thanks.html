@@ -105,7 +105,7 @@
         {% endif %}
     {% endif %}
 
-    {% if page.SUPPRESS_SHARING %}
+    {% if page.custom_fields.suppress_page_sharing  == 'yes' %}
         <div class="ak-grid-row">
             <div class="ak-grid-col ak-grid-col-12-of-12">
                 <h2>

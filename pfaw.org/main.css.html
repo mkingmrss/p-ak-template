@@ -918,6 +918,13 @@ header.banner {
   font-size: 15px;
   line-height: 1.4em; }
 
+.donation-content ul, .donation-content ol {
+  font-size: 15px;
+  line-height: 1.4em; }
+
+.donation-content ul li, .donation-content ol li {
+  margin-bottom: 4px; }
+
 .donation-form-seals {
   text-align: center;
   margin-top: 1em; }
@@ -1927,7 +1934,6 @@ label[for="id_in_honor_email"] span {
 #honor-row-checkbox {
   margin: 1em 0; }
 
-/* version bump */
 .ak-pagetype-petition .header__buttons ul {
   display: block; }
 
@@ -2517,6 +2523,11 @@ h3#report-call label p {
     font-size: 12px;
     margin-top: .25em;
     color: #ae272b; }
+  .ak-pagetype-signup #signup-form textarea {
+    height: 64px;
+    resize: none;
+    width: 100%;
+    border: 1px solid #afb9b8; }
 
 .ak-pagetype-signup button.ak-has-overlay {
   text-transform: uppercase;
@@ -3080,6 +3091,27 @@ body:not(.ak-pagetype-donate) .scrollTop {
     .lte .ak-rtl .ak-grid-row .ak-grid-col:not(:last-child),
     .lte .ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) {
       margin: 0; } }
+
+div.ak-text-expander.ak-truncated {
+  overflow: hidden;
+  max-height: 4.5em; }
+
+div.ak-text-expander.ak-truncated a.ak-read-more {
+  display: block; }
+
+div.ak-text-expander p:first-child {
+  margin-top: 0px; }
+
+@media screen and (min-width: 480px) {
+  div.ak-text-expander.ak-truncated {
+    overflow: visible;
+    max-height: none; }
+  div.ak-text-expander {
+    max-height: 100%;
+    overflow: visible;
+    margin-bottom: 10px; }
+  div.ak-text-expander p:first-child {
+    margin-top: 10px; } }
 
 .ak-pagetype-survey #ak-survey-questions {
   background: #eff3f3;

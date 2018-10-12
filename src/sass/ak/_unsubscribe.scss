@@ -121,6 +121,13 @@
 			margin-top: .25em;
 			color: $red;
 		}
+
+		textarea {
+		    height: 64px;
+		    resize: none;
+		    width: 100%;
+		    border: 1px solid #afb9b8;
+		}
 	}
 
 	button.ak-has-overlay {

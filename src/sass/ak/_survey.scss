@@ -1,3 +1,31 @@
+div.ak-text-expander.ak-truncated {
+  overflow: hidden;
+  max-height: 4.5em;
+}
+
+div.ak-text-expander.ak-truncated a.ak-read-more {
+  display: block;
+}
+
+div.ak-text-expander p:first-child {
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 480px) {
+  div.ak-text-expander.ak-truncated {
+    overflow: visible;
+    max-height: none;
+  }
+  div.ak-text-expander {
+    max-height: 100%;
+    overflow: visible;
+    margin-bottom: 10px;
+  }
+  div.ak-text-expander p:first-child {
+    margin-top: 10px;
+  } 
+}
+
 .ak-pagetype-survey {
 
   #ak-survey-questions {

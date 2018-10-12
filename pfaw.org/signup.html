@@ -19,16 +19,25 @@
     
         <div id="signup-form" class="ak-grid-col ak-grid-col-6-of-12 ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
-            {% include_tmpl form.introduction_text %}
+            {% if page.custom_fields.signup_form_intro_header != '' %}
+                <h2>{{ page.custom_fields.signup_form_intro_header }}</h2>
+            {% endif %}
 
             {% include "./user_form_wrapper.html" %}
 
+            {% if page.custom_fields.hide_comment_field != 'yes' %}
+            <div class="ak-field ak-field-comment">
+                <label for="id_comment">{{ page.custom_fields.custom_comment_label|default:"Add a comment (optional):" }}</label>
+                <textarea id="id_comment" name="action_comment"></textarea>
+            </div>
+            {% endif %}
+
             <div class="form-row form-submit">
-                <button type="submit" class="full">Sign Up</button>
+                <button type="submit" class="full">{{ page.custom_fields.custom_submit_text|default:"Sign Up" }}</button>
             </div>
 
             <div class="form-row">
-                <p class="disclaimer">PFAW will send you periodic updates by email.</p>
+                <p class="disclaimer">{{ page.custom_fields.custom_disclaimer_text|default:"PFAW will send you periodic updates by email." }}</p>
             </div>
 
         </div>
@@ -38,6 +47,8 @@
             {% if page.custom_fields.featured_image %}
             <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
             {% endif %}
+
+            {% include_tmpl form.introduction_text %}
 
             <div class="ak-mobile-lead"></div>
 
