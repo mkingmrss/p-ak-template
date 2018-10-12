@@ -668,7 +668,7 @@
                         {% with page.custom_fields.designation as designation %}
                             {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_employer == "required" or page.custom_fields.show_occupation == "required" %}
                             <div class="form-row">
-                                <div class="form-content form-content-multi">
+                                <div class="form-content form-content--checkbox">
                                     <p class="disclaimer">Federal law requires us to collect the following information:</p>
 
                                     <input type="checkbox" name="action_retired_unemployed" id="id_retired_unemployed" value="y" class="js--retired-unemployed">
@@ -678,12 +678,8 @@
                             </div>
                             {% endif %}
                             {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_employer %}
-                            <div class="form-row">
+                            <div class="form-row js--employment-field">
                               <div class="form-content">
-                                
-                                {% if has_candidates or designation == "PAC" or designation == "527" %}
-                                <p class="disclaimer">Federal law requires us to collect the following information:</p>
-                                {% endif %}
 
                                 {% if not page.custom_fields.show_employer == "show" %}
                                 <input type="hidden" name="required" value="action_employer">
@@ -695,7 +691,7 @@
                             </div>
                             {% endif %}
                             {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_occupation %}
-                            <div class="form-row">
+                            <div class="form-row js--employment-field">
                               <div class="form-content">
 
                                 {% if not page.custom_fields.show_occupation == "show" %}
@@ -1110,6 +1106,25 @@ window.upsellAnnual = true;
     })( window );
     {% endif %}
     
+    // Retired / unemployed checkbox
+    (function( window ) {
+
+        var inputValue = 'retired or unemployed',
+            $checkbox = $( '.js--retired-unemployed' ),
+            $employmentContainers = $( '.js--employment-field' ),
+            $employmentFields = $( '[name="action_employer"], [name="action_occupation"]' );
+
+        $checkbox.on( 'change', function() {
+            if ( this.checked ) {
+                $employmentContainers.hide();
+                $employmentFields.val( inputValue );
+            } else {
+                $employmentFields.val( '' );
+                $employmentContainers.show();
+            }
+        }).trigger( 'change' );
+
+    })( window );
 
     // Annual autorenewal
     (function( window ) {
