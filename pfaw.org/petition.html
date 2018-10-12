@@ -31,6 +31,10 @@
 
                     {% include "./user_form_wrapper.html" %}
 
+
+       {% if page.custom_fields.mobilecommons_optin %} {{ page.custom_fields.mobilecommons_optin }} {% endif %}
+          
+
                     {% if page.custom_fields.hide_comment_field != 'yes' %}
                     <div class="ak-field ak-field-comment">
                         <label for="id_comment">{{ page.custom_fields.custom_comment_label|default:"Add a comment (optional):" }}</label>
@@ -49,6 +53,9 @@
                         <label for="id_affirm" class="checkbox">I affirm my membership with People For the American Way.</label>
                     </div>
                     {% endif %}
+                    
+ 
+                    
 
                     <div class="form-row">
                         <p class="disclaimer">{{ page.custom_fields.custom_disclaimer_text|default:"PFAW will send you periodic updates by email." }}</p>

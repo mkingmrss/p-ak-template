@@ -6,6 +6,8 @@
 <form class="ak-form norecognize" name="act" method="POST" action="{% if update %}/update_action/{% else %}/act/{% endif %}" accept-charset="utf-8">
     <input type="hidden" name="page" value="{{ page.name }}">
 
+    {% csrf_token %}
+
 <div class="ak-grid-row">
     <div class="ak-grid-col ak-grid-col-12-of-12">
         {% if not update %}
@@ -353,7 +355,7 @@
 {% if update %}
     <script type="text/javascript">
     $( function() {
-        $('#user-info input[name=email]').attr('disabled','disabled')
+        $('#ak-user-info input[name=email]').attr('disabled','disabled')
     } );
     </script>
 {% endif %}
