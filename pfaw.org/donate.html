@@ -666,6 +666,17 @@
                         </div>
                     
                         {% with page.custom_fields.designation as designation %}
+                            {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_employer == "required" or page.custom_fields.show_occupation == "required" %}
+                            <div class="form-row">
+                                <div class="form-content form-content-multi">
+                                    <p class="disclaimer">Federal law requires us to collect the following information:</p>
+
+                                    <input type="checkbox" name="action_retired_unemployed" id="id_retired_unemployed" value="y" class="js--retired-unemployed">
+                                    <label for="id_retired_unemployed" class="checkbox">I am retired or unemployed</label>
+                                  </div>
+                                </div>
+                            </div>
+                            {% endif %}
                             {% if has_candidates or designation == "PAC" or designation == "527" or page.custom_fields.show_employer %}
                             <div class="form-row">
                               <div class="form-content">
