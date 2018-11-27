@@ -38,6 +38,7 @@
                     <div>
                         <label class="ak-survey-question-label">
                             {{ question.question_label }}
+                            {% if question.required %}*{% endif %}
                         </label>
                         {{ question.input_html }}
                     </div>
